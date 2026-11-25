@@ -128,6 +128,17 @@ def _move_info(slot: dict, raw_moves: list[dict] | None) -> dict:
     return details
 
 
+def _reserves(raw_team: dict | list, slots: list[dict]) -> dict:
+    eligible = {ident(option["species"]) for slot in slots for option in slot["options"]
+                if option["type"] == "switch"}
+    reserves = {}
+    for mon in raw_team.values() if isinstance(raw_team, dict) else raw_team:
+        view = pokemon_view(mon) or {}
+        if (species := view.get("species")) in eligible:
+            reserves[species] = {key: view[key] for key in ("hp", "status", "moves") if key in view}
+    return dict(sorted(reserves.items()))
+
+
 def move_metadata(data: dict) -> dict:
     data = dict(data)
     accuracy = data.get("accuracy")
@@ -192,6 +203,8 @@ def make_decision(
     elif phase == BATTLE and len(templates) == 1:
         slots = sorted(templates[0]["slots"], key=lambda row: row["slot"])
         actions = _joint_choices(slots)
+        if isinstance(raw_team := raw.get("team"), (dict, list)):
+            observation["reserves"] = _reserves(raw_team, slots)
         available = raw.get("available_moves") or [[], []]
         move_info = tuple(
             _move_info(slot, raw_moves) for slot, raw_moves in zip(slots, available, strict=True)

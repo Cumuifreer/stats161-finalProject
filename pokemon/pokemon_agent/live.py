@@ -76,5 +76,7 @@ def create_agent():
 
 def create_llm_agent():
     from .llm import LlmPolicy
+    from .tactics import load_dex
 
+    load_dex()
     return LiveAgent(LlmPolicy())

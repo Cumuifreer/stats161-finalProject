@@ -9,7 +9,11 @@ from .sim import FORMAT, SEATS, Showdown, _draft
 
 def _compare(report, stage, local, official, **where):
     report["compared"][stage] += 1
-    fields = [key for key in sorted(local.observation.keys() | official.observation.keys())
+    fields_to_compare = local.observation.keys() | official.observation.keys()
+    if "reserves" not in official.observation:
+        # Earlier captures predate the normalized reserve view.
+        fields_to_compare.discard("reserves")
+    fields = [key for key in sorted(fields_to_compare)
               if local.observation.get(key) != official.observation.get(key)]
     local_actions = {json.dumps(action, sort_keys=True) for action in local.actions}
     official_actions = {json.dumps(action, sort_keys=True) for action in official.actions}

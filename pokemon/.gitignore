@@ -18,7 +18,12 @@ __pycache__/
 
 # Personal and course materials
 参考材料/
+
+# Local handoff documents
 README.md
+AGENTS.md
+PROGRESS.md
+DECISIONS.md
 
 # Game captures and logs
 captures/

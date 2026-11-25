@@ -3,11 +3,50 @@
 // A local Showdown battle, driven through newline-delimited JSON over stdio.
 // Only each side's pending choice and its player-visible board cross the bridge.
 const readline = require("node:readline");
-const {Battle, Teams} = require("pokemon-showdown");
+const {Battle, Dex, Teams} = require("pokemon-showdown");
 const {extractChannelMessages} = require("pokemon-showdown/dist/sim/battle");
+
+if (process.argv[2] === "--card-stats") {
+    const {readFileSync} = require("node:fs");
+    const calculator = new Battle({formatid: "gen9vgc2025regi", seed: [0, 0, 0, 1]});
+    const stats = JSON.parse(readFileSync(0, "utf8")).map(card => {
+        const species = calculator.dex.species.get(card.species);
+        const evs = {}, ivs = {};
+        for (const stat of Object.keys(species.baseStats)) {
+            evs[stat] = calculator.clampIntRange(card.evs?.[stat] ?? 0, 0, 255);
+            ivs[stat] = calculator.clampIntRange(card.ivs?.[stat] ?? 31, 0, 31);
+        }
+        const level = calculator.clampIntRange(card.level || 100, 1, 9999);
+        const spread = calculator.spreadModify(species.baseStats, {evs, ivs, level, nature: card.nature});
+        if (species.maxHP) spread.hp = species.maxHP;
+        return {level, stats: spread};
+    });
+    process.stdout.write(JSON.stringify(stats) + "\n");
+    return;
+}
+
+if (process.argv[2] === "--dex") {
+    const types = Object.fromEntries(Dex.types.all().map(type => [
+        type.id, Object.fromEntries(Object.entries(type.damageTaken).map(([attack, code]) => [
+            attack.toLowerCase(), [1, 2, 0.5, 0][code],
+        ])),
+    ]));
+    const species = Object.fromEntries(Dex.species.all().map(mon => [
+        mon.id, {types: mon.types.map(type => type.toLowerCase()), ...mon.baseStats},
+    ]));
+    const moves = Object.fromEntries(Dex.moves.all().map(move => [move.id, {
+        type: move.type.toLowerCase(), multihit: move.multihit,
+        base_power: move.basePower, accuracy: move.accuracy === true ? 1 : move.accuracy / 100,
+        category: move.category.toLowerCase(),
+    }]));
+    process.stdout.write(JSON.stringify({types, species, moves}) + "\n");
+    return;
+}
 
 let battle;
 let logPosition;
+let pivotSeat;
+let pivotPreview;
 const revealed = new Map();
 const previewRosters = new Map();
 
@@ -130,6 +169,7 @@ function view(side) {
             turn: battle.turn,
             active_pokemon: side.active.map(mon => publicPokemon(mon, true)),
             opponent_active_pokemon: opponent.active.map(mon => publicPokemon(mon, false)),
+            team: side.pokemon.slice(side.active.length).map(mon => publicPokemon(mon, true)),
             weather: battle.field.weather,
             fields: [...Object.keys(battle.field.pseudoWeather), battle.field.terrain].filter(Boolean),
             side_conditions: Object.keys(side.sideConditions),
@@ -170,6 +210,8 @@ function handle(message) {
         for (const seat of ["p1", "p2"]) {
             battle.setPlayer(seat, {name: seat, team: Teams.pack(message.rosters[seat])});
         }
+        pivotSeat = message.pivot_seat;
+        pivotPreview = pivotSeat ? battle.getSide(pivotSeat).activeRequest : null;
     } else if (message.command === "choose") {
         const side = battle.getSide(message.seat);
         if (!battle.choose(side.id, choiceText(side, message.action))) {
@@ -179,10 +221,21 @@ function handle(message) {
         throw new Error("Unknown Showdown bridge command");
     }
     trackReveals();
+    const views = battle.ended ? [] : battle.sides.map(view).filter(Boolean);
+    const pivotView = views.find(item => item.seat === pivotSeat && item.phase === "moving");
+    if (pivotView) {
+        pivotView.pivot = {
+            request: battle.getSide(pivotSeat).activeRequest,
+            preview_request: pivotPreview,
+            protocol_log: extractChannelMessages(battle.log.join("\n"), [0])[0].filter(
+                line => !/^\|(debug|showteam|t:)\|/.test(line),
+            ),
+        };
+    }
     return {
         ended: battle.ended,
         winner: battle.winner || null,
-        views: battle.ended ? [] : battle.sides.map(view).filter(Boolean),
+        views,
     };
 }
 

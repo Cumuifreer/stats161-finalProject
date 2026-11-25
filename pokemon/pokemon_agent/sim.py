@@ -7,6 +7,7 @@ import subprocess
 from time import perf_counter
 
 from .game import BATTLE, BATTLE_BANK, DECISION_LIMIT, DRAFT, DRAFT_SIZE, Decision, ident, make_decision
+from .pivot import PivotOpponent
 
 SEATS = ("p1", "p2")
 FORMAT = "gen9vgc2025regi"
@@ -74,7 +75,7 @@ def _draft(pool: list[dict], first: str, choose) -> dict[str, list[dict]]:
 
 
 def play_game(
-    engine: Showdown, cards: list[dict], policies: dict, seed: int, samples: dict, *, pool=None,
+    engine: Showdown, cards: list[dict], policies: dict, seed: int, samples: dict, *, pool=None, fixed_policies=None,
 ) -> str | None:
     rng = random.Random(seed)
     if pool is None:
@@ -82,10 +83,12 @@ def play_game(
     first = rng.choice(SEATS)
     battle_seed = [rng.randrange(65536) for _ in range(4)]
     banks = {seat: BATTLE_BANK for seat in SEATS}
+    fixed_policies = fixed_policies or {}
 
-    def choose(seat: str, decision: Decision) -> dict:
+    def choose(seat: str, decision: Decision, view: dict | None = None) -> dict:
         started = perf_counter()
-        action = policies[seat](decision)
+        policy = fixed_policies.get(decision.phase, policies[seat])
+        action = policy.choose(decision, view) if isinstance(policy, PivotOpponent) else policy(decision)
         elapsed = perf_counter() - started
         late = elapsed >= decision.seconds_left
         if decision.phase == BATTLE:
@@ -100,7 +103,12 @@ def play_game(
         return action if event else decision.validate(action)
 
     rosters = _draft(pool, first, choose)
-    reply = engine.call("start", format=FORMAT, seed=battle_seed, rosters=rosters)
+    start = dict(format=FORMAT, seed=battle_seed, rosters=rosters)
+    for seat, policy in policies.items():
+        if isinstance(policy, PivotOpponent):
+            policy.start(seed, seat, rosters)
+            start["pivot_seat"] = seat
+    reply = engine.call("start", **start)
     for _ in range(500):
         if reply["ended"]:
             return reply["winner"]
@@ -113,7 +121,7 @@ def play_game(
             bank = banks[seat] if phase == BATTLE else None
             seconds = min(DECISION_LIMIT[phase], bank) if bank is not None else DECISION_LIMIT[phase]
             decision = make_decision(phase, view["raw"], view["templates"], seat, seconds, bank)
-            action = choose(seat, decision)
+            action = choose(seat, decision, view)
             if banks[seat] <= 0:
                 return next(other for other in SEATS if other != seat)
             reply = engine.call("choose", seat=seat, action=action)

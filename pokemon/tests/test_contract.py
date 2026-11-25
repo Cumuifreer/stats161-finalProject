@@ -4,16 +4,19 @@ import io
 import json
 import os
 from pathlib import Path
+import sys
 from tempfile import TemporaryDirectory
 from types import SimpleNamespace
 import unittest
 from unittest.mock import Mock, patch
 
 from pokemon_agent.__main__ import HISTORICAL_CARDS, _bench, _catalog, _replay
-from pokemon_agent.game import BATTLE, DRAFT, GAME_TYPE, PREVIEW, make_decision
+from pokemon_agent.game import BATTLE, DRAFT, GAME_TYPE, PREVIEW, Decision, make_decision
 from pokemon_agent.live import create_agent
+from pokemon_agent.llm import LlmPolicy
 from pokemon_agent.policy import heuristic
 from pokemon_agent.sim import SEATS, _draft, play_game
+from pokemon_agent.tactics import tactical, tactical_candidates
 
 ROSTER = ["amoonguss", "incineroar", "rillaboom", "gholdengo", "arcanine", "gyarados"]
 PASS = {"type": "pass"}
@@ -61,6 +64,133 @@ class ContractTests(unittest.TestCase):
         self.assertEqual(action["slot_0"]["target"], 1)
         self.assertEqual(action["slot_1"]["target"], 0)
         self.assertEqual(decision.observation["opponents"][0]["species"], "dondozo")
+
+    def test_tactical_policy_accounts_for_immunity(self):
+        options = [
+            {"type": "move", "move_id": move, "targets": [1], "base_power": power, "category": "special"}
+            for move, power in (("earthpower", 90), ("thunderbolt", 80))
+        ]
+        template = {"slots": [{"slot": 0, "options": options}, {"slot": 1, "options": [PASS]}]}
+        decision = make_decision(BATTLE, {
+            "opponent_active_pokemon": [{"species": "Gyarados", "types": ["Water", "Flying"]}, None],
+        }, [template], "p1")
+        dex = {
+            "types": {"flying": {"ground": 0, "electric": 2}, "water": {"electric": 2}},
+            "species": {},
+            "moves": {"earthpower": {"type": "ground"}, "thunderbolt": {"type": "electric"}},
+        }
+        with patch("pokemon_agent.tactics.load_dex", return_value=dex):
+            self.assertEqual(tactical(decision)["slot_0"]["move_id"], "thunderbolt")
+
+    def test_tactical_shortlist_keeps_legal_alternatives(self):
+        options = [
+            {"type": "move", "move_id": f"attack{i}", "target": 1} for i in range(6)
+        ] + [
+            {"type": "switch", "species": "gholdengo"},
+            {"type": "move", "move_id": "protect", "target": 0},
+            {"type": "move", "move_id": "tailwind", "target": 0},
+        ]
+        ranked = [{"type": "doubles_turn", "slot_0": action, "slot_1": PASS} for action in options]
+        decision = Decision(BATTLE, {}, tuple(ranked))
+        with patch("pokemon_agent.tactics.tactical_actions", return_value=ranked):
+            shortlist = tactical_candidates(decision)
+        self.assertEqual(len(shortlist), 6)
+        self.assertEqual(shortlist[0], ranked[0])
+        for action in ranked[-3:]:
+            self.assertIn(action, shortlist)
+        for action in shortlist:
+            decision.validate(action)
+
+    def test_calibrated_policy_uses_weather_for_fixed_card_damage(self):
+        options = [
+            {"type": "move", "move_id": move, "targets": [1], "base_power": power, "category": "special"}
+            for move, power in (("flamethrower", 90), ("waterpulse", 60))
+        ]
+        template = {"slots": [{"slot": 0, "options": options}, {"slot": 1, "options": [PASS]}]}
+        raw = {
+            "active_pokemon": [{"species": "Hatterene"}, None],
+            "opponent_active_pokemon": [{"species": "Porygon2"}, None],
+            "weather": {"RAINDANCE": 1},
+        }
+        decision = make_decision(BATTLE, raw, [template], "p1")
+        profile = {"level": 50, "stats": {"hp": 150, "spa": 100, "spd": 100, "spe": 100}}
+        profiles = dict.fromkeys(("hatterene", "porygon2"), profile)
+        dex = {"types": {}, "species": {}, "moves": {
+            "flamethrower": {"type": "fire"}, "waterpulse": {"type": "water"},
+        }}
+        with patch("pokemon_agent.tactics.load_dex", return_value=dex):
+            self.assertEqual(tactical(decision)["slot_0"]["move_id"], "flamethrower")
+            action = tactical(decision, card_profiles=profiles)
+        self.assertEqual(decision.validate(action)["slot_0"]["move_id"], "waterpulse")
+
+    def test_preview_scores_reserves_and_avoids_reversed_lead_duplicates(self):
+        leads = ["incineroar", "rillaboom"]
+        bring = leads + ["amoonguss", "arcanine"]
+        counter = leads + ["amoonguss", "gholdengo"]
+        options = tuple(
+            {"type": "select_lineup", "bring": members, "leads": order}
+            for members in (bring, counter) for order in (leads, leads[::-1])
+        )
+        decision = Decision(PREVIEW, {
+            "team": [
+                {"species": species, "moves": ["thunderbolt" if species == "gholdengo" else "tackle"]}
+                for species in set(bring + counter)
+            ],
+            "opponent_team": [{"species": "gyarados", "types": ["water", "flying"]}],
+        }, options)
+        dex = {
+            "types": {"water": {"electric": 2}, "flying": {"electric": 2}},
+            "species": {},
+            "moves": {
+                "thunderbolt": {"type": "electric", "category": "special", "base_power": 80, "accuracy": 1},
+                "tackle": {"type": "normal", "category": "physical", "base_power": 80, "accuracy": 1},
+            },
+        }
+        with patch("pokemon_agent.tactics.load_dex", return_value=dex):
+            shortlist = tactical_candidates(decision)
+        self.assertEqual(shortlist, [options[2], options[0]])
+
+    def test_battle_reserves_match_own_legal_switches(self):
+        raw = {
+            "team": {
+                "p1: Gholdengo": {"species": "Gholdengo", "current_hp": 68, "max_hp": 100,
+                                 "status": "BRN", "moves": {"Shadow Ball": {}}},
+                "p1: Amoonguss": {"species": "Amoonguss", "current_hp_fraction": 1},
+            },
+            "opponent_team": {"p2: Gholdengo": {"species": "Gholdengo", "current_hp_fraction": 1}},
+        }
+        decision = make_decision(BATTLE, raw, [forced_replacement()], "p1")
+        self.assertEqual(decision.observation["reserves"], {
+            "gholdengo": {"hp": .68, "status": "brn", "moves": ["shadowball"]},
+        })
+
+    def test_deepseek_picks_a_legal_candidate_and_falls_back(self):
+        cards = [{"card_id": card} for card in ("a", "b")]
+        decision = make_decision(DRAFT, {"available_cards": cards}, cards, "p1")
+        options = decision.actions
+        client = Mock()
+        create = client.chat.completions.create
+        create.side_effect = [
+            SimpleNamespace(choices=[SimpleNamespace(message=SimpleNamespace(content=content))])
+            for content in ('{"id":"1"}', '{"id":"9"}')
+        ]
+        factory = Mock(return_value=client)
+        with patch.dict(os.environ, {"POKEMON_LLM_PROVIDER": "deepseek", "DEEPSEEK_API_KEY": "test"}, clear=True):
+            with patch.dict(sys.modules, {
+                "openai": SimpleNamespace(OpenAI=factory),
+                "dotenv": SimpleNamespace(load_dotenv=Mock()),
+            }):
+                policy = LlmPolicy()
+        self.assertEqual(policy(decision), options[1])
+        self.assertEqual((policy.source, policy.model_choices, policy.different_choices), ("llm", 1, 1))
+        policy.in_flight.join()
+        self.assertEqual(policy(decision), options[0])
+        self.assertEqual((policy.source, policy.fallbacks), ("fallback", 1))
+        factory.assert_called_once_with(api_key="test", base_url="https://api.deepseek.com", max_retries=0)
+        request = create.call_args.kwargs
+        self.assertEqual(request["model"], "deepseek-flash")
+        self.assertEqual(request["response_format"], {"type": "json_object"})
+        self.assertEqual(request["extra_body"], {"thinking": {"type": "disabled"}})
 
     def test_moves_without_explicit_targets(self):
         template = {"slots": [
@@ -177,16 +307,20 @@ class ContractTests(unittest.TestCase):
 
     def test_benchmark_uses_only_complete_pairs_for_wins(self):
         args = argparse.Namespace(
-            cards=HISTORICAL_CARDS, testing_pools=None, pairs=2, seed=20, left="heuristic", right="random",
+            cards=HISTORICAL_CARDS, testing_pools=None, pairs=3, seed=20, left="heuristic", right="random",
+            battle_only=False, preview_only=False, ace_trainer=None, pair_results=True,
         )
         with patch("pokemon_agent.__main__.Showdown"), patch(
-            "pokemon_agent.__main__.play_game", side_effect=["p1", "p1", "p1", ValueError("invalid choice")],
+            "pokemon_agent.__main__.play_game",
+            side_effect=["p1", "p1", "p1", ValueError("invalid choice"), "p2", "p2"],
         ), redirect_stdout(io.StringIO()) as output:
             self.assertEqual(_bench(args), 1)
         report = json.loads(output.getvalue())
-        self.assertEqual(report["completed_games"], 3)
-        self.assertEqual(report["completed_pairs"], 1)
+        self.assertEqual(report["completed_games"], 5)
+        self.assertEqual(report["completed_pairs"], 2)
         self.assertEqual([agent["win_rate"] for agent in report["agents"]], [0.5, 0.5])
+        self.assertEqual([agent["win_rate_ci95"] for agent in report["agents"]], [[0.5, 0.5]] * 2)
+        self.assertEqual(report["paired_scores"], {"20": [1, 0], "22": [0, 1]})
         self.assertEqual(report["errors"][0]["left_seat"], "p2")
 
 
