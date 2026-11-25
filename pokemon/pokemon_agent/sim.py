@@ -1,6 +1,8 @@
 """Seeded draft and doubles games over a local Showdown process."""
 
+from dataclasses import replace
 import json
+from hashlib import sha256
 from pathlib import Path
 import random
 import subprocess
@@ -8,17 +10,36 @@ from time import perf_counter
 
 from .game import BATTLE, BATTLE_BANK, DECISION_LIMIT, DRAFT, DRAFT_SIZE, PREVIEW, Decision, ident, make_decision
 from .pivot import PivotOpponent
+from .policy import heuristic
 
 SEATS = ("p1", "p2")
 FORMAT = "gen9vgc2025regi"
 FIRST_DRAFTER_PICKS = {0, 3, 4, 7, 8, 11}
 
 
+def fingerprint(value) -> str:
+    return sha256(json.dumps(value, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+
+
+def pool_fingerprint(cards, seed) -> str:
+    pool = random.Random(seed).sample(cards, DRAFT_SIZE)
+    return fingerprint(sorted(card["card_id"] for card in pool))
+
+
 class Showdown:
+    def __init__(self, *, audit_restoration: bool = False, public_search: bool = False):
+        self.audit_restoration = audit_restoration
+        self.public_search = public_search
+
     def __enter__(self):
         bridge = Path(__file__).with_name("showdown.cjs")
+        command = ["node", str(bridge)]
+        if self.audit_restoration:
+            command.append("--audit-restoration")
+        if self.public_search:
+            command.append("--public-search")
         self.process = subprocess.Popen(
-            ["node", str(bridge)], stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True
+            command, stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True
         )
         return self
 
@@ -86,13 +107,23 @@ def play_game(
     fixed_policies = fixed_policies or {}
 
     def choose(seat: str, decision: Decision, view: dict | None = None) -> dict:
+        if decision.phase == BATTLE:
+            bank = banks[seat]
+            decision = replace(decision, seconds_left=min(DECISION_LIMIT[BATTLE], bank), bank_seconds_left=bank)
+        elif decision.seconds_left is None:
+            decision = replace(decision, seconds_left=DECISION_LIMIT[decision.phase])
         started = perf_counter()
         configured = policies[seat]
         policy = fixed_policies.get(decision.phase, configured)
         if policy is not configured and decision.phase == PREVIEW:
             if observe := getattr(configured, "observe", None):
                 observe(decision)
-        action = policy.choose(decision, view) if isinstance(policy, PivotOpponent) else policy(decision)
+        if isinstance(policy, PivotOpponent):
+            action = policy.choose(decision, view) if decision.phase == BATTLE else heuristic(decision)
+        elif phase_search := getattr(policy, "choose_with_public_history", None):
+            action = phase_search(decision, seat, (view or {}).get("search"))
+        else:
+            action = policy(decision)
         elapsed = perf_counter() - started
         late = elapsed >= decision.seconds_left
         if decision.phase == BATTLE:
@@ -103,11 +134,25 @@ def play_game(
         elif late:
             event = "auto_action"
             action = rng.choice(decision.actions)
+        if event is None:
+            try:
+                action = decision.validate(action)
+            except ValueError:
+                samples[seat].append((decision.phase, elapsed * 1000, "illegal_action"))
+                raise
         samples[seat].append((decision.phase, elapsed * 1000, event))
-        return action if event else decision.validate(action)
+        return None if event == "forfeit" else action
 
     rosters = _draft(pool, first, choose)
+    return play_battle(engine, rosters, policies, seed, battle_seed, choose)
+
+
+def play_battle(engine, rosters, policies, seed, battle_seed, choose):
+    """Run from team preview over the same player-view decisions as a full game."""
     start = dict(format=FORMAT, seed=battle_seed, rosters=rosters)
+    search_seats = [seat for seat, policy in policies.items() if hasattr(policy, "choose_with_public_history")]
+    if search_seats:
+        start["search_seats"] = search_seats
     for seat, policy in policies.items():
         if isinstance(policy, PivotOpponent):
             policy.start(seed, seat, rosters)
@@ -122,11 +167,8 @@ def play_game(
         for view in views:
             seat = view["seat"]
             phase = view["phase"]
-            bank = banks[seat] if phase == BATTLE else None
-            seconds = min(DECISION_LIMIT[phase], bank) if bank is not None else DECISION_LIMIT[phase]
-            decision = make_decision(phase, view["raw"], view["templates"], seat, seconds, bank)
-            action = choose(seat, decision, view)
-            if banks[seat] <= 0:
+            action = choose(seat, make_decision(phase, view["raw"], view["templates"], seat), view)
+            if action is None:
                 return next(other for other in SEATS if other != seat)
             reply = engine.call("choose", seat=seat, action=action)
     if reply["ended"]:

@@ -1,0 +1,18 @@
+{
+  "v1": {
+    "correct": 376,
+    "recover": 71,
+    "spoil": 68,
+    "disagreement": 309,
+    "outside_shortlist": 0,
+    "decisions": 682
+  },
+  "v1-shortlist": {
+    "correct": 376,
+    "recover": 71,
+    "spoil": 68,
+    "disagreement": 309,
+    "outside_shortlist": 0,
+    "decisions": 682
+  }
+}

@@ -1,0 +1,367 @@
+HENGZHI HE
+HENGZHI HE
+Everyone, I think, test off, so let's get started. Yeah, so…
+In today's discussion, I will, mainly, talk about your final project, yeah.
+So, as, so as, Pro Beng, mentioned to you, in his, in his lecture, the, final project will be, related to the gas tournament.
+Yeah, so just wanted to double-check, if you have, Heard about this before?
+Okay, yeah.
+And the…
+So, we will, play, two games in the final project. So, one is the Pokemon, and another one is the World War, yeah. So, in today's discussion, I will introduce, the rules, and also, some high-level ideas about how to, create your, self-hosted agents, for this tournament.
+So, first, let me introduce the schedules for the Pokemon.
+So… in the, pomo, each pair of the equations?
+Or we'll compete in a turn-based battle.
+So, the procedure is as follows.
+So first, each of the agents will, strip the chin.
+So, so, each agent will choose, this, Pokemon from a shared pool before each battle.
+And then, in the battle, each agent will select 4 of your seeds at the start of the game.
+And, now, we first, have our team, and then we then select, four, programs among these disks.
+So, the next step is that
+We will select, two of the four.
+To, get started. Well, the other two will wait in reserve.
+So, each time.
+The agent will need to choose an action for each active Pokemon.
+And Bob… For this action, there are, two different types.
+So the first is move.
+They need to pick one of its four moves and choose a target.
+And also, alternatively, we can shoot this switch. Then we can, switch the…
+Pokemon with another Pokemon from your reserves.
+So, the goal of the battle is to eliminate awful THOMAS on the on the other hand.
+And also, we have, time constraint for each battle. So, each mesh, kind of describes
+Then the thing is, more total HP, will, be considered as, meetings again.
+So any questions for this part? Yeah, so this is just a high-level introduction, and we have some documents for the more detailed rules of this game.
+Okay, if no questions, then let us move to the next game.
+So, another thing is the werewolf.
+So, how many of you have, played the wolf before? Please raise your hands.
+Okay, yeah. So, it seems many of you have, played this game before, but, let me still introduce more details about the game rules.
+So… In this game, people will have, Different roles.
+So, in our tournament, we will have, 3 different roles in total. So the first is the host.
+And another is the CR. And the further is the villagers.
+So, in the tournament, each game will include, 7 agents in total.
+So we have, 7 players.
+And among these 7 players, 2 are the Wolves.
+And why is the sale?
+And, all the other players are the villagers.
+So, each row has, different targets in this deck.
+So, if you are a villager.
+Then your goal is to, try to find other wolves.
+And, the CR also has the same goal as the leaders.
+And if you are the,
+And if you are the… and if you are the… and if you are the wolf, then your goal is, try to survive, and, mislead the…
+Villager.
+So… Let me introduce, the procedure of the game.
+So, when playing this game, the players, well…
+Yeah, so, so, so each, so each game of the rules will, include, several days.
+So, in the first night.
+The following things will happen.
+So, though… Both will, meet with each other, so that they know, each other's roles.
+And, but here, we'll check,
+and the CR will check one player, to, learn, this player's role.
+And, for our, and for our tournament, the current rule is that
+We are, so, also, also, we added the conjunct to the…
+So we added the conjuncts to the walls, so that they cannot kill the villagers or the seer in the first night.
+But for the following night.
+So… Wolves can, choose, beacon.
+And then the theater.
+Can check one player.
+And, head on.
+The victim leaves, and everyone sees their role.
+And in the daytime, the leading players, will discuss, and the vote for our player.
+Or they… or they can choose,
+Or they can choose not to vote, for anyone.
+And, for the, player that, obtains the most votes.
+We are in limited, despair, and, reveal their role.
+And, if we have a tie, or, everyone choose, not to vote for a player.
+Then nobody will leave.
+And, different roles will have, the, different, winning goals, as I mentioned before.
+So, the privilege routine.
+That includes, both the villagers and also the seer.
+They will win, if, both worlds, have been eliminated.
+And, the woes will win.
+If, the living ropes equal or outnumber the remaining villager teams.
+For, 3 days in a row. Has no, both elimination.
+And we all have, the different scoring rules, for different roles.
+So, for the VG, This 13 weeks. Then they will get…
+One score. And if they lose, then they will get zero score.
+Father for the wolves!
+If the, team wins, then you will get, then they will get, two scores, and if they lose, then they will get the score of negative points.
+So, any questions about this?
+Yeah.
+Yeah, yeah.
+Yeah. So, like, each team, like, one agent, like, is at one character, and then, so the total, like, it's just one game, right? And different teams play just different roles? Yeah, yeah.
+Oh, maybe I can make this more clear.
+Yeah, so for example, I assume I have, Team 1, Team 2.
+Until, Team 7 to participate in this game. And then each team will,
+Have their own agent, right?
+And, each agent will have, their… each agent will have their own… each agent will have their own role, yeah.
+And then, they participated in this game, yeah.
+Yeah, does this answer your question? Thank you. Oh, yeah.
+So, any other questions for this part? Yeah.
+Yeah, yeah, so, you are required to design agents to play, both of the games. Yeah, but I think you can use different agents for different games.
+Yeah.
+Okay, so now let me introduce the tournament format for this course.
+So… For the… Pokemon.
+The tournament will be, as follows.
+So, first, we will have the,
+Yeah, yeah, yeah, so we all have, two different stages.
+So, in the first stage.
+Every, two different teams.
+Well, compete with each other.
+And after this stage, so,
+According to the performance, in the first stage, different teams will have different,
+Well, it has different scores, right?
+And, we choose… The, top 8 agents in the first stage.
+And then they will come, to the second stage.
+So, the second stage will be running, as follows. Let me write it in the white box.
+So, for example, we assume, in the first stage, we have
+The top 8 agents that will, go into the second stage.
+Then, we will first do this match.
+So… So, number one, we'll play with the… Number 8.
+Number 4 will play with the number 5. The number 3 will play with the number 6, and the number 2 will play with the number 7.
+So here… This number means the ranking of their performance in the first stage.
+So, now I use the AI to denote the…
+Winners of, each, game.
+And then this A1 will play with this A2, and this A3 will play with this A4.
+And then, they will, and then the two will play with, each other.
+Yeah.
+So this is, how we…
+Do the, tournament for the game.
+So, any questions for this part?
+Okay, if not, then, for the Wolf, so this,
+This can, well, include, 7, different agents.
+So, there's, yeah, so it is not necessary, to do, to, play the tournament this far.
+So, for the roof, we just let same agent, agents pay together, and the rules are random, each game.
+And, these runs will continue until the time, expressed.
+And the, the goal of the agent is to attend, as many as,
+As many of the points as possible.
+Yeah.
+So, any questions for this part?
+Well, if not, let me, introduce, the idea of the idea of…
+Setting your, own agents, to play in this platform.
+So… The idea is that we will have a centralized platform call it, Ultra Agent.
+And the games, will be, played in this platform.
+However, you need to, create the agent.
+And, set up it in your own computer.
+So now, both your computer and also the Azure agent,
+suburbs will be important for the, guests. And they have, different roles.
+So, in your own computer, you'll need to run your own agent code, and also manage the memory of the agents.
+And, you will need to create a budget entity model to help make decisions.
+And you can, send actions and in-game messages, and also receive the messages.
+From the summers.
+So, in the servers.
+So, Mitch, we'll be all fine.
+And also the, the server valve, manages the different rounds of the gas.
+And, the gates will be run in the… in the… and the gates will be run in the centralized…
+Summer.
+And it can return the observations, and also the recorded results.
+To the agents in your local computer.
+Yeah, so this is the high-level idea of the roles of your own computer and the servers.
+In the game.
+So, in short, the agent in your own computer will be responsible for Managing the memory.
+And also, receiving the information.
+Of the guests for the server, and then also making the decisions.
+And the gains will be honored in the centralized server.
+These are some key steps.
+Of, how your agents,
+Talk to each, talk to the server.
+So, when you, so when you register, in the platform.
+you will get an official agent key.
+And, you've seen, this official Agent P.
+You can connect your agent to the platform.
+To help the agents to find and connect to the assigned games.
+And, when playing the games.
+The platform will, send the observation of the YANG states, and also some messages.
+To the, to your own agents.
+And also, the baseline will tell your agent the available actions.
+Then, your agent, after receiving this information.
+Well, you need to give the credit context to your LRM and, choose an action.
+And then, you can, send a structured action.
+Oh, I want the message?
+To the server.
+And the server will apply the action, and wait for the next step or result.
+Yeah, so this is, how your agents talk to the servers.
+So, any questions about these key steps?
+Okay, if not, let us, continue.
+Okay, so, these are some, steps about how to, do the registration.
+So, further, this is the link of, the platform.
+So, you will first need to, use the,
+Use the Google account to sign it.
+And also, I'll complete the recertification form.
+And then, you can, create your, self-hosted agent.
+In this, platform.
+So, in fact, the main goal of this step is to get…
+an official API key from the platform, so that the agent in your own computer will be able to connect it to the platform. Yeah, so the main goal of this step is to get an official API key.
+And also, we require you, to share the GitHub repository, for your code.
+As part of, this final project.
+Oh yeah, so, the, first step is, closely connected to the second step.
+So… After you obtain your agent key.
+You, should, you should, you should, cop, you should, copy it, and, save it in your.
+Local environment of the agents.
+Okay, so, these are some,
+So, so, so these are the key steps about the, about the local setup and the usage of the LM.
+Yep.
+Yeah, but I… yeah, but I think I can…
+Yeah, but I think I can skip, I can skip it for now, because, we have a very detailed, document for this.
+And also, the platform allows you to do the testing.
+So… In the, platform, you can, open the testing on the dashboard.
+And, truth again.
+And, and then, and then in, and a day, and then in your scam.
+You can, put your agent in the waiting… in the, in the waiting room.
+So that there might be another agent to, do the condition with you.
+And, when, testing, the game, you can run your agent, and,
+watch the, recording of, How It Plates?
+So, in the tournament, I think.
+You need to, register for each game.
+and Keep one instance of your agent's running, during the tournament.
+And in the tournament day, the assigned games will be connected automatically.
+And if the program stops, you need to restart the same command.
+And also, this is a special requirement, for, this course.
+So, we know that, sometimes, the deterministic policy might have, good performance in the game.
+But, for this, project, yeah, since, part of, the cost is closely related to the agents.
+So we require you, to, use the LM to make decisions during the gameplay, instead of using a domestic policy.
+Okay, and also, I have attached, some useful links.
+To help you better, understand how this type of works, yeah.
+And, and
+And, one easy way, to better understand this is, that you can feed all the links.
+to ChatGPT o'clock.
+and the tragedy and the cloud, based on my experiments, they can understand this very well, yeah.
+Yeah, so, you can ask, for their help, to create the agency.
+And I will upload the, the slides, to the Cross website after, today's discussion, yes.
+Alright, so I think, that's all for the introduction, yeah.
+And, there are some, technical, details, that you might need to, spend some time to figure that out, yeah. But based on my experiments, the GPT and the cloud can understand this very well.
+Yeah, so, in fact, I, I have, participated in the first, YANG tournament.
+Several weeks ago.
+So I just, ask the chat GPT,
+To understand this, and to, create… Both for me.
+And surprisingly, they're both created by the ChatGPT,
+Winted the first prize in one of the games, yeah.
+Okay, so I think, that's all for, today's discussion. Any questions?
+Yeah.
+Also, can I ask your question, okay.
+Sorry to speak a little bit silly.
+Not yet.
+What do you think was about your agent that made it better? Oh, I see it, yeah, so…
+This is a very good question, yeah. So, in fact, I think, we do not have a definitive answer about this. Yeah, because sometimes.
+The performance of your own HR really depends on The ideas of others, right?
+Yes, yeah, so sometimes it is… It is possible that
+Yeah, so sometimes it's possible data for a given game, and if you have free, Vietnamese policy.
+then, A might be the B. B might be the C, and the C might be the A, right?
+Yeah, so my suggestion, for creating an agent that can win as many, other agents as possible is that I think, you need to
+Ask your agent to quickly learn about the idea of their computers.
+And, to address the, their actions according to
+There are estimations of what other agents think.
+Yes, Odas, it's Andrew.
+Okay, yeah.
+Which games did you owe me?
+The red alert, which is not included in this final project.
+also so well, just using two numbers. Yeah, yeah, yeah.
+Should we do both of them, or… Yeah, so, you are expected to do both of them, but you can use different address for different guests.
+How many? Okay. How many, like… - we've had 10.
+Random.
+like, less, 30, different teams here.
+B.
+Oh, so, the long termance will, depend on the task.
+Yeah, so… So let's… so let me go to the previous, slides.
+Yeah, so your question is about the… whoa, whoa, whoa, right?
+Yeah, so the rounds will continue until the time expires, yeah.
+Oh, so here, I think, we will just, play the one… Round by round, yeah.
+So… Yes.
+Yeah, so, yeah, so, yes, yes, yes, so, so, let me take an example.
+So, assume, the time assigned to the wolf is, an hour.
+And then if the first round only, only spends, like, 3, minutes to… to finish it.
+And then we will go to the…
+And then we'll go to the second round.
+Yeah, so…
+If you can,
+So, if each guy finishes in a very… in a very short time, then we will play a lot of rounds.
+By the, if each can,
+spends too much time, then the number of rounds will be, smaller, yeah.
+Yeah.
+Oh, so for this, I will, double-check with the professor.
+Yeah And can you, send me an email to remind me about this question?
+Yeah.
+For the werewolf game, if you are a, villager, and you were eliminated?
+Is that kind of a loss, even though maybe, like, your ability to win at the end? Oh, no. So, this is a good question, yeah.
+So, if you are an illiter, and you are eliminated in the beginning.
+But the other villagers win, then you are still considered a screen.
+Yeah, yeah. Does this make sense, too? Yes. Yeah.
+Then how do we decide the ranking?
+the miniatures.
+Oh, so, we have…
+Oh, let me go to… Yeah, so we have, this, going Ruth.
+For the villagers, and also the werewolves.
+Yeah, so, if you are… And miniature.
+And, the…
+Villagers turn out to win in this game. Then all the villagers and also the seals will get one plus in this plan.
+And if they lose, then they are getting their ones.
+And if you are the woke, and the…
+And the… whoa, we did it again.
+Then all the groups will, open two points.
+Otherwise, they will lose a negative one.
+Oh, I don't think I'll lose one, but yeah. And then, like, they will continue until, like, they generate, like, different break-ins for you. Yeah, yeah, yeah, yeah.
+Are we guaranteed that we'll play as a werewolf?
+Oh, so, this is not guaranteed, because the rows are assigned randomly. But if you have enough rounds, then with high probability you will have the chance to play at the…
+What was right?
+Nice. Yeah.
+Oh, I think the… I was gonna say it again?
+Yeah, yeah, yeah, so, I will communicate with profession so that we can make sure to place enough rounds.
+Any other questions?
+Yeah.
+Oh, yeah, so, this is a very good question, yeah, so, the…
+Scores of the final project you, obtained will be closely related to the Ranking of your performance.
+But, no need to worry a lot about this.
+Because, that we will give a very nice baseline score.
+For, all the agents that participate in this project.
+Yeah.
+Yep.
+Oh, yeah, so for this, we are still,
+Finalizing the… yeah, so we are still finalizing the details, yeah.
+Also, I will, talk with Professor Chong, during my meeting with him tomorrow, and get with you soon.
+Yeah.
+For, sorry, I'm late.
+Oh, if everyone in the class is using some sort of AI bot to create their agents, how can we expect them to yield, like, different results? Like, we'll just have them all the same? Oh, yeah, because,
+Even if, different students use the same,
+AI, like the HENG, to create the agents.
+But the insurance, is that the performance, really, depends on the prompts.
+Yeah, and the prompts, well, yeah, so, if you have a very good idea and write it in a prompt, then the model can help you to create a very powerful idea.
+Yes, that's what I can do.
+Sure. Yeah, yeah.
+Yeah.
+Bosley.
+Probably minor food.
+Yeah, I can install it.
+And we have to give you the prompt that we give, that we… give, like, our AI tool.
+Do we include the prompt that we use in our submission? Because I think it's just… Oh, yeah, yeah, yeah, so, in your, final, final, in your final report, you are, encouraged to include, include your, include your prompts. Okay, I see that. Yeah.
+Yes.
+Sure.
+have other reasons.
+Oh, so, when you are testing the agents, I think the platform will, so, will support your agent to play with itself. Yeah, so is this correct?
+Okay, yeah, yeah, yeah. So you can either, play with, your own agent.
+And also, played with, the agents, from other kids.
+Okay, let me check, if I still have, some… notices.
+Debb need to mention.
+Oh, yeah, so, I have, some, other, details about this project, yeah.
+So the first is that, different from the first tournament.
+And you say, okay, so in this final project, you are allowed to do the revision to your agents.
+Even when the tournament, has, has, has started yet.
+So, for example, if you find that, in, one, competition with another agent, there are, some things that you want to improve, then you are still allowed to do the revision to each.
+And another is that… For this course, we'll have another bonus project.
+Yeah, that is, different from the final project. Yeah, so the bonus project.
+It's about, how to, use this platform to do the evaluation for, different large energy models.
+And I am still, finalizing the details with Profession, yeah.
+So, this project will be counted as, Bonos, yeah.
+And also, yeah.
+Oh, so for the bonus projects, it will be, done individually.
+Yeah.
+And also, after the,
+project about, the game tournaments. We will, create some,
+survey, yeah, to help us learn more about your,
+experience in participating in this game, yeah.
+If we can change our… Bottle, or, like, in our agent.
+after the first, like, round of the tournament. Yeah, yeah. So when's the… when's our final agent due? Like, when's this due? Oh, so, yeah, yeah, so, to clarify this, you are allowed to change, the agents anytime during the tournament.
+So, you're… Meeting class.
+Yeah, so I think he will be in class.
+Yeah, but I will need to, double-check with the profession, yeah.
+Yeah. So,
+So when you submit the final report, you just need to mention, how you changed the agents during this process.
+Yeah.
+Okay, any other questions?

@@ -1,0 +1,212 @@
+{
+  "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+  "testing_pools": 0,
+  "first_seed": 150001,
+  "pairs": 24,
+  "frozen_suite": null,
+  "battle_only": true,
+  "preview_only": false,
+  "completed_games": 48,
+  "completed_pairs": 24,
+  "draws": 0,
+  "games_per_second": 26.16,
+  "agents": [
+    {
+      "wins": 19,
+      "fallbacks": 0,
+      "model_choices": 0,
+      "different_choices": 0,
+      "policy": "ppo",
+      "win_rate": 0.3958333333333333,
+      "win_rate_ci95": [
+        0.3125,
+        0.4791666666666667
+      ],
+      "score_rate": 0.3958333333333333,
+      "decision_p95_ms": 0.87,
+      "battle_time_p95_seconds": 0.01,
+      "forfeits": 0,
+      "value_audit": {
+        "games": 48,
+        "mean_value": -0.1515258587896824,
+        "mean_return": -0.20833333333333334,
+        "mse": 0.9306167260109643,
+        "constant_mean_mse": 0.9565972222222221,
+        "pearson_r": 0.32677150165481883
+      },
+      "by_phase": {
+        "draft": {
+          "decisions": 288,
+          "p95_ms": 0.06,
+          "p99_ms": 0.07,
+          "auto_actions": 0,
+          "timeout_rate": 0.0,
+          "illegal_actions": 0,
+          "illegal_action_rate": 0.0
+        },
+        "team_preview": {
+          "decisions": 48,
+          "p95_ms": 0.97,
+          "p99_ms": 1.03,
+          "auto_actions": 0,
+          "timeout_rate": 0.0,
+          "illegal_actions": 0,
+          "illegal_action_rate": 0.0
+        },
+        "moving": {
+          "decisions": 439,
+          "p95_ms": 0.75,
+          "p99_ms": 0.96,
+          "auto_actions": 0,
+          "timeout_rate": 0.0,
+          "illegal_actions": 0,
+          "illegal_action_rate": 0.0
+        }
+      }
+    },
+    {
+      "wins": 29,
+      "fallbacks": 0,
+      "model_choices": 0,
+      "different_choices": 0,
+      "policy": "joint",
+      "win_rate": 0.6041666666666666,
+      "win_rate_ci95": [
+        0.5208333333333334,
+        0.6875
+      ],
+      "score_rate": 0.6041666666666666,
+      "decision_p95_ms": 0.89,
+      "battle_time_p95_seconds": 0.01,
+      "forfeits": 0,
+      "by_phase": {
+        "draft": {
+          "decisions": 288,
+          "p95_ms": 0.06,
+          "p99_ms": 0.08,
+          "auto_actions": 0,
+          "timeout_rate": 0.0,
+          "illegal_actions": 0,
+          "illegal_action_rate": 0.0
+        },
+        "team_preview": {
+          "decisions": 48,
+          "p95_ms": 0.91,
+          "p99_ms": 0.98,
+          "auto_actions": 0,
+          "timeout_rate": 0.0,
+          "illegal_actions": 0,
+          "illegal_action_rate": 0.0
+        },
+        "moving": {
+          "decisions": 437,
+          "p95_ms": 0.89,
+          "p99_ms": 1.09,
+          "auto_actions": 0,
+          "timeout_rate": 0.0,
+          "illegal_actions": 0,
+          "illegal_action_rate": 0.0
+        }
+      }
+    }
+  ],
+  "errors": [],
+  "paired_scores": {
+    "150001": [
+      0,
+      1
+    ],
+    "150002": [
+      0,
+      1
+    ],
+    "150003": [
+      1,
+      0
+    ],
+    "150004": [
+      0,
+      1
+    ],
+    "150005": [
+      0,
+      0
+    ],
+    "150006": [
+      0,
+      1
+    ],
+    "150007": [
+      0,
+      1
+    ],
+    "150008": [
+      0,
+      1
+    ],
+    "150009": [
+      1,
+      0
+    ],
+    "150010": [
+      0,
+      1
+    ],
+    "150011": [
+      0,
+      0
+    ],
+    "150012": [
+      0,
+      1
+    ],
+    "150013": [
+      0,
+      0
+    ],
+    "150014": [
+      0,
+      1
+    ],
+    "150015": [
+      0,
+      0
+    ],
+    "150016": [
+      0,
+      1
+    ],
+    "150017": [
+      1,
+      0
+    ],
+    "150018": [
+      0,
+      1
+    ],
+    "150019": [
+      1,
+      0
+    ],
+    "150020": [
+      1,
+      0
+    ],
+    "150021": [
+      0,
+      1
+    ],
+    "150022": [
+      0,
+      1
+    ],
+    "150023": [
+      1,
+      0
+    ],
+    "150024": [
+      0,
+      0
+    ]
+  }
+}

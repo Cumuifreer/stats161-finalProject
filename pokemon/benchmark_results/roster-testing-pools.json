@@ -1,0 +1,724 @@
+{
+  "summary": {
+    "pools": 52,
+    "wins": 84,
+    "score_rate": 0.8076923076923077,
+    "paired_ci95": [
+      0.7019230769230769,
+      0.9038461538461539
+    ],
+    "seconds": 35.85408409964293
+  },
+  "results": [
+    {
+      "catalog": null,
+      "testing_pools": 13,
+      "first_seed": 341001,
+      "pairs": 13,
+      "frozen_suite": null,
+      "battle_only": false,
+      "preview_only": false,
+      "pipeline": true,
+      "completed_games": 26,
+      "completed_pairs": 13,
+      "draws": 0,
+      "games_per_second": 0.74,
+      "agents": [
+        {
+          "wins": 24,
+          "fallbacks": 0,
+          "model_choices": 0,
+          "different_choices": 142,
+          "policy": "roster-net",
+          "win_rate": 0.9230769230769231,
+          "win_rate_ci95": [
+            0.7692307692307693,
+            1.0
+          ],
+          "score_rate": 0.9230769230769231,
+          "decision_p95_ms": 452.32,
+          "battle_time_p95_seconds": 0.01,
+          "forfeits": 0,
+          "roster_activity": {
+            "draft_changed": 139
+          },
+          "by_phase": {
+            "draft": {
+              "decisions": 156,
+              "p95_ms": 0.12,
+              "p99_ms": 0.19,
+              "auto_actions": 0,
+              "timeout_rate": 0.0,
+              "illegal_actions": 0,
+              "illegal_action_rate": 0.0
+            },
+            "team_preview": {
+              "decisions": 26,
+              "p95_ms": 775.1,
+              "p99_ms": 1131.59,
+              "auto_actions": 0,
+              "timeout_rate": 0.0,
+              "illegal_actions": 0,
+              "illegal_action_rate": 0.0
+            },
+            "moving": {
+              "decisions": 255,
+              "p95_ms": 1.01,
+              "p99_ms": 1.14,
+              "auto_actions": 0,
+              "timeout_rate": 0.0,
+              "illegal_actions": 0,
+              "illegal_action_rate": 0.0
+            }
+          }
+        },
+        {
+          "wins": 2,
+          "fallbacks": 2,
+          "model_choices": 0,
+          "different_choices": 4,
+          "policy": "lineup-rollout",
+          "win_rate": 0.07692307692307693,
+          "win_rate_ci95": [
+            0.0,
+            0.23076923076923078
+          ],
+          "score_rate": 0.07692307692307693,
+          "decision_p95_ms": 549.05,
+          "battle_time_p95_seconds": 0.01,
+          "forfeits": 0,
+          "by_phase": {
+            "draft": {
+              "decisions": 156,
+              "p95_ms": 0.07,
+              "p99_ms": 0.08,
+              "auto_actions": 0,
+              "timeout_rate": 0.0,
+              "illegal_actions": 0,
+              "illegal_action_rate": 0.0
+            },
+            "team_preview": {
+              "decisions": 26,
+              "p95_ms": 896.31,
+              "p99_ms": 912.12,
+              "auto_actions": 0,
+              "timeout_rate": 0.0,
+              "illegal_actions": 0,
+              "illegal_action_rate": 0.0
+            },
+            "moving": {
+              "decisions": 265,
+              "p95_ms": 0.89,
+              "p99_ms": 0.97,
+              "auto_actions": 0,
+              "timeout_rate": 0.0,
+              "illegal_actions": 0,
+              "illegal_action_rate": 0.0
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "paired_scores": {
+        "341001": [
+          1,
+          1
+        ],
+        "341002": [
+          1,
+          1
+        ],
+        "341003": [
+          1,
+          1
+        ],
+        "341004": [
+          1,
+          1
+        ],
+        "341005": [
+          1,
+          1
+        ],
+        "341006": [
+          1,
+          1
+        ],
+        "341007": [
+          1,
+          1
+        ],
+        "341008": [
+          1,
+          1
+        ],
+        "341009": [
+          0,
+          0
+        ],
+        "341010": [
+          1,
+          1
+        ],
+        "341011": [
+          1,
+          1
+        ],
+        "341012": [
+          1,
+          1
+        ],
+        "341013": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "catalog": null,
+      "testing_pools": 13,
+      "first_seed": 341101,
+      "pairs": 13,
+      "frozen_suite": null,
+      "battle_only": false,
+      "preview_only": false,
+      "pipeline": true,
+      "completed_games": 26,
+      "completed_pairs": 13,
+      "draws": 0,
+      "games_per_second": 0.79,
+      "agents": [
+        {
+          "wins": 19,
+          "fallbacks": 0,
+          "model_choices": 0,
+          "different_choices": 142,
+          "policy": "roster-net",
+          "win_rate": 0.7307692307692307,
+          "win_rate_ci95": [
+            0.5,
+            0.9230769230769231
+          ],
+          "score_rate": 0.7307692307692307,
+          "decision_p95_ms": 524.28,
+          "battle_time_p95_seconds": 0.01,
+          "forfeits": 0,
+          "roster_activity": {
+            "draft_changed": 139
+          },
+          "by_phase": {
+            "draft": {
+              "decisions": 156,
+              "p95_ms": 0.11,
+              "p99_ms": 0.12,
+              "auto_actions": 0,
+              "timeout_rate": 0.0,
+              "illegal_actions": 0,
+              "illegal_action_rate": 0.0
+            },
+            "team_preview": {
+              "decisions": 26,
+              "p95_ms": 739.29,
+              "p99_ms": 1316.72,
+              "auto_actions": 0,
+              "timeout_rate": 0.0,
+              "illegal_actions": 0,
+              "illegal_action_rate": 0.0
+            },
+            "moving": {
+              "decisions": 259,
+              "p95_ms": 1.0,
+              "p99_ms": 1.16,
+              "auto_actions": 0,
+              "timeout_rate": 0.0,
+              "illegal_actions": 0,
+              "illegal_action_rate": 0.0
+            }
+          }
+        },
+        {
+          "wins": 7,
+          "fallbacks": 4,
+          "model_choices": 0,
+          "different_choices": 3,
+          "policy": "lineup-rollout",
+          "win_rate": 0.2692307692307692,
+          "win_rate_ci95": [
+            0.07692307692307693,
+            0.5
+          ],
+          "score_rate": 0.2692307692307692,
+          "decision_p95_ms": 505.3,
+          "battle_time_p95_seconds": 0.01,
+          "forfeits": 0,
+          "by_phase": {
+            "draft": {
+              "decisions": 156,
+              "p95_ms": 0.06,
+              "p99_ms": 0.07,
+              "auto_actions": 0,
+              "timeout_rate": 0.0,
+              "illegal_actions": 0,
+              "illegal_action_rate": 0.0
+            },
+            "team_preview": {
+              "decisions": 26,
+              "p95_ms": 789.36,
+              "p99_ms": 799.13,
+              "auto_actions": 0,
+              "timeout_rate": 0.0,
+              "illegal_actions": 0,
+              "illegal_action_rate": 0.0
+            },
+            "moving": {
+              "decisions": 253,
+              "p95_ms": 0.94,
+              "p99_ms": 1.07,
+              "auto_actions": 0,
+              "timeout_rate": 0.0,
+              "illegal_actions": 0,
+              "illegal_action_rate": 0.0
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "paired_scores": {
+        "341101": [
+          1,
+          0
+        ],
+        "341102": [
+          1,
+          1
+        ],
+        "341103": [
+          1,
+          1
+        ],
+        "341104": [
+          1,
+          1
+        ],
+        "341105": [
+          1,
+          1
+        ],
+        "341106": [
+          1,
+          1
+        ],
+        "341107": [
+          0,
+          0
+        ],
+        "341108": [
+          0,
+          0
+        ],
+        "341109": [
+          1,
+          1
+        ],
+        "341110": [
+          1,
+          1
+        ],
+        "341111": [
+          1,
+          1
+        ],
+        "341112": [
+          0,
+          0
+        ],
+        "341113": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "catalog": null,
+      "testing_pools": 13,
+      "first_seed": 341201,
+      "pairs": 13,
+      "frozen_suite": null,
+      "battle_only": false,
+      "preview_only": false,
+      "pipeline": true,
+      "completed_games": 26,
+      "completed_pairs": 13,
+      "draws": 0,
+      "games_per_second": 0.81,
+      "agents": [
+        {
+          "wins": 20,
+          "fallbacks": 0,
+          "model_choices": 0,
+          "different_choices": 141,
+          "policy": "roster-net",
+          "win_rate": 0.7692307692307693,
+          "win_rate_ci95": [
+            0.5384615384615384,
+            0.9615384615384616
+          ],
+          "score_rate": 0.7692307692307693,
+          "decision_p95_ms": 532.36,
+          "battle_time_p95_seconds": 0.01,
+          "forfeits": 0,
+          "roster_activity": {
+            "draft_changed": 138
+          },
+          "by_phase": {
+            "draft": {
+              "decisions": 156,
+              "p95_ms": 0.12,
+              "p99_ms": 0.16,
+              "auto_actions": 0,
+              "timeout_rate": 0.0,
+              "illegal_actions": 0,
+              "illegal_action_rate": 0.0
+            },
+            "team_preview": {
+              "decisions": 26,
+              "p95_ms": 743.45,
+              "p99_ms": 1504.93,
+              "auto_actions": 0,
+              "timeout_rate": 0.0,
+              "illegal_actions": 0,
+              "illegal_action_rate": 0.0
+            },
+            "moving": {
+              "decisions": 244,
+              "p95_ms": 0.99,
+              "p99_ms": 1.15,
+              "auto_actions": 0,
+              "timeout_rate": 0.0,
+              "illegal_actions": 0,
+              "illegal_action_rate": 0.0
+            }
+          }
+        },
+        {
+          "wins": 6,
+          "fallbacks": 6,
+          "model_choices": 0,
+          "different_choices": 8,
+          "policy": "lineup-rollout",
+          "win_rate": 0.23076923076923078,
+          "win_rate_ci95": [
+            0.038461538461538464,
+            0.46153846153846156
+          ],
+          "score_rate": 0.23076923076923078,
+          "decision_p95_ms": 2.15,
+          "battle_time_p95_seconds": 0.01,
+          "forfeits": 0,
+          "by_phase": {
+            "draft": {
+              "decisions": 156,
+              "p95_ms": 0.07,
+              "p99_ms": 0.07,
+              "auto_actions": 0,
+              "timeout_rate": 0.0,
+              "illegal_actions": 0,
+              "illegal_action_rate": 0.0
+            },
+            "team_preview": {
+              "decisions": 26,
+              "p95_ms": 772.59,
+              "p99_ms": 778.22,
+              "auto_actions": 0,
+              "timeout_rate": 0.0,
+              "illegal_actions": 0,
+              "illegal_action_rate": 0.0
+            },
+            "moving": {
+              "decisions": 249,
+              "p95_ms": 0.94,
+              "p99_ms": 1.01,
+              "auto_actions": 0,
+              "timeout_rate": 0.0,
+              "illegal_actions": 0,
+              "illegal_action_rate": 0.0
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "paired_scores": {
+        "341201": [
+          1,
+          1
+        ],
+        "341202": [
+          1,
+          1
+        ],
+        "341203": [
+          1,
+          0
+        ],
+        "341204": [
+          1,
+          1
+        ],
+        "341205": [
+          1,
+          1
+        ],
+        "341206": [
+          0,
+          0
+        ],
+        "341207": [
+          0,
+          0
+        ],
+        "341208": [
+          1,
+          0
+        ],
+        "341209": [
+          1,
+          1
+        ],
+        "341210": [
+          1,
+          1
+        ],
+        "341211": [
+          1,
+          1
+        ],
+        "341212": [
+          1,
+          1
+        ],
+        "341213": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "catalog": null,
+      "testing_pools": 13,
+      "first_seed": 341301,
+      "pairs": 13,
+      "frozen_suite": null,
+      "battle_only": false,
+      "preview_only": false,
+      "pipeline": true,
+      "completed_games": 26,
+      "completed_pairs": 13,
+      "draws": 0,
+      "games_per_second": 0.77,
+      "agents": [
+        {
+          "wins": 21,
+          "fallbacks": 0,
+          "model_choices": 0,
+          "different_choices": 151,
+          "policy": "roster-net",
+          "win_rate": 0.8076923076923077,
+          "win_rate_ci95": [
+            0.5769230769230769,
+            1.0
+          ],
+          "score_rate": 0.8076923076923077,
+          "decision_p95_ms": 539.43,
+          "battle_time_p95_seconds": 0.01,
+          "forfeits": 0,
+          "roster_activity": {
+            "draft_changed": 148
+          },
+          "by_phase": {
+            "draft": {
+              "decisions": 156,
+              "p95_ms": 0.12,
+              "p99_ms": 0.13,
+              "auto_actions": 0,
+              "timeout_rate": 0.0,
+              "illegal_actions": 0,
+              "illegal_action_rate": 0.0
+            },
+            "team_preview": {
+              "decisions": 26,
+              "p95_ms": 738.24,
+              "p99_ms": 1466.23,
+              "auto_actions": 0,
+              "timeout_rate": 0.0,
+              "illegal_actions": 0,
+              "illegal_action_rate": 0.0
+            },
+            "moving": {
+              "decisions": 204,
+              "p95_ms": 1.07,
+              "p99_ms": 1.23,
+              "auto_actions": 0,
+              "timeout_rate": 0.0,
+              "illegal_actions": 0,
+              "illegal_action_rate": 0.0
+            }
+          }
+        },
+        {
+          "wins": 5,
+          "fallbacks": 2,
+          "model_choices": 0,
+          "different_choices": 3,
+          "policy": "lineup-rollout",
+          "win_rate": 0.19230769230769232,
+          "win_rate_ci95": [
+            0.0,
+            0.4230769230769231
+          ],
+          "score_rate": 0.19230769230769232,
+          "decision_p95_ms": 571.41,
+          "battle_time_p95_seconds": 0.01,
+          "forfeits": 0,
+          "by_phase": {
+            "draft": {
+              "decisions": 156,
+              "p95_ms": 0.07,
+              "p99_ms": 0.07,
+              "auto_actions": 0,
+              "timeout_rate": 0.0,
+              "illegal_actions": 0,
+              "illegal_action_rate": 0.0
+            },
+            "team_preview": {
+              "decisions": 26,
+              "p95_ms": 756.92,
+              "p99_ms": 779.01,
+              "auto_actions": 0,
+              "timeout_rate": 0.0,
+              "illegal_actions": 0,
+              "illegal_action_rate": 0.0
+            },
+            "moving": {
+              "decisions": 215,
+              "p95_ms": 1.0,
+              "p99_ms": 1.24,
+              "auto_actions": 0,
+              "timeout_rate": 0.0,
+              "illegal_actions": 0,
+              "illegal_action_rate": 0.0
+            }
+          }
+        }
+      ],
+      "errors": [],
+      "paired_scores": {
+        "341301": [
+          1,
+          1
+        ],
+        "341302": [
+          1,
+          0
+        ],
+        "341303": [
+          1,
+          1
+        ],
+        "341304": [
+          1,
+          1
+        ],
+        "341305": [
+          1,
+          1
+        ],
+        "341306": [
+          0,
+          0
+        ],
+        "341307": [
+          0,
+          0
+        ],
+        "341308": [
+          1,
+          1
+        ],
+        "341309": [
+          1,
+          1
+        ],
+        "341310": [
+          1,
+          1
+        ],
+        "341311": [
+          1,
+          1
+        ],
+        "341312": [
+          1,
+          1
+        ],
+        "341313": [
+          1,
+          1
+        ]
+      }
+    }
+  ],
+  "pool_sha256": [
+    "4c2f548f0b029fdb09876dc35d201a462527d83f91f975845e3d5aa5c3736bcf",
+    "396e039d167995650faacd15a57aaf9b5aa6601a5e346737f63ee07fb3b535ee",
+    "501723e73e2210100bfbc35e1939f9ab3f15f44b4106d951c3cfe4491c83ff05",
+    "08939548bce3b20c6f2509850d05639765eaeeda57265709f54e51766ce37ed4",
+    "a836382eeca2f1630aeba6d4a4142f6892e30d7e74c5e598bb131293ae1c6d35",
+    "0d850c735ec99b60392061eb057c01faf0375faeaea3e22129c9148a21bc408a",
+    "7aa60eb6a7c8e10e9f48ac7c9a7db0eecefc63c2860a1b05c5cf276b879611b8",
+    "d0e6bf59f50cd62cdc74d909df5796bab4dfc8e99503c7846f5eb9010ef97da8",
+    "7685623fe1a3cd000ae4afea60b6f06b74b4731cf58be47092c838fef068db01",
+    "b7acc0fde25f11d5194e5ec0eeeadb6fed2a7a2c0d06cebe56ebbe863d60ab10",
+    "671488844a8882d21092e7eda9493a4b987ba0b7707fa03a9cc37c1de66a7505",
+    "021c4ed7648e942a7b536d14c25f59196d8a186b12b5638638f3c6cccfc1ed9c",
+    "f0f9c69a172b653baa3d0fcb84ccfc32aa917d9c2ddcd610ca825c18eba326cc",
+    "662e2c48b9d37eb3956bed38007f845b766a947535993861469a12d6e8331291",
+    "051cebeabcdda66ec9e453073c542d0b6e09e0f3389f294206d647089d5d3cb2",
+    "3ce80fe8c1a5ba5c28f5cd565e16ca9e2126996cc2b79beea0f4f09695c99bd7",
+    "b25848c8e3eab826766a47e44f173b413218ed93d39fb8f30a1c4ab249c184f4",
+    "a6e497828d5e301fa2c97743a83f74d96819d9665096c12a32f90cdeb5c7ad2c",
+    "0205c163f93f166b95a22fbbcd119666d42c9c884ec45f2beea2779d9cec73af",
+    "71e3017a3f8a102f9aab4b78b222733a30827e74b3664c6701effda694c914cd",
+    "4f880719a64f0201183a02e850cd61c1596cd6de4469166a2c081b6c4e9c0256",
+    "e75a4a5320d8ccba0dc17209483593c2a3f1383901b1eed8be74ab42beac69d0",
+    "0e0703a267321493394b9826595b5afc0132c285d3693baf52eccd39276390a1",
+    "ec2f7495c1a2d05f33d6a21340db29e57cc7ee08d07de7f9e003afa678797db5",
+    "7d1d81405a76cbdea384fa647f9c8cddd75d5b0df3cc3acf8b3c41525b7b65c7",
+    "31f2377cf87430fc91eeb2f4eeb1356a9a582dc26a908dd9004fa8586000912a",
+    "e5cfd48dedd48f4eb1306dae525ebebdb9bd1572f30705c4c207f88851ec3bab",
+    "7022405f988979188b322b06270cdb73d9d9cefc87ab0c5ea34ef76277c34cfa",
+    "6d24bf51964bb05fe56a436252ae9a59147ab95d83c9643f8864476f9accbd69",
+    "9033f7f1f1d99bbcb136191f4ead7cd19553848cd37cc1ec5f1ab986084f1c8f",
+    "c9742623faab459115ee8e998e33df935b0e04beeb9ea4eafc37f45cbcede0ca",
+    "0db67b024354457bc354d047b4c4b48b919f61e58ed677d9151041cfa89f83bb",
+    "f8009c1c34a9383a70c2b9639f91b5ae040df64b65e22e537f5902fc2a6ed2ed",
+    "46cd8842b77b967c0ac91e3191335ab9a32d4502ec66fef73e13773622e10186",
+    "e80c05e068d622836636a10f6333e06d8e7ba70d7b36511e634e2223e1f7e333",
+    "e4017fb281ff0e21434c09aa6946dff2ef6d57fc6e28cf8783cb7c64cba54ce8",
+    "0b21eab09c6120a8c01fc0bfad366f48e98439f63edebacfe097a4089e5179da",
+    "79c295b2d57b212112c51d9c83ae0cad42319c97ed1d9224d12924b7976611bd",
+    "09c00e5c168ba348958f67d6ad401232868715defd9c0dddd5a3d24c525ff4c1",
+    "432e73acbef790a753faa0de961994bc9152098adc158b71e3950d8b1bc10812",
+    "7cff1a816c1482948197fb30e56c00524435f0010211ac93157a0183aee89378",
+    "c7270f838b801788ebbb13d603714ddd79b8c911da10df2fceeaf3bc86b61b79",
+    "eb5b99075c55fe079c4378f5c5f705c7d066c4d2f767c6eb4d470c705ef4b19a",
+    "e6634d9ef5843239774145c163a969f1167ffe44a3b418ddc0652ca26e887901",
+    "04860e2ba0a0a6b2f8f67622ea55b72ec74e922a19ac1975f838a4d5d2385fda",
+    "32a601264de920f65f12026b9f4b3e720bc3cdc3d13faaf47d9617deb9a7e72c",
+    "0da348df8f50e067d2e0901af724224b9090f7369f706e652804261a290da0a0",
+    "02d8ff3c1a182ab86a20b8bcf8989d653511da5fcc58354bbfbc6c9cd0980fa9",
+    "cb911cf2f24da24ee53670f6026f29e2f20e64464d4f8329c1b9044095f4a3b0",
+    "86703a58f113eaa9f1df9bba3f4e17600ea3acddc5e8f743a5d6a0a442013355",
+    "248face04f021850c1615528e7cd7591f3e6ec1a8ad4dadc2a25e771649680b8",
+    "1c7402538979bee8c42bc0bfe68fd1f55f5dd6128d0312c85bdba362eae77bb7"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "search-v2-holdout",
+  "seed": 100001,
+  "pairs": 64,
+  "catalog_sha256": "16c4d38ae85cc5c02fdd8eab01391c53994bc11978528183c1e43dc27e37da9c",
+  "pool_order_sha256": "d2703dbe891c0ed3db28c16b0e8e3d70ffd6d7855ada07903201cfa8922b16bd",
+  "ace_trainer_revision": "b74574abb0c5cb26f3107a4d0a389c0dc25c2a52",
+  "unseen_opponent": "tactical-calibrated",
+  "opponents": [
+    "joint",
+    "tactical",
+    "pivot",
+    "pivot-base",
+    "tactical-calibrated"
+  ]
+}

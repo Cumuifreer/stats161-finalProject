@@ -1,2 +1,19 @@
+.env
+.env.*
+!.env.example
+.envrc
+
+# Local dependencies
+.venv/
+venv/
+node_modules/
+
+# Operating system files
 .DS_Store
-pokemon/参考材料/
+._*
+__MACOSX/
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+desktop.ini
+$RECYCLE.BIN/

@@ -291,8 +291,9 @@ def tactical(decision: Decision, *, card_profiles: dict | None = None) -> dict:
     return tactical_actions(decision, card_profiles=card_profiles)[0]
 
 
-def tactical_candidates(decision: Decision) -> list[dict]:
-    ranked = tactical_actions(decision)
+def tactical_candidates(decision: Decision, *, ranked: list[dict] | None = None) -> list[dict]:
+    if ranked is None:
+        ranked = tactical_actions(decision)
     if decision.phase == PREVIEW:
         shortlist = []
         seen = set()

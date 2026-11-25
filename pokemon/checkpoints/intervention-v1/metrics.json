@@ -1,0 +1,20 @@
+{
+  "train": {
+    "roots": 512,
+    "changed_outcomes": 233,
+    "paired_mse": 0.22405630350112915,
+    "zero_delta_mse": 0.2275390625,
+    "direction_accuracy": 0.6223176121711731
+  },
+  "validation": {
+    "roots": 128,
+    "changed_outcomes": 56,
+    "paired_mse": 0.2217462956905365,
+    "zero_delta_mse": 0.21875,
+    "direction_accuracy": 0.4464285969734192
+  },
+  "sampling_seconds": 23.82169540040195,
+  "training_seconds": 0.30185220018029213,
+  "selected_epoch": 1,
+  "parameters": 73473
+}

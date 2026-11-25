@@ -1,0 +1,10 @@
+{
+  "name": "lineup-rollout-v1-confirmation",
+  "phase": "lineup",
+  "seed": 230001,
+  "pairs": 64,
+  "catalog_sha256": "16c4d38ae85cc5c02fdd8eab01391c53994bc11978528183c1e43dc27e37da9c",
+  "pool_order_sha256": "eb2e1c28c5e9e2e7e677d7f40987816ee4314698366cc54a1a1aec2de1bddf40",
+  "ace_trainer_revision": "b74574abb0c5cb26f3107a4d0a389c0dc25c2a52",
+  "opponents": ["joint", "pivot", "pivot-base"]
+}

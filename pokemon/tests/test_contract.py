@@ -11,8 +11,10 @@ import unittest
 from unittest.mock import Mock, patch
 
 from pokemon_agent.__main__ import HISTORICAL_CARDS, _bench, _catalog, _replay
+from pokemon_agent.forecast import ForecastConfig, ForecastPolicy
 from pokemon_agent.game import BATTLE, DRAFT, GAME_TYPE, PREVIEW, Decision, make_decision
 from pokemon_agent.joint import JointPolicy, TurnForecast
+from pokemon_agent.lineup import LineupPolicy, _best_lineup
 from pokemon_agent.live import create_agent
 from pokemon_agent.llm import LlmPolicy
 from pokemon_agent.policy import heuristic
@@ -149,13 +151,38 @@ class ContractTests(unittest.TestCase):
             separated, would_lose = forecast._evaluate([hit_second, hit, hit_second, PASS])
             cover, protected = forecast._evaluate([hit_second, protect, hit_second, PASS])
             candidates = tactical_candidates(decision)
-            ranked = [action for action, _ in JointPolicy(profiles).rank(decision)]
+            joint_ranked = JointPolicy(profiles).rank(decision)
+            anchored = ForecastPolicy(profiles, ForecastConfig()).rank(decision)
+            position_ranked = ForecastPolicy(profiles, ForecastConfig(position=.55)).rank(decision, candidates)
+            expanded_ranked = ForecastPolicy(profiles, ForecastConfig(12, .32, True)).rank(decision)
+            ranked = [action for action, _ in joint_ranked]
         self.assertEqual(attacks["move_order"], [0, 1])
         self.assertEqual(would_lose["our_ko"], [1])
         self.assertEqual(protected["our_ko"], [])
         self.assertGreater(both_attack, cover)
         self.assertGreater(cover, separated)
         self.assertCountEqual(ranked, candidates)
+        self.assertEqual(anchored, joint_ranked)
+        self.assertCountEqual([action for action, _ in position_ranked], candidates)
+        self.assertEqual(len(expanded_ranked), 9)
+        self.assertTrue(all(decision.validate(action) is action for action, _ in expanded_ranked))
+
+    def test_preview_rollout_requires_a_repeatable_win_improvement(self):
+        self.assertEqual(_best_lineup([[1, 1], [2, 1]]), 0)
+        self.assertEqual(_best_lineup([[1, 0], [0, 2]]), 0)
+        self.assertEqual(_best_lineup([[1, 1], [2, 2]]), 1)
+
+    def test_preview_rollout_falls_back_when_public_rosters_are_incomplete(self):
+        team = ROSTER[:4]
+        actions = tuple({"type": "select_lineup", "bring": team, "leads": leads}
+                        for leads in (team[:2], team[2:]))
+        decision = Decision(PREVIEW, {"team": [{"species": name} for name in team], "opponent_team": []}, actions)
+        worker = Mock()
+        policy = LineupPolicy({}, {}, worker)
+        with patch("pokemon_agent.tactics.load_dex", return_value={}):
+            self.assertEqual(policy(decision), actions[0])
+        self.assertEqual(policy.fallbacks, 1)
+        worker.call.assert_not_called()
 
     def test_preview_scores_reserves_and_avoids_reversed_lead_duplicates(self):
         leads = ["incineroar", "rillaboom"]

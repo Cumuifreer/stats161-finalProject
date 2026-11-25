@@ -1,0 +1,677 @@
+XIAOFENG LIN
+XIAOFENG LIN
+00:00:00
+Wow.
+Basically means that, in the future, hopefully, we are going to use what he developed, rather than, you know, using art programming, and, other than this, Agentic data scientist, he will all…
+Also, introduce a way to track your agent.
+The other tool is not only useful for the data agent to talk about, you can also assign it to the game agent, okay? And I share you about the final, project, link, right? The PDF, and we call it the audit, right? And I'm going to provide you one more PDF,
+Covering the Holy Greek grief, and,
+the final report, I don't know if people have questions, but they still have final report, and, some, like, game rule details, okay? So I'm going to roll out, you know, a few days, give you enough time to prepare for that time.
+Any questions about the final?
+What, Sasha?
+Like, previously in the syllabus, you still have the final report? Yeah, we probably may not have that, so waiting for my email, okay? Okay. So,
+Yeah, I still haven't given enough cycle yet, so I know that you don't want to write it. Many people don't want to write it, okay? So, make it easy, okay? Don't worry. Okay, so, let's thank, the XIOFOB here.
+Thank you very much, Professor. Thank you very much, everyone, for being here on…
+an important day like this, which is the release of GTA 6, so I very… everyone has such passion for…
+this works, which is wonderful. So today, we are going to talk about,
+centering… we have three parts. We're basically centering, around one agent. Can a…
+Somehow it's disconnected. Look, connection's not good. Let me… let me see. Okay, let me just pause.
+not the…
+All right, let's try to… try to hold this steady, because this connection is not there. Okay.
+Let me try to resume recording.
+Reporting… And let me share my…
+On that? Okay, I think I see where the product is.
+See, I'm probably not sharing, though.
+the right street.
+Damn.
+Okay, I think now.
+Okay, here we go.
+Let's try to…
+All right, so let's get right back here. So, Matt.
+So, today, we have… each session will have three parts and one topic each to talk about. The first part, it's about a concrete example, so agents, but focusing on one topic, which is table reasoning. We're going to delve into what makes tables a special
+trouble for the agent, reasoning as a task in general. And part two is going to be some
+We have a class activity, which we will work on, finding the eras
+in the Tableau agents that we just talked about, and see how the fancy, smart designs will fail in some very naive and dumb eras, and how… and the last part is about how we develop the methods to recover from this era, and actually try to let the agent recognize this error and improve on this error in general.
+So that's the, roughly the three parts. Each parts take, like, an hour or 15 minutes.
+So, we start from the two previous lectures. We already talked about how we put together an agent based on large language model. We have a language model in the loop, they think, they…
+read the context, and they act on the context by calling their tools, their functions, right? And they observe the outcome of their actions, and they keep iterating forward. That's what the standard react look, and actually what the standard would look about.
+And there are tools
+And memories that would augment the agent's functionalities, that we could design a proper two sets, and for the agents to interact with better in a more standardized and constrained way. And we have memories that brings information that agents need, either about its context or about a task it's going on, to give a better context to make it work better on its current status.
+And today, it's all about
+One experience of us, our lab, actually building one agent's deal with the table reasoning problems, and you'll see a lot of terrible failures, a lot of struggles that we have to go through to actually make it work, in both table domain and as an agent in general.
+Bye.
+So, first part is…
+Table reasoning is about working at the table, and a table, well, looks like this. But sometimes there are two big sides of tables that matters and deep learnings and maiden work. One is the text table, where something you see in the Wikipedia page, say, about a person who's the person…
+person's date of birth, nationality, country of origins, occupation, and etc. And those text tables are about carrying some information. Think of them as a way to do bullet points, right? They're basically presenting that information that's given to you.
+And the primary versions that we work on is the data. As you can see, each row here is an observation, or a data point.
+And data points carries, information independent as themselves. Of course, sometimes we have countries and their GDP, etc, but mostly, what we care about is the trend.
+Their average, their ranges, the interaction and correlation between tables, like, those different countries.
+different GDP values for different regions at different education levels and political tendency, etc.
+And the table is about, in our considering is about providing for some data. And the questions we're handling, the table reasoning here, is mostly about getting such information and such trends from the data.
+We have the simple table extraction, for example, which is about looking up at the table and finding whether they have a corresponding answer, like which country, which was the GDP of the United States in 2025 is so important, they started to look up.
+In… in table trend for extraction, for bias, some sort of manipulation, that is no longer something
+that you could done by just looking at the table. And inside generation, which is more customer-related, is that you have to not just produce.
+some trends for correlation, coefficient, etc, that's in the table. You have to build on top of that and give suggestions of summarizing to the user what is going on in the data. So you can see there's the different layers of question, but all these questions, they're asked started in some plain languages. Say the persons were asked.
+which one… which country has the highest GDP, or which product is producing the most profit? And there is an answer that depends on many rows that requires finding the trend. Eventually, the agents here, an LM agent, will have to reach out to the customers and produce them an answer, which
+Usually, we consider that that's an answer with a ground truth, but there could also be open-ended question. That's a step… that's a more advanced one that would move on. So…
+Here's the question. So, usually we…
+consider this table, and we have a question. And what we usually have to do is that we have to take a transformation before the table comes into an easier form that will allow us to answer the question or makes the trends more obvious. For example, we could filter them and just keep the population that's for our interest.
+we could reorder them, like, we want to find a minimum or a maximum, right? These are very…
+a very common operation that you've probably done a lot of times in R, in our Pythons, and you want to do group.
+or aggregation. So you want to treat each group separately. Instead of just having a total average, you want to have the average of each group. Like, you want to have whether the effects or changes of a certain policy or certain software version differs by different group or person.
+Right, that's the Simpson…
+PRADOX would come in, like, you want to check each group, whether it contradicts the overall trend. And you have joins, which is about merging different tables together to get bigger tables that match information that comes from different databases, right? So, all these sort of answers, right, all these
+questions. It has to be done as a series of action. So, most of the times, you look at these tables, you cannot directly get what you want. It's not like there's a smart data scientist, they could just look at the tables and come up
+With the step, what in… that's the same for the language models. They will internalize, either in their reasoning step, they internally come through the operations and
+And do these steps, or they have to explicitly do so by laying out, showing steps, right? They have to lay out each step, they filter, they group by certain columns, and they produce, they sort by each count, and they take the top of it, that two, so forth. It's a combination of action, produces one program. So, each table question is generally the answer by a sequence of these actions.
+So, each actions could be very small, they just… Perform a very simple transaction.
+transformation, like, filter out everybody, finding out everyone's high, and that is the whole logic that we're going to be using for this class, and in the rest of this presentation. It's about how do you operate in this program? Where do you operate? It operates either in the LLM thinking space as a part of this output, or it operates as
+a language model generated as a code. You could write a Python code, a SQL query for do this, or it operates as a set of function columns, right? You call it a set of given function or tools, etc. That brings this to gradually from a table form to a form that's easier for your answer, so that's
+The whole table question is about.
+Right, give a second… Alright.
+Come on.
+Yes, it's… Because it's not very… Come on.
+Interesting.
+This is not good.
+All right, we're back here. Okay.
+Right.
+Okay.
+So, before we come to our methods, there are several solutions that you'll probably have in your minds. Let's go over them, right? So, let's say, why… what makes tables so different, right? So, we had talked about agents. It's so smart. It brings… it solves all your homework questions instantly, right, in minutes. Why is it different from just
+getting a table. It's like, how do… how can… why… what's stopping us from just putting one table into the context window of our massive
+RatiusOptimus 5 for Fables, and just have it spell out the answer for us. And the whole difficulties of table reasoning comes into the size and heterogeneity of its data.
+So we… if… for this to work, we want the models to fit in what the model context window can bring us. It could do… we expect the model to do whatever computation it has. It could just understand this row and column structure, and unfortunately, all of these are not true, not… at least not at an optimal level for your language model, so we are going to look at that.
+Okay, so we're looking at some small square table in the previous session, so this is what a practical table looks
+might look like… this is not even close to what a production will look like, right? So this is… each tables have all sorts of different categories and type of variables. You have
+Patient IDs, which is not even clear, it's a numbers, it's a string, you have date, you have different categories. Let's…
+you cannot even see it so closely without zooming in. You have numbers that comes into all sorts of distribution. They're long tails, they could be normalized, or they're not, and they could have 100 digits behind it, or they
+just an integer. They have continuous values, but some of them are just ordinal, or some of them are just category labels without numerical meaning at all. All these fit into a massive context window.
+And this table has, if you…
+Let's say if you have 100 rows and 100 columns, that's…
+one that's 10,000 cells, and you have to even tokenize it further, that will bring you even more further, and like the numbers, we bring it down into even smaller chunks and so forth. And 100 row tables is toy by any standards, but industrial standards will come up millions and billions tables flowing everywhere. If you want models to somehow just ingest the tables and produce that trend.
+First, the context windows will block you from doing that, right? So, this… we do some calculation, right? So, just the toy tables that we're showing would take us a few hundred tokens, and the median table would just show you a few…
+Dozens of thousands, a lab table, some machine learning table you'll do for your projects, like in your regression and classification, you know, stats, stats up.
+Problems will bring you up.
+to millions, and 100 million… 1 million rows brings you to… I don't even know how to… how much zero is that, right? So… and the production table, come in, come on. It's gonna… it's gonna…
+First, it's gonna be a huge waste of the compute, even does that fit in? And it will be a close of contacts. And even when that fits in.
+that,
+There is the inherent problems of models in understanding the large language models, attention mechanisms will problems when you have actually tried to retrieve information from such big tables accurately.
+See, Fury, even if you can manage to fit in the tables, and is it… you expect it to read the data, extract.
+some of the values, and some of the information, and answer the question for you. What often happens is attention gets diluted in a very long context. That's the very common problem about the context rotting, or the large language model getting lost in the middle of its context.
+And it's just… it has been a ton of empirical evidences about how the accuracy of the operation or the task depends on where the relevant information…
+information. It's end.
+And when it's at the beginning of the end, right, there is where there usually, based on the training data, is pertaining biases, that the most important or relevant information is at, right? The question is about, or is at the beginning of the end, learning a model to learn, to look, pay more attention to those spots. And that's either an imbalance of attention distribution, or a
+Let's say the…
+inaccurate or uncalibrated distribution of where the model should be looking at. That will cause a problem that it's… even the machine is able to lost the relevant information, and it could sometimes answer confidently in a highly structured and very organized way. So that will just
+That would be fundamentally that it is not about a province that you can just
+fitting a bigger, bigger, contact sizes, or have, larger, longest contacts per training, that would just… it's not gonna simply fix that. It's both the compute size, the latency side, and the efficacy side. It's just not going to be the most applicable way of doing that.
+And, of course, if you have worked on some foundation model for tables, you have seen in the past two years, there has been
+I would say tremendous effort trying to scale up transformer-based Tableau models, scaling it to take… first starting from 10,000 columns all the way to 1 million columns, and there are people trying…
+observation, and so forth, and tried a million, 10 millions, and so forth. And that is not… I don't think it's gonna end…
+And nicely anywhere, unless you have a real small table that you have to work with, that the sheer scale of the table is just not making a good fit for the language model.
+And…
+Then comes with the problem. Say, what if we just try to use a small table, right? Just, we aggregate, or we look on… like, say we have, Wikipedia.
+want a table to operate on it? Is it just a strong latest model, like GPT-6 or something? Is it just to handle these operations for us? The second problem is then about the inherent, you know, inductive bias, or how the way the language model works with numbers is disruptive.
+So here, here is a older experiment. This is, like, 2 years ago, but from our test, we'll show below that the pattern still transverse. The large language model
+Well, when it's written.
+it is asked to do some simple arithmic operation, like below, just adding two large numbers. It is very sensitive to how you present the numbers, right? You present it as a number without a comment in the below, and this correctness can… goes much drastically lower, and without those comments, the accuracy climbs up.
+And it's very sensitive to how you present a table to it, and…
+Right, this is… it's not doing a good job, even with all the advanced, you know, the post-training itself is not doing a good job at just manipulating very basic numbers.
+And the… And this is one of the
+one of my favorite examples, so about how it's having trouble modeling numerical distribution, I just generated a variation using
+This year, using a model like, I remember 5.4, I asked it to sample a uniform distribution, right, from the operation of 0 and 1, and I take very big sample sizes, I recall, 10 million or something, 10… I'm not 10 million, 10,000 or something.
+And you will see, obviously, if you fit a smooth kernel density estimation on that, the density doesn't look uniform at all, right? It's like… it's more like a bell-shaped curve, or like a Gaussian, and it is what the
+pre-trained distribution is bringing it to light, what the token distribution looks like, rather than the numerical distribution. That brings us to a big province that I usually use, again.
+It's the language model for…
+pure language model for Tableau argument, is that if the model's having difficulty in modeling such simple things, like just a uniform normal distribution.
+How would it end?
+any better when we have to go to some conditional distribution, right? More advanced relationship between your high-dimensional X and Y is something you have to dig out from the data and by looking at all those possible marginals, right? Because if you look at the marginal, you have just 10 columns that will give you
+That's 10 squares times of columns and marginals, and… and the…
+And that number just goes up quadratically, right? So all the different distribution that… to work with, it's just be a challenge. And all these problems come into how fundamentally that language model deals with numbers. So this is…
+This is one actual tokenization sample, right, we worked with.
+So we have the tables, and we do text transformation of it. We bring each column, I mean, each row, each observation, into a sentence. And that's a classic transformation, how you will work with a language model on tables. And…
+What happens is that when these numbers with digit, for example, 1.755,
+It goes into the tokenizer, which has to break down your continuous numbers as discrete tokens.
+And it doesn't go into one token, as with numerical values. It goes into breaking them into some very arbitrary pieces, like 1.755 begins 1, and then point, and then 75, and then 5, and so forth. And taken out of context, each… if you… if this goes into token input, token ID, into your language model, they don't see 75 or 5, which is 75 greater than
+There's no such relationship. They… all they can see is a… just an ID, which is totally discrete and each other. And it will have to…
+Come up with, figure out that numerical relationship can be represented with this totally discrete token.
+And that extra translation step, it's what fundamentally makes it very challenging for it to handle numerical numbers. Like, a stronger model can figure out, potentially, okay, 7-5 is greater than 5, that's when it is a part of the digits, but this is extra work, right? So if you have a model directly modeled, continuous distribution, even something as simple
+That's, let's say, logistic regression.
+I mean, it has the continuous magnitude value rather than the tokens, right? And it is… that is where the continuous feature is often totally devastated when it comes to
+And text encoding, which, which the text transforming here doesn't really pay a big difference, actually. So, if you think this is very unstructuralized, and we… there have been people testing about different ways of this text transformation.
+You could put it into, like, a standard CSV format, rather than a sentence. You could put it into JSON format, where
+each row is a tag… is a key to value mapping. You could put it into other delimator formats. It doesn't… doesn't matter, right? Isn't it very interesting that these formats actually perform relatively similar to each other, and
+And none of these are able to address the fundamental limits, right? Some of our… some of the foundational work that try to leverage large language models, including some of our work, will have to take out these numerical categories, right? Take them, and we encode them separate. We have some continuous embedding, something like
+Project its normalized value into a separate embedding, and concatenate that with the embeddings
+or representation of the categories and column names and metadata. So in this way, you could somehow combine the language meaning with the numerical, and the tokenization
+itself, as the Texan batting work, it just… it just…
+Couldn't… couldn't overpass this loss of continuous information at all, right?
+So, And…
+This is a even closer example of how the above problem will look even more messier when you have long tables like this. All these random tokenization, you know, breaking down into small pieces of tokens, and it just adds a lot of degrees of complexity if the model will have to figure out which are which, and which are the numerical information it has to preserve versus this car.
+And another reason with the language model, right, is that it's a struggle with the
+let's say how it's… it's very sensitive to not just the way you present the data to it, not just numerical data, it's also sensitive to the structure, how they're given to it.
+And this is one very classic example we found when we try to use language model to do a classification and generation problem. We say we have it… the features input to it.
+the same identical values, as you can see, they just come in with different orders. And very surprisingly, the model's showing a great deal of variance, and in terms of how… which features put first. And it is… if we do a… we actually did a…
+a importance, future importance study for, after, for these kind of behaviors. And what we found is that it will, just like the same context rotting behavior, it's putting higher…
+importance to the role, that comes first. Like, it's paying for the first example, it's paying more attention to sex as a feature for prediction, and the second is more for height for a prediction. And it is also found that
+Even if we give it the same table, in a question-answering problem, which is not about, you know, classification or producing, modeling.
+feature correlations, that changing the layouts is going to have a big impact on the accuracy. Like, you have the same table as we saw before, we just randomly shuffle the rows and columns, we shuffle in a certain way, we shuffle it,
+behave it, with the identical data, as the model is experiencing a change, a consistent change, in performances, and in how it could actually answer the aggregate
+answer the promise, which, from our, you know, from a productions or standpoint, it's just…
+totally intolerable. It's very high, we will say, variance or instability to just even this sort of… sort of small scale of changes. And the test table here is not… nothing like the big, production, you know, or lab tables that we're looking at. They're just small square tables.
+And all these problems still back into the way how the language model handles data, right? So.
+As we just mentioned, you have to…
+In order for a 1D language model, which assumes every input that goes into it as a sequence of
+Tokens for, pieces of language.
+The tables is inherently 2D.
+So therefore, when it's a table small, you could insert some deliminators, like a new line signal, to let them know, okay, when it's smaller, that this is a new line, and the corresponding position in the upper line, I mean, the previous row, correspond to the next row, and this column in this value correspond to that, the same row in the other column's value.
+This whole relationship gets in… when it's small, just think of… think of, once again, like a boiler point. It's…
+is doable. It could recognize the structure in a similar way it recognizes your
+let's say, formats in language model, I mean, in the Python functions, or in your presentation bullet points, when it goes to a big table, when it has to maintain a long-term consistency of which column means what, and which rows represent what information and feature, that information, that consistency will
+will collapse, and it is fundamentally about how this attention mechanism is gonna work, right? There has been recent, more exploration, trying to improve it limitedly by
+introducing what we call a 2D attention matrix. That is, instead of allowing one token here to attend to this in a 2D, just other roles, treating at
+it will add the two different dimensions. So, each token here, assuming you've got the attention model, it will not just attend to the other in the sequence, it will have a different way of attending to the other elements in its own columns and its own row, and possibly in relevant elements, that if you can join the tables to another table. So that is one way of mitigating how these
+problem, and it's… it's showing effectiveness for, some of the table-specific, tasks, such as you want to do a classification or regression. But for,
+before… Let's say a general language model.
+this problem, this is an inherent bottleneck for it, right? And when you have… and also, if you just put it into a language model as a whole table, and it comes out with an answer, and you don't have anything to inspect it, because this is a black box, right?
+So, we want some solutions that will handle the sizes that
+the number of computation, and the tabular structure. So, let's say we don't… let's… don't work with the tables directly. We… we don't… we don't have to work with
+a massive table or CSV, that's just not we humans work with tables as well. We will work with a summary, right? We'll try to… when…
+we're working with all Pythons, we use code, and we try to write code to extract what's out there to do the transformation, and get to the table into a form.
+Let's say, for example, you could use a Python program or a SQL query, like shown like this, and it will do the series of transformation, the programs of table read questions we mentioned above, right? It will do the selection or filtering of the data.
+And we will do the filterings based on the conditions, and we'll do the group, and do the aggregations, all the things, eventually produce a form that's good for our question answering. It looks very good, right? So, and…
+can't we just let the model write the code to try to solve the problem? It's… then we're done. We don't have to work with the big tables, etc.
+We could… and we absolutely could. And… but then we found a problem compared with the…
+the ultimate approach, which later developed to ours. So here's two approaches.
+From the class of paper that we build on, the Biter.
+which is a SQL query generation approach, so you can imagine that this is a one-step approach, right? So this generates one SQL based on the questions that is given, and you use that SQL output as the answer to the final question that you're given. It's giving, reasonable accuracy on small tables, right? Small table meaning the
+As I recall, that, number of rows is less than 15.
+But as you can see, as you come to a median table and large table, this performance degrades very quickly. For median table, which is roughly 50 columns, is already 26, and a large table is 6.4. And when… then the chain of table method, which we'll delve deeper later, which is the step-by-step solution instead of one step, it degrades as well.
+with a larger table with greater complexity, but it degrades more gracefully, right? It's doing better on every step, and it degrades over the table size is much smaller.
+And this is the problem, we'll say.
+with the one-step code generation approach. That is, it's…
+Make the plan, it generates the code, and which the plan is about having… walking through the entire programs, all the steps in our table question answering.
+Altogether, without doubt.
+what we say, a rough exploration. So, what usually happens is that the models make some assumptions about the table. Say, when you say age, right?
+you have the age columns, making some assumptions about the valuable variable types. It makes about what even the column is actually spelled with an age, or age with capital or something, and it's…
+about any other additional constraints, like how would you process some sort of values, like categories or missing values and so forth. And they do this before the plan. It shows… this data is seen before they explore the data, because they understand what are the distributions and the constraints, and what the data… always say the word metadata or schema looks like.
+And that is the… that is the problem. You could definitely write a program, it could do anything, but it wouldn't solve your table problem reliably until it explores. It takes problems step by step until it could
+base each obvious action based roughly on the intermediate state, which solves it, like, it's… or, in a lot of ways, we look at the environments and the table after, by giving an actual look before and after every obvious action.
+So here's where our, the agent system we designed,
+what we call… really, it comes from… we tried the relational database, somehow we make that this name, yeah. Professor, do we have a plan to give it a better name? Yeah. I didn't know. Do we have…
+Yeah, we decided his name in 5 minutes, and it somehow won us the first place in an Amazon hackathon, so we decided to keep it for a year.
+We just don't have time to come up with a new one.
+Yeah, so… so I appreciate if anyone, after listening to this lecture, have suggestions. This… this definitely has to be a better name, it's just we came out with 5 minutes. But anyway, it's about the problems that we try to deal with relational tables, but using agents, and with solving the problems we have about. So, if you're familiar with the React loop and the chain of thought reasoning, you will find this
+This is a very relevant table adaption of those ideas. So, what happens is that we…
+First, the model doesn't have to interact with the table. It doesn't even have to read.
+Just a part, let's say, the first row of the table.
+you know, humans, like, like some of humans would do. And what it… because even a few rows, like, and you have… you have some industrial setting, it's very… it's very messy, right? It's gonna… a lot of, you know, uninterpretable, you know, hash-coded variables. So what I do is, we have a set of tools that it finds all the actions that this table can… this agent can do on a table.
+we solve the atomic action at the very beginning, right? They'll just dump ones, but we… sometimes we clearly delineate them.
+Like, the sorting, printing the summary tables, extracting, aligning sortings, or doing…
+transformation for certain columns are string or data, which are all very messy ones. These are the tools, and we have validation for each tools, and we have strictly, you know, we have some validated schemes. They have to follow what exactly you pass them to us. They are what actually are going to work with the tables, and they are the ones that will
+Bring the summaries of information.
+back to the language model, which will bring us… will enable us to work much better. So imagine, like, when you're using R or Python, right, you want to do something
+table preprocessing, like, some of… most of the times, we don't just jump in to look at the raw CSV file or so forth. We call, like, in R, we call a summary function, which will bring us
+data types and value ranges, etc, the key information, which now comes in languages, is now in much more comfortable form for the model to work with than a raw table, right? It's… they're a lazy little production, you know, they're just bringing the first 10 rows into that that somehow… and then when the 100 row columns comes… 100 columns, they will come out, it just totally crashes.
+models start hallucinating with a greater way. No, sorry, we just want to, interact entirely with the
+True set, that's how the model goes. A model makes two calling, and it will generate intermediate states, which could be summaries of the tables, or the changes in the environment, such as how the tables transform, how's the trans… the differences in its dimensions. Okay, sorry.
+Okay, that's true.
+Oh, come on, friends, it's… Okay, looks like there's some agents it doesn't want…
+Sorry, give me a second…
+Okay.
+of interaction. So, I'm mentioning about this intermediate state, which I was talking about, that tools.
+bring us intermediate states, and allow us to see whether there is something that's off. Like, it will be observed that the… if there's irrelevant outcomes, we know the model's doing something that's inaccurate, instead of having it felt silently, which is a big problem we try to address. For example, if the model just
+say, put a filter conditions, like the age doesn't equal to 20, right? It's trying to… and here, it's making an assumption that the age column is actually a number. It might not be, right? For example, especially when you have some, you know.
+real-world data, it's like a survey. You have people putting in their ages by hand. You could get something that's NA or 20 in English, right, or in other languages, right? It just somehow magically turns your entire columns into strings, although even the first
+100 columns are all… looks like numbers, right? It's gonna… it's gonna extract an empty set, which it's perfectly fine for later analyses, and gonna keep operating, and turn out… give you all the future analyses of that empty set, and you don't have any awareness of it. So it's about having the model adjust
+based on its preliminary signals of the output. And then this keeps going, going forward, until the
+Each time, it brings up some short summary, and it will come to the… until at the end, you… it will do the same, you know, programs and step operation until at the end, we have the full answer, right? So…
+That's where the model tried to do. So that's basically… you have two ideas that's beside it. We have the…
+the… Loop, which is the chain of tables, which is combined.
+comes from the chain of thoughts, as you can see, so it's doing step-by-step, but each step we emphasize on having the model observe what the state of table is on. And the second is the… we have what we call a table algebra, right? So it's about the vocabulary of the table operations that we could do. It's… surprisingly, that comes from
+comes from the classic research that the operation you can do on tables, all sort of computations, like aggregating, extracting, you know, filterings, they could be put into a relatively small set.
+Right? That's where it allows us to use… to do all these different operations with just a well-created small set of tools. So, putting these together, let's take a quick look of what it really will look like. I have,
+Okay? Is there a… Is there a voice, sir?
+Sir Warriors being sure? Thank you, sir.
+Yeah, is there a way to display?
+We just support him there, I guess. I see.
+So, this brings us… so basically, that's how the agent works. This is rather a simple… this is an example. We'll see even this simple toy data will get
+give us a headache in the beginning of next section or class activity. But, while I get
+the… I'll get back this to work. We can see that the really agent, actually, we have… we have built it, and it's capable of addressing their several problems, right? That…
+We're able… we just identified.
+Earlier, thanks.
+Okay, let me try to get it back to work.
+This is not… I'm trying… In the tunes, man.
+Right.
+I don't know about that,
+Hmm, okay.
+It's, Yeah, sure. Let me try to figure it. Okay, this is coming back, okay.
+So yeah, this… this basically concludes our first sessions. We discussed a lot about how different is tabular data is, and how it's a problem for language
+model, and we found there's a… there's… each province of this finds its own place about, really, its designs, right, for the table's interaction. The table's size doesn't take problems. We delegate it entirely to interact with this. The model's problems of doing computation and comp…
+by transformation stream behaviors, exactly. We solve it by having a separate set of tools.
+And we want the… the outputs as a summary, which helps us the problems that the model is reading with role and column structure. And with the nothing… the inspections and building trust problems, we do so by aggregate… laying out and recording all the intermediate results. And with the planning problems that we do, it's by iterative observing the
+media choices and plan this action based on that. So, you might ask.
+If you don't use any of our tools, like, you just use things like Python or SQL queries and have the model do step-by-step, is that going to do something similar? Yeah, the answer is yes, if you have the model to do…
+Tune it to carefully, to plan this each step before moving forward, to have it collect the context and information where, for roughly, when you have the full pictures before you execute it, yeah, you don't have to use a tool.
+or you could just treat each… if each function or multiple bit of tools, as it is tool. The problem is the model doesn't…
+You know, they don't… they don't often have the…
+the domain expertise, which is embedded in this, how we design this tool, or the domain need, right? So, your corporations, or your products, your teams use had their separate focuses on the tools and the checks, or how to constraint, which you can embed in the tools. So, it's about how…
+It's about where you can inject these, specific constraints and knowledge into your system. And overall, having the model to understand the context and follow your instructions explicitly, it's a very… it's a very big pain. And even you could have, like, a hundred, you know, rows of
+prompts in it, but this guarantee… doesn't guarantee we'll follow it exactly. So, that is how the release
+actions and motivation is about. We try to break down the complex table operation into… bring it into tools, rather than having LM context model to work with it, and we try to build it step by step by looking at the tables and its effects on the state and environment before moving forward. So that is…
+the…
+have, say, the key points of how make the… really more stable and accurate and being capable, of building what we call an observabilities and trust and induction sense, yeah.
+So, that will be the first part of the lecture today. So, how about we come back, take a 10-minute break, and we'll come back with our, our class activity, right? Before we come out, any questions for this part, folks?
+Okay, end question?
+Give me no more, let's take a 10-minute break, and bye.
+Okay, welcome back, ladies and gentlemen. Let's start with the part two today, which is my favorite part about how the lab has to run through to identify errors. So, let's do a… I could. I put up a kafoot.
+Competition right here.
+So if you're like to participate, please join this campaign, or you can scan the QR code here, which will bring us to an online, you know, multiple choice question forms, and you will be able to answer a few questions, which is multiple choice later, based on your analyses of the following
+to Adrian failures, alright? So… I'll give you 1 minute to just…
+join, and let's see who will be the one who makes the best guess about our agent system, right? So, while you're joining,
+A bit… little bit of context is that we're looking at… we just spent the whole hour before that talking about how
+we built in Table Agent System that is intended to solve the Tableau problems. We use all the different skills and designs, and unfortunately, as you'll
+who soon realize is going to fail. It's going to make mistakes and dumb mistakes, and even in simple scenarios, right, it's got to be pretty challenging to identify them. There are two types of mistakes you have.
+some obvious errors or failures, right? They will pop you with error messages. And by the way, I've, has everyone, interested in the game joined?
+Okay. Okay, I think this is… this is good, this… we don't have a limit of how many.
+Okay.
+So, you probably have to hold this for a couple minutes, because we have to walk through the era together, and let's see how
+how we can identify them, okay. We have two types of questions, which is what about those… there's loud and obvious errors. You have errors, right? So let's… give you an error message. You know there's a play, it's failing, throwing you an exception.
+There are also silent error. We just take a look at that. It doesn't pop you any errors, it pops you error messages. It just…
+fail. It gives you a wrong answer, that everything looks fine. It silently makes a mistake somewhere else, and in the middle, it produces an empty data frame as a part of the processing, and deleting you to the final answer that is wrong, okay? So, what's gonna…
+today, as everyone done, I'm just gonna start to the same trouble of error localization, so everybody get experience about error localization looks like. Okay, can I just skip to everybody here? Okay, cool.
+So, what's gonna happen in the first… in this session is that we will walk through together a… two actual examples about what the errors looks like.
+And that's some real challenges. This is Lao error. You are very lucky. You have an exception, it's a trace back, like your typical, you know, coding failure. And a nasty error is that everything looks fine, right? You picked the wrong actions, or it misunderstood your question, and the
+produce a realistic-looking output, and it's just still wrong, right? For example, this part is filtering all good, it's doing, you know, the subsetting all good, and in the end, it didn't choose to count by patients. It counted a number of rows, which is the wrong grain for your data, and it gives you an answer which is 6.
+It looks totally feasible, no errors, no messages. It's just wrong, and somehow put your entire projects into devastation, because the answer's just totally off, right? So this is the silent failure, the one that's giving us a huge ton of trouble. And it's very often, actually, if you
+come out with these days, you know, agent, you know, studies, that there's a lot of times the agent's doing a very good job in fixing its own errors, at least the, you know, strongest model. It is not doing a very good job in
+I'm always finding these examples error. This is a real experiment we actually ran among our lab members. So what happens
+earlier this year, is that everyone in Trust Surfy AI Lab, from me to Professor Chung, we have to sit down and spend a couple hours trying to look through these very, non-human readable traces, right? There's, two calling traces, what the function calls, and they are the… and also some table actions, the function call that we did. And the goal… there, you have two goals.
+We're gonna walk through each step, and in the end, you'll answer two questions. Which step do you think
+leading to a wrong answer. We know the answer is wrong, because you give an answer, we have the true answer, which is the right answer, we compare it. That part is straightforward. The nasty part is that doesn't give us much information about what is wrong. How should you improve your system, right? That's all this error localization is about.
+I made this…
+labeling kit myself, and I sent it to all my lab mates, and I apologize to them, because this… this is not a very nice-looking one.
+What, will you get is something that looks slightly better, that's generated by our best friend, Claude Code, and so basically the table is this, right? This is a very simple table. You just have two columns. You just have, you know, categories, you know, the award you get, as well as the
+in 2004, what's the winner, right? Where do they come from, right? So, and the question is very simple. How many awards that this movie
+Our reason? One, in 2004. That's very, very simple data, very simple question. And let's see how much
+This… this question's messing up, our… our love agent.
+Let's start with the first step, okay? Let's work step by step. First step it does, it tries to print the table summary, okay? You have a lot of, you know, nasty things, table names, blah blah blah, it's meaningless, ignore that. You know the tables, you know the shape, okay, what we found, we have column names, you know, and 20, 24 different columns. Okay, perhaps it looks means each year, right? We guess it.
+we guessed it from what we saw, the table has to use some common sense. It might mess up, it might get it wrong, okay? So, next step is you try to select the columns. You select the two columns, which is the category. I don't know how they spell category, perhaps there's the Asian people, I don't know, but, I guess, like, but…
+And then it selected to…
+2004. Looks good. Okay, we look in categories, right? The number of wards, we look at the years, which is 2004,
+And then it starts to say, okay, try to select category equals best movie.
+Okay, maybe, and it's just giving us an error. Okay, looks like this is a bad signal, maybe this is a problem, maybe, and it gave an error.
+what happens next is it tries to filter again. Okay, looks like it was spelling
+I don't know what. It was taking a wrong input parameters input in place. It shouldn't have in place. There are some internal constraints that's flocking it from making it wrong. Okay, it used a different, you know, parameter set, but it essentially do the same thing, which is category.
+And the best movie, and…
+boom, it jumped to the answer, it category filters that out, this is what you get, the only movie you have, and the answer, oh, is answering Arizona. Okay, it's not even a number.
+So… You have gone through the old trajectory.
+Now… Let's say I don't have, Linda Intuit.
+Guys, what, what, what do you think, what do you think is wrong here?
+Which is first, let's say, which we have seen five steps. Which step would you say is wrong?
+let's… let's… you can put your answer in here. I don't think there is a… remember just five steps, right? The table summary, select the column, filtering.
+Filtering second time.
+And step 5, which is printing the table and showing the final answer. This is a very… this is kind of open-end question, doesn't necessarily have the right answer. You… you might argue your answer is different from my reference answer, and I'm just… this is the question that's presented at our team.
+Can you tell me which part is turned wrong? I'm not even asking a valid one.
+why there's some, you know, fundamental causes. This is all you get, that's all you solve. You have five steps. Which one do you think is wrong?
+You might think, okay, maybe it's printing the summary wrong, it's selecting the wrong callers that doesn't have the right information. I don't know, perhaps, and you have filtered for this filtering, maybe it was wrong, this is something that catastrophic, you have a wrong tool column, just
+Bring the whole thing down in the wrong direction.
+Meeting.
+Meeting?
+Please take care.
+Alright, so please, please, I am…
+I didn't set a time limit because we have another question, but I appreciate it if you come back, you'll… we have, like, one minute, please think about that, and pick your answer, right? It doesn't… doesn't matter if Ron doesn't… once again, this is a very ambiguous problem that you're solving. It doesn't necessarily have one right answer.
+So you'll probably argue a different answer than I did.
+And it's probably… probably that's correct. I mean, you… or you have your reason invalid to it. Well, I'm just talking about my reasoning, right?
+Or do you think that's the answer? And…
+Okay, I will have 30 seconds, and we'll end the question.
+And, let me see…
+20 seconds…
+And… alright, so I think everyone has it.
+We have two… Respondent, you have one more minute, so I'm just ready.
+Oof.
+Oops.
+Cool.
+All right, we'll call, and let's see what everybody's choosing.
+Okay, so…
+we have a very uneven distribution, right, for the… this is not necessarily the right versus wrong. So, we have a lot… most are people picking up table summary, which is the first step, and there are equal amount of people, so if we put step 3 and 4, right, most people think, okay, the filtering part looks like something's getting wrong, and getting the final answer one, okay, there's some… some…
+perhaps they put the wrong turns on it. So, my personal choice, my opinions, is that, it is…
+The filter part is the second… the second time filter part. It's the one that makes things
+irrecoverable, I would say. The first filter step is an error, but there are cases that it could recover from, right? It knows an error, it knows it cannot stop there. It must do something to fix it. That signal is pretty clear. And what I think about the second
+question is that, remember if it goes here, it's filtering by category is best movie, right? It thinks the best movie is the one corresponding to reward. But actually, unfortunately, there are a couple other rewards, right? It's for the, the movie itself. I mean, there are…
+Best Director, and what is that again? That is the Most Fair Supporting Actor.
+So, it is somehow… it doesn't understand the string, and it doesn't have the ability to recognize these arisins that are also counted towards the reward. But then bring us to a even more challenging question, that is.
+Right. All right, friends here, give applause for yourself, but…
+If you're… you're the… you're the student in the class that's best aligns with Professor Chung, and if everybody… you're the most aligned one, I promise I'll tell Professor Chung and
+He'll be nice on you on the final presentation, I promise, okay? Okay. So, the next question is, we have walked through these steps.
+What do you think it's the reason?
+Why is this failing? Does it misunderstood the question, the model doesn't… Reason for enough.
+Or does it apply the wrong filter here? Or just because that 2 calling is causing the distraction?
+Or do you think the agent somehow misread?
+the table, right? Like, just, like, it'd have to answer, and it just…
+give a response incorrectly, which is very common. I see, I see, personally see it dozens of times, right? The output is a number, something's very clear, but it just responds…
+underneath the strange, and vice versa, right? That happens very often. What do you think is the problem here? And if you are the engineer, you are
+one of the transfer fee AI lab, you have to tell a professor, hey, this is… what's wrong with our system? We want to improve. What would you say? I mean, this is…
+Let's brainstorm, right? What do you think this is the problematic… problematic part?
+And you… everyone, you can have your own reason, right? And once again, this doesn't… necessarily means, Qantas.
+better than the others, like, you could have
+reason to support each one of these. So, yeah, let's… let's take another minute, see if you'll walk this out, okay?
+Okay, let's Santa Fe.
+Let me think.
+What's…
+Alright, so let's see… anyone wants to…
+Could you answer? Alright. All right.
+So, I personally think there's, you know, the reason behind the first three choices, right? And so you'll get points for the first three choices. First, the model just doesn't understand, right? It's…
+from the last filtering wrong, that indicates that could tell you two different questions. Either the model doesn't understand we want all the total number of rewards, even if, in the summary part, it has seen some of the schemas, you should recognize that there's some
+variation or complexity in the name format you should be doing for artists, artisan, like, do a string matching or a regular expression before you go for actual analyses. And it… you could say that it's doing a wrong filtering based on the wrong formats or the wrong conditions, or
+you can say this is because the two calling, right? It's because probably the model doesn't have the right tools to fix that.
+It doesn't have the tools to do the regular expressions, or this sort of string manipulation. Probably it's our fault we didn't give the right tool. And eventually, it turns out there is a mix of all of them, and what we actually fix that is, we have to fix all these
+problems. We need the better models that understand the reasoning better, rather than the follow that we're using, which is old. We need the better, filter
+guide, which is the naming prominent, and we need the better tools to handle the strings. All right, that's where… that's where I bring us to that.
+Right, so you see there's a… we're just getting started, and…
+That is a first question, right? So, we're already having this much trouble. The next one is going to be even more fun.
+I would say, this is the set. Okay, how many minutes we've passed, right? We have been 10 minutes into the thing, and we're just doing one question, right? Imagine everyone in the trustworthy app, including Professor Chung, has to sit there and handle 30 questions label everyone before they can go home for dinner. That's what happened earlier this year. So let's just try to do one more question, all right?
+Let's say
+you have the question. Okay, this is a different question, it's about the competition, right? The companies, right? The countries like Indonesia, South Korea, Iraq, Colombia, and you have
+a lot of tables you wanna… with results, like the scores, who wins, who lose, which year was it? And the question, once again, was pretty straightforward, though. It was, which opponents has the most win?
+All right, so this is the full table once again, and if they won, right, it's a post
+They're just… just about how the opponents have the ones, right? It's… and we just want to have the one with country with the most won by just probably counting the one, okay, that's how we would think. Let's see how the Asians were doing. Once again, an awkward
+print summary, right? It's supposed to see the…
+problems, and I mean the data, so start off the data. By the way, you can… this is the actual output that our labelers was getting, so you might feel free to point out some problems that you're noticing, which might be a problem as well, right? We can further improve that.
+And we have the tool that returns the table, like, okay, shape, column, column types, blah blah blah.
+And it's starting to filter, okay, looks like it's around the right direction. Started result equals 1. Okay, looks like that was right, that was a categorical table, and okay, it looks like we filtered…
+out something from the shape, 14 goes to 12 rows, and now it's time to aggregate. Okay, great. It's aggregating based on the column, which is
+the pan side. I don't know what it's doing, but… and… but it looks like it's candy.
+Sounds like it.
+And it gives it a aggregated value. Okay, let's do a quick check. What was the pounding again?
+What I was doing by pounding? Wait, pound was just a… in this, right? Isn't that some… but…
+Group pending by camp, okay, it doesn't matter, it's grouped by the opponent, that's the right one, okay.
+I'm getting mess… you know, it's getting people messy here. And it prints the summary again.
+It doesn't have that table, so it gets the table names they're working with all. And by the way, it keeps all the intermediate tables, so that's why the model have to think about which table you're working with.
+And once again, sorry, there's no pan column.
+to group by again. It's failures, pushing back, it's…
+because it's doing that column, remember what happened? Impl…
+in place, right? It edited that column aggregated, so that original pan column no longer exists.
+Messy, friends, messy.
+And I just keep trying.
+It just doesn't work.
+The pound just… Ex… stop existing?
+And I grouped by opponent again.
+No, that's bad, because… You're probably just grouping… it's grouping on… aggregating again on an aggregate, right?
+now it's tried to sort again by the two columns. I don't even know what it's doing, but let's see. It's sorted again on an aggregate that has been aggregated, and it tries to make, you know, sort by a new table, and eventually, okay, this is the final table.
+look perfectly reasonable, right? Doesn't seem very messy. Everybody has count equals 1, right? That looks like the answer in the top… everybody has the same count, right?
+Perfect, no problem. So, the model makes a very reasonable, logical choice that everybody has… is the one with the most win. Everybody. Perfect.
+And unfortunately, the answer is wrong, right? The agent got…
+Very feasible answer. Once again, if you don't underst… don't look at what's in between. You have no idea what just messed up.
+And the answer is just wrong. Okay, now back to the two questions.
+we're gonna have. So, same two questions. Which step is ultimately responsible for the error?
+All right, thank you very, guys, and…
+Most of you got it, thank you, and…
+Let's see, let's see if, once again, our…
+RL with human feedback alignment test, so please, this is… which single step, or part of step, do you think it's responsible for the error? I do some grouping myself, because you don't have to pick from the 10 different steps. Some of these are just meaningless, right?
+Take a look, please take a look at these steps. Is it…
+Because the table summary is doing a bad summary or a wrong filter, it's not supposed to filter by the results.
+Or is it just… Not supposed to count based on the proponent first.
+Or is it doing the second count? Once again, it's reflecting out of the wrong side of it? Or is it just misreading the final result
+incorrectly.
+Let's see.
+Folks, if… let's see, if you have… once again, this is our tables, our tables here, right? Our result, our competitions is…
+the same, you know, a lot of these columns, it doesn't necessarily matter. What do you think?
+Is it wrong for it to filter by the win? The result equals win?
+Or it shouldn't count the number of each component. Is that aggregation step wrong?
+Or is it because the number of tens is, like, it's just misreading it?
+I mean, folks, please, thank…
+Give it a… give it a… give it a shot, right? Give it a shot.
+Alright, just give it a shot.
+to be the most alignment… most aligned members of the judgments of Trust for Fee AI labs. I don't… this is… well, this is just our judges, but,
+Alright, let's have another minute. I mean, this is… this is complicated, so I'll probably give it, like, 2 minutes.
+One minute and a half, I should.
+Yes, any questions? Oh, sorry? Doesn't South Korea happen?
+Which one? Sorry?
+South Korea… South Korea? I mean, I bear…
+Yeah, that is a… so let's say if you count that, they have the same count, right?
+Yeah, Barrett.
+They don't… yeah, they have…
+Right, that's… that's the prob… that's one problem as well. Yeah, you… I mean, this is… this is about how you interpret the question, right? Sometimes this question is, you know, we… we have ambiguity ourselves, so… but let's take it the most simple approach that you would put in, which is what…
+I mean the labels given by the dataset creator, so probably that's how they think, right? But…
+That… that's ambiguity, right? That's… that's… we have to work. And, by the way, interestingly, sometimes 5% of the WikiTable data, which we think… we think the label is just wrong, right? So this happens. There's a data set quality issue that you have to encounter. Especially these days, a lot of people are generating data set of large language model, right? There's more of them.
+Okay, so… Thank you, everyone. It's for your answer. Let's see how much… Of us align, so… Alright.
+My personal… my thought is with the second one. Okay, once again, we have a very big variance, a disagreement among human judges, right? Which, we think we are the best people on Earth who know this data. But, let me explain a little of my…
+reason. But that's my reasoning, because I think the first count looks good, the second count is simply aggregating on an aggregate, right? Because if you look at the first table, it's probably, you accurately count each single one of them. That's what I… what I think.
+And… One last question, and first, shout out to this group of winners here, who the most
+aligned, I would say. The people, they like the turns, and… so one last question for this activity to do is…
+Once again, what do you think is causing the problem?
+Right, once again, we have to…
+We just saw… recap what we just saw. The model, starting on the…
+Plausible, at least a plausible right direction.
+And it goes off by doing the count, right? And then it somehow tries to do the sorting.
+And it makes some errors in the sorting using the wrong column, which is… I think it's not devastating, right? So you could just fix it with the right argument. But instead, what I think is that it just…
+change differently, right? So.
+And as, as one of our members who's pointed out, and sorry, what's your name again? Sorry, what's your name? Craig. Hey, nice to see you, Craig. Thank you for that question, right? Franco pointed out.
+Maybe the question itself is just wrong, right? The agent's doing it in a reasonable way?
+maybe the agent's not right, it's just that we are defining the metrics poorly. Maybe it's the…
+Grand true of questions is just wrong, perhaps.
+What is… or perhaps the tool calling just too difficult for…
+to handle is just a bad two-calling design in our… We're supposed to fix that?
+Alright, let's… let's give everyone one more minute and try to…
+Let's see, how many of us… how many of you would…
+That… and by the way, if… Hey, hello, Professor, and…
+And we're back here in the middle of our class activity, so everybody's trying to walk through the same, really, error localization phases here. And… and I'm going to show someone who's most aligned with our lab choices, so I ask you to please be nice to them on their presentation. Okay, okay.
+alignment, right?
+Okay. We just started? Yeah, we… this is actually the last question. Last question. So basically, we show them a trajectory, and we walk for them the whole trajectory, and we're asking everybody, do you know what is probably the right answer? And we've lined it with the human labels, which we did, right? We did earlier this year.
+So, yeah, so it's just about how aligned with, like, everyone's with us, so just a… all right, so let's, yeah, let's have one more, 30 seconds, right? And Professor, maybe you can give your answer on this one later as well, yeah.
+Yay.
+And… So, just to help you…
+And you probably missed the trajectory, but you can feel free to give your best guess.
+Right? So, let's wait… Almost there… Who's there. Everyone have…
+Okay, let's call it. Let's call it. Anyone wants to have the answer, or we just…
+Let's see how everyone's speaking.
+Okay.
+Alright.
+Yeah, so… Okay, this time still we have a lot of deviation, but,
+Finally, some… this is… this appears to be the most aligned question between the classes and our lab. So, my personal choice is… is that I think the counting went wrong, right? Remember the first time we already… the agents already did one counting by group, so let's get back quick… real quickly, right?
+It does aggregate. It counted the number of components.
+in its winning subset, so it already gets the number of win for each component. But then, because of some errors, it deviated, what I believe is that it goes off the way by the agents, by misled by this error. It's trying to fix this error too hard, and eventually, it somehow just do…
+accidentally do the opponents counting again. It aggregated again on the aggregation, right? So this time you get a different aggregation, which is everybody's is 1.
+So this… this is where it used for its final answer, which is wrong. It believes everyone has the same number of count. So that is what… of course, you… you can… you can reasonably argue, right? So this might be a two calling. Maybe if there's no such two-calling failure, maybe the mod…
+the agents would just keep answering and get it right, and maybe the error just wouldn't happen. You will be… I don't think it's wrong if you argue in direction, because that's a reasonable guess. We just don't have evidence to prove that, which is what we're going to talk next. But for now, let's finish the…
+The whole games?
+All right, so the… the bronze, the two team members, is getting two out of two. Maybe our friends can come here and…
+3 out of 2 people. Alright, let's see, does anyone get 4 out of 4? Oh, Gigi Bond is the one who's most aligned with us. Can Gigi Bong just let profession know, you know? Okay, let's try it out here.
+Run applause to everybody, you've done a wonderful job here, because this is a real question, and remember how much time we spent to… we spent, like, 20… at least 20 minutes? Just for these two questions, you understand that's why we need these automated labeling, right? So.
+we just spent two, that's… let's… everybody… because in… in this… in this earlier this year, we have to label just 137 question, right? And we need two different labelers for that. That's multiplied by 2, multiplied by 10 minutes.
+You know, you… let's… let's… you do the math, so…
+It's very expensive, and remember, there is 14,000 questions in the WikiTables, right? And it's just one version of model, and just one version of data.
+And just think how many, you know, human labor would I did if we want to change, make sure to adapt the model to identify this as a model problem versus a architect infrastructure problem for us.
+So, and… oh, by the way, before I go off to Gigi Bong, maybe you can let us, Professor know your name or your time, we can have chat after that. So, Professor, please be nice to Gigi Bonsai final presentation.
+Yeah. Yeah.
+Okay, thank you very much, everyone. Yeah, that's exactly… that's a real workflow, right? That's actually what we did to try to dig out the error, and that's likely what those
+model companies, or Frontier Labs are hiring, you know, highly educated peoples, like people in this classroom, to try to just do the label for them, spend hours and hours, you know, just doing those labels.
+Right? That's… so, it's very expensive, and as you saw that there's a lot of possible failure modes that you've already surfaced from just that two examples, right? The model might be just doing the count on the wrong units. It's thinking about, you know, it's
+counting rows rather than the unique entities, which, like, could be the components. It's doing it on the wrong unit of grain for the table, and it could be, you know.
+using that value or a certain spelling incorrectly. For example, like the questions that they're just spelling the age incorrectly, or just make guesses on what the categories will look like, well, based on that
+based on his prior knowledge, rather than looking at the context. It would just probably never check… do such, checking for these, values, and it just read the question incorrectly. That's plausible answers, right? So, like, perhaps it just…
+Doesn't recognize that it should count for all the different In different,
+awards that's related to the movie Harrison. You just count the best movie and forget about other viable example, which is Best Director and Best Actor, and so forth.
+And you just use the wrong conditions, or doing the filtering incorrectly. And sometimes the filtering, wrong, that's sometimes…
+would go wrong with your… depends on your database setup, right? Some… some of your libraries, when you have a non-existent library, or you are doing it as equals or on-equals conditioning, it would not throw an error, even if you are
+doing it with a non-existing conditions, which naturally give you an empty number. That's a very common error for the large language model, when they hallucinate and make up categories for a system that doesn't exist in your data, right? And you can have the repairs that just
+You know, that put the model in the wrong direction. The model's trying so hard to try to recover from some of its error or exception messages instead, and ultimately, it doesn't get out of it ever.
+And…
+all sorts of different modes, right? You could have different reading of the tables without checking the stays, even if that's present, and just…
+Because some information is present in your context. It's well known that doesn't guarantee to let the model steer its direction, due to the same problem we mentioned, which is context rotting and loss in the middle of a large language context.
+So, we have a lot of…
+We can… the list can go wrong, goes on, beyond that.
+We could identify these as the model's problem is interpreting the problem or the contest incorrectly. It could be our system, the environment, or the more fancy term, the harness problem. You're not giving the model the right tools or the proper instructions for using them.
+It could be some just, random problems. It's just that somehow the model have a, let's say, a network error. It's accessing your databases by internet, but it somehow had an error that let the model disguise it into a signal that doesn't relate or doesn't reproduce, or it just…
+This happened because this is a model, model performed phase differently, right?
+For different models, versions, and etc.
+And…
+So, this basically brings us in to a province of how do we find the steps that is error.
+And if you notice, like.
+remember that how deviated, like, the class selection was on… for the cost and for the… the root cause of the steps, and I made it intentionally, some… a little ambiguous. I just asked people, what do you think, which step would you blame?
+And as you can see, the cost is kind of subjective, because everyone can argue for your own choices, and we wouldn't know it without evidence and testing.
+And even for the steps, there… if you define it as the fundamental step, there will be a lot of disagreement, right? So you could say, maybe I think this step is ultimately responsible, that's associated with your, root cause question.
+If you try to find the first step, it's wrong. That appears to have a more of 5.
+actionable metrics, but is the first one is wrong necessarily a meaningful problem? Not necessarily, right? Because if
+If a powerful enough agent, or it might be able to recover from it, right? It could… you see the first error, an exception message, it should just adjust slightly and should get it off and back on the track. And there could always happen for the agent to adjust itself, especially with giving them the intermediate states.
+So, what we ended up defining
+which is not entirely… we agree entirely constants for the, you know, the subject, which is a relatively new subject for agent, is that we're looking for the first wrong step that makes the problem unsalvageable, or we call the first irrecoverable step. The step that makes
+Every step further that depends, inevitably, or very likely, goes wrong.
+One of the steps you might see is that the… in the first reasoning trajectory… No, the second one, the review… the second example, right? There was a… there was a step where the model was doing aggregation, but was doing it on in place, right? In place means
+It's dangerous, right? You just change the original data frame, right? The table just now becomes the aggregated form. You lose the unagregated one.
+And you… and one step, that's the point of no return, because you overwritten your original data, you cannot go back. No matter how smart your model is, there… the data is gone, it's just gone. That's one example of a non-recoverable step, what looks like. So there has been…
+A lot of, methods or studies comes into the academias that are in the industry trying to identify these sort of error at scale, because we don't want to spend hours and hours sitting… sitting in the room like we just did and trying to label what goes wrong.
+We could let the model review itself, very comments.
+and it just… and it's just that it would suffer from its own biases, right? It's… if you have, ever used language model to review a papers or grade its own completion, that you probably see the bias that it's very likely to treat its own output as correct, as dying, or it's…
+continue to be misled by its own context, right? It's just code kept going down the same path, without…
+From its own biases.
+And even asking a model that
+trying to review a different model, it will still
+The context you put into it, especially when the first existing model already done a lot of work, can still impact the second model's decisions in a way that we… it's just like what the humans do as behaviors as tunnel vision, right? One, one example I keep telling is that
+I actually did a test myself this year. I… I let Cloud Code written an entire model, and I let it…
+let Codex review it for an hour or something, and it just…
+coming out 100 different explanations as ZRA, right? It just doesn't get out from either one. And they ended up being a hundred different explanations, none of these matters. They're…
+they're just seeing all sort of the model breakings, you know, training instability, and what ended up being the answer is that they didn't use the wrong… they didn't use the right input file, right? So they used the empty file with the corrupted categories that every…
+errors that just follow, and no single agent in this 100 pages, you know, debugging logs ever bothered to think about that. So, even using a separate model is not immune to that same tunnel vision, bringing by the context error.
+So, and… Right, then… And we can have, right?
+So, reading, in particular, is not a very reliable
+way, especially when you have to present evidences, right? For the same errors like we just saw. There are different ways to explain it. Most of them would make sense, but it would take some sort of trials and errors and, you know, controlled experiments to actually figure out what would that be. And that's someone… that brings someone to just, you know.
+Let's… how about we just rerun the whole experiments from the agent trajectory, and let's see if there are some house that
+In a re-fixed run or a re-attempt, the model gets the right answer, and we can do the contrast and see where the things are going off. That is one step closer to the solutions that we will think, and
+But that… what is missing is that, what if the two trajectories are fundamentally different, right? Say, we have…
+one with the first, the arrow one, going one direction, like taking the aggregate approach, and the second one going a totally different direction than taking the grouping or filtering approach. And even if the second one
+is goes correct. It tells us what could be correct. It doesn't tell us why it is wrong, which is the signal we want to pick from the agent's failures, right? So that we… they lead to some more surgical work.
+More precise interaction weight, something similar to what an experiment designer would do.
+And also, we talk about memory in our previous lecture, so we might want to just bring the model's own memory, or bring its own failure records into its memory module, and next time, whenever it encounters similar questions.
+come back to the old failure last time, and perhaps it will somehow steer it out of it, especially with some models summarizing its own failure. That, once again, depends on the same method 1 and 2, right? It depends on the model, depends on whether to steer out of
+Be able to dig out that noises and find out the answers, and whether it's… once it's come to a new question, and with memory, it can dig out the… it could,
+prevent from suffering from the same biases again. So, this, brings us to… so this is our part two today, is to give everyone a real walkthrough about
+how, you know, how noisy and how troublesome a real error localization would be. And the next sessions, before we come back from the break, we will talk about
+What is our solution? And how we combined, the… both the…
+The agents, the language model judge, and the…
+a counterfactual intervention and fixing, to have an evidence-based solution to answer the question, which step is causing the error with a little bit more robustness and usefulness? So that will be the second part for today.
+Right, and before we go to the break, does anyone… anyone has questions on this part?
+Okay, any question?
+No, I think, Bright PARK program would help is the Bright in soccer than me. But unfortunately, I graduated next year, so I really wanted him to stay in university. He's the perfect, candidate for professor, but… Yeah, good professor.
+you know, industry offer 10 times more money. Okay, yeah, so thanks. Thank you, guys. Meeting is free. 5.30, okay.
+Hi, welcome back, ladies and gentlemen.
+And let's get started with the last part of the day, is to take what all we know from agents and agent failures together, and what is our solution for
+Localizing wisdom.
+are identifiable steps to make. That's what we call an error localization, or error attribution.
+And to just briefly recap, our goal is to identify the first irrevocable error, right? The first error that couldn't be fixed by any further action. That, once again, might be arguable metrics. You might have your own opinion about that. That is something that at least most of the field has been agreeing on.
+on, although it has problems still. So, in part two, we just chosen our step. We try to look through the gap.
+All the steps, trajectories, and we try to pick out… use our own reasoning to figure out which step is the problem.
+And we could have different reasoning for the same problem, which is why we saw different… so many different answers for the same question with all the everyones in the class. And if we… we actually, in our human label, from our TrustRiv members, we found that the agreement rate between any two raters for the same question is just
+80%, just 80% for the number of steps to blame, and dropped to roughly 65% for the reasons to blame. So there's a lot of disagreement that could come up if you were just to think about what's the problem.
+So what we try to do with the whole idea is that let's try to test all these guesses we have about
+what's wrong? Basically doing some testing by real elements. So, what we want to get
+strong it is, wants to recap the form, is that we're given the questions, and the tables, and an agent trajectories. We want to come up with the following information that will help us improve.
+We want to know which step is the most problematic one causing the error. We want to know what type of error, right? So, it's causing the problem. And we want to, most importantly.
+compared with what we have been struggling with in Part 2, I want to have some sort of evidences that will
+let us show, convincingly, at least to some degree of confidence, that we're not just randomly guessing. And that would be very important if you are
+some top engineer in places like, say, Amazon or Microsoft in charge of the outlook, right? And you try to merge important
+agent-based code into your production codes, and you want evidences, is there any errors, and is there anything that's fixed, right? Just having some explanation or LLM-generated port wouldn't be… probably wouldn't be that much for
+building trust, or… I mean, it's… it's not going to get them off the hook if something goes wrong. They want evidences. So, what we want…
+want to do here is that
+We want to combine what we have been doing. We do the diagnosis, which we read. Of course, we need to come up some
+our explain… own guesses, right? Just like what we did with reading, going through the steps, we come up with some of our explanations. And the test is we do testing.
+And by testing, we mean, actually, we need to try it out following our explanation, the hypothesis. For example, when we say the,
+That the aggregated counting, the second aggregate on
+top of the first aggregate is the problematic one, and let's try it. How about we drop that problematic step we identified, and see if now it goes better. Or if it's… we think it's refiltering based on the wrong criteria, the wrong condition, let's try it with a condition that we guessed, or we just diagnosed, and see if things get better.
+That is evidence, right? That's like building and controlled experiment, or if you're with
+causal inference community, like, you would have… you've probably heard of the technique called synthetic interference, right? You have an interference, you have,
+You have a trajectory before you do intervention, you observe the trajectory after the intervention, which is, in this case, is our fixing, and you also have the
+trajectory, which is what might happen if the intervention is not applied, right? In real, you know, demographic or social science cases, you don't have that intervention. You don't know exactly what the
+on the intervened traces would be, so we have to fit the regression model to predict its trajectory, but fortunately for our agent cases, we can
+It's just tokens, so we can easily generate both cases, and we can repeat it for different trials to get things like variance or confidence interval. Very nice for us, right? We couldn't do this controlled experiment from
+Social science population, but you couldn't have the same
+the same country with that policy on and off at a different time. That doesn't make sense.
+And finally, we verify, right? So we verify based on the outcome. This is assuming we have some reliable measurements, some oracles, some ground truth answer with what the answer, what right will be, and that will give us a signal of what, whether our fixing is working or not.
+So, to be more specific, we could,
+I don't… I wasn't able to fix that method part, so let's just go right to this. So, the first step is the same, right? We've given
+The diagnosis part is that we're given the same trajectories, noisy as they are. We try to standardize it using things like putting into a standard trajectory, like LAN chains, or, you know, the common trajectories formats that people will use. And we put into an auditor models that will read the trace, and they give their initial, guesses. They were just like what we did in step two.
+But with large language model.
+They output the step, and they output the wrong conditions, and how confident they are, so…
+This will guide… this part is still language model based, right? This part could go wrong, it could go totally off, like, just…
+It may be reasonable, but it's off. So we generate a few different hypotheses using different runs of the model with different redundancies or draws. So we have a few possible hypotheses. And then we turn this hypothesis, this is gear, into a repair plan.
+This repair plan is basically, you roll back all the way.
+to the step before the step that identifies error. For example, step 4 and 5, we just drop them all together, and we let the model to redo everything from that point.
+Given the step, it's already.
+Pretty done.
+and this diagnosis reports. So, the idea is, if the model,
+If the diagnosis is helpful, you identify what's wrong and what to avoid, then the action model, when the builder's repair plan, which is re-executing from the intervened point.
+issued
+Fix it, and then issue goes on the right direction, and replay from that step should produce a correct answer, right?
+That's where replayed is going from. And, however.
+Even if, when there is a…
+suggestions or diagnostic report, what you would often happen, often see, especially with a weaker model, is unfaithful behavior. That's the second type of hallucination you've often heard of. You've probably heard of the terms hallucination, about language model making up facts that doesn't exist.
+But there's another time of hallucination we call the faithfulness, right? It's just… it doesn't make our things new, it just do it in a way that doesn't follow your explicit instruction. For example, if you tell it to don.
+to do a filter, but in a different way, right? Filter on a different column, it might, given on the long context it's already given, and it just keeps sticking to the old way. The same problem as the tunnel vision bias that we just talked about, especially when you have a very long trajectory, right? In the real problems, the
+The hotel structures might have dozens, or even a hundred steps, so the first 15 steps, which will be a huge context already, is enough to Elias the model that perhaps it will keep going down the same wrong path.
+Since your diagnosis doesn't change my mind, I'll just go, whatever that is. Here is what that we designed, the second step, we call it the faithfulness gate. It's
+Well, basically, just a…
+not a judge model, but now it's giving a much simpler task. As the name suggests, you gauge the outcome on whether it is faithful to the diagnosis report. If the model repair it in a different way that differs from the diagnosis.
+It will get rejected, and the model has to redo, redo over again, until it produces something we think is faithful.
+that… because without this, right, so you could… if the model just fixed in a random way, and it's… it's not very different from starting all over again, because even if you… the model continues and gets right this time, we don't know what is the true distinction. We were not able to test the diagnosis hypothesis we made.
+So, this step ensures we have found a diagnosis, we fix the problem steps, following it in a strictly way that is close to the diagnosis. And if
+the model is then verified, you get the answer right this time, it doesn't fall, it doesn't collapse or error. Then we believe there is evidences that before.
+that this diagnosis is helpful. It's capturing something that will lead the model, it's helping the model to improve. And this step is responsible, because if you can flip it from the answer from wrong to correct by changing this one, this has to carry some of
+the weight in the model's ultimate decision process, right? So this might be the,
+Right? That's the overall idea here. So if you look at the diagnosis part, right, it could hallucinate. There's no guarantee that this one, this diagnosis is correct. And the faithfulness gay part
+Well, unfortunately, this is… this is a much simpler problem, but there's still… we cannot say it's 100% accurate. It might just let go of something that's unfaithful, or, you know, that they have… or just kill something that's actually faithful, if
+But it's the much rare cases. But taking all these into consideration, if the whole loop works, and we have identified one set that
+One step, if you fix it, you have the evidences that it goes to either wrong, and you could, sort of wrongd to correct, and this is so confusing.
+And taking that together, right, this is evidence we believe we can act on it, and we have evidences rather than just some reasoning in our head or with the LM's reasoning space. And you might be…
+thinking, this is… this… we… in practice, we're gonna start from backward way, right? So this is more efficient. Try to, you know, this… this aligns with our thoughts of trying to discover the last step that… the first step to make things irrecoverable, right? So, we start from step 5 and try to diagnose it and fix it, and if the step 5 happens to be one
+You know, with potential error. If we have
+the agent in the step 1, stage 1, identify step three and five, both have problematic, we start from the last step. We don't start from the front, because obviously… and…
+It is not…
+if an agent is doing a mistake in the early one, especially one with stronger capability, it always has chances to recover. It is some later step, possibly, that will make things unrecoverably wrong. If you start from the step 5 and do whatever
+the agent tries, and up to a certain amount of budget, like, can try 10 times for… or 5 different hypotheses, for example, and it still doesn't fix it. We conclude, and we move on. This is probably the salvageable part. The irrevocable error probably goes before it.
+Right? That is the central idea, so we keep moving until there is a point we can fix the problem.
+Right?
+So the idea is pretty, I would say it's… it's combining the, diagnosis and the fixing and the improvement of the, first signals together by using this faithfulness gate. That is the central idea. It's pretty straightforward, but it's, quite useful, right? So we have been testing all these
+our methods. We use it testing on a variety of different methods on the Wikitable benchmark, which is the table data that we're using, but we also test it on
+software engineering benchmark. We tested on some web reasoning agent benchmark, but the model has to do some web search to answer the user's questions, and we do a lot of benchmarking on top of that, and we found, okay.
+It's our paper result that we're doing consistently better on all of these different benchmarks. Not consistently. I mean, for text-only reasoning, we're not the best benchmark here. This kind of makes sense, because when you have a text,
+when you have, you know, reasoning or inference by, you know, a text paragraph, unlike the function calls or coding, you don't have a clear cut-off about which part is step one, which part is step two. Those reasoning might be interleaved together, and which is different from our tabular tool cases, right? Each
+tool. It's by definition and design, only do a very small and separated task. So,
+But on the… on the coatings, right, more Agentic cases, the cases that we used to do, we are doing a better performance. And the…
+And we have, a lot of different diagnoses about, you know, there's strong repairs, right? The explanation how much we agree, our explanation we generate agree with the humans when we, human labelers, which we assume is our ground truth, our,
+our… when… when our repair is successful, our accuracy… that explanation accuracy, which we graded manually by comparing the model-generate accuracy versus the human accuracy, is much higher, right? This may also… it's kind of the goal of connecting the explanation with the repairings and verification, because now, whenever
+explanations only survive when it's somehow being able to fix the question. Of course, there is… might not be the
+you know, the model might get lucky, maybe initial failure, just random noises, so that even if diagnosis fixing does not necessarily mean it's, it's related to the ground truth, right? I'm making…
+So much disclaimer here, but that… that is the whole pro… that is the problem of when you have to make a causal claim. But still, connecting explanation and fixing, give it a better accuracy, and make the explanation more helpful if you want to improve the performance. And there actually be some tech company in collaboration of lab try to combine this technique into building their so-called reoccursive self-improvement. So they take this…
+Pilot is one intervention step, and once you have some solid evidences about which part of the model is going wrong, you could improve the system, right? Let the agent update his environments, update his PROM, update his harness, or whatever.
+And try to make the next round of accuracy goes better, all right?
+And, right, the… it was that… this is, we tried to replace the hint with, different, with some… something that's not usable, because it has been found in a lot of language…
+model studies, right? Sometimes just giving it more context with meaningful, placeable text, it will still somehow make the performance increase by encouraging the model to think more and deeper, but that's not our case, right? In our case, the correct hint is still important, right? Especially, it has to be
+inserted at the right step, which is connected with the fixing, once again. And, alright. So, and what's interesting fact is, when you don't have a ground truth, right, accuracy, especially in your deploying your model, you don't have a ground truth.
+before your… your question, your customer might be asking, whatever that is. So, you can see the performance without
+go for. In this case, we have to refer to what we call a structure defer. So, there is a step… we have to reduce to a strong model that reading the
+the trajectory, step by step, and try to find out the minor deviations without looking at the whole trajectory. Use it as some sort of judge model when we don't know what the true answer is.
+Reasonably, you will see a degrading performance on all these front… on every benchmark, but Kind of a steal.
+They're still kind of, you know, they're usable, so they… the practice real, so especially… this tool is particularly useful when you're in our boats, like, you try to build and improve your agent's system, so when you know the ground truth, which you assume you do, it's better for you to quickly loop around and improve.
+And get your performance better, right? Right, so…
+But, you know, that's still… some of… we have… Some of our…
+strong results, and we need some of our limitation, basically, you need to… it works best when you know the answer, and it works only when you have a way to replay, right, retry from a fixed starting point. That's easy to do when you have a language model, when you can just put in the exact
+trajectories, like the same contacts, same log, and try again from there, exactly. It would be difficult if you're going to some other, domains, such as, Embody Agent, for example, right? You… it's difficult to set the Embody Agent like a
+robot's arm to exact positions of where the failure things has happened, right? There's a lot of, it's not a complete or a discrete step. There's a lot of continuous movements, and you have to break it down. It's difficult to reset. There's a lot of, you know.
+And the noise is due to gravity and so forth, so that's a problem we're trying to solve.
+Right, so that is pretty much, our, lecture today. So we take a look at
+one agents we built. We try to navigate through the failures, which is so headache, so much headache, even for simple cases, and we try to build demonstrated systems how we can get… recover from it, and we extend to more different cases, like
+Not just typo reasoning, but any reasoning agents, like coding agents, with research agents, and, you know, search agents as well, so they could
+The logic is the same, to build up step by step, make every step observable, and make this action grounded on top of that, on the most latest knowledge that's available for your state, for your environment.
+Alright, that will be the lecture for today, everyone. I thank you for your attention.
+And any questions before I call it a day?
+Do you have any questions?
+No question. I think this gives you a concrete example. This is, of course, more complex than the AI and the CA agent, you know. AI is much simpler, but you will see how we build a data analytics agent. It's very relevant to you guys, I think, you know.
+And, XIOFON can send me the PDF. Yeah, absolutely. And also, we record this, video. I think it's worth watching multiple platforms when I build the agent.
+And also, he opened up this black box, so…
+It's, it's good. Okay, by the way, for the reading, it's, accessible from the, ChatGPT.
+So if you've seen the flag install, and also the, cloud.
+Okay.
+So, if you go to cloud, plugin, soft, then you search really, we haven't changed the name yet, but still really, then download it.
+Then it's from then you can start, like, do your homework by, like, natural language, okay? So, if there's a bug, just let me know, okay? And we just uploaded to the cloud and opened it a few weeks ago, so…
+many people are using them, including Into3, just so I thought that. Okay, let's send this off from the…
+Hey there, thanks for letting us.

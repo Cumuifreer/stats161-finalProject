@@ -1,0 +1,44 @@
+{
+  "device": "cuda",
+  "torch": "2.10.0+cu128",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "peak_mib": 77.3173828125,
+  "parameters": 26017,
+  "fitting_seconds": 1.5692830001935363,
+  "train_games": 4096,
+  "validation_games": 768,
+  "train": {
+    "draft": {
+      "log_loss": 0.6319109201431274,
+      "brier": 0.2207808643579483,
+      "accuracy": 0.64697265625
+    },
+    "preview": {
+      "log_loss": 0.6234867572784424,
+      "brier": 0.21683984994888306,
+      "accuracy": 0.652099609375
+    },
+    "prior": {
+      "log_loss": 0.633179783821106,
+      "brier": 0.22129327058792114,
+      "accuracy": 0.646728515625
+    }
+  },
+  "validation": {
+    "draft": {
+      "log_loss": 0.6418039202690125,
+      "brier": 0.22540143132209778,
+      "accuracy": 0.6184896230697632
+    },
+    "preview": {
+      "log_loss": 0.6354415416717529,
+      "brier": 0.22194330394268036,
+      "accuracy": 0.6536458730697632
+    },
+    "prior": {
+      "log_loss": 0.6419540643692017,
+      "brier": 0.22545354068279266,
+      "accuracy": 0.6223958730697632
+    }
+  }
+}

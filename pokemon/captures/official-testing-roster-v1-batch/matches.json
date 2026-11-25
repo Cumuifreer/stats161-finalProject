@@ -1,0 +1,46 @@
+[
+  {
+    "match_id": "c847a718-7e96-4a42-9050-6e834ab642a4",
+    "capture_key": "ecf91d1ce542051c2254aa18",
+    "context": "testing",
+    "game_type": "pokemon_vgc_doubles_draft",
+    "weights_sha256": "a458a24568361e1515be1ee13e7b8bb094b0e8147a0799e1eecec4ccedc33d5c",
+    "seats": [
+      0,
+      1
+    ]
+  },
+  {
+    "match_id": "9ea6a313-acaa-4f5c-a82b-97dc9317946c",
+    "capture_key": "ebc0f4ef7f68a2e29e66ec67",
+    "context": "testing",
+    "game_type": "pokemon_vgc_doubles_draft",
+    "weights_sha256": "a458a24568361e1515be1ee13e7b8bb094b0e8147a0799e1eecec4ccedc33d5c",
+    "seats": [
+      0,
+      1
+    ]
+  },
+  {
+    "match_id": "3f349600-3f61-414f-8048-e7c87800e71a",
+    "capture_key": "4562a3465a8d18fdeb3b998c",
+    "context": "testing",
+    "game_type": "pokemon_vgc_doubles_draft",
+    "weights_sha256": "a458a24568361e1515be1ee13e7b8bb094b0e8147a0799e1eecec4ccedc33d5c",
+    "seats": [
+      0,
+      1
+    ]
+  },
+  {
+    "match_id": "563cf953-467d-4626-9c45-a2a0a01bd54d",
+    "capture_key": "8d1e72951a074abb0b385246",
+    "context": "testing",
+    "game_type": "pokemon_vgc_doubles_draft",
+    "weights_sha256": "a458a24568361e1515be1ee13e7b8bb094b0e8147a0799e1eecec4ccedc33d5c",
+    "seats": [
+      0,
+      1
+    ]
+  }
+]

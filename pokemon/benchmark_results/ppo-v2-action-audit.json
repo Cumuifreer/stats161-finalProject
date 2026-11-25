@@ -1,0 +1,2289 @@
+{
+  "seed": 138001,
+  "pairs": 64,
+  "checkpoints": {
+    "v1": {
+      "fixed_trajectory": {
+        "decisions": 1006,
+        "outside_top1": 0,
+        "selection_changed": 0,
+        "full_teacher_correct": 566,
+        "short_teacher_correct": 566,
+        "num_legal": 70622,
+        "num_candidates": 5516,
+        "forced": 84
+      },
+      "outside_softmax_mean": 0.0007565221746577917,
+      "in_set_logit_max_delta": 3.814697265625e-06,
+      "bench": {
+        "full": {
+          "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+          "testing_pools": 0,
+          "first_seed": 138001,
+          "pairs": 64,
+          "frozen_suite": null,
+          "battle_only": true,
+          "preview_only": false,
+          "completed_games": 128,
+          "completed_pairs": 64,
+          "draws": 0,
+          "games_per_second": 27.11,
+          "agents": [
+            {
+              "wins": 50,
+              "fallbacks": 0,
+              "model_choices": 0,
+              "different_choices": 0,
+              "policy": "bc",
+              "win_rate": 0.390625,
+              "win_rate_ci95": [
+                0.328125,
+                0.453125
+              ],
+              "score_rate": 0.390625,
+              "decision_p95_ms": 1.76,
+              "battle_time_p95_seconds": 0.01,
+              "forfeits": 0,
+              "by_phase": {
+                "draft": {
+                  "decisions": 768,
+                  "p95_ms": 0.05,
+                  "p99_ms": 0.08,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                },
+                "team_preview": {
+                  "decisions": 128,
+                  "p95_ms": 1.01,
+                  "p99_ms": 1.09,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                },
+                "moving": {
+                  "decisions": 1140,
+                  "p95_ms": 1.94,
+                  "p99_ms": 2.31,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                }
+              }
+            },
+            {
+              "wins": 78,
+              "fallbacks": 0,
+              "model_choices": 0,
+              "different_choices": 0,
+              "policy": "joint",
+              "win_rate": 0.609375,
+              "win_rate_ci95": [
+                0.546875,
+                0.671875
+              ],
+              "score_rate": 0.609375,
+              "decision_p95_ms": 0.88,
+              "battle_time_p95_seconds": 0.01,
+              "forfeits": 0,
+              "by_phase": {
+                "draft": {
+                  "decisions": 768,
+                  "p95_ms": 0.05,
+                  "p99_ms": 0.07,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                },
+                "team_preview": {
+                  "decisions": 128,
+                  "p95_ms": 0.91,
+                  "p99_ms": 1.01,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                },
+                "moving": {
+                  "decisions": 1116,
+                  "p95_ms": 0.89,
+                  "p99_ms": 1.14,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                }
+              }
+            }
+          ],
+          "errors": [],
+          "paired_scores": {
+            "138001": [
+              0,
+              0
+            ],
+            "138002": [
+              1,
+              0
+            ],
+            "138003": [
+              1,
+              0
+            ],
+            "138004": [
+              1,
+              1
+            ],
+            "138005": [
+              0,
+              0
+            ],
+            "138006": [
+              0,
+              1
+            ],
+            "138007": [
+              0,
+              1
+            ],
+            "138008": [
+              0,
+              1
+            ],
+            "138009": [
+              0,
+              1
+            ],
+            "138010": [
+              0,
+              1
+            ],
+            "138011": [
+              0,
+              1
+            ],
+            "138012": [
+              0,
+              0
+            ],
+            "138013": [
+              0,
+              1
+            ],
+            "138014": [
+              0,
+              1
+            ],
+            "138015": [
+              1,
+              0
+            ],
+            "138016": [
+              0,
+              1
+            ],
+            "138017": [
+              0,
+              1
+            ],
+            "138018": [
+              0,
+              1
+            ],
+            "138019": [
+              0,
+              1
+            ],
+            "138020": [
+              1,
+              0
+            ],
+            "138021": [
+              1,
+              0
+            ],
+            "138022": [
+              1,
+              0
+            ],
+            "138023": [
+              1,
+              0
+            ],
+            "138024": [
+              0,
+              0
+            ],
+            "138025": [
+              1,
+              0
+            ],
+            "138026": [
+              1,
+              1
+            ],
+            "138027": [
+              0,
+              0
+            ],
+            "138028": [
+              0,
+              1
+            ],
+            "138029": [
+              0,
+              1
+            ],
+            "138030": [
+              1,
+              0
+            ],
+            "138031": [
+              1,
+              0
+            ],
+            "138032": [
+              0,
+              0
+            ],
+            "138033": [
+              0,
+              1
+            ],
+            "138034": [
+              0,
+              1
+            ],
+            "138035": [
+              0,
+              1
+            ],
+            "138036": [
+              1,
+              0
+            ],
+            "138037": [
+              0,
+              0
+            ],
+            "138038": [
+              1,
+              0
+            ],
+            "138039": [
+              1,
+              0
+            ],
+            "138040": [
+              0,
+              0
+            ],
+            "138041": [
+              0,
+              1
+            ],
+            "138042": [
+              0,
+              1
+            ],
+            "138043": [
+              0,
+              0
+            ],
+            "138044": [
+              1,
+              1
+            ],
+            "138045": [
+              0,
+              1
+            ],
+            "138046": [
+              0,
+              0
+            ],
+            "138047": [
+              0,
+              0
+            ],
+            "138048": [
+              0,
+              0
+            ],
+            "138049": [
+              0,
+              1
+            ],
+            "138050": [
+              0,
+              0
+            ],
+            "138051": [
+              1,
+              0
+            ],
+            "138052": [
+              0,
+              1
+            ],
+            "138053": [
+              1,
+              0
+            ],
+            "138054": [
+              0,
+              0
+            ],
+            "138055": [
+              1,
+              0
+            ],
+            "138056": [
+              1,
+              0
+            ],
+            "138057": [
+              1,
+              0
+            ],
+            "138058": [
+              0,
+              0
+            ],
+            "138059": [
+              1,
+              0
+            ],
+            "138060": [
+              0,
+              0
+            ],
+            "138061": [
+              0,
+              0
+            ],
+            "138062": [
+              0,
+              1
+            ],
+            "138063": [
+              1,
+              0
+            ],
+            "138064": [
+              0,
+              1
+            ]
+          }
+        },
+        "shortlist": {
+          "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+          "testing_pools": 0,
+          "first_seed": 138001,
+          "pairs": 64,
+          "frozen_suite": null,
+          "battle_only": true,
+          "preview_only": false,
+          "completed_games": 128,
+          "completed_pairs": 64,
+          "draws": 0,
+          "games_per_second": 30.85,
+          "agents": [
+            {
+              "wins": 50,
+              "fallbacks": 0,
+              "model_choices": 0,
+              "different_choices": 0,
+              "policy": "bc",
+              "win_rate": 0.390625,
+              "win_rate_ci95": [
+                0.328125,
+                0.453125
+              ],
+              "score_rate": 0.390625,
+              "decision_p95_ms": 0.87,
+              "battle_time_p95_seconds": 0.01,
+              "forfeits": 0,
+              "by_phase": {
+                "draft": {
+                  "decisions": 768,
+                  "p95_ms": 0.06,
+                  "p99_ms": 0.07,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                },
+                "team_preview": {
+                  "decisions": 128,
+                  "p95_ms": 1.05,
+                  "p99_ms": 1.12,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                },
+                "moving": {
+                  "decisions": 1140,
+                  "p95_ms": 0.69,
+                  "p99_ms": 0.84,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                }
+              }
+            },
+            {
+              "wins": 78,
+              "fallbacks": 0,
+              "model_choices": 0,
+              "different_choices": 0,
+              "policy": "joint",
+              "win_rate": 0.609375,
+              "win_rate_ci95": [
+                0.546875,
+                0.671875
+              ],
+              "score_rate": 0.609375,
+              "decision_p95_ms": 0.88,
+              "battle_time_p95_seconds": 0.01,
+              "forfeits": 0,
+              "by_phase": {
+                "draft": {
+                  "decisions": 768,
+                  "p95_ms": 0.06,
+                  "p99_ms": 0.06,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                },
+                "team_preview": {
+                  "decisions": 128,
+                  "p95_ms": 0.99,
+                  "p99_ms": 1.13,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                },
+                "moving": {
+                  "decisions": 1116,
+                  "p95_ms": 0.87,
+                  "p99_ms": 0.99,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                }
+              }
+            }
+          ],
+          "errors": [],
+          "paired_scores": {
+            "138001": [
+              0,
+              0
+            ],
+            "138002": [
+              1,
+              0
+            ],
+            "138003": [
+              1,
+              0
+            ],
+            "138004": [
+              1,
+              1
+            ],
+            "138005": [
+              0,
+              0
+            ],
+            "138006": [
+              0,
+              1
+            ],
+            "138007": [
+              0,
+              1
+            ],
+            "138008": [
+              0,
+              1
+            ],
+            "138009": [
+              0,
+              1
+            ],
+            "138010": [
+              0,
+              1
+            ],
+            "138011": [
+              0,
+              1
+            ],
+            "138012": [
+              0,
+              0
+            ],
+            "138013": [
+              0,
+              1
+            ],
+            "138014": [
+              0,
+              1
+            ],
+            "138015": [
+              1,
+              0
+            ],
+            "138016": [
+              0,
+              1
+            ],
+            "138017": [
+              0,
+              1
+            ],
+            "138018": [
+              0,
+              1
+            ],
+            "138019": [
+              0,
+              1
+            ],
+            "138020": [
+              1,
+              0
+            ],
+            "138021": [
+              1,
+              0
+            ],
+            "138022": [
+              1,
+              0
+            ],
+            "138023": [
+              1,
+              0
+            ],
+            "138024": [
+              0,
+              0
+            ],
+            "138025": [
+              1,
+              0
+            ],
+            "138026": [
+              1,
+              1
+            ],
+            "138027": [
+              0,
+              0
+            ],
+            "138028": [
+              0,
+              1
+            ],
+            "138029": [
+              0,
+              1
+            ],
+            "138030": [
+              1,
+              0
+            ],
+            "138031": [
+              1,
+              0
+            ],
+            "138032": [
+              0,
+              0
+            ],
+            "138033": [
+              0,
+              1
+            ],
+            "138034": [
+              0,
+              1
+            ],
+            "138035": [
+              0,
+              1
+            ],
+            "138036": [
+              1,
+              0
+            ],
+            "138037": [
+              0,
+              0
+            ],
+            "138038": [
+              1,
+              0
+            ],
+            "138039": [
+              1,
+              0
+            ],
+            "138040": [
+              0,
+              0
+            ],
+            "138041": [
+              0,
+              1
+            ],
+            "138042": [
+              0,
+              1
+            ],
+            "138043": [
+              0,
+              0
+            ],
+            "138044": [
+              1,
+              1
+            ],
+            "138045": [
+              0,
+              1
+            ],
+            "138046": [
+              0,
+              0
+            ],
+            "138047": [
+              0,
+              0
+            ],
+            "138048": [
+              0,
+              0
+            ],
+            "138049": [
+              0,
+              1
+            ],
+            "138050": [
+              0,
+              0
+            ],
+            "138051": [
+              1,
+              0
+            ],
+            "138052": [
+              0,
+              1
+            ],
+            "138053": [
+              1,
+              0
+            ],
+            "138054": [
+              0,
+              0
+            ],
+            "138055": [
+              1,
+              0
+            ],
+            "138056": [
+              1,
+              0
+            ],
+            "138057": [
+              1,
+              0
+            ],
+            "138058": [
+              0,
+              0
+            ],
+            "138059": [
+              1,
+              0
+            ],
+            "138060": [
+              0,
+              0
+            ],
+            "138061": [
+              0,
+              0
+            ],
+            "138062": [
+              0,
+              1
+            ],
+            "138063": [
+              1,
+              0
+            ],
+            "138064": [
+              0,
+              1
+            ]
+          }
+        }
+      },
+      "paired_gain": {
+        "mean": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "shortlist-hard": {
+      "fixed_trajectory": {
+        "decisions": 1006,
+        "outside_top1": 103,
+        "selection_changed": 103,
+        "full_teacher_correct": 518,
+        "short_teacher_correct": 570,
+        "num_legal": 70622,
+        "num_candidates": 5516,
+        "forced": 84
+      },
+      "outside_softmax_mean": 0.26664894841950365,
+      "in_set_logit_max_delta": 2.86102294921875e-06,
+      "bench": {
+        "full": {
+          "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+          "testing_pools": 0,
+          "first_seed": 138001,
+          "pairs": 64,
+          "frozen_suite": null,
+          "battle_only": true,
+          "preview_only": false,
+          "completed_games": 128,
+          "completed_pairs": 64,
+          "draws": 0,
+          "games_per_second": 24.25,
+          "agents": [
+            {
+              "wins": 51,
+              "fallbacks": 0,
+              "model_choices": 0,
+              "different_choices": 0,
+              "policy": "bc",
+              "win_rate": 0.3984375,
+              "win_rate_ci95": [
+                0.3359375,
+                0.4609375
+              ],
+              "score_rate": 0.3984375,
+              "decision_p95_ms": 1.83,
+              "battle_time_p95_seconds": 0.02,
+              "forfeits": 0,
+              "by_phase": {
+                "draft": {
+                  "decisions": 768,
+                  "p95_ms": 0.05,
+                  "p99_ms": 0.07,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                },
+                "team_preview": {
+                  "decisions": 128,
+                  "p95_ms": 0.93,
+                  "p99_ms": 1.11,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                },
+                "moving": {
+                  "decisions": 1268,
+                  "p95_ms": 1.97,
+                  "p99_ms": 2.31,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                }
+              }
+            },
+            {
+              "wins": 77,
+              "fallbacks": 0,
+              "model_choices": 0,
+              "different_choices": 0,
+              "policy": "joint",
+              "win_rate": 0.6015625,
+              "win_rate_ci95": [
+                0.5390625,
+                0.6640625
+              ],
+              "score_rate": 0.6015625,
+              "decision_p95_ms": 0.88,
+              "battle_time_p95_seconds": 0.01,
+              "forfeits": 0,
+              "by_phase": {
+                "draft": {
+                  "decisions": 768,
+                  "p95_ms": 0.05,
+                  "p99_ms": 0.07,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                },
+                "team_preview": {
+                  "decisions": 128,
+                  "p95_ms": 0.94,
+                  "p99_ms": 1.03,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                },
+                "moving": {
+                  "decisions": 1239,
+                  "p95_ms": 0.89,
+                  "p99_ms": 1.11,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                }
+              }
+            }
+          ],
+          "errors": [],
+          "paired_scores": {
+            "138001": [
+              0,
+              1
+            ],
+            "138002": [
+              0,
+              0
+            ],
+            "138003": [
+              1,
+              0
+            ],
+            "138004": [
+              1,
+              0
+            ],
+            "138005": [
+              1,
+              1
+            ],
+            "138006": [
+              0,
+              1
+            ],
+            "138007": [
+              0,
+              1
+            ],
+            "138008": [
+              0,
+              1
+            ],
+            "138009": [
+              0,
+              1
+            ],
+            "138010": [
+              0,
+              1
+            ],
+            "138011": [
+              0,
+              0
+            ],
+            "138012": [
+              0,
+              0
+            ],
+            "138013": [
+              0,
+              1
+            ],
+            "138014": [
+              0,
+              1
+            ],
+            "138015": [
+              0,
+              1
+            ],
+            "138016": [
+              0,
+              1
+            ],
+            "138017": [
+              1,
+              0
+            ],
+            "138018": [
+              1,
+              1
+            ],
+            "138019": [
+              0,
+              1
+            ],
+            "138020": [
+              1,
+              0
+            ],
+            "138021": [
+              1,
+              0
+            ],
+            "138022": [
+              1,
+              0
+            ],
+            "138023": [
+              0,
+              0
+            ],
+            "138024": [
+              0,
+              1
+            ],
+            "138025": [
+              1,
+              0
+            ],
+            "138026": [
+              0,
+              1
+            ],
+            "138027": [
+              1,
+              0
+            ],
+            "138028": [
+              0,
+              0
+            ],
+            "138029": [
+              0,
+              0
+            ],
+            "138030": [
+              1,
+              0
+            ],
+            "138031": [
+              0,
+              0
+            ],
+            "138032": [
+              0,
+              0
+            ],
+            "138033": [
+              0,
+              0
+            ],
+            "138034": [
+              0,
+              0
+            ],
+            "138035": [
+              0,
+              0
+            ],
+            "138036": [
+              1,
+              0
+            ],
+            "138037": [
+              0,
+              1
+            ],
+            "138038": [
+              1,
+              0
+            ],
+            "138039": [
+              1,
+              0
+            ],
+            "138040": [
+              0,
+              0
+            ],
+            "138041": [
+              0,
+              1
+            ],
+            "138042": [
+              0,
+              1
+            ],
+            "138043": [
+              1,
+              0
+            ],
+            "138044": [
+              0,
+              0
+            ],
+            "138045": [
+              0,
+              1
+            ],
+            "138046": [
+              1,
+              0
+            ],
+            "138047": [
+              0,
+              1
+            ],
+            "138048": [
+              1,
+              0
+            ],
+            "138049": [
+              0,
+              1
+            ],
+            "138050": [
+              0,
+              0
+            ],
+            "138051": [
+              1,
+              0
+            ],
+            "138052": [
+              1,
+              0
+            ],
+            "138053": [
+              1,
+              0
+            ],
+            "138054": [
+              0,
+              0
+            ],
+            "138055": [
+              1,
+              0
+            ],
+            "138056": [
+              1,
+              0
+            ],
+            "138057": [
+              1,
+              0
+            ],
+            "138058": [
+              0,
+              1
+            ],
+            "138059": [
+              1,
+              1
+            ],
+            "138060": [
+              0,
+              0
+            ],
+            "138061": [
+              1,
+              0
+            ],
+            "138062": [
+              0,
+              1
+            ],
+            "138063": [
+              1,
+              0
+            ],
+            "138064": [
+              0,
+              1
+            ]
+          }
+        },
+        "shortlist": {
+          "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+          "testing_pools": 0,
+          "first_seed": 138001,
+          "pairs": 64,
+          "frozen_suite": null,
+          "battle_only": true,
+          "preview_only": false,
+          "completed_games": 128,
+          "completed_pairs": 64,
+          "draws": 0,
+          "games_per_second": 30.4,
+          "agents": [
+            {
+              "wins": 51,
+              "fallbacks": 0,
+              "model_choices": 0,
+              "different_choices": 0,
+              "policy": "bc",
+              "win_rate": 0.3984375,
+              "win_rate_ci95": [
+                0.3359375,
+                0.4609375
+              ],
+              "score_rate": 0.3984375,
+              "decision_p95_ms": 0.86,
+              "battle_time_p95_seconds": 0.01,
+              "forfeits": 0,
+              "by_phase": {
+                "draft": {
+                  "decisions": 768,
+                  "p95_ms": 0.06,
+                  "p99_ms": 0.07,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                },
+                "team_preview": {
+                  "decisions": 128,
+                  "p95_ms": 0.99,
+                  "p99_ms": 1.21,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                },
+                "moving": {
+                  "decisions": 1188,
+                  "p95_ms": 0.71,
+                  "p99_ms": 0.87,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                }
+              }
+            },
+            {
+              "wins": 77,
+              "fallbacks": 0,
+              "model_choices": 0,
+              "different_choices": 0,
+              "policy": "joint",
+              "win_rate": 0.6015625,
+              "win_rate_ci95": [
+                0.5390625,
+                0.6640625
+              ],
+              "score_rate": 0.6015625,
+              "decision_p95_ms": 0.88,
+              "battle_time_p95_seconds": 0.01,
+              "forfeits": 0,
+              "by_phase": {
+                "draft": {
+                  "decisions": 768,
+                  "p95_ms": 0.06,
+                  "p99_ms": 0.07,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                },
+                "team_preview": {
+                  "decisions": 128,
+                  "p95_ms": 0.96,
+                  "p99_ms": 1.09,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                },
+                "moving": {
+                  "decisions": 1161,
+                  "p95_ms": 0.84,
+                  "p99_ms": 1.03,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                }
+              }
+            }
+          ],
+          "errors": [],
+          "paired_scores": {
+            "138001": [
+              0,
+              1
+            ],
+            "138002": [
+              1,
+              0
+            ],
+            "138003": [
+              1,
+              0
+            ],
+            "138004": [
+              1,
+              0
+            ],
+            "138005": [
+              1,
+              1
+            ],
+            "138006": [
+              0,
+              1
+            ],
+            "138007": [
+              0,
+              1
+            ],
+            "138008": [
+              0,
+              1
+            ],
+            "138009": [
+              0,
+              1
+            ],
+            "138010": [
+              0,
+              1
+            ],
+            "138011": [
+              0,
+              0
+            ],
+            "138012": [
+              0,
+              0
+            ],
+            "138013": [
+              0,
+              1
+            ],
+            "138014": [
+              0,
+              0
+            ],
+            "138015": [
+              1,
+              0
+            ],
+            "138016": [
+              0,
+              0
+            ],
+            "138017": [
+              1,
+              1
+            ],
+            "138018": [
+              0,
+              1
+            ],
+            "138019": [
+              0,
+              1
+            ],
+            "138020": [
+              1,
+              0
+            ],
+            "138021": [
+              1,
+              0
+            ],
+            "138022": [
+              1,
+              0
+            ],
+            "138023": [
+              0,
+              0
+            ],
+            "138024": [
+              0,
+              1
+            ],
+            "138025": [
+              1,
+              0
+            ],
+            "138026": [
+              0,
+              1
+            ],
+            "138027": [
+              0,
+              0
+            ],
+            "138028": [
+              0,
+              1
+            ],
+            "138029": [
+              0,
+              1
+            ],
+            "138030": [
+              1,
+              0
+            ],
+            "138031": [
+              0,
+              0
+            ],
+            "138032": [
+              0,
+              0
+            ],
+            "138033": [
+              0,
+              1
+            ],
+            "138034": [
+              0,
+              1
+            ],
+            "138035": [
+              0,
+              0
+            ],
+            "138036": [
+              1,
+              0
+            ],
+            "138037": [
+              0,
+              1
+            ],
+            "138038": [
+              1,
+              0
+            ],
+            "138039": [
+              1,
+              0
+            ],
+            "138040": [
+              0,
+              0
+            ],
+            "138041": [
+              0,
+              1
+            ],
+            "138042": [
+              0,
+              1
+            ],
+            "138043": [
+              1,
+              0
+            ],
+            "138044": [
+              0,
+              0
+            ],
+            "138045": [
+              0,
+              1
+            ],
+            "138046": [
+              1,
+              0
+            ],
+            "138047": [
+              0,
+              0
+            ],
+            "138048": [
+              0,
+              0
+            ],
+            "138049": [
+              0,
+              1
+            ],
+            "138050": [
+              0,
+              0
+            ],
+            "138051": [
+              1,
+              0
+            ],
+            "138052": [
+              1,
+              0
+            ],
+            "138053": [
+              1,
+              0
+            ],
+            "138054": [
+              0,
+              0
+            ],
+            "138055": [
+              1,
+              0
+            ],
+            "138056": [
+              1,
+              0
+            ],
+            "138057": [
+              1,
+              0
+            ],
+            "138058": [
+              0,
+              1
+            ],
+            "138059": [
+              1,
+              1
+            ],
+            "138060": [
+              0,
+              0
+            ],
+            "138061": [
+              1,
+              0
+            ],
+            "138062": [
+              0,
+              1
+            ],
+            "138063": [
+              1,
+              0
+            ],
+            "138064": [
+              0,
+              1
+            ]
+          }
+        }
+      },
+      "paired_gain": {
+        "mean": 0.0,
+        "ci95": [
+          -0.0546875,
+          0.0546875
+        ]
+      }
+    },
+    "history-hard": {
+      "fixed_trajectory": {
+        "decisions": 1006,
+        "outside_top1": 280,
+        "selection_changed": 280,
+        "full_teacher_correct": 470,
+        "short_teacher_correct": 612,
+        "num_legal": 70622,
+        "num_candidates": 5516,
+        "forced": 84
+      },
+      "outside_softmax_mean": 0.3376644925505818,
+      "in_set_logit_max_delta": 7.62939453125e-06,
+      "bench": {
+        "full": {
+          "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+          "testing_pools": 0,
+          "first_seed": 138001,
+          "pairs": 64,
+          "frozen_suite": null,
+          "battle_only": true,
+          "preview_only": false,
+          "completed_games": 128,
+          "completed_pairs": 64,
+          "draws": 0,
+          "games_per_second": 23.18,
+          "agents": [
+            {
+              "wins": 41,
+              "fallbacks": 0,
+              "model_choices": 0,
+              "different_choices": 0,
+              "policy": "bc",
+              "win_rate": 0.3203125,
+              "win_rate_ci95": [
+                0.25,
+                0.3984375
+              ],
+              "score_rate": 0.3203125,
+              "decision_p95_ms": 1.78,
+              "battle_time_p95_seconds": 0.02,
+              "forfeits": 0,
+              "by_phase": {
+                "draft": {
+                  "decisions": 768,
+                  "p95_ms": 0.06,
+                  "p99_ms": 0.06,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                },
+                "team_preview": {
+                  "decisions": 128,
+                  "p95_ms": 1.0,
+                  "p99_ms": 1.07,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                },
+                "moving": {
+                  "decisions": 1397,
+                  "p95_ms": 1.95,
+                  "p99_ms": 2.31,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                }
+              }
+            },
+            {
+              "wins": 87,
+              "fallbacks": 0,
+              "model_choices": 0,
+              "different_choices": 0,
+              "policy": "joint",
+              "win_rate": 0.6796875,
+              "win_rate_ci95": [
+                0.6015625,
+                0.75
+              ],
+              "score_rate": 0.6796875,
+              "decision_p95_ms": 0.88,
+              "battle_time_p95_seconds": 0.01,
+              "forfeits": 0,
+              "by_phase": {
+                "draft": {
+                  "decisions": 768,
+                  "p95_ms": 0.06,
+                  "p99_ms": 0.08,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                },
+                "team_preview": {
+                  "decisions": 128,
+                  "p95_ms": 1.09,
+                  "p99_ms": 1.25,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                },
+                "moving": {
+                  "decisions": 1360,
+                  "p95_ms": 0.87,
+                  "p99_ms": 1.14,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                }
+              }
+            }
+          ],
+          "errors": [],
+          "paired_scores": {
+            "138001": [
+              0,
+              0
+            ],
+            "138002": [
+              0,
+              0
+            ],
+            "138003": [
+              0,
+              0
+            ],
+            "138004": [
+              0,
+              1
+            ],
+            "138005": [
+              0,
+              0
+            ],
+            "138006": [
+              0,
+              1
+            ],
+            "138007": [
+              0,
+              1
+            ],
+            "138008": [
+              0,
+              1
+            ],
+            "138009": [
+              0,
+              0
+            ],
+            "138010": [
+              0,
+              0
+            ],
+            "138011": [
+              0,
+              0
+            ],
+            "138012": [
+              0,
+              0
+            ],
+            "138013": [
+              1,
+              1
+            ],
+            "138014": [
+              0,
+              0
+            ],
+            "138015": [
+              0,
+              1
+            ],
+            "138016": [
+              0,
+              1
+            ],
+            "138017": [
+              0,
+              0
+            ],
+            "138018": [
+              0,
+              0
+            ],
+            "138019": [
+              0,
+              1
+            ],
+            "138020": [
+              1,
+              0
+            ],
+            "138021": [
+              1,
+              0
+            ],
+            "138022": [
+              1,
+              0
+            ],
+            "138023": [
+              1,
+              0
+            ],
+            "138024": [
+              0,
+              0
+            ],
+            "138025": [
+              0,
+              0
+            ],
+            "138026": [
+              1,
+              1
+            ],
+            "138027": [
+              0,
+              0
+            ],
+            "138028": [
+              0,
+              0
+            ],
+            "138029": [
+              0,
+              0
+            ],
+            "138030": [
+              0,
+              0
+            ],
+            "138031": [
+              0,
+              0
+            ],
+            "138032": [
+              1,
+              0
+            ],
+            "138033": [
+              1,
+              1
+            ],
+            "138034": [
+              0,
+              0
+            ],
+            "138035": [
+              0,
+              1
+            ],
+            "138036": [
+              1,
+              0
+            ],
+            "138037": [
+              0,
+              1
+            ],
+            "138038": [
+              1,
+              0
+            ],
+            "138039": [
+              0,
+              1
+            ],
+            "138040": [
+              1,
+              0
+            ],
+            "138041": [
+              0,
+              1
+            ],
+            "138042": [
+              0,
+              1
+            ],
+            "138043": [
+              1,
+              0
+            ],
+            "138044": [
+              0,
+              1
+            ],
+            "138045": [
+              0,
+              1
+            ],
+            "138046": [
+              0,
+              0
+            ],
+            "138047": [
+              0,
+              0
+            ],
+            "138048": [
+              1,
+              0
+            ],
+            "138049": [
+              0,
+              1
+            ],
+            "138050": [
+              1,
+              0
+            ],
+            "138051": [
+              1,
+              1
+            ],
+            "138052": [
+              0,
+              0
+            ],
+            "138053": [
+              1,
+              0
+            ],
+            "138054": [
+              0,
+              0
+            ],
+            "138055": [
+              1,
+              0
+            ],
+            "138056": [
+              1,
+              0
+            ],
+            "138057": [
+              0,
+              0
+            ],
+            "138058": [
+              0,
+              0
+            ],
+            "138059": [
+              0,
+              1
+            ],
+            "138060": [
+              0,
+              0
+            ],
+            "138061": [
+              1,
+              0
+            ],
+            "138062": [
+              0,
+              1
+            ],
+            "138063": [
+              0,
+              0
+            ],
+            "138064": [
+              0,
+              1
+            ]
+          }
+        },
+        "shortlist": {
+          "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+          "testing_pools": 0,
+          "first_seed": 138001,
+          "pairs": 64,
+          "frozen_suite": null,
+          "battle_only": true,
+          "preview_only": false,
+          "completed_games": 128,
+          "completed_pairs": 64,
+          "draws": 0,
+          "games_per_second": 29.89,
+          "agents": [
+            {
+              "wins": 53,
+              "fallbacks": 0,
+              "model_choices": 0,
+              "different_choices": 0,
+              "policy": "bc",
+              "win_rate": 0.4140625,
+              "win_rate_ci95": [
+                0.3515625,
+                0.4765625
+              ],
+              "score_rate": 0.4140625,
+              "decision_p95_ms": 0.87,
+              "battle_time_p95_seconds": 0.01,
+              "forfeits": 0,
+              "by_phase": {
+                "draft": {
+                  "decisions": 768,
+                  "p95_ms": 0.06,
+                  "p99_ms": 0.07,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                },
+                "team_preview": {
+                  "decisions": 128,
+                  "p95_ms": 1.0,
+                  "p99_ms": 1.11,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                },
+                "moving": {
+                  "decisions": 1203,
+                  "p95_ms": 0.73,
+                  "p99_ms": 0.9,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                }
+              }
+            },
+            {
+              "wins": 75,
+              "fallbacks": 0,
+              "model_choices": 0,
+              "different_choices": 0,
+              "policy": "joint",
+              "win_rate": 0.5859375,
+              "win_rate_ci95": [
+                0.5234375,
+                0.6484375
+              ],
+              "score_rate": 0.5859375,
+              "decision_p95_ms": 0.87,
+              "battle_time_p95_seconds": 0.01,
+              "forfeits": 0,
+              "by_phase": {
+                "draft": {
+                  "decisions": 768,
+                  "p95_ms": 0.06,
+                  "p99_ms": 0.07,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                },
+                "team_preview": {
+                  "decisions": 128,
+                  "p95_ms": 0.91,
+                  "p99_ms": 1.23,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                },
+                "moving": {
+                  "decisions": 1198,
+                  "p95_ms": 0.84,
+                  "p99_ms": 0.96,
+                  "auto_actions": 0,
+                  "timeout_rate": 0.0,
+                  "illegal_actions": 0,
+                  "illegal_action_rate": 0.0
+                }
+              }
+            }
+          ],
+          "errors": [],
+          "paired_scores": {
+            "138001": [
+              0,
+              0
+            ],
+            "138002": [
+              1,
+              0
+            ],
+            "138003": [
+              1,
+              0
+            ],
+            "138004": [
+              0,
+              1
+            ],
+            "138005": [
+              0,
+              0
+            ],
+            "138006": [
+              0,
+              1
+            ],
+            "138007": [
+              0,
+              1
+            ],
+            "138008": [
+              0,
+              1
+            ],
+            "138009": [
+              0,
+              1
+            ],
+            "138010": [
+              0,
+              1
+            ],
+            "138011": [
+              0,
+              1
+            ],
+            "138012": [
+              0,
+              0
+            ],
+            "138013": [
+              0,
+              1
+            ],
+            "138014": [
+              0,
+              1
+            ],
+            "138015": [
+              0,
+              0
+            ],
+            "138016": [
+              0,
+              1
+            ],
+            "138017": [
+              0,
+              0
+            ],
+            "138018": [
+              0,
+              1
+            ],
+            "138019": [
+              0,
+              1
+            ],
+            "138020": [
+              1,
+              0
+            ],
+            "138021": [
+              1,
+              0
+            ],
+            "138022": [
+              1,
+              0
+            ],
+            "138023": [
+              1,
+              0
+            ],
+            "138024": [
+              1,
+              1
+            ],
+            "138025": [
+              1,
+              0
+            ],
+            "138026": [
+              1,
+              1
+            ],
+            "138027": [
+              1,
+              0
+            ],
+            "138028": [
+              0,
+              0
+            ],
+            "138029": [
+              0,
+              0
+            ],
+            "138030": [
+              1,
+              0
+            ],
+            "138031": [
+              1,
+              0
+            ],
+            "138032": [
+              1,
+              0
+            ],
+            "138033": [
+              0,
+              1
+            ],
+            "138034": [
+              0,
+              1
+            ],
+            "138035": [
+              0,
+              1
+            ],
+            "138036": [
+              1,
+              0
+            ],
+            "138037": [
+              0,
+              0
+            ],
+            "138038": [
+              1,
+              0
+            ],
+            "138039": [
+              0,
+              1
+            ],
+            "138040": [
+              0,
+              0
+            ],
+            "138041": [
+              0,
+              1
+            ],
+            "138042": [
+              0,
+              0
+            ],
+            "138043": [
+              1,
+              0
+            ],
+            "138044": [
+              1,
+              0
+            ],
+            "138045": [
+              0,
+              1
+            ],
+            "138046": [
+              1,
+              0
+            ],
+            "138047": [
+              0,
+              0
+            ],
+            "138048": [
+              0,
+              0
+            ],
+            "138049": [
+              0,
+              1
+            ],
+            "138050": [
+              0,
+              0
+            ],
+            "138051": [
+              1,
+              0
+            ],
+            "138052": [
+              1,
+              1
+            ],
+            "138053": [
+              1,
+              0
+            ],
+            "138054": [
+              0,
+              0
+            ],
+            "138055": [
+              1,
+              0
+            ],
+            "138056": [
+              1,
+              0
+            ],
+            "138057": [
+              1,
+              0
+            ],
+            "138058": [
+              0,
+              1
+            ],
+            "138059": [
+              1,
+              1
+            ],
+            "138060": [
+              0,
+              0
+            ],
+            "138061": [
+              1,
+              0
+            ],
+            "138062": [
+              0,
+              1
+            ],
+            "138063": [
+              1,
+              0
+            ],
+            "138064": [
+              0,
+              1
+            ]
+          }
+        }
+      },
+      "paired_gain": {
+        "mean": 0.09375,
+        "ci95": [
+          0.0078125,
+          0.1796875
+        ]
+      }
+    }
+  },
+  "post_update_shortlist_distribution": {
+    "initial": {
+      "decisions": 1006,
+      "changed_from_initial": 0,
+      "matches_teacher": 612,
+      "mean_kl_from_initial": 0.0,
+      "mean_entropy": 0.5275662036737718
+    },
+    "annealed2": {
+      "decisions": 1006,
+      "changed_from_initial": 54,
+      "matches_teacher": 611,
+      "mean_kl_from_initial": 0.014229806915082539,
+      "mean_entropy": 0.5239395508250188
+    },
+    "annealed4": {
+      "decisions": 1006,
+      "changed_from_initial": 65,
+      "matches_teacher": 603,
+      "mean_kl_from_initial": 0.02150438693856237,
+      "mean_entropy": 0.5322920079309652
+    },
+    "fixed4": {
+      "decisions": 1006,
+      "changed_from_initial": 69,
+      "matches_teacher": 606,
+      "mean_kl_from_initial": 0.02118849306141637,
+      "mean_entropy": 0.5152721688170889
+    }
+  }
+}

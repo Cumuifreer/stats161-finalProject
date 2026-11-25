@@ -1,5 +1,6 @@
 """Rerank the existing shortlist against plausible replies to a doubles turn."""
 
+from dataclasses import dataclass, field
 from itertools import product
 
 from .game import BATTLE, PREVIEW, Decision, ident
@@ -14,19 +15,53 @@ def _move(move_id: str, target: int = 0) -> dict:
     return {"type": "move", "move_id": move_id, "target": target}
 
 
-class JointPolicy:
-    def __init__(self, profiles: dict):
-        self.profiles = profiles
-        self.opponent_roster = []
-        self.revealed = set()
-        self.protected_at = {}
+@dataclass
+class BattleHistory:
+    opponent_roster: tuple[str, ...] = ()
+    revealed: set[str] = field(default_factory=set)
+    protected_at: dict[str, int] = field(default_factory=dict)
 
     def observe(self, decision: Decision) -> None:
         if decision.phase == PREVIEW:
-            self.opponent_roster = [mon["species"] for mon in decision.observation["opponent_team"]
-                                    if mon and "species" in mon]
+            self.opponent_roster = tuple(mon["species"] for mon in decision.observation["opponent_team"]
+                                         if mon and "species" in mon)
             self.revealed.clear()
             self.protected_at.clear()
+        elif decision.phase == BATTLE:
+            self.revealed.update(mon["species"] for mon in decision.observation["opponents"]
+                                 if mon and "species" in mon)
+
+    def record(self, decision: Decision, action: dict) -> None:
+        if decision.phase == BATTLE:
+            for slot, mon in zip(SLOTS, decision.observation["active"], strict=True):
+                if mon and mon.get("species") and action[slot].get("move_id") in PROTECT:
+                    self.protected_at[mon["species"]] = decision.observation["turn"]
+
+    def unseen(self) -> tuple[str, ...]:
+        return () if len(self.revealed) >= 4 else tuple(
+            species for species in self.opponent_roster if species not in self.revealed
+        )
+
+    def repeated(self, turn: int | None) -> set[str]:
+        return {species for species, previous in self.protected_at.items()
+                if isinstance(turn, int) and previous == turn - 1}
+
+    def snapshot(self) -> dict:
+        return {"opponent_roster": self.opponent_roster, "revealed": sorted(self.revealed),
+                "protected_at": dict(self.protected_at)}
+
+    @classmethod
+    def from_snapshot(cls, raw: dict) -> "BattleHistory":
+        return cls(tuple(raw["opponent_roster"]), set(raw["revealed"]), dict(raw["protected_at"]))
+
+
+class JointPolicy:
+    def __init__(self, profiles: dict):
+        self.profiles = profiles
+        self.history = BattleHistory()
+
+    def observe(self, decision: Decision) -> None:
+        self.history.observe(decision)
 
     def __call__(self, decision: Decision) -> dict:
         self.observe(decision)
@@ -35,27 +70,18 @@ class JointPolicy:
         return action
 
     def record(self, decision: Decision, action: dict) -> None:
-        if decision.phase == BATTLE:
-            for slot, mon in zip(SLOTS, decision.observation["active"], strict=True):
-                if mon and mon.get("species") and action[slot].get("move_id") in PROTECT:
-                    self.protected_at[mon["species"]] = decision.observation["turn"]
+        self.history.record(decision, action)
 
     def rank(self, decision: Decision, candidates: list[dict] | None = None) -> list[tuple[dict, dict]]:
         if candidates is None:
             candidates = tactical_candidates(decision)
         if decision.phase != BATTLE:
             return [(action, {}) for action in candidates]
-        self.revealed.update(mon["species"] for mon in decision.observation["opponents"]
-                             if mon and "species" in mon)
+        self.history.observe(decision)
         if len(candidates) == 1:
             return [(candidates[0], {})]
-        unseen = () if len(self.revealed) >= 4 else tuple(
-            species for species in self.opponent_roster if species not in self.revealed
-        )
-        turn = decision.observation.get("turn")
-        repeated = {species for species, previous in self.protected_at.items()
-                    if isinstance(turn, int) and previous == turn - 1}
-        forecast = TurnForecast(decision, self.profiles, unseen, repeated)
+        forecast = TurnForecast(decision, self.profiles, self.history.unseen(),
+                                self.history.repeated(decision.observation.get("turn")))
         return forecast.rank(candidates)
 
 
@@ -173,7 +199,7 @@ class TurnForecast:
                 replies.append(("switch", .10, switch))
         return replies
 
-    def _evaluate(self, choices):
+    def _evaluate(self, choices, *, position=False):
         mons = list(self.mons)
         initial = [mon.get("hp", 1) if mon else 0 for mon in mons]
         for i, choice in enumerate(choices):
@@ -249,12 +275,15 @@ class TurnForecast:
         loss = [initial[i] - hp[i] + .40 * (initial[i] > 0 >= hp[i]) for i in POSITIONS]
         score = sum(loss[2:]) - sum(loss[:2]) + tempo + effects[0] - effects[1]
         our_faints = [i for i in (0, 1) if initial[i] > 0 >= hp[i]]
-        return score, {
+        details = {
             "move_order": order,
             "our_ko": our_faints,
             "our_ko_before_move": [i for i in our_faints if choices[i]["type"] == "move" and i not in order],
             "foe_ko": [i - 2 for i in (2, 3) if initial[i] > 0 >= hp[i]],
         }
+        if position:
+            details.update(hp=hp, mons=mons, tailwind=tailwind, room=room)
+        return score, details
 
     def rank(self, candidates):
         replies = self._replies([candidates[0][slot] for slot in SLOTS])

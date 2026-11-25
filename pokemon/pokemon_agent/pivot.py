@@ -1,6 +1,7 @@
 """Run the original Ace Trainer pivot policy as a local benchmark opponent."""
 
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -15,9 +16,11 @@ class PivotOpponent:
     def __enter__(self):
         if not (self.checkout / "agent" / "versions" / "pivot.py").is_file():
             raise ValueError("--ace-trainer must point to an Ace Trainer checkout with agent/versions/pivot.py")
+        # Winsock needs SystemRoot even though the benchmark worker receives no API credentials.
+        environment = {"SystemRoot": os.environ["SystemRoot"]} if os.name == "nt" else {}
         self.process = subprocess.Popen(
-            [sys.executable, "-IB", str(Path(__file__).resolve())],
-            cwd=self.checkout, env={}, stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True,
+            [sys.executable, "-IB", "-X", "utf8", str(Path(__file__).resolve())],
+            cwd=self.checkout, env=environment, stdin=subprocess.PIPE, stdout=subprocess.PIPE, encoding="utf-8",
         )
         return self
 

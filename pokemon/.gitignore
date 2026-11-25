@@ -1,42 +1,10 @@
 
-# Local environment
-.env
-.env.*
-!.env.example
-.venv/
-node_modules/
-
-# Python caches
+# Local caches and generated Python metadata
+.cache/
 __pycache__/
+*.pyc
+*.pyo
 .pytest_cache/
-*.egg-info/
 .mypy_cache/
 .ruff_cache/
-
-# macOS
-.DS_Store
-
-# Personal and course materials
-参考材料/
-
-# Local handoff documents
-README.md
-AGENTS.md
-PROGRESS.md
-DECISIONS.md
-
-# Game captures and logs
-captures/
-*.log
-
-# Training outputs
-checkpoints/
-runs/
-wandb/
-*.pt
-*.pth
-*.ckpt
-*.safetensors
-
-# Benchmark temporary outputs
-benchmark_results/
+*.egg-info/

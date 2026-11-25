@@ -1,0 +1,1252 @@
+{
+  "network": {
+    "state_size": 264,
+    "action_size": 176
+  },
+  "feature_version": 2,
+  "profiles": {
+    "amoonguss": {
+      "level": 50,
+      "stats": {
+        "hp": 220,
+        "atk": 94,
+        "def": 123,
+        "spa": 105,
+        "spd": 112,
+        "spe": 50
+      },
+      "card_moves": [
+        "spore",
+        "ragepowder",
+        "pollenpuff",
+        "sludgebomb"
+      ],
+      "card_ability": "regenerator",
+      "card_item": "rockyhelmet"
+    },
+    "arcanine": {
+      "level": 50,
+      "stats": {
+        "hp": 197,
+        "atk": 178,
+        "def": 100,
+        "spa": 108,
+        "spd": 100,
+        "spe": 116
+      },
+      "card_moves": [
+        "flareblitz",
+        "extremespeed",
+        "snarl",
+        "protect"
+      ],
+      "card_ability": "intimidate",
+      "card_item": "safetygoggles"
+    },
+    "archaludon": {
+      "level": 50,
+      "stats": {
+        "hp": 197,
+        "atk": 112,
+        "def": 200,
+        "spa": 146,
+        "spd": 85,
+        "spe": 105
+      },
+      "card_moves": [
+        "bodypress",
+        "dracometeor",
+        "flashcannon",
+        "protect"
+      ],
+      "card_ability": "stamina",
+      "card_item": "leftovers"
+    },
+    "basculegion": {
+      "level": 50,
+      "stats": {
+        "hp": 196,
+        "atk": 180,
+        "def": 85,
+        "spa": 90,
+        "spd": 95,
+        "spe": 130
+      },
+      "card_moves": [
+        "wavecrash",
+        "aquajet",
+        "liquidation",
+        "protect"
+      ],
+      "card_ability": "adaptability",
+      "card_item": "lifeorb"
+    },
+    "baxcalibur": {
+      "level": 50,
+      "stats": {
+        "hp": 191,
+        "atk": 197,
+        "def": 112,
+        "spa": 85,
+        "spd": 106,
+        "spe": 152
+      },
+      "card_moves": [
+        "iciclespear",
+        "glaiverush",
+        "iceshard",
+        "protect"
+      ],
+      "card_ability": "thermalexchange",
+      "card_item": "loadeddice"
+    },
+    "chiyu": {
+      "level": 50,
+      "stats": {
+        "hp": 131,
+        "atk": 90,
+        "def": 100,
+        "spa": 187,
+        "spd": 140,
+        "spe": 167
+      },
+      "card_moves": [
+        "heatwave",
+        "darkpulse",
+        "overheat",
+        "snarl"
+      ],
+      "card_ability": "beadsofruin",
+      "card_item": "choicespecs"
+    },
+    "chienpao": {
+      "level": 50,
+      "stats": {
+        "hp": 156,
+        "atk": 172,
+        "def": 100,
+        "spa": 99,
+        "spd": 85,
+        "spe": 205
+      },
+      "card_moves": [
+        "iciclecrash",
+        "sacredsword",
+        "suckerpunch",
+        "protect"
+      ],
+      "card_ability": "swordofruin",
+      "card_item": "focussash"
+    },
+    "cresselia": {
+      "level": 50,
+      "stats": {
+        "hp": 227,
+        "atk": 81,
+        "def": 178,
+        "spa": 95,
+        "spd": 141,
+        "spe": 105
+      },
+      "card_moves": [
+        "icywind",
+        "moonblast",
+        "helpinghand",
+        "protect"
+      ],
+      "card_ability": "levitate",
+      "card_item": "sitrusberry"
+    },
+    "dondozo": {
+      "level": 50,
+      "stats": {
+        "hp": 257,
+        "atk": 167,
+        "def": 135,
+        "spa": 76,
+        "spd": 86,
+        "spe": 55
+      },
+      "card_moves": [
+        "wavecrash",
+        "earthquake",
+        "liquidation",
+        "protect"
+      ],
+      "card_ability": "unaware",
+      "card_item": "leftovers"
+    },
+    "dragonite": {
+      "level": 50,
+      "stats": {
+        "hp": 198,
+        "atk": 204,
+        "def": 115,
+        "spa": 108,
+        "spd": 120,
+        "spe": 101
+      },
+      "card_moves": [
+        "extremespeed",
+        "scaleshot",
+        "tailwind",
+        "protect"
+      ],
+      "card_ability": "multiscale",
+      "card_item": "loadeddice"
+    },
+    "farigiraf": {
+      "level": 50,
+      "stats": {
+        "hp": 227,
+        "atk": 110,
+        "def": 90,
+        "spa": 178,
+        "spd": 91,
+        "spe": 72
+      },
+      "card_moves": [
+        "trickroom",
+        "dazzlinggleam",
+        "psychic",
+        "helpinghand"
+      ],
+      "card_ability": "armortail",
+      "card_item": "electricseed"
+    },
+    "fluttermane": {
+      "level": 50,
+      "stats": {
+        "hp": 130,
+        "atk": 67,
+        "def": 75,
+        "spa": 187,
+        "spd": 156,
+        "spe": 205
+      },
+      "card_moves": [
+        "moonblast",
+        "shadowball",
+        "icywind",
+        "protect"
+      ],
+      "card_ability": "protosynthesis",
+      "card_item": "boosterenergy"
+    },
+    "garchomp": {
+      "level": 50,
+      "stats": {
+        "hp": 184,
+        "atk": 182,
+        "def": 115,
+        "spa": 90,
+        "spd": 105,
+        "spe": 169
+      },
+      "card_moves": [
+        "earthquake",
+        "rockslide",
+        "ironhead",
+        "protect"
+      ],
+      "card_ability": "roughskin",
+      "card_item": "focussash"
+    },
+    "gholdengo": {
+      "level": 50,
+      "stats": {
+        "hp": 162,
+        "atk": 72,
+        "def": 115,
+        "spa": 185,
+        "spd": 112,
+        "spe": 149
+      },
+      "card_moves": [
+        "makeitrain",
+        "shadowball",
+        "nastyplot",
+        "protect"
+      ],
+      "card_ability": "goodasgold",
+      "card_item": "airballoon"
+    },
+    "greattusk": {
+      "level": 50,
+      "stats": {
+        "hp": 222,
+        "atk": 183,
+        "def": 151,
+        "spa": 65,
+        "spd": 73,
+        "spe": 118
+      },
+      "card_moves": [
+        "headlongrush",
+        "closecombat",
+        "rockslide",
+        "protect"
+      ],
+      "card_ability": "protosynthesis",
+      "card_item": "boosterenergy"
+    },
+    "grimmsnarl": {
+      "level": 50,
+      "stats": {
+        "hp": 202,
+        "atk": 141,
+        "def": 85,
+        "spa": 103,
+        "spd": 139,
+        "spe": 80
+      },
+      "card_moves": [
+        "lightscreen",
+        "reflect",
+        "spiritbreak",
+        "thunderwave"
+      ],
+      "card_ability": "prankster",
+      "card_item": "lightclay"
+    },
+    "gyarados": {
+      "level": 50,
+      "stats": {
+        "hp": 202,
+        "atk": 194,
+        "def": 99,
+        "spa": 72,
+        "spd": 120,
+        "spe": 102
+      },
+      "card_moves": [
+        "waterfall",
+        "earthquake",
+        "taunt",
+        "protect"
+      ],
+      "card_ability": "intimidate",
+      "card_item": "sitrusberry"
+    },
+    "hatterene": {
+      "level": 50,
+      "stats": {
+        "hp": 164,
+        "atk": 110,
+        "def": 115,
+        "spa": 206,
+        "spd": 124,
+        "spe": 44
+      },
+      "card_moves": [
+        "trickroom",
+        "dazzlinggleam",
+        "psychic",
+        "mysticalfire"
+      ],
+      "card_ability": "magicbounce",
+      "card_item": "safetygoggles"
+    },
+    "incineroar": {
+      "level": 50,
+      "stats": {
+        "hp": 201,
+        "atk": 135,
+        "def": 112,
+        "spa": 90,
+        "spd": 156,
+        "spe": 80
+      },
+      "card_moves": [
+        "fakeout",
+        "knockoff",
+        "partingshot",
+        "flareblitz"
+      ],
+      "card_ability": "intimidate",
+      "card_item": "safetygoggles"
+    },
+    "indeedeef": {
+      "level": 50,
+      "stats": {
+        "hp": 177,
+        "atk": 67,
+        "def": 128,
+        "spa": 115,
+        "spd": 126,
+        "spe": 105
+      },
+      "card_moves": [
+        "followme",
+        "helpinghand",
+        "dazzlinggleam",
+        "psychic"
+      ],
+      "card_ability": "psychicsurge",
+      "card_item": "rockyhelmet"
+    },
+    "ironbundle": {
+      "level": 50,
+      "stats": {
+        "hp": 132,
+        "atk": 90,
+        "def": 134,
+        "spa": 176,
+        "spd": 80,
+        "spe": 206
+      },
+      "card_moves": [
+        "freezedry",
+        "hydropump",
+        "encore",
+        "protect"
+      ],
+      "card_ability": "quarkdrive",
+      "card_item": "boosterenergy"
+    },
+    "ironhands": {
+      "level": 50,
+      "stats": {
+        "hp": 259,
+        "atk": 211,
+        "def": 128,
+        "spa": 63,
+        "spd": 88,
+        "spe": 73
+      },
+      "card_moves": [
+        "fakeout",
+        "closecombat",
+        "wildcharge",
+        "drainpunch"
+      ],
+      "card_ability": "quarkdrive",
+      "card_item": "assaultvest"
+    },
+    "irontreads": {
+      "level": 50,
+      "stats": {
+        "hp": 166,
+        "atk": 164,
+        "def": 140,
+        "spa": 82,
+        "spd": 90,
+        "spe": 173
+      },
+      "card_moves": [
+        "earthquake",
+        "ironhead",
+        "highhorsepower",
+        "protect"
+      ],
+      "card_ability": "quarkdrive",
+      "card_item": "boosterenergy"
+    },
+    "ironvaliant": {
+      "level": 50,
+      "stats": {
+        "hp": 149,
+        "atk": 135,
+        "def": 110,
+        "spa": 172,
+        "spd": 81,
+        "spe": 184
+      },
+      "card_moves": [
+        "moonblast",
+        "closecombat",
+        "thunderbolt",
+        "protect"
+      ],
+      "card_ability": "quarkdrive",
+      "card_item": "boosterenergy"
+    },
+    "kingambit": {
+      "level": 50,
+      "stats": {
+        "hp": 207,
+        "atk": 205,
+        "def": 140,
+        "spa": 72,
+        "spd": 105,
+        "spe": 71
+      },
+      "card_moves": [
+        "suckerpunch",
+        "ironhead",
+        "kowtowcleave",
+        "protect"
+      ],
+      "card_ability": "supremeoverlord",
+      "card_item": "blackglasses"
+    },
+    "klefki": {
+      "level": 50,
+      "stats": {
+        "hp": 164,
+        "atk": 101,
+        "def": 111,
+        "spa": 90,
+        "spd": 152,
+        "spe": 95
+      },
+      "card_moves": [
+        "reflect",
+        "lightscreen",
+        "dazzlinggleam",
+        "foulplay"
+      ],
+      "card_ability": "prankster",
+      "card_item": "lightclay"
+    },
+    "landorustherian": {
+      "level": 50,
+      "stats": {
+        "hp": 164,
+        "atk": 197,
+        "def": 111,
+        "spa": 112,
+        "spd": 100,
+        "spe": 157
+      },
+      "card_moves": [
+        "earthquake",
+        "rockslide",
+        "uturn",
+        "protect"
+      ],
+      "card_ability": "intimidate",
+      "card_item": "choicescarf"
+    },
+    "lucario": {
+      "level": 50,
+      "stats": {
+        "hp": 146,
+        "atk": 162,
+        "def": 90,
+        "spa": 121,
+        "spd": 90,
+        "spe": 156
+      },
+      "card_moves": [
+        "closecombat",
+        "bulletpunch",
+        "poisonjab",
+        "protect"
+      ],
+      "card_ability": "innerfocus",
+      "card_item": "lifeorb"
+    },
+    "milotic": {
+      "level": 50,
+      "stats": {
+        "hp": 202,
+        "atk": 72,
+        "def": 100,
+        "spa": 120,
+        "spd": 194,
+        "spe": 101
+      },
+      "card_moves": [
+        "scald",
+        "icebeam",
+        "recover",
+        "protect"
+      ],
+      "card_ability": "competitive",
+      "card_item": "chestoberry"
+    },
+    "pelipper": {
+      "level": 50,
+      "stats": {
+        "hp": 167,
+        "atk": 63,
+        "def": 120,
+        "spa": 161,
+        "spd": 91,
+        "spe": 85
+      },
+      "card_moves": [
+        "hurricane",
+        "weatherball",
+        "tailwind",
+        "protect"
+      ],
+      "card_ability": "drizzle",
+      "card_item": "damprock"
+    },
+    "porygon2": {
+      "level": 50,
+      "stats": {
+        "hp": 192,
+        "atk": 100,
+        "def": 110,
+        "spa": 172,
+        "spd": 116,
+        "spe": 72
+      },
+      "card_moves": [
+        "trickroom",
+        "triattack",
+        "icebeam",
+        "recover"
+      ],
+      "card_ability": "download",
+      "card_item": "eviolite"
+    },
+    "rillaboom": {
+      "level": 50,
+      "stats": {
+        "hp": 205,
+        "atk": 176,
+        "def": 111,
+        "spa": 72,
+        "spd": 91,
+        "spe": 124
+      },
+      "card_moves": [
+        "fakeout",
+        "woodhammer",
+        "grassyglide",
+        "uturn"
+      ],
+      "card_ability": "grassysurge",
+      "card_item": "assaultvest"
+    },
+    "sableye": {
+      "level": 50,
+      "stats": {
+        "hp": 157,
+        "atk": 96,
+        "def": 95,
+        "spa": 76,
+        "spd": 128,
+        "spe": 70
+      },
+      "card_moves": [
+        "foulplay",
+        "fakeout",
+        "willowisp",
+        "taunt"
+      ],
+      "card_ability": "prankster",
+      "card_item": "mentalherb"
+    },
+    "salamence": {
+      "level": 50,
+      "stats": {
+        "hp": 171,
+        "atk": 139,
+        "def": 100,
+        "spa": 162,
+        "spd": 100,
+        "spe": 167
+      },
+      "card_moves": [
+        "dracometeor",
+        "hurricane",
+        "tailwind",
+        "protect"
+      ],
+      "card_ability": "intimidate",
+      "card_item": "lumberry"
+    },
+    "screamtail": {
+      "level": 50,
+      "stats": {
+        "hp": 222,
+        "atk": 76,
+        "def": 166,
+        "spa": 85,
+        "spd": 136,
+        "spe": 131
+      },
+      "card_moves": [
+        "dazzlinggleam",
+        "encore",
+        "wish",
+        "protect"
+      ],
+      "card_ability": "protosynthesis",
+      "card_item": "covertcloak"
+    },
+    "sneasler": {
+      "level": 50,
+      "stats": {
+        "hp": 156,
+        "atk": 182,
+        "def": 80,
+        "spa": 54,
+        "spd": 100,
+        "spe": 189
+      },
+      "card_moves": [
+        "fakeout",
+        "closecombat",
+        "direclaw",
+        "protect"
+      ],
+      "card_ability": "unburden",
+      "card_item": "aguavberry"
+    },
+    "sylveon": {
+      "level": 50,
+      "stats": {
+        "hp": 201,
+        "atk": 76,
+        "def": 85,
+        "spa": 178,
+        "spd": 152,
+        "spe": 80
+      },
+      "card_moves": [
+        "hypervoice",
+        "shadowball",
+        "calmmind",
+        "protect"
+      ],
+      "card_ability": "pixilate",
+      "card_item": "wikiberry"
+    },
+    "talonflame": {
+      "level": 50,
+      "stats": {
+        "hp": 185,
+        "atk": 102,
+        "def": 91,
+        "spa": 84,
+        "spd": 89,
+        "spe": 195
+      },
+      "card_moves": [
+        "tailwind",
+        "bravebird",
+        "taunt",
+        "protect"
+      ],
+      "card_ability": "galewings",
+      "card_item": "sharpbeak"
+    },
+    "thundurus": {
+      "level": 50,
+      "stats": {
+        "hp": 154,
+        "atk": 121,
+        "def": 90,
+        "spa": 177,
+        "spd": 101,
+        "spe": 179
+      },
+      "card_moves": [
+        "thunderbolt",
+        "sludgebomb",
+        "taunt",
+        "protect"
+      ],
+      "card_ability": "defiant",
+      "card_item": "lifeorb"
+    },
+    "tinglu": {
+      "level": 50,
+      "stats": {
+        "hp": 262,
+        "atk": 131,
+        "def": 145,
+        "spa": 67,
+        "spd": 145,
+        "spe": 65
+      },
+      "card_moves": [
+        "ruination",
+        "spikes",
+        "earthquake",
+        "protect"
+      ],
+      "card_ability": "vesselofruin",
+      "card_item": "leftovers"
+    },
+    "torkoal": {
+      "level": 50,
+      "stats": {
+        "hp": 177,
+        "atk": 105,
+        "def": 160,
+        "spa": 150,
+        "spd": 91,
+        "spe": 36
+      },
+      "card_moves": [
+        "eruption",
+        "heatwave",
+        "yawn",
+        "protect"
+      ],
+      "card_ability": "drought",
+      "card_item": "charcoal"
+    },
+    "tornadus": {
+      "level": 50,
+      "stats": {
+        "hp": 186,
+        "atk": 121,
+        "def": 90,
+        "spa": 145,
+        "spd": 101,
+        "spe": 179
+      },
+      "card_moves": [
+        "bleakwindstorm",
+        "taunt",
+        "tailwind",
+        "protect"
+      ],
+      "card_ability": "prankster",
+      "card_item": "mentalherb"
+    },
+    "toxapex": {
+      "level": 50,
+      "stats": {
+        "hp": 157,
+        "atk": 83,
+        "def": 173,
+        "spa": 65,
+        "spd": 213,
+        "spe": 55
+      },
+      "card_moves": [
+        "liquidation",
+        "haze",
+        "toxic",
+        "protect"
+      ],
+      "card_ability": "regenerator",
+      "card_item": "blacksludge"
+    },
+    "tyranitar": {
+      "level": 50,
+      "stats": {
+        "hp": 207,
+        "atk": 155,
+        "def": 130,
+        "spa": 103,
+        "spd": 167,
+        "spe": 81
+      },
+      "card_moves": [
+        "rockslide",
+        "knockoff",
+        "lowkick",
+        "protect"
+      ],
+      "card_ability": "sandstream",
+      "card_item": "chopleberry"
+    },
+    "ursaluna": {
+      "level": 50,
+      "stats": {
+        "hp": 237,
+        "atk": 211,
+        "def": 125,
+        "spa": 58,
+        "spd": 101,
+        "spe": 70
+      },
+      "card_moves": [
+        "facade",
+        "headlongrush",
+        "earthquake",
+        "protect"
+      ],
+      "card_ability": "guts",
+      "card_item": "flameorb"
+    },
+    "urshifurapidstrike": {
+      "level": 50,
+      "stats": {
+        "hp": 176,
+        "atk": 200,
+        "def": 120,
+        "spa": 74,
+        "spd": 80,
+        "spe": 149
+      },
+      "card_moves": [
+        "surgingstrikes",
+        "closecombat",
+        "aquajet",
+        "protect"
+      ],
+      "card_ability": "unseenfist",
+      "card_item": "mysticwater"
+    },
+    "whimsicott": {
+      "level": 50,
+      "stats": {
+        "hp": 136,
+        "atk": 78,
+        "def": 105,
+        "spa": 129,
+        "spd": 95,
+        "spe": 184
+      },
+      "card_moves": [
+        "tailwind",
+        "moonblast",
+        "encore",
+        "lightscreen"
+      ],
+      "card_ability": "prankster",
+      "card_item": "focussash"
+    },
+    "wochien": {
+      "level": 50,
+      "stats": {
+        "hp": 192,
+        "atk": 105,
+        "def": 120,
+        "spa": 104,
+        "spd": 205,
+        "spe": 90
+      },
+      "card_moves": [
+        "leechseed",
+        "foulplay",
+        "gigadrain",
+        "protect"
+      ],
+      "card_ability": "tabletsofruin",
+      "card_item": "sitrusberry"
+    }
+  },
+  "threshold": 0.1,
+  "catalog_sha256": "16c4d38ae85cc5c02fdd8eab01391c53994bc11978528183c1e43dc27e37da9c",
+  "split": {
+    "train": {
+      "190001": "f810d4f90a44691dd41344f339af6f9e31a36636c93e367c7f912f1d7e2aac70",
+      "190002": "97b948b17ccb77aeba322f3991a566258845a0bebd4ee6d1778a08dbef48cbcf",
+      "190003": "9382ef103aff736f86033c8bfee7487ca9d529c17b9f0f04fbc05b9202565b6e",
+      "190004": "6ab5f98796d5220a77f3248af21f99c0b54714835fba72458b1200fc05da5bb3",
+      "190005": "95bd98a2a585230f2d609d357fefd94ff166511527aef1bc20adbebfe44ca818",
+      "190006": "425986e4307c2d25d8728cae7163b64358480880970916810f4a4ab86f2b6b86",
+      "190007": "6ab7ceed913fb21fea5dc37192e011b76b11c7edbd2a6e8f131ade24850ef2f1",
+      "190008": "3d1026cc6be03107748e02f622bee6a4a34f3352a5ee87006bada5d8d8a4ca56",
+      "190009": "46bb3ee41ca8e8b4e22ad2b76f271374e2528d039af3840dc8fef00f94757527",
+      "190010": "85ad53910fcfaf815f178322f58b4130fec7f7923f5ca4252f06bfc9abaeaef5",
+      "190011": "1852bbd693d793f072d764764c03ec07c790b47c69697626584d4859fcf6ebfd",
+      "190012": "72586f9d80078deb82d33fcff0b7bd580b885753c8b3ce2acc18b0cf85a05968",
+      "190013": "b6a9a5606963e12cf0b390ff9fc3c14fb49b90b2d6011affb1541c7ccec3c034",
+      "190014": "615f640c2d7da3489dfc79bca4f6d8fd9a2542fa20e8051c605a8d59e8ec843d",
+      "190015": "f19c0871a80873c9a93c12b9f8a846a0f51e7b3b9373be16b1e0200d9b3e175b",
+      "190016": "487fe6bdba95819e4da8ee6aa03297bb6fcd120b9172a9767f95b182c83363a4",
+      "190017": "e0aaa84ce0d2b2e94661e935b27b37731c62caf5d5cf75c8b5710ba8d4c5b781",
+      "190018": "03beb32850cc555beb19b09ded95d9cb96c83fd3ad770ea8ddca9a6284588555",
+      "190019": "6f1b433150e4f570dd1ee2afff104e058878a211b08863c782c92f4aed463551",
+      "190020": "b563f65b3e9f9663f5fedb291d7dafc5bc3e56b683999bed566922e285eb39df",
+      "190021": "319b203b9a0022d2645f60e13a939803ef50dd82cda139fc2924853492b708a3",
+      "190022": "fcbe69c42c556b1d78134bb6504a90a5d4764ad38e7c809f600c5dfff421a736",
+      "190023": "39d6e565fff7d010c16803ee30b9e6412cf47de3c0e1a559127a12cbb22c5f3f",
+      "190024": "23ec5878d380de7beed2f06b8299ddfa716a5272b690a591d30bf510490d8c63",
+      "190025": "814e9e3698a9e9a0e11bb2d30796c1c8d5f09e9027c3ce0659737e722531c8aa",
+      "190026": "840f9a67b162c797a6d8c7e17d79de3c72cea499bd0b9ec34c3d31d9b91a4694",
+      "190027": "13252746ee7f8c6db513a21c75838f00ee81012205ad915f0cb1fcf293b7b64a",
+      "190028": "8379cb1c2828708da87f2f4a802db53bab2847ada0d489b963ef903b8d27e6de",
+      "190029": "42e0a6f6e2f7e5863ec0d7beaf0c7b15bb012d36b963ab7d596b58f69ed9597f",
+      "190030": "843ffb271fd656120226955c0f7ef06de3ec9abfadbdd72cce9f52d5c8b0f687",
+      "190031": "22c98bc746c9b4ba63d7759cdb1bafcdfce6cba3f4d627e002b964b996656cc0",
+      "190032": "5be09fbea2a5d54e26de6c5c9f540161d9d11d0a09fcae02d0f653822839fbda",
+      "190033": "da6b5b509a95cf849618f65145aeb5529af9add19a5eb77debdd882abe0156ca",
+      "190034": "2053793c9eb3351ff00087e426600425e8a81de7adbb6e1bd786d5588d1a95ab",
+      "190035": "f6d7e4bd3576813fdda1804db8a7ab946810e3303db2b27ad78a72b89c196031",
+      "190036": "425a43d897d18ae3138f77507eaeff7aced7171ed23cfd7df5481e9d13abc5f1",
+      "190037": "561fb73f4a0b08f264dbf3aa766e1d57c4401a20e8b4f093af5e310e0f1f2986",
+      "190038": "d9399150391f507c8c24b78c057614581eabdbe6fd0e48b41e100441fa078528",
+      "190039": "631a061594fcc2d87c4de0312b6b3e732b80746d194a7a345301890125be83fa",
+      "190040": "f2cd87aac98c57cbc20163d48d52529373ab5b0197bd1a1fe678abc10d038d6a",
+      "190041": "6a5a23cdcc952718599d06ac3a0fa02126c8f72c25b2d7b69eb836a05db20d67",
+      "190042": "18e8d258742b888bcdc5e941fc4d0b72f0f01cacf38a509a369292c28f3c0fd0",
+      "190043": "ce4d8214ad4a4aafe7049ed7671c387f2b5a663ea55d87922e89400c497ad792",
+      "190044": "35d17cac236fa35c75bb98f243db672067e20243e5207e4381a3f4f26a01033e",
+      "190045": "cb457c29168bced442381cc4b08aff145ace12eead41642669493fcee4bae139",
+      "190046": "f3a49d92b64218ea01e2b23f813f48c724ea9dcfd2f2e462f9bbe41a4479a9a4",
+      "190047": "5b035f86293f5c997d513ad8549d57e6c8ce35d2a87d6f797e8c0de4803f1bf6",
+      "190048": "00d0f23abbbfcbdd0bbc36055059332a0429726b0d5b175e50540a6ae697adb8",
+      "190049": "648e8e92cfb3379dbfb2151c25e19e2ca36df287da92d6f48f61c4541a73f457",
+      "190050": "d951a994fa41e9480be3856e9ac258d8b73f56e74c88356bf77b99e1808863af",
+      "190051": "1f984b653b644825f03f47b0ecb3fcd36d657fb0979a9e8c1a51c487fdcb99e3",
+      "190052": "3c123217fbe1c7b76ab7d8eb719b70984c2109f0d9c94e8b4f4c6770193e2149",
+      "190053": "fd6660b5820521c23ef1e4bfcf0c73cb0b7470bc58a2be2b7c7cc47f2713e6b0",
+      "190054": "0f6b19e5adba1d18886f7820fc549eb52203106c0d8bf9eab95df632d4a03e50",
+      "190055": "d8a088080cca577e3159a23691e0d934334c845134aeb780b2dd8223a7dd5a6c",
+      "190056": "76edd12d710035ee4218b348efce1c9c3c8f1bb90a6fe3a0be9bf54b054caa1e",
+      "190057": "b0ce47a67799c4bf4b7a949508b250e73b13a4394e38e8a9e49bab15a8a2fbdb",
+      "190058": "a4157ef38d388e56d3959eda7d77db3964cbea4d9015cf913633a5eac41c95e5",
+      "190059": "c6b16b3a8c6740c4e274dd22f49ad605c6f54ae49af626487377dc9fa146ae43",
+      "190060": "60179fcbe87b448c841d50dbdc19bc53f63938fbd62d448c510f943bf6a460ce",
+      "190061": "989c959d3bc8451b6b92e1fb32636c685e3b73f1ff33752df6a973779ca2b43d",
+      "190062": "ea81ae355e198daf7409e53ff793fb701ac24d125006d515f718764a14934a33",
+      "190063": "c10f3dfb6bd160f57c490055ccf1ba5a483192942ad60eaa1729b992903bc049",
+      "190064": "d0ac91a94d58bd79577f07c31be10ebdf1c240174e99720342f75c274d1ec3b6",
+      "190065": "db09c153ab92bdbb17a20137786bff151e0629f1bf3d0b908ec46a06c5789d4a",
+      "190066": "232fefb630807993bf80d45bfd20cd0837d78e3c2ca447504dde6509ad070507",
+      "190067": "7b79084851d78b11a443b401140f6ce3b03dcfdd447a91e776ce6c8dc24f83c4",
+      "190068": "37e9531f4be5c2ba97cf34179a1a098a8a3c99decfb2c7c49b69ffd9c3ecc009",
+      "190069": "11c83764edc1f4d0d3ab86b6e9976e50ebdfb25a7cd3d1d9616b80ecf126434f",
+      "190070": "328205426c8dddcae96226db4331fa6d7afdf354073636e402cb82930ec10b77",
+      "190071": "e2a05dd8e116a3840b2a94e6a956cbd34616bc10d01cb35b6369a87fe49c9a89",
+      "190072": "baf5b784901f652546237ccc9d0eb67769c603f4b13dbc00b565ad9652d3e0e8",
+      "190073": "5895631da175155ad072ad402447e3b9e03a4caf49e7200e5c81b8cad41f4b28",
+      "190074": "a87793c41c385fbb84c0466322449073a8d10db84aaec05bfe764d0df9147ba6",
+      "190075": "304dfb3d3287c8b0a71749140023196164d0ef9d19310ae038de5d5969cbe8d2",
+      "190076": "cfd44aa0a9bb38e28150ee87a233c598388de6519ee610b64bf20e3b07dffa94",
+      "190077": "21fd30ef293c549b6916122f979759a0b8c57b560b9b2b5f0f724d096987b546",
+      "190078": "3363d58235d46ab39ebe82477dbfe246911b5b4cb886d545f9ca688a43252a2a",
+      "190079": "9862eb68ed31b68d8cf0c772d137fbdc1b468fe44519a4b91999bd0e504f64db",
+      "190080": "5afc6192efbe7971d175e76937488ae76743c3f2840e1185b7a83180bd9e4b72",
+      "190081": "99e350c13fc85574faa5e32a77dd015285285bda38c8e23b1e5cdc4020b0144d",
+      "190082": "553c4922b2659bba42dda89d9c12899673ca38f8f63f979b1c816c06e9fb63ef",
+      "190083": "eb4d0ebb74d7b41197ed7788c510538e7163621d99d08c61dc18dd19370b0da7",
+      "190084": "1a1878292f5e20e959d9a5c525bf6ac4417e0fc34a2062253bb6f02884efe995",
+      "190085": "9b1d19ade3c59fb83dce7e3ac9446bf3fd5d3448713dc0f7a2eebc06f975f4cf",
+      "190086": "a90f161cba7f2673fdcc958ae67b9d5415d7c922149f3e0a7a275cab10e01b56",
+      "190087": "00be9f6a17bf2b8429e86c04dd11126826812844220e764ab3e64261de6c0a16",
+      "190088": "ceef76086cd36d3251f5e12e37fe77d8c82beb5acd0ba82afcdcbecc8bd051ca",
+      "190089": "71bb3bfc42e53cd35789ecb56a06d31bf4e8652ad644f661fb63e881f3db5e5f",
+      "190090": "2f05ca0d7c79f01261f4d1c9b0fa0e5ce5d447c10807f2efd609f3b90418cb9d",
+      "190091": "a134d88aca57dd6beea26ee1adec3572dfb817f264757782c697b97be489483d",
+      "190092": "fe7a6c4bf33374711e797f4bd469c899464c8af8455cf065e7ca0800dcdc07db",
+      "190093": "9608600a2a39ee99e43b39ba0965af2a1bb30c4671b78f405e9620e5226b05c7",
+      "190094": "ffe05fd7333871f61c717c738632d124e3c26b10fa546583bf6a8f64992750b9",
+      "190095": "f231f3d08f3b98654c08cf0ae62da41bbe7c9655af2fca78d37c95e54995e2d9",
+      "190096": "7a9feb8cc3a95125e6a2b7845f6e464613f70a9723dc6944726e35eef1e145c2",
+      "190097": "aefec1d5654bfb02f83902c4664098ac32cd2e91ae59b67bc95b234c018329ed",
+      "190098": "e22ce5d05cccd64ca46dbbec495dcd4723a335688b3f31f5293b70bf13fe3ed9",
+      "190099": "c58934c4e6e2319b2b039971eb28bccd9693a3524f30affb171fe08593bc0f47",
+      "190100": "7f9cebfdfd78db9faafc6677f3bcd915d59c27e3d994198ea05fb52b4610dd70",
+      "190101": "b606a5b3a08911aa2f3f55fae6758c6d175c4b1684be178d12e2bc09712475f5",
+      "190102": "1cd8bb379329662c1254e83a03a5f7fbe181a1c045b9af7e1fdd544d754e0ce9",
+      "190103": "77bf110f8ad43dd20ec5077d3b698a01e732b87c959f2dc9ef880288dfde5f9f",
+      "190104": "54197f9f0cd91c7d487e416cb68a820abd44294b1908432c01d75d70a9733f39",
+      "190105": "ee38edf1c2a21dd8eec43d656ece568225d960d931383c287058517e748159b3",
+      "190106": "5b9ef395ea268831cd5014631b86f337d8c7f7ff622e69f3bb4b51ae88baf2b7",
+      "190107": "edce07dcfe71b129b09c3e567367f29933154854fa38fbbc06069d14d4fe2870",
+      "190108": "dd402b81ee6af8d7d716502b4b76eb700ff8fed32d5225d8035f39a03c8b5d80",
+      "190109": "ebcd02d40df5c25572800bb2e7aa850d8381bf475210141e3e9c10afdd618b0f",
+      "190110": "fa353776294bf4f603e2a4545ac6c65bbf6e1775f4bafd14657af607ae66c463",
+      "190111": "d4b30eba602f38b5d6181790bd6aa763572d489f63a786a8ef026669733f84fe",
+      "190112": "3d4e96a537c7082f6c52438a04314e814353594564fe92acdeff4d0e6d6ba802",
+      "190113": "ce32d87c4a3474bcd4c022c146dae678e2978448a4cf8cffb97f79cd7c7b2992",
+      "190114": "3465474c67f006d3daf0e8b31bbd603dfd404fd9871edbde0e6fcdc19d311195",
+      "190115": "a72e3a9e7f1a2612897090aad9297cf61898b8db986d7a24c6e818f031dd0453",
+      "190116": "74c86787670946af70afd6b68d983fa83481f7adadb9ad40970cca582c1a227a",
+      "190117": "b47f29c524f7d817981899f0e7b889e6a7a638029c79da190ff5657b0599d535",
+      "190118": "b0f8171619220486d80c0a2fcde79ccb497783c73426e4ca78d3de1b20c48e8c",
+      "190119": "bab8932b9f70ac9c2566f6297bcf7ecac43399002d78e9a8f9ac06c1587d7bd4",
+      "190120": "e90595fc9c9fd9133b12141da613b604fec05c4b8f206f768b0aaadf4889ea2a",
+      "190121": "c6b3c5bc981007da003574f51052fd7086f181358cfb6ecff519c711bdc018e1",
+      "190122": "76e0cace683b86f0c1042fdbbbef02514c0af7b470bc19447202e2197f99e0cb",
+      "190123": "d57c585fd7856ad12a7497446c603caa75656027d9fe52bf02691019b649674a",
+      "190124": "33754e1060c8209e493e50af43b1a6ed55665a3de405835d301fc2eb424a61e3",
+      "190125": "89c0cc51edf09d2ee5e59362e89dec421f6da434bbdd50d9a31199818c1bf2f1",
+      "190126": "d4406d8e60be809a51fc82fa7f737c732fea60a561a7b0b5961ea80c07120270",
+      "190127": "32ff52c8a0d014649d92383e812899c8830883bbdc5bf613df2e50e485167389",
+      "190128": "b934f40934b05ca853237acbde82d99e5f0a29d99c5cc3d11aa95b34f21e7c86",
+      "190129": "3d5656b167a23a39614754357befea4674ee8e8e9fb74249339a4991c9d9e0eb",
+      "190130": "f649de74b5202a093f4cbe3d4806c13c43d7fce3a8f101498902c8edce4923f1",
+      "190131": "abbbb265010681b3f582002c33c7e6a68a06b252aa1b105cf282dc0907989fb9",
+      "190132": "30025ad3269be8a6f9e0b6506fe8b425bfce2e81ee9d2533a98d02388e72d529",
+      "190133": "43c0d3dc838a4a50c55e3457dd1abf89a24ffd76c4f88d3a4cbe0bf48f2a6128",
+      "190134": "b749371b90aa7358968c7476d2e8280a718d765052ac7475d3c3e8e4f000afd4",
+      "190135": "1126a736a15b4cb2a4f0f5d9e2ec7159996a481fdae6580ef42763a5f610cf18",
+      "190136": "6edc0cfef4cd07e464346750da0e94f2e5898a3eb6a7c4b58d9d464b278c2c1b",
+      "190137": "0c7b67cefb4ba6b3b3904c5e34d0c0fdfec42b6102e5d9d7e4a0daa61f284a31",
+      "190138": "6b1c2e5f23965494513547e51d87390d622352388971fdbbf93804fbffc901d6",
+      "190139": "6e55a7bdb9fb431e932ccdc5a76d2c41960abde08bdacfb273915e7f11c7b9dd",
+      "190140": "58193fba3c18674bff35c219319dd02be724bcad3cd477d6b3939e96ccb79e4b",
+      "190141": "45d8504c03dc220be60a4c703634be2070a225451c5eb3965021a94e9dac3cf5",
+      "190142": "b5d30c1e2abc900143a390279fedb73c5a1d6e721d600aee87667f866aedfe98",
+      "190143": "24135c312b6ddbd7df6d34202e1df9a05a47ca19a907d064663336505d831e72",
+      "190144": "e462dc60633181fb665f91c027fc512f844a9f0601649f5b2885360fd9f89f8c",
+      "190145": "1e553b93cf55fbc3b453806d3e461a052eec20d535b4fa93b7e3ea6648ed327f",
+      "190146": "8d64fa63f15249780e6c43afcd153c5fb90e5dc87d0c4d739a0a081c8630057e",
+      "190147": "42a94c85ccdec681b0f563a23f5b0007ead1eaf0018eff35ad1f6eff98ecb8c3",
+      "190148": "e468c411bbac212b469e523de4dca4955ef17daee37fe658008abbe40d97096e",
+      "190149": "e09bc8f1260c37553053776a189d3144e913a42df41ab7f5156fc1f773c88a24",
+      "190150": "e3626c5dec7a8da874c007cf122fb90742a8e258d95263c1e3c9525c4d394009",
+      "190151": "cf81404f09d5645eccc9da67c35ae314a7665035998a5ec2a8755f9f93960419",
+      "190152": "a471e72947943a381ec087ca6b9db1d8bbea4d4ae03286442a578ed0d203f948",
+      "190153": "987ed9f9d33c25f0c01e40c91a3342c426b1548198f929562d8f465e37f5e97f",
+      "190154": "794c2fcd3f5b853ad9886f9944c14e80f302d69d1a7158aa726513a58d6ad0a0",
+      "190155": "13b87ebaa4f00758497492e9a7eada9e0be4301de4002c8c2982107753ea497c",
+      "190156": "a70b807c85e7e577d5a6400c1a248abc62f81451914a20dc10a18c27f3e03b93",
+      "190157": "53d9ac84110be5d16df4c30fc4ebbca37e690ce3bb33fd9a006e6b7d7d16f7d1",
+      "190158": "374529123fbcfe9fde127c1b7f52ed68b2170c604d04dee66629c41a336d6d15",
+      "190159": "926b947dcbafafa91900d09f40414b09ec2cfde5e33da391ada3bbfbe2fff077",
+      "190160": "f57f4b6db60c0961339194fef9ff3d7c274f4c8e44bc88d27a80bc8d2a8f727f",
+      "190161": "32916a2f30be2315f6faa4f569f38553a7a306849967b220eafcd9d410c20ae4",
+      "190162": "425e985c6d78a6d947a7a3552ea7ce99f56b90375cdabebc25d88f0e3108b72d",
+      "190163": "ec2c8fdc2e7eacb217fd4eaa9917869e6d6c56074e05a9c6d877e4dca453bde3",
+      "190164": "5eac1bc248927e7298245be11c99fe2fafd7ebb67a9a46bddaaa463c16c94937",
+      "190165": "fc9d1ecc38726488c04554281083829aad32f1d7992468acaa3f8110d7b38726",
+      "190166": "3093226f160d5ec5e1a4977f0a7aecf54fce8f66a6963165ef99d5ac18aa4e7b",
+      "190167": "7cae0c05d0566398399efc39d7e3842149e72f5df70e43df12bcf56716c878b4",
+      "190168": "b5fe143acccf6ff8350eb2e03f2d0ae3ce939b1c0f880ac0613ce206e0f6be80",
+      "190169": "17abfa05d4018c465a514b063b9949dc1d0ac62b60e4f1d7833543211980ed86",
+      "190170": "37614f6757e96b829ae6042e61925ff05b6e61923666c7245d0122efd7aae9e7",
+      "190171": "459bff1be9f4c809c07252fdeaa0dcc0ac895edb5387992b5c44341c467149ce",
+      "190172": "27665f52efbe68aefadbd0a7e601f7baf4e9e9b36b3d9d971b65e879b7aca8ca",
+      "190173": "68e8483b09ca23493da571abe2b09f4d1adb0889b5d383f7dd56c41498ae8410",
+      "190174": "5e8729356ab41ae3266439672bc31c421f8b04379bb415fad3dffc32533e23d1",
+      "190175": "59a68cbab4cfd22431d2aaafb0b4097a32257dbb913ae4d67d5f516a66b46298",
+      "190176": "6976b4d9eb85b05266584396e931ada1ed7456748e08e37e36401eecc053c963",
+      "190177": "534903f0a643651fd944110afd198424fa8d2a7c1422e6affd10581820b97c29",
+      "190178": "447d9418ee8067524f1d20a7c970886178cb7182ffd27079ec524a2390092af1",
+      "190179": "892f815994133dfc8c2ea7fc61ef35b9a3a7d02450f1cbedd25c1d1089a71781",
+      "190180": "e87a510c3857d1ffc07675d43e40630ea851c6062e5e141f6bff72d92f613403",
+      "190181": "23a0af54cace63e8ed04a2428284cffdbcf95a10febaad6fb317f9004911cca8",
+      "190182": "e32d3643b98878cfe19260b04ed74d73cbb4d017010a83f646de7c55c519516c",
+      "190183": "1f1f62fd0f57362d6079ce2767a5037967c7d57b7b6213a6972c362c2d8a2cb6",
+      "190184": "81c844e24ac7ecba9d411348526e3411ac645734628a11964c4c00de5f0a58a4",
+      "190185": "f2ba377ca26be8400917e1496eb7f73fd06713ce732615313a001a3a8416ebfd",
+      "190186": "218da59e4ad2a874edf8630b44abef373a33077022238b7fa87f4f870293d55a",
+      "190187": "3cde3ca62208a61a94bdba5d88c0f07aec256609f451cc2e94f5952278f12088",
+      "190188": "30223b85aa2e211cade1ff4820771bf86d8e296997ed0faa3af9a0055632f87a",
+      "190189": "fcaaf1b1b661b1025d12e9cfa3ddb38385413455a516727791259aa84a5bb4e3",
+      "190190": "ce98aff09ca5597e72993a65b23eed88595d9e68ac8d209279edc3aa97fc9f38",
+      "190191": "247a74b687ceed143be8a95d2d7921caec6a6f38efe2a2f0a1e1fe07ff98daf7",
+      "190192": "fedaa69cc8eb5db2210adc5614d3b9159148048a734d6651670181439bb7d4fd",
+      "190193": "2be38edccb4f72330587060cee445e734ad7cb23addc629d5a3f4bb4df669d89",
+      "190194": "201e4c86855c24c834c8b0ed8f135a411e9ddcf46366b1f0b21e8c3876a49f07",
+      "190195": "85cf17129d45916949a9ca08cd5b76286c959f714592a4f4e911e73085b8b602",
+      "190196": "6e639e80dd6235af581d119b84e15c98fa7bb5726a2c934bba53b7ff34c933d0",
+      "190197": "47d14cd2f9ac619591edc47f2d873309b445bde6ace9e55c74154e784d02f9f4",
+      "190198": "f0f5ffd4b9cf0caf93993a53be830d8010f97960787fdbcbb3f4adc28703fd39",
+      "190199": "54ef4753d04f34f1b9285426f66d71acc75fd5f0eb838462f89e9458198465a6",
+      "190200": "b00a935fe314b52254288abb90989b3e87525fa9f366acf6a82d4e95d71ac8cf",
+      "190201": "2b64be36013d7593eb014fdbf8e51f3fa5b5ea118932cb42bad1e19c167f9c97",
+      "190202": "cf4caff7e1b83c33f8e3ae51d9f156de4c36466b9d990c99fbf7b08c45cc5ce4",
+      "190203": "e00c12e3d97cf9e7cbae1f6b216b3ed17b749f6d24f2581076a3747f202cc7d6",
+      "190204": "a48084dcd1ee95b95b58c277600c8a3d57d79646d3fff820e4d73e2dc1c92d7f",
+      "190205": "11d0ebc1575ca56dde6e301397b7df2cd669f3c91aeb85b0fd8a2d890c4af899",
+      "190206": "5c0be65b40d4e585fde4b9d7cbf35f97623fb0b2cd27691999068d4c9c815173",
+      "190207": "64d5b47c30ef5e3bdb2a281f25b825ac5666215fb3b86f6d87b1eb11cc157ca0",
+      "190208": "d351488764fe3a4865d2fd45313ae35edd2a4016acb6e4034167bd8ed0a22bf0",
+      "190209": "3d8cbef714294ef6bab987b44380c2497e98a9b61b1b6a1ac50cd5fc21f6a797",
+      "190210": "4bac31b314ffa25e442ce40e4ffcf8e9f013dd36389ec2b1b712d8a33921079f",
+      "190211": "129f63dd2470f562f91935cdbe5388395e9fbe4a27a2d59e4f2d0f5d73f40969",
+      "190212": "3618721e1f8128e89012c23ef107f1e79eac13193b223bed79c2718cb2569a39",
+      "190213": "958faddff5e40e606a29c214d6e497e99f29aae71749180f35fc772d07c1cd53",
+      "190214": "fa9163995f55a9ae90115b37cd28d4f008b09344cc33d75b9c4632ccd194a3d9",
+      "190215": "d63d01597d6975b4febe7115077d88d22cfdd925f6e435b9c53c11ea5c5a3de5",
+      "190216": "00f3597deba270d730c0590b5d30f906f205aa781408d03eaa3586fdca26e1f9",
+      "190217": "3acc8ec470f905da56b75459d7ece8ac160a5f255318d762fb9ba33fd66c11a7",
+      "190218": "865e24ac770e4909e29bd1dbe4cdbff15a504cc1849726f981e538ea398179ef",
+      "190219": "897f1b549433fa71fe64f7e3b5fcc1d6e468da37da8d8939ca9001aba61f660f",
+      "190220": "7232f2ffd4379c3898e6d5af74224764c2dfaf5555733999b4176ff28fee1075",
+      "190221": "1dd19632bc71feb80b74b57e65fe2d158c73dc4358bc37d37d5fcc5b7dbf8f0e",
+      "190222": "7a877e72ce4b4895863e33acd7eaad7cd8ee01d4fcb0998cf97085af1605f4a2",
+      "190223": "aa2a139370e8c9c7d8c4bca6389c5758097c9ede0bb2c31724029b60231648d4",
+      "190224": "1117e51b6921cfb995e1a56440bca163cbb4ee7e7dab76da31a69906ad402faf",
+      "190225": "ff402894ccfddc4adbc174072d704fbd0efbe14161a30b669e98ae372a5e70e6",
+      "190226": "49a4f8d9d49a2655ce8c39d07fca210d6afad31455ad3d43ce68f212dc1d496f",
+      "190227": "690b0276ed79c63af0b97075f75a21b3707fc0caa04481e7d8c99fe18d6e8d71",
+      "190228": "96ead13559a18ebae4d955bb4ca792d391cca94ea4aa55e02001c77046e11376",
+      "190229": "628f9e1561b1cc4758259f8e72c23d4d8271751822333f335f4ffc05fae91b9d",
+      "190230": "fdb0054813c70afee19658da886ec32c899d43d8bea62e192bbcc5de6d0470ab",
+      "190231": "b1b4fdba73dec6a9329b3197fb52c756b42ef6d04a8a13a4af9d86b312d812a4",
+      "190232": "df0dfa3b13a67392245ef4912243c02f1013894b42a1e09da98a22059586bdc1",
+      "190233": "6dc2bf2733197b6d8d22410713224fcfa40246420201c46de5670d8839aa3c96",
+      "190234": "f21497d131c0c8369aa591b1bb083fbd7438900ba34aabbe912f430ab22f0b5b",
+      "190235": "1780c609779d9e32f768e21fb1b7fb803a055b0458af9af0d978074b3aacc594",
+      "190236": "864d58f469e7538324b7161f868329adc628a2431159dadeff220e06856b01bf",
+      "190237": "9af6f560e84647e1ecb98a3da28ec224f55e275a9244996bd502df14bc9d47c6",
+      "190238": "5664f948fe6af6187be59295bd6eaa006df5052c3f4ca6d1dc689d7f4ec9bebb",
+      "190239": "896f07a046a8070ec2a8122534708abe2dc980b2e69a2ce269de800777c8d7d8",
+      "190240": "62747844527be1b0c4b47d5cc444eef7ac145adc44c8ceedab93b9c12db06e0a",
+      "190241": "8508afda7e7cbc2a96a6a875d31c34dfa1ba70c3380433a5488b7fa0ed6dd2e2",
+      "190242": "02481b4098f9681fbce46549ee4cd591b8db245b55f288410645d85b4dc714b4",
+      "190243": "23752762544a86fc5df9d2d341a02e8cca65ac06a9c25ff9cd98846741a429a0",
+      "190244": "c1ac7a3bf9a6fc931cc4a08c4084ebec77470520fef7895b28e821114d13c54f",
+      "190245": "626e19dd65321d20da9074a63a18f79370465de7dc977c1ca1e03836a0d61958",
+      "190246": "13a4bed2fb3d1d3e0e054cc1b30b433569c079ce40c2103d15a7d86d673e91dc",
+      "190247": "811e6db792fa89ef2ec2dc7567c54fe1cb22d595f16cd565807a2eb448880380",
+      "190248": "f65822b8ca764732216c269117602799879ad23983565e91b1adbd91945ffde3",
+      "190249": "49454521082869a1f979eeca9b95a34bb51c802a8d804db6ef10fb874b11d198",
+      "190250": "15051a736ed4ba5e0df7005af4322c28a5cbdfbec2d38c7c85f28538c98f3b9a",
+      "190251": "ee14cc69c56d83033d537e8bdce69a5b8eb7433aef295556ba6541d4fada6c46",
+      "190252": "e6873e0fbd8d0d63e76cc4f7e2964f554a4953959624aa26d97d14f2c2642852",
+      "190253": "98e87f25c65b58b47b4597cdf865967fb2cfb9e85c510aaab37329728123032d",
+      "190254": "58eb4f1704230461d301b6d42c9864dd657e536e38963c2d78ac69b59ecfdb25",
+      "190255": "860527dba9fe7f94973005effd7801a1d16e36e51837af17930ea7b16466d980",
+      "190256": "dad48d1505318d15372d53fddfdf1d53335d7a3e9e5f91d0636be25c5c92d462"
+    },
+    "validation": {
+      "200001": "a8c9641f45a4c670e4aefc3d427553465c5df857290e8866fa74e4d9100e45a6",
+      "200002": "2972db0d2b260dc129266225a9e432de02a44bf17e83055885c26683647c483c",
+      "200003": "1eae8c1c7cc8f1aff8b7bb61ae66854c6bbdb14d7e0e77c514aa34017ad00c55",
+      "200004": "f067d1160eadd0015ee9d4049b04b817f7a449699d4806bfd83e2ff7d603d444",
+      "200005": "fcf4761998212773602dd782265a21404a255b813687e70b7bd9ccb4242eb9ec",
+      "200006": "8254cbbb1d4fbad5a83168f55fdc69ee1989c659d074532b7a6991283cba2ea7",
+      "200007": "645b9607e87691ddcc10a2b4f214fa7eb4a8659352a3bbc6c47c692362371d5d",
+      "200008": "9b29f3e445ae9e375b4bc5af7f58ce433943a5182848886fc4cf10ea71c789b1",
+      "200009": "a915b02269066dd8e7765a01765ec5a7b72aca63432f39f5f033365bed277611",
+      "200010": "01a7c784c47c03ae2e0c3061957c736f0b7b85fa0d77df93b6addee0dcaf5858",
+      "200011": "9f29faec9b50f64a8da924d538010a55b8c8bbf4b1421543cf5eaab7e5c29490",
+      "200012": "8581d02fc26964e566772378572ed1f6bf4fb7252c5ccd51590f6647016a218c",
+      "200013": "147713960a3e490e002bfd78a686fb69b9bc491d5ebe78f465e026c7709e799a",
+      "200014": "7bb23d5d84c3320c4e8b06e925b046e1de49e78c1c8f7899c931947b1bdd15c4",
+      "200015": "b41a049c346d4b9b3f78ebf9fc9b7bcaa8c7078a7170f002bd643794222279ad",
+      "200016": "f3603582f3b34f817834bb87b7febd282c8f1d72aa7a903010ed0b079def1d2b",
+      "200017": "aec425a3f6486d7abc7bb2e758169affc3882351005d96a3c6b0930fb0d69afd",
+      "200018": "fa62c6743e80de007bb8d4cfabb2fd989b3532370fe2de3c06ac5193edc7ff3e",
+      "200019": "cda3c1843e9e0959afc25bbef4ef94382f42525a8528af79a3bd0b74a13166e8",
+      "200020": "38e1ce9a3c0cf9a543c989cdff98792e5ccecf1c4cf95c331bea87af8044c901",
+      "200021": "03a034f0550d4c32090e00f2f273fffc96b96b4974d1a21a253e2b4e6f80531a",
+      "200022": "e42efa89c940419864cd4faef7e7c8c30e3191d7402c72255fbdce54fae6c5ae",
+      "200023": "937814e105698f520988a0a0e0504f0f6c4448f9c669bb707078c307a3feae7c",
+      "200024": "80621fa165d49e2ea63953727df979c6c527bc7423e6d00d7ece7f6b4d485fbb",
+      "200025": "dd71c3a88a02bf4a2efd9c4a9028e16342bc9c3230d6d10be41c6e170f90bc6e",
+      "200026": "da20da12fb82a9d173ba58f456b695a0454f00a75f34a1858d32c1b8d15077e8",
+      "200027": "7898a12968a24bad8634d8383d884de221db296d930f8fe0ea4aeb9fb7ddec1b",
+      "200028": "d71008e68e1831e42ba125055f49e6a12d354c3fe4f0b86e1245f5f5aafceb54",
+      "200029": "5552ba5496886a0c5c0544af19c4aa75ea59ec1ed420d0f0fa0dc68634cbedae",
+      "200030": "e26d9946ac51c30c22f4f5e81812d9d0a81dad435393c3f2ad95654e53f33eb7",
+      "200031": "3682b1951ec1f38cdbfdc4c684e00ef714030d12de22ba4aaf3f37f9479790ec",
+      "200032": "05daea3b6d23663e43714797d0c65b0dee3defac3c69ebd538753079158547b0",
+      "200033": "0145644c480feea2b80458592ee9ef2aa7df6d4fbff324eb850c84ad351b71ee",
+      "200034": "c28a1a8b9c1d5866eeb28cfa9502e489e1164cc9dfaa3f3e2013a0d135620dd6",
+      "200035": "764cbbedb20bbfc512c67ebd44745140d6de47851c0046846c6aa2ca812c4baf",
+      "200036": "ebd954409e8632a51bf9e885c89554fc65de74bc02470fc32f8c47e9fc3c1685",
+      "200037": "fc06d3da18e1b4ba7499a49f7732afc4b7ca89c77f783c83a7c067c00abb89ac",
+      "200038": "2c66e414f53eee1a12a763241e440c623c2a48f826ffcf4800317592ebf9d80d",
+      "200039": "10017bf94e58d6faa523d92576703ec183cff53b059b0d49b06bd3606144616d",
+      "200040": "90bf0e954c4aa65f49b3fc32f7176b640e62bde7eef7b660109b2b9c82dcc33c",
+      "200041": "c8c908ff1a3c902151f55c7c55afea65f30e38ae23b81aae702c1e41a9a108f7",
+      "200042": "60999a48822477e8fb0a7761c92d3fa45a11c0c333379a09c565ede658426746",
+      "200043": "536f11c08c0e1540aace9227061dc6274cb46953e087b92b755436759ad4814c",
+      "200044": "de31c283c98e5f29a8a3d611c1063bed7812a3cddd5a52536b3c5ca9cfed99d5",
+      "200045": "0b3a9c10ccae76272eba6f8421fd83e85807d15e9ead8a1ef8c7d424855bc27f",
+      "200046": "f7376dbd690366252ff97e7ae686f21bf5215fb2d774e785ca3ece32ff1d3adb",
+      "200047": "8d4c603d1c02e0b6a71814663c08bde8c13c3f3fd0f84bb73f7ef02a9b4ca156",
+      "200048": "795340f7c40779059f94ad21afb154f39e1fa09106409c69122cda1ce0e7bbcb",
+      "200049": "eabd6921883635cb7fa6e4e02b602691575f7ef06c18d5c4d52ae7ac9990138b",
+      "200050": "5140efbb07fc79f34647409e8d4a57896bb07f3fe6d672d5f6126427e0175d65",
+      "200051": "c64e99ed58d258b316873a420890ec8abad0755b099edd67a473da710e386bd7",
+      "200052": "613cbefdfc9b7589fb4f2f3f44552ce80c6842c4873b2f90b8cc64a8d4818935",
+      "200053": "22612a67437674f96477b146af6ee6e73ec5568e3aabe1f5b083118fd0d44ed1",
+      "200054": "af6dd55cad98279c2ff209db8f946748cd24c43146922b694e135114a80416e7",
+      "200055": "a121b3b9270a53986df804a2e4190888f6abcfb27bec35781be28cbab8832dee",
+      "200056": "1a2933b906db197d386395c8af90ce80762cb27471edd2e22a604a2c8233bb2d",
+      "200057": "837558c492db94d4b35d0e1ae1114ab869e0175fe70c2e7c4424308b2686c0b4",
+      "200058": "0f051e40c7e0ac1f735c8161d8de49c152cf0c32827b36f5d6dbafb5d3a917f2",
+      "200059": "0591821bd05f063a334e177b3755806814fda262f4c67624f4b3cafac62a5d3b",
+      "200060": "d8d6e2247851c343f90d4bb7814c474cc954640db759ce7b8a6f1a53584f6a36",
+      "200061": "e2fb03c81386300a6c7c6f8db1259cd3b453fb93f70400c63b662c11debad63f",
+      "200062": "2b8bd6898b19469052dd2f7d80eabcc71f2b4ceb9d9a0bf4cf2aee662e3e321e",
+      "200063": "333d52642efd4f8adb11f36f7244528a92ea759bbe2aace31c06db0ede9d34d6",
+      "200064": "f444705cbc097f861492dea8857534825b0a9ff077445443b36011557020d9c9"
+    }
+  },
+  "workers": 6,
+  "format": "single early-turn intervention, Joint continuation",
+  "device": "cuda"
+}

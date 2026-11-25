@@ -1,0 +1,96 @@
+{
+  "variant": "history-soft",
+  "torch_version": "2.10.0+cu128",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "parameters": 32321,
+  "train": {
+    "games": 320,
+    "games_per_second": 20.36,
+    "teacher_outcomes": {
+      "tactical": {
+        "wins": 50,
+        "losses": 30,
+        "draws": 0
+      },
+      "joint": {
+        "wins": 40,
+        "losses": 40,
+        "draws": 0
+      },
+      "pivot": {
+        "wins": 49,
+        "losses": 31,
+        "draws": 0
+      },
+      "pivot-base": {
+        "wins": 38,
+        "losses": 42,
+        "draws": 0
+      }
+    },
+    "forced_decisions": 213,
+    "decisions": 2656,
+    "top1": 0.7575301204819277,
+    "top3": 0.9759036144578314,
+    "tactical_top1": 0.5500753012048193,
+    "illegal_action_rate": 0.0,
+    "teacher_disagreed_with_tactical": 1195,
+    "bc_recovered_teacher_correction": 898,
+    "bc_spoiled_tactical_teacher_agreement": 347
+  },
+  "holdout": {
+    "games": 80,
+    "games_per_second": 20.98,
+    "teacher_outcomes": {
+      "tactical": {
+        "wins": 11,
+        "losses": 9,
+        "draws": 0
+      },
+      "joint": {
+        "wins": 10,
+        "losses": 10,
+        "draws": 0
+      },
+      "pivot": {
+        "wins": 5,
+        "losses": 15,
+        "draws": 0
+      },
+      "pivot-base": {
+        "wins": 8,
+        "losses": 12,
+        "draws": 0
+      }
+    },
+    "forced_decisions": 64,
+    "decisions": 682,
+    "top1": 0.5615835777126099,
+    "top3": 0.9002932551319648,
+    "tactical_top1": 0.5469208211143695,
+    "illegal_action_rate": 0.0,
+    "teacher_disagreed_with_tactical": 309,
+    "bc_recovered_teacher_correction": 145,
+    "bc_spoiled_tactical_teacher_agreement": 135
+  },
+  "encoding_seconds": 1.237,
+  "training_seconds": 0.917,
+  "training_decisions_per_second": 34743.17,
+  "loss_by_epoch": [
+    1.5697085828666228,
+    1.506216118134648,
+    1.4854696802346103,
+    1.460855323148061,
+    1.4384092767554593,
+    1.42082324659968,
+    1.4021827973515155,
+    1.3833215552640248,
+    1.369396439517837,
+    1.3559607999870575,
+    1.3446555999388177,
+    1.3366924423769295
+  ],
+  "state_dict_bytes": 132727,
+  "verified_samples": 6
+}

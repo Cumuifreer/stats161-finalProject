@@ -1,0 +1,10 @@
+{
+  "name": "forecast-v1-blind",
+  "seed": 170001,
+  "pairs": 64,
+  "catalog_sha256": "16c4d38ae85cc5c02fdd8eab01391c53994bc11978528183c1e43dc27e37da9c",
+  "pool_order_sha256": "ebd27919f1c171f8976404fd930db9a9d85ddb461f69bcbe1aaf83559bd8d454",
+  "ace_trainer_revision": "b74574abb0c5cb26f3107a4d0a389c0dc25c2a52",
+  "unseen_opponent": "tactical-calibrated",
+  "opponents": ["joint", "pivot", "pivot-base", "tactical", "tactical-calibrated", "ppo-history"]
+}

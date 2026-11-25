@@ -1,0 +1,10 @@
+{
+  "name": "roster-pipeline-v1-blind",
+  "phase": "pipeline",
+  "seed": 290001,
+  "pairs": 64,
+  "catalog_sha256": "16c4d38ae85cc5c02fdd8eab01391c53994bc11978528183c1e43dc27e37da9c",
+  "pool_order_sha256": "73f23553f6ce8aa75681ee465c2c9216d62fc616e8c705bbbf25121efeb6a8ae",
+  "ace_trainer_revision": "b74574abb0c5cb26f3107a4d0a389c0dc25c2a52",
+  "opponents": ["lineup-rollout", "joint", "pivot", "pivot-base", "ppo-history"]
+}

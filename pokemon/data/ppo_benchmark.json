@@ -1,0 +1,16 @@
+{
+  "name": "ppo-v1-final",
+  "seed": 130001,
+  "pairs": 64,
+  "catalog_sha256": "16c4d38ae85cc5c02fdd8eab01391c53994bc11978528183c1e43dc27e37da9c",
+  "pool_order_sha256": "18522a99c7f71be7854d252bd6088c74526dcb7b2816748a91d87aed42e3c78b",
+  "ace_trainer_revision": "b74574abb0c5cb26f3107a4d0a389c0dc25c2a52",
+  "unseen_opponent": "tactical-calibrated",
+  "opponents": [
+    "joint",
+    "tactical",
+    "pivot",
+    "pivot-base",
+    "tactical-calibrated"
+  ]
+}

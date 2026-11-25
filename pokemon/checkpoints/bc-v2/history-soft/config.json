@@ -1,0 +1,1147 @@
+{
+  "feature_version": 2,
+  "network": {
+    "state_size": 264,
+    "action_size": 173,
+    "hidden_size": 64
+  },
+  "battle_format": "gen9vgc2025regi",
+  "shortlist_only": true,
+  "variant": "history-soft",
+  "card_profiles": {
+    "amoonguss": {
+      "level": 50,
+      "stats": {
+        "hp": 220,
+        "atk": 94,
+        "def": 123,
+        "spa": 105,
+        "spd": 112,
+        "spe": 50
+      },
+      "card_moves": [
+        "spore",
+        "ragepowder",
+        "pollenpuff",
+        "sludgebomb"
+      ],
+      "card_ability": "regenerator",
+      "card_item": "rockyhelmet"
+    },
+    "arcanine": {
+      "level": 50,
+      "stats": {
+        "hp": 197,
+        "atk": 178,
+        "def": 100,
+        "spa": 108,
+        "spd": 100,
+        "spe": 116
+      },
+      "card_moves": [
+        "flareblitz",
+        "extremespeed",
+        "snarl",
+        "protect"
+      ],
+      "card_ability": "intimidate",
+      "card_item": "safetygoggles"
+    },
+    "archaludon": {
+      "level": 50,
+      "stats": {
+        "hp": 197,
+        "atk": 112,
+        "def": 200,
+        "spa": 146,
+        "spd": 85,
+        "spe": 105
+      },
+      "card_moves": [
+        "bodypress",
+        "dracometeor",
+        "flashcannon",
+        "protect"
+      ],
+      "card_ability": "stamina",
+      "card_item": "leftovers"
+    },
+    "basculegion": {
+      "level": 50,
+      "stats": {
+        "hp": 196,
+        "atk": 180,
+        "def": 85,
+        "spa": 90,
+        "spd": 95,
+        "spe": 130
+      },
+      "card_moves": [
+        "wavecrash",
+        "aquajet",
+        "liquidation",
+        "protect"
+      ],
+      "card_ability": "adaptability",
+      "card_item": "lifeorb"
+    },
+    "baxcalibur": {
+      "level": 50,
+      "stats": {
+        "hp": 191,
+        "atk": 197,
+        "def": 112,
+        "spa": 85,
+        "spd": 106,
+        "spe": 152
+      },
+      "card_moves": [
+        "iciclespear",
+        "glaiverush",
+        "iceshard",
+        "protect"
+      ],
+      "card_ability": "thermalexchange",
+      "card_item": "loadeddice"
+    },
+    "chiyu": {
+      "level": 50,
+      "stats": {
+        "hp": 131,
+        "atk": 90,
+        "def": 100,
+        "spa": 187,
+        "spd": 140,
+        "spe": 167
+      },
+      "card_moves": [
+        "heatwave",
+        "darkpulse",
+        "overheat",
+        "snarl"
+      ],
+      "card_ability": "beadsofruin",
+      "card_item": "choicespecs"
+    },
+    "chienpao": {
+      "level": 50,
+      "stats": {
+        "hp": 156,
+        "atk": 172,
+        "def": 100,
+        "spa": 99,
+        "spd": 85,
+        "spe": 205
+      },
+      "card_moves": [
+        "iciclecrash",
+        "sacredsword",
+        "suckerpunch",
+        "protect"
+      ],
+      "card_ability": "swordofruin",
+      "card_item": "focussash"
+    },
+    "cresselia": {
+      "level": 50,
+      "stats": {
+        "hp": 227,
+        "atk": 81,
+        "def": 178,
+        "spa": 95,
+        "spd": 141,
+        "spe": 105
+      },
+      "card_moves": [
+        "icywind",
+        "moonblast",
+        "helpinghand",
+        "protect"
+      ],
+      "card_ability": "levitate",
+      "card_item": "sitrusberry"
+    },
+    "dondozo": {
+      "level": 50,
+      "stats": {
+        "hp": 257,
+        "atk": 167,
+        "def": 135,
+        "spa": 76,
+        "spd": 86,
+        "spe": 55
+      },
+      "card_moves": [
+        "wavecrash",
+        "earthquake",
+        "liquidation",
+        "protect"
+      ],
+      "card_ability": "unaware",
+      "card_item": "leftovers"
+    },
+    "dragonite": {
+      "level": 50,
+      "stats": {
+        "hp": 198,
+        "atk": 204,
+        "def": 115,
+        "spa": 108,
+        "spd": 120,
+        "spe": 101
+      },
+      "card_moves": [
+        "extremespeed",
+        "scaleshot",
+        "tailwind",
+        "protect"
+      ],
+      "card_ability": "multiscale",
+      "card_item": "loadeddice"
+    },
+    "farigiraf": {
+      "level": 50,
+      "stats": {
+        "hp": 227,
+        "atk": 110,
+        "def": 90,
+        "spa": 178,
+        "spd": 91,
+        "spe": 72
+      },
+      "card_moves": [
+        "trickroom",
+        "dazzlinggleam",
+        "psychic",
+        "helpinghand"
+      ],
+      "card_ability": "armortail",
+      "card_item": "electricseed"
+    },
+    "fluttermane": {
+      "level": 50,
+      "stats": {
+        "hp": 130,
+        "atk": 67,
+        "def": 75,
+        "spa": 187,
+        "spd": 156,
+        "spe": 205
+      },
+      "card_moves": [
+        "moonblast",
+        "shadowball",
+        "icywind",
+        "protect"
+      ],
+      "card_ability": "protosynthesis",
+      "card_item": "boosterenergy"
+    },
+    "garchomp": {
+      "level": 50,
+      "stats": {
+        "hp": 184,
+        "atk": 182,
+        "def": 115,
+        "spa": 90,
+        "spd": 105,
+        "spe": 169
+      },
+      "card_moves": [
+        "earthquake",
+        "rockslide",
+        "ironhead",
+        "protect"
+      ],
+      "card_ability": "roughskin",
+      "card_item": "focussash"
+    },
+    "gholdengo": {
+      "level": 50,
+      "stats": {
+        "hp": 162,
+        "atk": 72,
+        "def": 115,
+        "spa": 185,
+        "spd": 112,
+        "spe": 149
+      },
+      "card_moves": [
+        "makeitrain",
+        "shadowball",
+        "nastyplot",
+        "protect"
+      ],
+      "card_ability": "goodasgold",
+      "card_item": "airballoon"
+    },
+    "greattusk": {
+      "level": 50,
+      "stats": {
+        "hp": 222,
+        "atk": 183,
+        "def": 151,
+        "spa": 65,
+        "spd": 73,
+        "spe": 118
+      },
+      "card_moves": [
+        "headlongrush",
+        "closecombat",
+        "rockslide",
+        "protect"
+      ],
+      "card_ability": "protosynthesis",
+      "card_item": "boosterenergy"
+    },
+    "grimmsnarl": {
+      "level": 50,
+      "stats": {
+        "hp": 202,
+        "atk": 141,
+        "def": 85,
+        "spa": 103,
+        "spd": 139,
+        "spe": 80
+      },
+      "card_moves": [
+        "lightscreen",
+        "reflect",
+        "spiritbreak",
+        "thunderwave"
+      ],
+      "card_ability": "prankster",
+      "card_item": "lightclay"
+    },
+    "gyarados": {
+      "level": 50,
+      "stats": {
+        "hp": 202,
+        "atk": 194,
+        "def": 99,
+        "spa": 72,
+        "spd": 120,
+        "spe": 102
+      },
+      "card_moves": [
+        "waterfall",
+        "earthquake",
+        "taunt",
+        "protect"
+      ],
+      "card_ability": "intimidate",
+      "card_item": "sitrusberry"
+    },
+    "hatterene": {
+      "level": 50,
+      "stats": {
+        "hp": 164,
+        "atk": 110,
+        "def": 115,
+        "spa": 206,
+        "spd": 124,
+        "spe": 44
+      },
+      "card_moves": [
+        "trickroom",
+        "dazzlinggleam",
+        "psychic",
+        "mysticalfire"
+      ],
+      "card_ability": "magicbounce",
+      "card_item": "safetygoggles"
+    },
+    "incineroar": {
+      "level": 50,
+      "stats": {
+        "hp": 201,
+        "atk": 135,
+        "def": 112,
+        "spa": 90,
+        "spd": 156,
+        "spe": 80
+      },
+      "card_moves": [
+        "fakeout",
+        "knockoff",
+        "partingshot",
+        "flareblitz"
+      ],
+      "card_ability": "intimidate",
+      "card_item": "safetygoggles"
+    },
+    "indeedeef": {
+      "level": 50,
+      "stats": {
+        "hp": 177,
+        "atk": 67,
+        "def": 128,
+        "spa": 115,
+        "spd": 126,
+        "spe": 105
+      },
+      "card_moves": [
+        "followme",
+        "helpinghand",
+        "dazzlinggleam",
+        "psychic"
+      ],
+      "card_ability": "psychicsurge",
+      "card_item": "rockyhelmet"
+    },
+    "ironbundle": {
+      "level": 50,
+      "stats": {
+        "hp": 132,
+        "atk": 90,
+        "def": 134,
+        "spa": 176,
+        "spd": 80,
+        "spe": 206
+      },
+      "card_moves": [
+        "freezedry",
+        "hydropump",
+        "encore",
+        "protect"
+      ],
+      "card_ability": "quarkdrive",
+      "card_item": "boosterenergy"
+    },
+    "ironhands": {
+      "level": 50,
+      "stats": {
+        "hp": 259,
+        "atk": 211,
+        "def": 128,
+        "spa": 63,
+        "spd": 88,
+        "spe": 73
+      },
+      "card_moves": [
+        "fakeout",
+        "closecombat",
+        "wildcharge",
+        "drainpunch"
+      ],
+      "card_ability": "quarkdrive",
+      "card_item": "assaultvest"
+    },
+    "irontreads": {
+      "level": 50,
+      "stats": {
+        "hp": 166,
+        "atk": 164,
+        "def": 140,
+        "spa": 82,
+        "spd": 90,
+        "spe": 173
+      },
+      "card_moves": [
+        "earthquake",
+        "ironhead",
+        "highhorsepower",
+        "protect"
+      ],
+      "card_ability": "quarkdrive",
+      "card_item": "boosterenergy"
+    },
+    "ironvaliant": {
+      "level": 50,
+      "stats": {
+        "hp": 149,
+        "atk": 135,
+        "def": 110,
+        "spa": 172,
+        "spd": 81,
+        "spe": 184
+      },
+      "card_moves": [
+        "moonblast",
+        "closecombat",
+        "thunderbolt",
+        "protect"
+      ],
+      "card_ability": "quarkdrive",
+      "card_item": "boosterenergy"
+    },
+    "kingambit": {
+      "level": 50,
+      "stats": {
+        "hp": 207,
+        "atk": 205,
+        "def": 140,
+        "spa": 72,
+        "spd": 105,
+        "spe": 71
+      },
+      "card_moves": [
+        "suckerpunch",
+        "ironhead",
+        "kowtowcleave",
+        "protect"
+      ],
+      "card_ability": "supremeoverlord",
+      "card_item": "blackglasses"
+    },
+    "klefki": {
+      "level": 50,
+      "stats": {
+        "hp": 164,
+        "atk": 101,
+        "def": 111,
+        "spa": 90,
+        "spd": 152,
+        "spe": 95
+      },
+      "card_moves": [
+        "reflect",
+        "lightscreen",
+        "dazzlinggleam",
+        "foulplay"
+      ],
+      "card_ability": "prankster",
+      "card_item": "lightclay"
+    },
+    "landorustherian": {
+      "level": 50,
+      "stats": {
+        "hp": 164,
+        "atk": 197,
+        "def": 111,
+        "spa": 112,
+        "spd": 100,
+        "spe": 157
+      },
+      "card_moves": [
+        "earthquake",
+        "rockslide",
+        "uturn",
+        "protect"
+      ],
+      "card_ability": "intimidate",
+      "card_item": "choicescarf"
+    },
+    "lucario": {
+      "level": 50,
+      "stats": {
+        "hp": 146,
+        "atk": 162,
+        "def": 90,
+        "spa": 121,
+        "spd": 90,
+        "spe": 156
+      },
+      "card_moves": [
+        "closecombat",
+        "bulletpunch",
+        "poisonjab",
+        "protect"
+      ],
+      "card_ability": "innerfocus",
+      "card_item": "lifeorb"
+    },
+    "milotic": {
+      "level": 50,
+      "stats": {
+        "hp": 202,
+        "atk": 72,
+        "def": 100,
+        "spa": 120,
+        "spd": 194,
+        "spe": 101
+      },
+      "card_moves": [
+        "scald",
+        "icebeam",
+        "recover",
+        "protect"
+      ],
+      "card_ability": "competitive",
+      "card_item": "chestoberry"
+    },
+    "pelipper": {
+      "level": 50,
+      "stats": {
+        "hp": 167,
+        "atk": 63,
+        "def": 120,
+        "spa": 161,
+        "spd": 91,
+        "spe": 85
+      },
+      "card_moves": [
+        "hurricane",
+        "weatherball",
+        "tailwind",
+        "protect"
+      ],
+      "card_ability": "drizzle",
+      "card_item": "damprock"
+    },
+    "porygon2": {
+      "level": 50,
+      "stats": {
+        "hp": 192,
+        "atk": 100,
+        "def": 110,
+        "spa": 172,
+        "spd": 116,
+        "spe": 72
+      },
+      "card_moves": [
+        "trickroom",
+        "triattack",
+        "icebeam",
+        "recover"
+      ],
+      "card_ability": "download",
+      "card_item": "eviolite"
+    },
+    "rillaboom": {
+      "level": 50,
+      "stats": {
+        "hp": 205,
+        "atk": 176,
+        "def": 111,
+        "spa": 72,
+        "spd": 91,
+        "spe": 124
+      },
+      "card_moves": [
+        "fakeout",
+        "woodhammer",
+        "grassyglide",
+        "uturn"
+      ],
+      "card_ability": "grassysurge",
+      "card_item": "assaultvest"
+    },
+    "sableye": {
+      "level": 50,
+      "stats": {
+        "hp": 157,
+        "atk": 96,
+        "def": 95,
+        "spa": 76,
+        "spd": 128,
+        "spe": 70
+      },
+      "card_moves": [
+        "foulplay",
+        "fakeout",
+        "willowisp",
+        "taunt"
+      ],
+      "card_ability": "prankster",
+      "card_item": "mentalherb"
+    },
+    "salamence": {
+      "level": 50,
+      "stats": {
+        "hp": 171,
+        "atk": 139,
+        "def": 100,
+        "spa": 162,
+        "spd": 100,
+        "spe": 167
+      },
+      "card_moves": [
+        "dracometeor",
+        "hurricane",
+        "tailwind",
+        "protect"
+      ],
+      "card_ability": "intimidate",
+      "card_item": "lumberry"
+    },
+    "screamtail": {
+      "level": 50,
+      "stats": {
+        "hp": 222,
+        "atk": 76,
+        "def": 166,
+        "spa": 85,
+        "spd": 136,
+        "spe": 131
+      },
+      "card_moves": [
+        "dazzlinggleam",
+        "encore",
+        "wish",
+        "protect"
+      ],
+      "card_ability": "protosynthesis",
+      "card_item": "covertcloak"
+    },
+    "sneasler": {
+      "level": 50,
+      "stats": {
+        "hp": 156,
+        "atk": 182,
+        "def": 80,
+        "spa": 54,
+        "spd": 100,
+        "spe": 189
+      },
+      "card_moves": [
+        "fakeout",
+        "closecombat",
+        "direclaw",
+        "protect"
+      ],
+      "card_ability": "unburden",
+      "card_item": "aguavberry"
+    },
+    "sylveon": {
+      "level": 50,
+      "stats": {
+        "hp": 201,
+        "atk": 76,
+        "def": 85,
+        "spa": 178,
+        "spd": 152,
+        "spe": 80
+      },
+      "card_moves": [
+        "hypervoice",
+        "shadowball",
+        "calmmind",
+        "protect"
+      ],
+      "card_ability": "pixilate",
+      "card_item": "wikiberry"
+    },
+    "talonflame": {
+      "level": 50,
+      "stats": {
+        "hp": 185,
+        "atk": 102,
+        "def": 91,
+        "spa": 84,
+        "spd": 89,
+        "spe": 195
+      },
+      "card_moves": [
+        "tailwind",
+        "bravebird",
+        "taunt",
+        "protect"
+      ],
+      "card_ability": "galewings",
+      "card_item": "sharpbeak"
+    },
+    "thundurus": {
+      "level": 50,
+      "stats": {
+        "hp": 154,
+        "atk": 121,
+        "def": 90,
+        "spa": 177,
+        "spd": 101,
+        "spe": 179
+      },
+      "card_moves": [
+        "thunderbolt",
+        "sludgebomb",
+        "taunt",
+        "protect"
+      ],
+      "card_ability": "defiant",
+      "card_item": "lifeorb"
+    },
+    "tinglu": {
+      "level": 50,
+      "stats": {
+        "hp": 262,
+        "atk": 131,
+        "def": 145,
+        "spa": 67,
+        "spd": 145,
+        "spe": 65
+      },
+      "card_moves": [
+        "ruination",
+        "spikes",
+        "earthquake",
+        "protect"
+      ],
+      "card_ability": "vesselofruin",
+      "card_item": "leftovers"
+    },
+    "torkoal": {
+      "level": 50,
+      "stats": {
+        "hp": 177,
+        "atk": 105,
+        "def": 160,
+        "spa": 150,
+        "spd": 91,
+        "spe": 36
+      },
+      "card_moves": [
+        "eruption",
+        "heatwave",
+        "yawn",
+        "protect"
+      ],
+      "card_ability": "drought",
+      "card_item": "charcoal"
+    },
+    "tornadus": {
+      "level": 50,
+      "stats": {
+        "hp": 186,
+        "atk": 121,
+        "def": 90,
+        "spa": 145,
+        "spd": 101,
+        "spe": 179
+      },
+      "card_moves": [
+        "bleakwindstorm",
+        "taunt",
+        "tailwind",
+        "protect"
+      ],
+      "card_ability": "prankster",
+      "card_item": "mentalherb"
+    },
+    "toxapex": {
+      "level": 50,
+      "stats": {
+        "hp": 157,
+        "atk": 83,
+        "def": 173,
+        "spa": 65,
+        "spd": 213,
+        "spe": 55
+      },
+      "card_moves": [
+        "liquidation",
+        "haze",
+        "toxic",
+        "protect"
+      ],
+      "card_ability": "regenerator",
+      "card_item": "blacksludge"
+    },
+    "tyranitar": {
+      "level": 50,
+      "stats": {
+        "hp": 207,
+        "atk": 155,
+        "def": 130,
+        "spa": 103,
+        "spd": 167,
+        "spe": 81
+      },
+      "card_moves": [
+        "rockslide",
+        "knockoff",
+        "lowkick",
+        "protect"
+      ],
+      "card_ability": "sandstream",
+      "card_item": "chopleberry"
+    },
+    "ursaluna": {
+      "level": 50,
+      "stats": {
+        "hp": 237,
+        "atk": 211,
+        "def": 125,
+        "spa": 58,
+        "spd": 101,
+        "spe": 70
+      },
+      "card_moves": [
+        "facade",
+        "headlongrush",
+        "earthquake",
+        "protect"
+      ],
+      "card_ability": "guts",
+      "card_item": "flameorb"
+    },
+    "urshifurapidstrike": {
+      "level": 50,
+      "stats": {
+        "hp": 176,
+        "atk": 200,
+        "def": 120,
+        "spa": 74,
+        "spd": 80,
+        "spe": 149
+      },
+      "card_moves": [
+        "surgingstrikes",
+        "closecombat",
+        "aquajet",
+        "protect"
+      ],
+      "card_ability": "unseenfist",
+      "card_item": "mysticwater"
+    },
+    "whimsicott": {
+      "level": 50,
+      "stats": {
+        "hp": 136,
+        "atk": 78,
+        "def": 105,
+        "spa": 129,
+        "spd": 95,
+        "spe": 184
+      },
+      "card_moves": [
+        "tailwind",
+        "moonblast",
+        "encore",
+        "lightscreen"
+      ],
+      "card_ability": "prankster",
+      "card_item": "focussash"
+    },
+    "wochien": {
+      "level": 50,
+      "stats": {
+        "hp": 192,
+        "atk": 105,
+        "def": 120,
+        "spa": 104,
+        "spd": 205,
+        "spe": 90
+      },
+      "card_moves": [
+        "leechseed",
+        "foulplay",
+        "gigadrain",
+        "protect"
+      ],
+      "card_ability": "tabletsofruin",
+      "card_item": "sitrusberry"
+    }
+  },
+  "distill_temperature": 0.25,
+  "catalog_sha256": "16c4d38ae85cc5c02fdd8eab01391c53994bc11978528183c1e43dc27e37da9c",
+  "teacher": "joint",
+  "opponents": [
+    "tactical",
+    "joint",
+    "pivot",
+    "pivot-base"
+  ],
+  "draft_and_preview": "heuristic (existing battle-only benchmark)",
+  "split": {
+    "train": {
+      "81001": "689c42669cac732693a80abef928b009ca76f580238aeea096171dc4ad58a20f",
+      "81002": "4669553f643f578937fb93184f7702a65bb4ed726e6fb51a022458f7912fde9c",
+      "81003": "00ceaaac227eda0c0422c0166a9563a12a1f1fac247979cd105efdf2fc1c3a7d",
+      "81004": "20e44570d1b9e63e2e7fa862f5afb1f595f18805fe91326ee8c966cbd9bfd0ed",
+      "81005": "159079db4f90eda0fad17e0f25aa37b4e690040bf0ed1be327f65ae3d71f45df",
+      "81006": "7e02bcb1104803d6e783f97043e333afcd317d437f74906c3ad1ef9cf752a47f",
+      "81007": "1be97b3974f4db8b469615cc839aa804af834fca7c4643faa1362eccb34f8441",
+      "81008": "c02db5510097053370d40ac18f0403eb535d654745fbf88243c8c0ad7bd4f155",
+      "81009": "2c2eaced4dd2ab6063b7688758314ba3d2ecb13f1c502cc951366828d7d3070a",
+      "81010": "4ab981a96299b921817d1880e39a386e4ec6f08b1d897032cc3fa7730bc4c13e",
+      "81011": "32cb9bb55087c3fa0ee6ef3f2727d6f3b2abc3619e00a0ec4130a6e0747f354c",
+      "81012": "cb80726fe1670599672b4a660a79e674a9e1242481abb9117e946912d8d3c8b4",
+      "81013": "833dd20feaf35db1fedb8fff78b4b129b4b4e8ef78c02a0eaa3868b26dfbb129",
+      "81014": "61042dabbf163c94fea8b3858b4924dc4a8c06b2f80accb9b37f6d446c79bbf9",
+      "81015": "fe7a09de136590111d6983add0d9456d0628a837e6a84d8447fd24d705ac6a8e",
+      "81016": "fe93e22d1a6689f21888be5964186733cb6ea804ba9d10299a5c7773ee246fee",
+      "81017": "bfed24cab513639fb8ecc921a5d3b746921af394eeae147006d311840c20e71d",
+      "81018": "696e246085762fa9290c2e80b3cf2e1d5889744e2ca69308126be55e390412c5",
+      "81019": "1bab69dbdd732491d7f520f4b582574c3168a7fa7d73698a35e4a062af834fd5",
+      "81020": "fbbb5d66b034616fe77674bc641eeb0f57a5643111c99d90f5e9d0e5d9fb6fca",
+      "81021": "455bf1896c01b0d3fb41ca9c4aaeacdccfb58456b08c77dbd3002387c72785a1",
+      "81022": "6e06be8a4d2a035d845e8a697ebadbe18cbaeb6e9a157ce522757b4e9ba5e14b",
+      "81023": "63d012266c6ff1016c19cca5ce2547a207d824aa90508620a377b63b94112020",
+      "81024": "26b6a66a0fff14ade54b4a0d006956ca1804d5ad8ff7907c2b81f8f895b79f26",
+      "81025": "49a37e32ed296853cc4e9a60719d644223f93a03c5f228c54e4ca213eb187f4d",
+      "81026": "6d8e34e280f34a4441b874df835415caec8f7a697b851f70916a2680882cdf64",
+      "81027": "bd4fdf135d8725c9ca4f05c331e633321ab372f3837a5c9fac560b83c567a070",
+      "81028": "b635e9e878ae296d024271ae770e53b9a6a6f09b58d3e89b3005ac25bf34f924",
+      "81029": "4b544c9838bbc1df59d6934e683eb36e05bd47bde3deba685eb5f93390715924",
+      "81030": "c9000bd0fe2cde6a931e7418a11d968c0d00aee2393ae9abd91fa3b2906dc113",
+      "81031": "f3ba0d15aa95e89bb1a1d77a4cbba31b9f77dae6472c3260bcead1040c0c3a00",
+      "81032": "07e58022a67295fc5548eee727642272470fc8fca1deb5210481f9865d459bc5",
+      "81033": "a1e4e0b73f03746baca07cb987e319fa609229c816114030b66a95cdf457d954",
+      "81034": "da591a536303ab0f3fa5b21e49e6f7b0ede4269a869e912800137369617cb00e",
+      "81035": "df53e2c8149551653ed83e0186d7f36f0df4ce9cc96973313313e6c03f1ed6a1",
+      "81036": "8f19993cc5e8392e65ea612a841382c57925942bb91eedcbd105e5bf2b488a15",
+      "81037": "070e332621c89acfa00e98727ddd7f451422b4b3617b4d01391e0be39000a437",
+      "81038": "9b63cb81583761dd96de580ece293ddb06fb9a3d665d168a9a4d8d90d62e5b57",
+      "81039": "99383db32670c7ba8ab2268b5d8d16e64bae6953282c8f4f93fa4ea53a90163c",
+      "81040": "5c6b7394c58f46389e4478fd9becc87133a86b2334fda3b890fe942433cde3d9",
+      "81041": "140b9f12ae6e6b7fa67a9973c2a461300241082195ca093b8fe1cf9ba7609606",
+      "81042": "4c090286680e1912b4022bcc21b1ffed7eb06c0c8db1a05c5ecc5d51d0a18a02",
+      "81043": "728d51c441abd3f5d615ec9d2d09efb5a1e940e0d4fabc31f1446f29c6a76e29",
+      "81044": "31ca61154154ef0f50af8d014228d38aeac1d32ac9479e73fe463cf0d917779f",
+      "81045": "ec938200e275974dfa31d62affec134d4074cea5a656a04bfc410ca5ad425ca4",
+      "81046": "b27c413342361a53bb2bbc51b2e08c0e4cf3357c8d02ccb8d765ab6fa413daf2",
+      "81047": "974ec03e5ac04f507963581287ff96c6a632e807f18d428160256dec33be5fc7",
+      "81048": "a32e68d698ed76e4e3c038b4e232b7134848d3b7e3eed81401877170557916e5",
+      "81049": "e37c3981ab0ee67b8f88f351ce665ae245a3e8bf1c393c0e41f8ce8ad895691b",
+      "81050": "a8d6b59e82fbfff3000cd2d876d275f9888d85857af40344911a7c4715868b29",
+      "81051": "ce2740f30a06da473393b8e28cd9d26f1cb859b0c059d2a902e15a118dee87b4",
+      "81052": "e13c11194f68a5e49f389584c9f21a161d7e70c82bb2603157926dea7e768ae4",
+      "81053": "215d0d75a66388c2473467743d117f91a3a443ca41059a679b0ad810cdb5f147",
+      "81054": "749908ced052594872c67f9f38a12fc636f27112acf76b892c4b8a7d6e9179de",
+      "81055": "e85216bb96a14bae34abefd03b8ebacf733c65f4e3a4944555f000bd3a61a6fc",
+      "81056": "265f14e76f211821d1234082755f9e353ee2b95e0985200f94eff0af0cc5951c",
+      "81057": "249d03943ea746700c2e1fcea289ce17de1e9eaade5449f1290bbde8d809337f",
+      "81058": "a3b9577ad797a5e2686114cee120711cc848b3995856495f3836d89e2e36c5c5",
+      "81059": "16d0344241d16187183ca3f687362ed76723e319b5d2414b0ecb9d29f2c0ab7c",
+      "81060": "078497fb5bb4fcb27fdc49a7f949a373e11daea4fc9375fbbd28a8993e469de1",
+      "81061": "c3aa4a1bd33e26f048812f1ed331fe0ab5882eb9089e2491282f18fc4b8d4d9f",
+      "81062": "ddd0f5393c621c0f8cd36f587301ce3eaa20b48ba0aa0f34da443983052c316f",
+      "81063": "44983e0cd00dbc77d1ca5cef7f6599d824415fc8bc9806c645032b9eb1963590",
+      "81064": "ec6bc1b36b084b50ca75be5e0fba73ec4d4c251be4a7991f3ccb7597f189c796",
+      "81065": "68426c712d02df5d4031708a234a6f25476ac35fdce13822eef0c3c2823a17b1",
+      "81066": "0cbba09343c6965ab04479ddadef8b3d05eb17faacd7469b5983c064445d4860",
+      "81067": "320f6e58a1037a7a3b894fcfa9a79e3e34f4448ccb39bc5924a06cd031a72b3b",
+      "81068": "df86ce96c766b4fd985d09c760a673d1074d01819afa000925c1effdce7ea4d4",
+      "81069": "2a7dcffde53eef8ac7ed430cee623af0f6ae758c4bf2fbc68b13c3e66c46b8de",
+      "81070": "2264ce74efdba8d44a3ef674e8611028fb72376c2709c3d79fa0f0cf135586d0",
+      "81071": "ae5f4f2becb5a993076edd5c8f43fb14105fc1c4f90d879ecc1e5bfe89f37744",
+      "81072": "dd3a250b83d72673bec7b840860903dba6f4dd6ba0a6a5a025903c833fd3fc8d",
+      "81073": "1ae3084b19c27dbe7d75aff5c6bf6519a7a48710ac88b918f5246414728943cb",
+      "81074": "835d4d76449d69f41fba7682814646e67f82b3914914d2d3c0278b3b3cf2950e",
+      "81075": "e8b1a90907ec55904ca3f9e41009d891d53cdb179d0eadb42dc27f81f0fb0b5b",
+      "81076": "c650e00ce89cee6010f0be4a799ba0726e9b55b8d82aad09808c1e1408465317",
+      "81077": "21fe0f8097bd8b5a7c9decb07e0a6fcbd3082777f228b0cf6333c50b8ec59dde",
+      "81078": "f2ab1688198ad53427edd20712d4600a65157510d1106ee504cbc658778db708",
+      "81079": "1464551a5fcde6907f09b7b57a84a843df04f0c511f7ac6514989e24e16567c6",
+      "81080": "7685288d3148cc2752dbd9b2dccde61fed2ec1fac4561069981f9f13758996c0",
+      "81081": "e1a36be41340a496bd6c495d210425880f4cb828135b5a9e1c91571f0ca88b4e",
+      "81082": "cf4be0a4dbccedc51bb7775474bef38a3f5d107876718148afd9488d66c230e8",
+      "81083": "86a9b77c5e54589ff2b590c94aed068433e6f73fc093f76b58e93eb4257a4fe4",
+      "81084": "7ecab2623377e7c28e2708eb5444947ee0a3446da2c63e100548bdfc92698848",
+      "81085": "0b7e9f4b223fe7a437a3bc5e29c7027d0884c17877d65f322e6808ce5febeaa7",
+      "81086": "ab7122b1dc3bfa24536b27272cdb9850bdcd7b75f3e507a77a6b237a3e7e83f4",
+      "81087": "c1535339f8c0ef20796bb618d9f52ae2e30e9df99c4d607e3b695bcbfacd470d",
+      "81088": "bff3b510997b51f0bfc3337e1b37d5c7010de62b3b55e39e2d027bbef00154b4",
+      "81089": "bb12e4b8763b294914a3db23c23ba215f3ed57f99422ae07fcfd782ec99d733e",
+      "81090": "35f593e2fe2a3929211fda00e76baa91e8f12360ee41ff8170e3871d4e35a105",
+      "81091": "0fead1dbde21cbba5528885361867cc36cb797f787be468ce1a67d3410037b8f",
+      "81092": "38103b3c4bd98b02e1c265975ddc2b08b8310f315fe6b716f15251426a2ae963",
+      "81093": "953889f5b62e7e58782ae852dc38177bd684bac1086ae854ed80bf0bb87479ef",
+      "81094": "8759ab3882fb18248d11267c6bdb1ec9ce1e80cd76b7f619501e6a113be090d9",
+      "81095": "1252d29df7d9ea4010e6dabf71abc4d1036ac1118fc71962c1f2eccfedf15abe",
+      "81096": "bf773e24daa387f54b977a36f235a907e89950e4a93a7334a2727e41ddfe45f2",
+      "81097": "d336ac3aa1135bc82a00a4adddd887ee0b5d18aacb282ae1911db99c69d3efb0",
+      "81098": "aac73d65032fe562d625fc925452b1b1ae6285c9e9f6b443f9e2111e1a05fc4d",
+      "81099": "05e81588723b69e92b5bc1283ba20c14216ad403462c76723e05302cd305320c",
+      "81100": "7d51b41107dd88ef2aba07685a6a30ebf69c4627d16fc34c7e941e1eafce78e8",
+      "81101": "4c7a13392e128bd474de8b507d40ee443886829f544c7112560565e7ffe85f82",
+      "81102": "c8adff0de3e74637c2f9add29c2d52f8085c562657b049fe970c1a7e4923312c",
+      "81103": "ce30cb21e5f60a6235ba96d1123b0ff5847f03a11cd7722d817537c68a1bd33e",
+      "81104": "8d7aa080cac4e2ad08ec4c104b21ebd53a1257523c57e91184c10544f41e509c",
+      "81105": "75a638620857090fafa1bd3fe03d129be8ef58871e239c51c1d3e0e546098582",
+      "81106": "fc88ba96353d111ca69f2cb07ae399457c7ac733e595fe7d883e248bce283216",
+      "81107": "ab2d036a753693aff82795afd1078f14e57b2652e1298e801d9b76f100a39a8f",
+      "81108": "6a806fd3f853535c280d5fd22b9519ca4687f7f8b9f24c64507a6bb0ca896b61",
+      "81109": "1cda78092c7f9c45ace053f9061dbb2b4b080b39b88261702dc6a92d5962f2d3",
+      "81110": "00577ed9236554c52993214f1d662816d34bafe7c9e664b8af1d37cff82b24a3",
+      "81111": "df02ab24d1aa50455fe5ecff586d60f8f2b529cc6e3e457261d38e464f8e78a3",
+      "81112": "fd2022da2b236d3b12dcbcc337538a0301dc344bb9e76303f61b7c83e06a3455",
+      "81113": "4e1637836dd3a42c20bff5c9a07b46f6fa30cf33a995fbb25f2ef31a724a0063",
+      "81114": "f1356db1b3b19fd9ae30a22d1a29a5d1adfd8bbbc1b11a90da209c3c63bccb9a",
+      "81115": "69579b5939b4e37ed6b7f9fd0880b531287a88a424b5f03c3ef34a78d299ffd3",
+      "81116": "3c5f0772d48fd16ba5d1fc776f1f762adf3c2eebfd59d48d5c8b2b7503df68f5",
+      "81117": "97a62492793c9267fde707cdbe3581d16e69ce594e7be69c215156dd3d975967",
+      "81118": "c0737e0a95df98fe6274117e2ea4c65f51ec7601cf26b5ba564d03e605b3ce10",
+      "81119": "f8cbc74784127e0b775ca47a9b263830a00e4aaeb42db68978f5e99b9aa4328b",
+      "81120": "b6c694a28a2be98862ab3a16843ea9dbc1a8041bf0fac9f31f6e1a00199224c5",
+      "81121": "10c40924d5dd541991c4a0ecb5318a6e65530c7d52c22fe3af84a9c871e0bdcc",
+      "81122": "499b7606002eec7c58ea74d5c8adde57083b31f8e5da09a70bd4d694b87be18a",
+      "81123": "a9ebd0528349e7629057b8d338c3c49b243bbfc262846cc1064bfd2eb70f6497",
+      "81124": "84f417903af97b1c10576ba52791194694dd7138add149d78bb7aa3ff361a9b4",
+      "81125": "aaeb1eb3f601e4c524a8ea243ae382d501447b420d064a41d3622e9a12a7f06e",
+      "81126": "b1891b2149a51a47b3c668ed24d8bfbb087a522525803e1504e1a54648a2db6b",
+      "81127": "8415df5b75a8a6d8a28134daaed4a1a65e36e283c41f6cf8d99e4532370281aa",
+      "81128": "0469f1087c0642c456d9099960733fd3b0028574d6b5303c8c56e5dbe41cf7f8",
+      "81129": "ceaaa8a12f9c6d28e2f3b00900708c7af4793f46c1496920c67a71d7f4f7ada8",
+      "81130": "925594e93d7202d2b8636012606aba7f81d8f734b6a0e48f936e301c6255c322",
+      "81131": "bf123e0cfa9b633ba30dcf9f73984bc19199b0ab181b0fa1cdfa42ea53a68275",
+      "81132": "52e31db02d8c96c311e5dab5dac1f49c2af3aa4c3b9b91c024a25f31a16f2fb5",
+      "81133": "78be59062156e7898ef9b6756170405e00af4a2a2ba5a0f5264d443f20859382",
+      "81134": "eabc16850d457a9759a92bbeda9d8a7704034033f55d8c94d92a2095bd96b777",
+      "81135": "8345b8f31f0a2f14932de99aeba213ec5cd66fd06c6a39e70bfedd99f8e5c204",
+      "81136": "e648681f539caf86ee07dfec47c0aa656847c8c08ffb5a72ed9b6d19da0aa59d",
+      "81137": "aaa436bde63927fdf4c469d3c43d1d3a984eb038ac5685632e227cf4f2dc0664",
+      "81138": "7821ecac787fbd3ea7a8e28ba869caa22178b007b80140d63dafa5b54ad84b5c",
+      "81139": "36f8c7f96523ccd24a48bbb72743e31af8916698fe2c49876d2d491f73021707",
+      "81140": "63ed1f22eb8ea0ffe35fbac631d488a8ea97a7ad528682ac0e2374c73627f16f",
+      "81141": "78a27b33b2783e8df9ba49932b5cd7069cfde88b8b2f29a11402d203070aa145",
+      "81142": "cd3360a17b972cf5655dc4e2f10da9a80b9624ede9ff8cf1e670bcf56963fb92",
+      "81143": "b5e3618fe6e79167dda4294fefb2cd2777c21b7002881ada1453cb5466e16a58",
+      "81144": "ef3779de38f57b1151027e5969227e55a6d39bba0094fe0d174c2b09b7515d32",
+      "81145": "c8fda6aad8d7132c3d04358444360d7c822266e626ac46d6174e13c7012ae0e8",
+      "81146": "03b913aa71ccd63a1b684315d5026d7bf35d8597ffc74bdbe80b998102fe659d",
+      "81147": "11435389141a533319e79af29a3634dd748eedd0ddf0ec15e47cd47fa4cdf88b",
+      "81148": "a4038b34016843423141a1069ad2e1250a865b358f68d23f6ebed868be5df7b6",
+      "81149": "095efa97af7b312e7c800b95e5ed52eac396c438ddd2ff11890d5ecfd2a27308",
+      "81150": "4ae1f34ea73da39ffe2b2dc6f1b152a885799e90f94d236c17b90f4f0012f7fa",
+      "81151": "3e57b8bb68abb252054513b4fc79da6472d4f78fcd2fe3bb1a9745a27b743d1b",
+      "81152": "c1353d65f3099f092758a9b0aa3dfb12b0ae8fe1373ba90ff2cda37f3e9d9a80",
+      "81153": "ad6fcb55b75ef5f182d44219e885a1e7c567c4c5e789a0cdfb022c09a72cc10f",
+      "81154": "f742391747057ee2552e17b09a5454c756ceb5f9c049f6e5fc9ca1e664da70cf",
+      "81155": "ebe48a22490c4308a5b621e61347a0dd38de7a88e751aa83071015ab423d6c8d",
+      "81156": "59e416fed911627a17f65c198dec9ebbc15233902edfe981bdee68a608de6f0d",
+      "81157": "686c3578142409d46198157f3beb18959622ae9674821fed85179052af56e792",
+      "81158": "46237597b6b36003f163c4a24a1721693a455faaabefb3342865f013041e7fe9",
+      "81159": "356c1931c2404ca842949e70e389899256b79e12aeb96c5b6c10cc3b04b469ce",
+      "81160": "e4648cdb6572dc253ab92ff762af797a5f249c0da143d40969aaf571172bee6c"
+    },
+    "holdout": {
+      "94001": "5985f00d9addb11f57a05d35bb05e06b5ec2369cb17d3fa76bee649509211c27",
+      "94002": "2a629d86a4c64cf5110675286743aefe14875cc5a0c93b752853789043d68c8d",
+      "94003": "390a047db32493d13b2e7cadb566e4ebecc0b758293c83953caa487ea26df8b8",
+      "94004": "64dee654121d47a48cb817bdeeb9a223cc05acdf15f68f2c53d27c1371370764",
+      "94005": "bff95961441462d8c8f68c778fb4704b7aca9127fa61cd5311c362edb7cf09ff",
+      "94006": "888a42f8268a7463654fc7b088d4462b58fbc98e36ba3679bd15922d9a567920",
+      "94007": "11da1228af94196e021d44beee32bef3b483739229b801865b6ac8e4e259219a",
+      "94008": "3f3f8afd1691615254fe485e6cee5aa35fa12e9748c6585358370e35dc43eb63",
+      "94009": "acd09c8bd86eed9ea057b0b3ff7a68e3f193386ae9da625253b0f6694a589c8b",
+      "94010": "1423072d71d07d0139ba093b55d82c25b04865f5130ebe6b7cbcd850b7b1d916",
+      "94011": "dfab9d85d8865cecf4d653b38fd6629d2d9b18b28aee41410749d46ff0e07c68",
+      "94012": "3cdba90bd8532b8b3f30e3b2c1fe101f6ae05b890fee0ee0a6fa343eee179432",
+      "94013": "6be28ab78de2a864402dc581d6b7f27f2d2aa40f9cd04e003e10c89534846623",
+      "94014": "51ea5c011284bf9f34f616ed664baff7dba414cfef3b00cb70591974d017bd7a",
+      "94015": "42358b0d638e96e50fb07220c8873a4077912241f7550c7feb340d1847358a5c",
+      "94016": "a8432fbb6e20471f06b1bf869d319e80b6d6fd286cbbe14b90592b02b605bd81",
+      "94017": "0b5f2b776132e83d44eaf3f9fedd71919668973668395bf84232e2880238b457",
+      "94018": "9a3e22d55995f0ee6dd95ff58665a5decfa1a32d2cc7d4c6935b890f311fff16",
+      "94019": "cbd1b961ce4f99d13a2418f0dd7e458ece0dde9675c887aeb1e2c31fcd2ec90c",
+      "94020": "790878e0515a5e455ef41acd42e8dc6ad5aba07911eba4ea168690c9d3ff5035",
+      "94021": "46d93f4a93599d3cba4368770b31700f798d22e378681f99514df7cd52fe60e3",
+      "94022": "bd5280f3a84b51314e985627b6de4895d810cf037d78fc84404d32ec3e8b9898",
+      "94023": "84723b93e61699217cbc94ddba333210c21d15dbd697754dd336225f9247ee5f",
+      "94024": "50cd309a862f39d65ca4486d3501fe6a4de07d678b1c924e614ed25d211891a0",
+      "94025": "30631d2702d7d118d2df3b9dbd70a599b3ce123eab072554c3ed2297e8fc3ddc",
+      "94026": "f83f99ccfa853cd8d848212c7d09e8a7375edc285d72d9bd3f835bdbaa389500",
+      "94027": "1714c668ff85b204b56b9d135a914345b877ceb8d15fd3af4aa938b290cf09c0",
+      "94028": "76bec505065d5a840e71e93673846657f1e3a7f7b3c1d5687da5644b30115fe1",
+      "94029": "78745557b3f21697d21bbd7bf62c84004125dee1f5c02a025c595554b663744f",
+      "94030": "72962ef7f2fe722828e4fbcc35877fa73a18ad39f8c5daaf30b1c4f306848b86",
+      "94031": "bf94c2a7d5f2aa275e56194ddcb4b71365f5caf401d788b1aba356f7547a70de",
+      "94032": "6f20f8b49fe6c8137bc4f0cc3f6a4f11d241c10ec233894539ef859df2c09af9",
+      "94033": "9d1cafbbef8562bfcde51bef666203f84050def63bbd45c54cf08ddcc4a765fb",
+      "94034": "e9a91cf5123eae0d2db5b1ac34b5ddde98812728a32e9219d2473118d5ffcb97",
+      "94035": "d0d8d484a6934e3899a1e8aa8e9672ba4ca28e8f0f75a7fe37291ab9a0d7cb5c",
+      "94036": "b850c0b28c70cf2ae8680e12f92b2ae5eb69ab9b6a1bbe205e75d69e48d9dfce",
+      "94037": "24bc2b019222c2b01350f2dfe5c0e0436a6d2c01eeba117de7252e0710a7558d",
+      "94038": "63837a044318ef1043f9aedfa5f2917c9e0413d1a058ff37a1d55ce0243dfa19",
+      "94039": "0204b63a2aeec6254e9a37de2186af6f8814a053742d09d6c254b3bcdc0bf209",
+      "94040": "3749049b1d45a6a343e68a680bf433600d3fff6240382d769186a80274ffaf0a"
+    }
+  },
+  "training": {
+    "seed": 81001,
+    "epochs": 12,
+    "batch_size": 64,
+    "learning_rate": 0.002
+  }
+}

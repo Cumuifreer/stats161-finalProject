@@ -1,0 +1,3792 @@
+{
+  "0": {
+    "task": "Pick four Pok\u00e9mon and two ordered leads in doubles. The opponent's four are unknown. Return JSON with just the legal candidate id.",
+    "our_public_cards": [
+      {
+        "card_id": "vgc-dragonite",
+        "species": "Dragonite",
+        "item": "Loaded Dice",
+        "ability": "Multiscale",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 252,
+          "spe": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Extreme Speed",
+          "Scale Shot",
+          "Tailwind",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-cresselia",
+        "species": "Cresselia",
+        "item": "Sitrus Berry",
+        "ability": "Levitate",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "def": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Icy Wind",
+          "Moonblast",
+          "Helping Hand",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-indeedee-f",
+        "species": "Indeedee-F",
+        "item": "Rocky Helmet",
+        "ability": "Psychic Surge",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "def": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Follow Me",
+          "Helping Hand",
+          "Dazzling Gleam",
+          "Psychic"
+        ]
+      },
+      {
+        "card_id": "vgc-rillaboom",
+        "species": "Rillaboom",
+        "item": "Assault Vest",
+        "ability": "Grassy Surge",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 236,
+          "atk": 116,
+          "def": 4,
+          "spd": 4,
+          "spe": 148
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Wood Hammer",
+          "Grassy Glide",
+          "U-turn"
+        ]
+      },
+      {
+        "card_id": "vgc-tyranitar",
+        "species": "Tyranitar",
+        "item": "Chople Berry",
+        "ability": "Sand Stream",
+        "nature": "Careful",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 4,
+          "spd": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Rock Slide",
+          "Knock Off",
+          "Low Kick",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-great-tusk",
+        "species": "Great Tusk",
+        "item": "Booster Energy",
+        "ability": "Protosynthesis",
+        "nature": "Jolly",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 252,
+          "spe": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Headlong Rush",
+          "Close Combat",
+          "Rock Slide",
+          "Protect"
+        ]
+      }
+    ],
+    "opponent_public_cards": [
+      {
+        "card_id": "vgc-amoonguss",
+        "species": "Amoonguss",
+        "item": "Rocky Helmet",
+        "ability": "Regenerator",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 244,
+          "def": 172,
+          "spd": 92
+        },
+        "ivs": {},
+        "moves": [
+          "Spore",
+          "Rage Powder",
+          "Pollen Puff",
+          "Sludge Bomb"
+        ]
+      },
+      {
+        "card_id": "vgc-iron-hands",
+        "species": "Iron Hands",
+        "item": "Assault Vest",
+        "ability": "Quark Drive",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 236,
+          "atk": 252,
+          "spe": 20
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Close Combat",
+          "Wild Charge",
+          "Drain Punch"
+        ]
+      },
+      {
+        "card_id": "vgc-incineroar",
+        "species": "Incineroar",
+        "item": "Safety Goggles",
+        "ability": "Intimidate",
+        "nature": "Careful",
+        "level": 50,
+        "evs": {
+          "hp": 244,
+          "def": 12,
+          "spd": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Knock Off",
+          "Parting Shot",
+          "Flare Blitz"
+        ]
+      },
+      {
+        "card_id": "vgc-dondozo",
+        "species": "Dondozo",
+        "item": "Leftovers",
+        "ability": "Unaware",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Wave Crash",
+          "Earthquake",
+          "Liquidation",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-wo-chien",
+        "species": "Wo-Chien",
+        "item": "Sitrus Berry",
+        "ability": "Tablets of Ruin",
+        "nature": "Careful",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "spa": 4,
+          "spd": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Leech Seed",
+          "Foul Play",
+          "Giga Drain",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-iron-valiant",
+        "species": "Iron Valiant",
+        "item": "Booster Energy",
+        "ability": "Quark Drive",
+        "nature": "Timid",
+        "level": 50,
+        "evs": {
+          "spa": 252,
+          "spd": 4,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Moonblast",
+          "Close Combat",
+          "Thunderbolt",
+          "Protect"
+        ]
+      }
+    ],
+    "legal_candidates": {
+      "0": {
+        "type": "select_lineup",
+        "bring": [
+          "dragonite",
+          "indeedeef",
+          "rillaboom",
+          "greattusk"
+        ],
+        "leads": [
+          "rillaboom",
+          "greattusk"
+        ]
+      },
+      "1": {
+        "type": "select_lineup",
+        "bring": [
+          "indeedeef",
+          "rillaboom",
+          "tyranitar",
+          "greattusk"
+        ],
+        "leads": [
+          "rillaboom",
+          "greattusk"
+        ]
+      },
+      "2": {
+        "type": "select_lineup",
+        "bring": [
+          "cresselia",
+          "indeedeef",
+          "rillaboom",
+          "greattusk"
+        ],
+        "leads": [
+          "rillaboom",
+          "greattusk"
+        ]
+      },
+      "3": {
+        "type": "select_lineup",
+        "bring": [
+          "dragonite",
+          "rillaboom",
+          "tyranitar",
+          "greattusk"
+        ],
+        "leads": [
+          "rillaboom",
+          "greattusk"
+        ]
+      },
+      "4": {
+        "type": "select_lineup",
+        "bring": [
+          "indeedeef",
+          "rillaboom",
+          "tyranitar",
+          "greattusk"
+        ],
+        "leads": [
+          "indeedeef",
+          "greattusk"
+        ]
+      }
+    }
+  },
+  "1": {
+    "task": "Pick four Pok\u00e9mon and two ordered leads in doubles. The opponent's four are unknown. Return JSON with just the legal candidate id.",
+    "our_public_cards": [
+      {
+        "card_id": "vgc-flutter-mane",
+        "species": "Flutter Mane",
+        "item": "Booster Energy",
+        "ability": "Protosynthesis",
+        "nature": "Timid",
+        "level": 50,
+        "evs": {
+          "spa": 252,
+          "spd": 4,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Moonblast",
+          "Shadow Ball",
+          "Icy Wind",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-cresselia",
+        "species": "Cresselia",
+        "item": "Sitrus Berry",
+        "ability": "Levitate",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "def": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Icy Wind",
+          "Moonblast",
+          "Helping Hand",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-sableye",
+        "species": "Sableye",
+        "item": "Mental Herb",
+        "ability": "Prankster",
+        "nature": "Careful",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 4,
+          "spd": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Foul Play",
+          "Fake Out",
+          "Will-O-Wisp",
+          "Taunt"
+        ]
+      },
+      {
+        "card_id": "vgc-rillaboom",
+        "species": "Rillaboom",
+        "item": "Assault Vest",
+        "ability": "Grassy Surge",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 236,
+          "atk": 116,
+          "def": 4,
+          "spd": 4,
+          "spe": 148
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Wood Hammer",
+          "Grassy Glide",
+          "U-turn"
+        ]
+      },
+      {
+        "card_id": "vgc-indeedee-f",
+        "species": "Indeedee-F",
+        "item": "Rocky Helmet",
+        "ability": "Psychic Surge",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "def": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Follow Me",
+          "Helping Hand",
+          "Dazzling Gleam",
+          "Psychic"
+        ]
+      },
+      {
+        "card_id": "vgc-chien-pao",
+        "species": "Chien-Pao",
+        "item": "Focus Sash",
+        "ability": "Sword of Ruin",
+        "nature": "Jolly",
+        "level": 50,
+        "evs": {
+          "hp": 4,
+          "atk": 252,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Icicle Crash",
+          "Sacred Sword",
+          "Sucker Punch",
+          "Protect"
+        ]
+      }
+    ],
+    "opponent_public_cards": [
+      {
+        "card_id": "vgc-amoonguss",
+        "species": "Amoonguss",
+        "item": "Rocky Helmet",
+        "ability": "Regenerator",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 244,
+          "def": 172,
+          "spd": 92
+        },
+        "ivs": {},
+        "moves": [
+          "Spore",
+          "Rage Powder",
+          "Pollen Puff",
+          "Sludge Bomb"
+        ]
+      },
+      {
+        "card_id": "vgc-dragonite",
+        "species": "Dragonite",
+        "item": "Loaded Dice",
+        "ability": "Multiscale",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 252,
+          "spe": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Extreme Speed",
+          "Scale Shot",
+          "Tailwind",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-talonflame",
+        "species": "Talonflame",
+        "item": "Sharp Beak",
+        "ability": "Gale Wings",
+        "nature": "Jolly",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 4,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Tailwind",
+          "Brave Bird",
+          "Taunt",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-iron-hands",
+        "species": "Iron Hands",
+        "item": "Assault Vest",
+        "ability": "Quark Drive",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 236,
+          "atk": 252,
+          "spe": 20
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Close Combat",
+          "Wild Charge",
+          "Drain Punch"
+        ]
+      },
+      {
+        "card_id": "vgc-archaludon",
+        "species": "Archaludon",
+        "item": "Leftovers",
+        "ability": "Stamina",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "def": 252,
+          "spa": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Body Press",
+          "Draco Meteor",
+          "Flash Cannon",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-iron-valiant",
+        "species": "Iron Valiant",
+        "item": "Booster Energy",
+        "ability": "Quark Drive",
+        "nature": "Timid",
+        "level": 50,
+        "evs": {
+          "spa": 252,
+          "spd": 4,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Moonblast",
+          "Close Combat",
+          "Thunderbolt",
+          "Protect"
+        ]
+      }
+    ],
+    "legal_candidates": {
+      "0": {
+        "type": "select_lineup",
+        "bring": [
+          "fluttermane",
+          "sableye",
+          "indeedeef",
+          "chienpao"
+        ],
+        "leads": [
+          "fluttermane",
+          "chienpao"
+        ]
+      },
+      "1": {
+        "type": "select_lineup",
+        "bring": [
+          "fluttermane",
+          "cresselia",
+          "indeedeef",
+          "chienpao"
+        ],
+        "leads": [
+          "fluttermane",
+          "chienpao"
+        ]
+      },
+      "2": {
+        "type": "select_lineup",
+        "bring": [
+          "fluttermane",
+          "rillaboom",
+          "indeedeef",
+          "chienpao"
+        ],
+        "leads": [
+          "fluttermane",
+          "chienpao"
+        ]
+      },
+      "3": {
+        "type": "select_lineup",
+        "bring": [
+          "fluttermane",
+          "sableye",
+          "rillaboom",
+          "chienpao"
+        ],
+        "leads": [
+          "fluttermane",
+          "chienpao"
+        ]
+      },
+      "4": {
+        "type": "select_lineup",
+        "bring": [
+          "fluttermane",
+          "cresselia",
+          "sableye",
+          "chienpao"
+        ],
+        "leads": [
+          "fluttermane",
+          "chienpao"
+        ]
+      }
+    }
+  },
+  "2": {
+    "task": "Pick four Pok\u00e9mon and two ordered leads in doubles. The opponent's four are unknown. Return JSON with just the legal candidate id.",
+    "our_public_cards": [
+      {
+        "card_id": "vgc-tornadus",
+        "species": "Tornadus",
+        "item": "Mental Herb",
+        "ability": "Prankster",
+        "nature": "Timid",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "spd": 4,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Bleakwind Storm",
+          "Taunt",
+          "Tailwind",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-iron-hands",
+        "species": "Iron Hands",
+        "item": "Assault Vest",
+        "ability": "Quark Drive",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 236,
+          "atk": 252,
+          "spe": 20
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Close Combat",
+          "Wild Charge",
+          "Drain Punch"
+        ]
+      },
+      {
+        "card_id": "vgc-iron-treads",
+        "species": "Iron Treads",
+        "item": "Booster Energy",
+        "ability": "Quark Drive",
+        "nature": "Jolly",
+        "level": 50,
+        "evs": {
+          "hp": 4,
+          "atk": 252,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Earthquake",
+          "Iron Head",
+          "High Horsepower",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-cresselia",
+        "species": "Cresselia",
+        "item": "Sitrus Berry",
+        "ability": "Levitate",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "def": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Icy Wind",
+          "Moonblast",
+          "Helping Hand",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-gholdengo",
+        "species": "Gholdengo",
+        "item": "Air Balloon",
+        "ability": "Good as Gold",
+        "nature": "Timid",
+        "level": 50,
+        "evs": {
+          "spa": 252,
+          "spd": 4,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Make It Rain",
+          "Shadow Ball",
+          "Nasty Plot",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-hatterene",
+        "species": "Hatterene",
+        "item": "Safety Goggles",
+        "ability": "Magic Bounce",
+        "nature": "Quiet",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "spa": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Trick Room",
+          "Dazzling Gleam",
+          "Psychic",
+          "Mystical Fire"
+        ]
+      }
+    ],
+    "opponent_public_cards": [
+      {
+        "card_id": "vgc-sneasler",
+        "species": "Sneasler",
+        "item": "Aguav Berry",
+        "ability": "Unburden",
+        "nature": "Jolly",
+        "level": 50,
+        "evs": {
+          "hp": 4,
+          "atk": 252,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Close Combat",
+          "Dire Claw",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-incineroar",
+        "species": "Incineroar",
+        "item": "Safety Goggles",
+        "ability": "Intimidate",
+        "nature": "Careful",
+        "level": 50,
+        "evs": {
+          "hp": 244,
+          "def": 12,
+          "spd": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Knock Off",
+          "Parting Shot",
+          "Flare Blitz"
+        ]
+      },
+      {
+        "card_id": "vgc-rillaboom",
+        "species": "Rillaboom",
+        "item": "Assault Vest",
+        "ability": "Grassy Surge",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 236,
+          "atk": 116,
+          "def": 4,
+          "spd": 4,
+          "spe": 148
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Wood Hammer",
+          "Grassy Glide",
+          "U-turn"
+        ]
+      },
+      {
+        "card_id": "vgc-dragonite",
+        "species": "Dragonite",
+        "item": "Loaded Dice",
+        "ability": "Multiscale",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 252,
+          "spe": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Extreme Speed",
+          "Scale Shot",
+          "Tailwind",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-chien-pao",
+        "species": "Chien-Pao",
+        "item": "Focus Sash",
+        "ability": "Sword of Ruin",
+        "nature": "Jolly",
+        "level": 50,
+        "evs": {
+          "hp": 4,
+          "atk": 252,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Icicle Crash",
+          "Sacred Sword",
+          "Sucker Punch",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-grimmsnarl",
+        "species": "Grimmsnarl",
+        "item": "Light Clay",
+        "ability": "Prankster",
+        "nature": "Careful",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 4,
+          "spd": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Light Screen",
+          "Reflect",
+          "Spirit Break",
+          "Thunder Wave"
+        ]
+      }
+    ],
+    "legal_candidates": {
+      "0": {
+        "type": "select_lineup",
+        "bring": [
+          "tornadus",
+          "ironhands",
+          "gholdengo",
+          "hatterene"
+        ],
+        "leads": [
+          "ironhands",
+          "hatterene"
+        ]
+      },
+      "1": {
+        "type": "select_lineup",
+        "bring": [
+          "ironhands",
+          "irontreads",
+          "gholdengo",
+          "hatterene"
+        ],
+        "leads": [
+          "ironhands",
+          "hatterene"
+        ]
+      },
+      "2": {
+        "type": "select_lineup",
+        "bring": [
+          "ironhands",
+          "cresselia",
+          "gholdengo",
+          "hatterene"
+        ],
+        "leads": [
+          "ironhands",
+          "hatterene"
+        ]
+      },
+      "3": {
+        "type": "select_lineup",
+        "bring": [
+          "tornadus",
+          "ironhands",
+          "irontreads",
+          "hatterene"
+        ],
+        "leads": [
+          "ironhands",
+          "hatterene"
+        ]
+      },
+      "4": {
+        "type": "select_lineup",
+        "bring": [
+          "tornadus",
+          "ironhands",
+          "cresselia",
+          "hatterene"
+        ],
+        "leads": [
+          "ironhands",
+          "hatterene"
+        ]
+      }
+    }
+  },
+  "3": {
+    "task": "Pick four Pok\u00e9mon and two ordered leads in doubles. The opponent's four are unknown. Return JSON with just the legal candidate id.",
+    "our_public_cards": [
+      {
+        "card_id": "vgc-cresselia",
+        "species": "Cresselia",
+        "item": "Sitrus Berry",
+        "ability": "Levitate",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "def": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Icy Wind",
+          "Moonblast",
+          "Helping Hand",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-iron-hands",
+        "species": "Iron Hands",
+        "item": "Assault Vest",
+        "ability": "Quark Drive",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 236,
+          "atk": 252,
+          "spe": 20
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Close Combat",
+          "Wild Charge",
+          "Drain Punch"
+        ]
+      },
+      {
+        "card_id": "vgc-chien-pao",
+        "species": "Chien-Pao",
+        "item": "Focus Sash",
+        "ability": "Sword of Ruin",
+        "nature": "Jolly",
+        "level": 50,
+        "evs": {
+          "hp": 4,
+          "atk": 252,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Icicle Crash",
+          "Sacred Sword",
+          "Sucker Punch",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-landorus-therian",
+        "species": "Landorus-Therian",
+        "item": "Choice Scarf",
+        "ability": "Intimidate",
+        "nature": "Jolly",
+        "level": 50,
+        "evs": {
+          "atk": 252,
+          "def": 4,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Earthquake",
+          "Rock Slide",
+          "U-turn",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-baxcalibur",
+        "species": "Baxcalibur",
+        "item": "Loaded Dice",
+        "ability": "Thermal Exchange",
+        "nature": "Jolly",
+        "level": 50,
+        "evs": {
+          "hp": 4,
+          "atk": 252,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Icicle Spear",
+          "Glaive Rush",
+          "Ice Shard",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-dondozo",
+        "species": "Dondozo",
+        "item": "Leftovers",
+        "ability": "Unaware",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Wave Crash",
+          "Earthquake",
+          "Liquidation",
+          "Protect"
+        ]
+      }
+    ],
+    "opponent_public_cards": [
+      {
+        "card_id": "vgc-dragonite",
+        "species": "Dragonite",
+        "item": "Loaded Dice",
+        "ability": "Multiscale",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 252,
+          "spe": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Extreme Speed",
+          "Scale Shot",
+          "Tailwind",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-whimsicott",
+        "species": "Whimsicott",
+        "item": "Focus Sash",
+        "ability": "Prankster",
+        "nature": "Timid",
+        "level": 50,
+        "evs": {
+          "hp": 4,
+          "spa": 252,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Tailwind",
+          "Moonblast",
+          "Encore",
+          "Light Screen"
+        ]
+      },
+      {
+        "card_id": "vgc-rillaboom",
+        "species": "Rillaboom",
+        "item": "Assault Vest",
+        "ability": "Grassy Surge",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 236,
+          "atk": 116,
+          "def": 4,
+          "spd": 4,
+          "spe": 148
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Wood Hammer",
+          "Grassy Glide",
+          "U-turn"
+        ]
+      },
+      {
+        "card_id": "vgc-ursaluna",
+        "species": "Ursaluna",
+        "item": "Flame Orb",
+        "ability": "Guts",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Facade",
+          "Headlong Rush",
+          "Earthquake",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-basculegion",
+        "species": "Basculegion",
+        "item": "Life Orb",
+        "ability": "Adaptability",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 4,
+          "atk": 252,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Wave Crash",
+          "Aqua Jet",
+          "Liquidation",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-sylveon",
+        "species": "Sylveon",
+        "item": "Wiki Berry",
+        "ability": "Pixilate",
+        "nature": "Modest",
+        "level": 50,
+        "evs": {
+          "hp": 244,
+          "spa": 252,
+          "spd": 12
+        },
+        "ivs": {},
+        "moves": [
+          "Hyper Voice",
+          "Shadow Ball",
+          "Calm Mind",
+          "Protect"
+        ]
+      }
+    ],
+    "legal_candidates": {
+      "0": {
+        "type": "select_lineup",
+        "bring": [
+          "ironhands",
+          "chienpao",
+          "landorustherian",
+          "baxcalibur"
+        ],
+        "leads": [
+          "ironhands",
+          "baxcalibur"
+        ]
+      },
+      "1": {
+        "type": "select_lineup",
+        "bring": [
+          "ironhands",
+          "chienpao",
+          "baxcalibur",
+          "dondozo"
+        ],
+        "leads": [
+          "ironhands",
+          "baxcalibur"
+        ]
+      },
+      "2": {
+        "type": "select_lineup",
+        "bring": [
+          "cresselia",
+          "ironhands",
+          "chienpao",
+          "baxcalibur"
+        ],
+        "leads": [
+          "ironhands",
+          "baxcalibur"
+        ]
+      },
+      "3": {
+        "type": "select_lineup",
+        "bring": [
+          "cresselia",
+          "ironhands",
+          "landorustherian",
+          "baxcalibur"
+        ],
+        "leads": [
+          "ironhands",
+          "baxcalibur"
+        ]
+      },
+      "4": {
+        "type": "select_lineup",
+        "bring": [
+          "ironhands",
+          "chienpao",
+          "landorustherian",
+          "baxcalibur"
+        ],
+        "leads": [
+          "chienpao",
+          "baxcalibur"
+        ]
+      }
+    }
+  },
+  "4": {
+    "task": "Pick four Pok\u00e9mon and two ordered leads in doubles. The opponent's four are unknown. Return JSON with just the legal candidate id.",
+    "our_public_cards": [
+      {
+        "card_id": "vgc-amoonguss",
+        "species": "Amoonguss",
+        "item": "Rocky Helmet",
+        "ability": "Regenerator",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 244,
+          "def": 172,
+          "spd": 92
+        },
+        "ivs": {},
+        "moves": [
+          "Spore",
+          "Rage Powder",
+          "Pollen Puff",
+          "Sludge Bomb"
+        ]
+      },
+      {
+        "card_id": "vgc-rillaboom",
+        "species": "Rillaboom",
+        "item": "Assault Vest",
+        "ability": "Grassy Surge",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 236,
+          "atk": 116,
+          "def": 4,
+          "spd": 4,
+          "spe": 148
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Wood Hammer",
+          "Grassy Glide",
+          "U-turn"
+        ]
+      },
+      {
+        "card_id": "vgc-hatterene",
+        "species": "Hatterene",
+        "item": "Safety Goggles",
+        "ability": "Magic Bounce",
+        "nature": "Quiet",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "spa": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Trick Room",
+          "Dazzling Gleam",
+          "Psychic",
+          "Mystical Fire"
+        ]
+      },
+      {
+        "card_id": "vgc-sylveon",
+        "species": "Sylveon",
+        "item": "Wiki Berry",
+        "ability": "Pixilate",
+        "nature": "Modest",
+        "level": 50,
+        "evs": {
+          "hp": 244,
+          "spa": 252,
+          "spd": 12
+        },
+        "ivs": {},
+        "moves": [
+          "Hyper Voice",
+          "Shadow Ball",
+          "Calm Mind",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-baxcalibur",
+        "species": "Baxcalibur",
+        "item": "Loaded Dice",
+        "ability": "Thermal Exchange",
+        "nature": "Jolly",
+        "level": 50,
+        "evs": {
+          "hp": 4,
+          "atk": 252,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Icicle Spear",
+          "Glaive Rush",
+          "Ice Shard",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-wo-chien",
+        "species": "Wo-Chien",
+        "item": "Sitrus Berry",
+        "ability": "Tablets of Ruin",
+        "nature": "Careful",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "spa": 4,
+          "spd": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Leech Seed",
+          "Foul Play",
+          "Giga Drain",
+          "Protect"
+        ]
+      }
+    ],
+    "opponent_public_cards": [
+      {
+        "card_id": "vgc-indeedee-f",
+        "species": "Indeedee-F",
+        "item": "Rocky Helmet",
+        "ability": "Psychic Surge",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "def": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Follow Me",
+          "Helping Hand",
+          "Dazzling Gleam",
+          "Psychic"
+        ]
+      },
+      {
+        "card_id": "vgc-incineroar",
+        "species": "Incineroar",
+        "item": "Safety Goggles",
+        "ability": "Intimidate",
+        "nature": "Careful",
+        "level": 50,
+        "evs": {
+          "hp": 244,
+          "def": 12,
+          "spd": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Knock Off",
+          "Parting Shot",
+          "Flare Blitz"
+        ]
+      },
+      {
+        "card_id": "vgc-iron-hands",
+        "species": "Iron Hands",
+        "item": "Assault Vest",
+        "ability": "Quark Drive",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 236,
+          "atk": 252,
+          "spe": 20
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Close Combat",
+          "Wild Charge",
+          "Drain Punch"
+        ]
+      },
+      {
+        "card_id": "vgc-basculegion",
+        "species": "Basculegion",
+        "item": "Life Orb",
+        "ability": "Adaptability",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 4,
+          "atk": 252,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Wave Crash",
+          "Aqua Jet",
+          "Liquidation",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-gyarados",
+        "species": "Gyarados",
+        "item": "Sitrus Berry",
+        "ability": "Intimidate",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 252,
+          "spe": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Waterfall",
+          "Earthquake",
+          "Taunt",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-iron-bundle",
+        "species": "Iron Bundle",
+        "item": "Booster Energy",
+        "ability": "Quark Drive",
+        "nature": "Timid",
+        "level": 50,
+        "evs": {
+          "hp": 4,
+          "spa": 252,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Freeze-Dry",
+          "Hydro Pump",
+          "Encore",
+          "Protect"
+        ]
+      }
+    ],
+    "legal_candidates": {
+      "0": {
+        "type": "select_lineup",
+        "bring": [
+          "rillaboom",
+          "hatterene",
+          "baxcalibur",
+          "wochien"
+        ],
+        "leads": [
+          "rillaboom",
+          "baxcalibur"
+        ]
+      },
+      "1": {
+        "type": "select_lineup",
+        "bring": [
+          "amoonguss",
+          "rillaboom",
+          "hatterene",
+          "baxcalibur"
+        ],
+        "leads": [
+          "rillaboom",
+          "hatterene"
+        ]
+      },
+      "2": {
+        "type": "select_lineup",
+        "bring": [
+          "rillaboom",
+          "hatterene",
+          "sylveon",
+          "baxcalibur"
+        ],
+        "leads": [
+          "rillaboom",
+          "baxcalibur"
+        ]
+      },
+      "3": {
+        "type": "select_lineup",
+        "bring": [
+          "amoonguss",
+          "rillaboom",
+          "hatterene",
+          "wochien"
+        ],
+        "leads": [
+          "rillaboom",
+          "hatterene"
+        ]
+      },
+      "4": {
+        "type": "select_lineup",
+        "bring": [
+          "amoonguss",
+          "rillaboom",
+          "hatterene",
+          "baxcalibur"
+        ],
+        "leads": [
+          "rillaboom",
+          "baxcalibur"
+        ]
+      }
+    }
+  },
+  "5": {
+    "task": "Pick four Pok\u00e9mon and two ordered leads in doubles. The opponent's four are unknown. Return JSON with just the legal candidate id.",
+    "our_public_cards": [
+      {
+        "card_id": "vgc-amoonguss",
+        "species": "Amoonguss",
+        "item": "Rocky Helmet",
+        "ability": "Regenerator",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 244,
+          "def": 172,
+          "spd": 92
+        },
+        "ivs": {},
+        "moves": [
+          "Spore",
+          "Rage Powder",
+          "Pollen Puff",
+          "Sludge Bomb"
+        ]
+      },
+      {
+        "card_id": "vgc-dragonite",
+        "species": "Dragonite",
+        "item": "Loaded Dice",
+        "ability": "Multiscale",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 252,
+          "spe": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Extreme Speed",
+          "Scale Shot",
+          "Tailwind",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-incineroar",
+        "species": "Incineroar",
+        "item": "Safety Goggles",
+        "ability": "Intimidate",
+        "nature": "Careful",
+        "level": 50,
+        "evs": {
+          "hp": 244,
+          "def": 12,
+          "spd": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Knock Off",
+          "Parting Shot",
+          "Flare Blitz"
+        ]
+      },
+      {
+        "card_id": "vgc-sableye",
+        "species": "Sableye",
+        "item": "Mental Herb",
+        "ability": "Prankster",
+        "nature": "Careful",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 4,
+          "spd": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Foul Play",
+          "Fake Out",
+          "Will-O-Wisp",
+          "Taunt"
+        ]
+      },
+      {
+        "card_id": "vgc-wo-chien",
+        "species": "Wo-Chien",
+        "item": "Sitrus Berry",
+        "ability": "Tablets of Ruin",
+        "nature": "Careful",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "spa": 4,
+          "spd": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Leech Seed",
+          "Foul Play",
+          "Giga Drain",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-dondozo",
+        "species": "Dondozo",
+        "item": "Leftovers",
+        "ability": "Unaware",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Wave Crash",
+          "Earthquake",
+          "Liquidation",
+          "Protect"
+        ]
+      }
+    ],
+    "opponent_public_cards": [
+      {
+        "card_id": "vgc-tornadus",
+        "species": "Tornadus",
+        "item": "Mental Herb",
+        "ability": "Prankster",
+        "nature": "Timid",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "spd": 4,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Bleakwind Storm",
+          "Taunt",
+          "Tailwind",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-pelipper",
+        "species": "Pelipper",
+        "item": "Damp Rock",
+        "ability": "Drizzle",
+        "nature": "Modest",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "spa": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Hurricane",
+          "Weather Ball",
+          "Tailwind",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-indeedee-f",
+        "species": "Indeedee-F",
+        "item": "Rocky Helmet",
+        "ability": "Psychic Surge",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "def": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Follow Me",
+          "Helping Hand",
+          "Dazzling Gleam",
+          "Psychic"
+        ]
+      },
+      {
+        "card_id": "vgc-archaludon",
+        "species": "Archaludon",
+        "item": "Leftovers",
+        "ability": "Stamina",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "def": 252,
+          "spa": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Body Press",
+          "Draco Meteor",
+          "Flash Cannon",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-thundurus",
+        "species": "Thundurus",
+        "item": "Life Orb",
+        "ability": "Defiant",
+        "nature": "Timid",
+        "level": 50,
+        "evs": {
+          "spa": 252,
+          "spd": 4,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Thunderbolt",
+          "Sludge Bomb",
+          "Taunt",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-chien-pao",
+        "species": "Chien-Pao",
+        "item": "Focus Sash",
+        "ability": "Sword of Ruin",
+        "nature": "Jolly",
+        "level": 50,
+        "evs": {
+          "hp": 4,
+          "atk": 252,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Icicle Crash",
+          "Sacred Sword",
+          "Sucker Punch",
+          "Protect"
+        ]
+      }
+    ],
+    "legal_candidates": {
+      "0": {
+        "type": "select_lineup",
+        "bring": [
+          "dragonite",
+          "incineroar",
+          "sableye",
+          "wochien"
+        ],
+        "leads": [
+          "dragonite",
+          "incineroar"
+        ]
+      },
+      "1": {
+        "type": "select_lineup",
+        "bring": [
+          "dragonite",
+          "incineroar",
+          "sableye",
+          "dondozo"
+        ],
+        "leads": [
+          "dragonite",
+          "incineroar"
+        ]
+      },
+      "2": {
+        "type": "select_lineup",
+        "bring": [
+          "dragonite",
+          "incineroar",
+          "wochien",
+          "dondozo"
+        ],
+        "leads": [
+          "dragonite",
+          "incineroar"
+        ]
+      },
+      "3": {
+        "type": "select_lineup",
+        "bring": [
+          "amoonguss",
+          "dragonite",
+          "incineroar",
+          "sableye"
+        ],
+        "leads": [
+          "dragonite",
+          "incineroar"
+        ]
+      },
+      "4": {
+        "type": "select_lineup",
+        "bring": [
+          "amoonguss",
+          "dragonite",
+          "incineroar",
+          "wochien"
+        ],
+        "leads": [
+          "dragonite",
+          "incineroar"
+        ]
+      }
+    }
+  },
+  "6": {
+    "task": "Pick four Pok\u00e9mon and two ordered leads in doubles. The opponent's four are unknown. Return JSON with just the legal candidate id.",
+    "our_public_cards": [
+      {
+        "card_id": "vgc-dragonite",
+        "species": "Dragonite",
+        "item": "Loaded Dice",
+        "ability": "Multiscale",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 252,
+          "spe": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Extreme Speed",
+          "Scale Shot",
+          "Tailwind",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-iron-hands",
+        "species": "Iron Hands",
+        "item": "Assault Vest",
+        "ability": "Quark Drive",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 236,
+          "atk": 252,
+          "spe": 20
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Close Combat",
+          "Wild Charge",
+          "Drain Punch"
+        ]
+      },
+      {
+        "card_id": "vgc-hatterene",
+        "species": "Hatterene",
+        "item": "Safety Goggles",
+        "ability": "Magic Bounce",
+        "nature": "Quiet",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "spa": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Trick Room",
+          "Dazzling Gleam",
+          "Psychic",
+          "Mystical Fire"
+        ]
+      },
+      {
+        "card_id": "vgc-iron-valiant",
+        "species": "Iron Valiant",
+        "item": "Booster Energy",
+        "ability": "Quark Drive",
+        "nature": "Timid",
+        "level": 50,
+        "evs": {
+          "spa": 252,
+          "spd": 4,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Moonblast",
+          "Close Combat",
+          "Thunderbolt",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-urshifu-rapid-strike",
+        "species": "Urshifu-Rapid-Strike",
+        "item": "Mystic Water",
+        "ability": "Unseen Fist",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 4,
+          "atk": 252,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Surging Strikes",
+          "Close Combat",
+          "Aqua Jet",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-scream-tail",
+        "species": "Scream Tail",
+        "item": "Covert Cloak",
+        "ability": "Protosynthesis",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "def": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Dazzling Gleam",
+          "Encore",
+          "Wish",
+          "Protect"
+        ]
+      }
+    ],
+    "opponent_public_cards": [
+      {
+        "card_id": "vgc-incineroar",
+        "species": "Incineroar",
+        "item": "Safety Goggles",
+        "ability": "Intimidate",
+        "nature": "Careful",
+        "level": 50,
+        "evs": {
+          "hp": 244,
+          "def": 12,
+          "spd": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Knock Off",
+          "Parting Shot",
+          "Flare Blitz"
+        ]
+      },
+      {
+        "card_id": "vgc-whimsicott",
+        "species": "Whimsicott",
+        "item": "Focus Sash",
+        "ability": "Prankster",
+        "nature": "Timid",
+        "level": 50,
+        "evs": {
+          "hp": 4,
+          "spa": 252,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Tailwind",
+          "Moonblast",
+          "Encore",
+          "Light Screen"
+        ]
+      },
+      {
+        "card_id": "vgc-rillaboom",
+        "species": "Rillaboom",
+        "item": "Assault Vest",
+        "ability": "Grassy Surge",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 236,
+          "atk": 116,
+          "def": 4,
+          "spd": 4,
+          "spe": 148
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Wood Hammer",
+          "Grassy Glide",
+          "U-turn"
+        ]
+      },
+      {
+        "card_id": "vgc-gyarados",
+        "species": "Gyarados",
+        "item": "Sitrus Berry",
+        "ability": "Intimidate",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 252,
+          "spe": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Waterfall",
+          "Earthquake",
+          "Taunt",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-lucario",
+        "species": "Lucario",
+        "item": "Life Orb",
+        "ability": "Inner Focus",
+        "nature": "Jolly",
+        "level": 50,
+        "evs": {
+          "hp": 4,
+          "atk": 252,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Close Combat",
+          "Bullet Punch",
+          "Poison Jab",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-grimmsnarl",
+        "species": "Grimmsnarl",
+        "item": "Light Clay",
+        "ability": "Prankster",
+        "nature": "Careful",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 4,
+          "spd": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Light Screen",
+          "Reflect",
+          "Spirit Break",
+          "Thunder Wave"
+        ]
+      }
+    ],
+    "legal_candidates": {
+      "0": {
+        "type": "select_lineup",
+        "bring": [
+          "ironhands",
+          "hatterene",
+          "ironvaliant",
+          "urshifurapidstrike"
+        ],
+        "leads": [
+          "ironhands",
+          "ironvaliant"
+        ]
+      },
+      "1": {
+        "type": "select_lineup",
+        "bring": [
+          "dragonite",
+          "ironhands",
+          "hatterene",
+          "ironvaliant"
+        ],
+        "leads": [
+          "ironhands",
+          "ironvaliant"
+        ]
+      },
+      "2": {
+        "type": "select_lineup",
+        "bring": [
+          "dragonite",
+          "ironhands",
+          "hatterene",
+          "urshifurapidstrike"
+        ],
+        "leads": [
+          "ironhands",
+          "hatterene"
+        ]
+      },
+      "3": {
+        "type": "select_lineup",
+        "bring": [
+          "ironhands",
+          "hatterene",
+          "ironvaliant",
+          "screamtail"
+        ],
+        "leads": [
+          "ironhands",
+          "ironvaliant"
+        ]
+      },
+      "4": {
+        "type": "select_lineup",
+        "bring": [
+          "dragonite",
+          "ironhands",
+          "hatterene",
+          "ironvaliant"
+        ],
+        "leads": [
+          "ironhands",
+          "hatterene"
+        ]
+      }
+    }
+  },
+  "7": {
+    "task": "Pick four Pok\u00e9mon and two ordered leads in doubles. The opponent's four are unknown. Return JSON with just the legal candidate id.",
+    "our_public_cards": [
+      {
+        "card_id": "vgc-amoonguss",
+        "species": "Amoonguss",
+        "item": "Rocky Helmet",
+        "ability": "Regenerator",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 244,
+          "def": 172,
+          "spd": 92
+        },
+        "ivs": {},
+        "moves": [
+          "Spore",
+          "Rage Powder",
+          "Pollen Puff",
+          "Sludge Bomb"
+        ]
+      },
+      {
+        "card_id": "vgc-whimsicott",
+        "species": "Whimsicott",
+        "item": "Focus Sash",
+        "ability": "Prankster",
+        "nature": "Timid",
+        "level": 50,
+        "evs": {
+          "hp": 4,
+          "spa": 252,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Tailwind",
+          "Moonblast",
+          "Encore",
+          "Light Screen"
+        ]
+      },
+      {
+        "card_id": "vgc-rillaboom",
+        "species": "Rillaboom",
+        "item": "Assault Vest",
+        "ability": "Grassy Surge",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 236,
+          "atk": 116,
+          "def": 4,
+          "spd": 4,
+          "spe": 148
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Wood Hammer",
+          "Grassy Glide",
+          "U-turn"
+        ]
+      },
+      {
+        "card_id": "vgc-incineroar",
+        "species": "Incineroar",
+        "item": "Safety Goggles",
+        "ability": "Intimidate",
+        "nature": "Careful",
+        "level": 50,
+        "evs": {
+          "hp": 244,
+          "def": 12,
+          "spd": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Knock Off",
+          "Parting Shot",
+          "Flare Blitz"
+        ]
+      },
+      {
+        "card_id": "vgc-tyranitar",
+        "species": "Tyranitar",
+        "item": "Chople Berry",
+        "ability": "Sand Stream",
+        "nature": "Careful",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 4,
+          "spd": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Rock Slide",
+          "Knock Off",
+          "Low Kick",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-baxcalibur",
+        "species": "Baxcalibur",
+        "item": "Loaded Dice",
+        "ability": "Thermal Exchange",
+        "nature": "Jolly",
+        "level": 50,
+        "evs": {
+          "hp": 4,
+          "atk": 252,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Icicle Spear",
+          "Glaive Rush",
+          "Ice Shard",
+          "Protect"
+        ]
+      }
+    ],
+    "opponent_public_cards": [
+      {
+        "card_id": "vgc-cresselia",
+        "species": "Cresselia",
+        "item": "Sitrus Berry",
+        "ability": "Levitate",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "def": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Icy Wind",
+          "Moonblast",
+          "Helping Hand",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-dragonite",
+        "species": "Dragonite",
+        "item": "Loaded Dice",
+        "ability": "Multiscale",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 252,
+          "spe": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Extreme Speed",
+          "Scale Shot",
+          "Tailwind",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-indeedee-f",
+        "species": "Indeedee-F",
+        "item": "Rocky Helmet",
+        "ability": "Psychic Surge",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "def": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Follow Me",
+          "Helping Hand",
+          "Dazzling Gleam",
+          "Psychic"
+        ]
+      },
+      {
+        "card_id": "vgc-iron-hands",
+        "species": "Iron Hands",
+        "item": "Assault Vest",
+        "ability": "Quark Drive",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 236,
+          "atk": 252,
+          "spe": 20
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Close Combat",
+          "Wild Charge",
+          "Drain Punch"
+        ]
+      },
+      {
+        "card_id": "vgc-arcanine",
+        "species": "Arcanine",
+        "item": "Safety Goggles",
+        "ability": "Intimidate",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 252,
+          "spe": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Flare Blitz",
+          "Extreme Speed",
+          "Snarl",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-iron-bundle",
+        "species": "Iron Bundle",
+        "item": "Booster Energy",
+        "ability": "Quark Drive",
+        "nature": "Timid",
+        "level": 50,
+        "evs": {
+          "hp": 4,
+          "spa": 252,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Freeze-Dry",
+          "Hydro Pump",
+          "Encore",
+          "Protect"
+        ]
+      }
+    ],
+    "legal_candidates": {
+      "0": {
+        "type": "select_lineup",
+        "bring": [
+          "whimsicott",
+          "rillaboom",
+          "tyranitar",
+          "baxcalibur"
+        ],
+        "leads": [
+          "rillaboom",
+          "baxcalibur"
+        ]
+      },
+      "1": {
+        "type": "select_lineup",
+        "bring": [
+          "amoonguss",
+          "rillaboom",
+          "tyranitar",
+          "baxcalibur"
+        ],
+        "leads": [
+          "rillaboom",
+          "baxcalibur"
+        ]
+      },
+      "2": {
+        "type": "select_lineup",
+        "bring": [
+          "rillaboom",
+          "incineroar",
+          "tyranitar",
+          "baxcalibur"
+        ],
+        "leads": [
+          "incineroar",
+          "baxcalibur"
+        ]
+      },
+      "3": {
+        "type": "select_lineup",
+        "bring": [
+          "whimsicott",
+          "incineroar",
+          "tyranitar",
+          "baxcalibur"
+        ],
+        "leads": [
+          "incineroar",
+          "baxcalibur"
+        ]
+      },
+      "4": {
+        "type": "select_lineup",
+        "bring": [
+          "whimsicott",
+          "rillaboom",
+          "tyranitar",
+          "baxcalibur"
+        ],
+        "leads": [
+          "whimsicott",
+          "baxcalibur"
+        ]
+      }
+    }
+  },
+  "8": {
+    "task": "Pick four Pok\u00e9mon and two ordered leads in doubles. The opponent's four are unknown. Return JSON with just the legal candidate id.",
+    "our_public_cards": [
+      {
+        "card_id": "vgc-flutter-mane",
+        "species": "Flutter Mane",
+        "item": "Booster Energy",
+        "ability": "Protosynthesis",
+        "nature": "Timid",
+        "level": 50,
+        "evs": {
+          "spa": 252,
+          "spd": 4,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Moonblast",
+          "Shadow Ball",
+          "Icy Wind",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-cresselia",
+        "species": "Cresselia",
+        "item": "Sitrus Berry",
+        "ability": "Levitate",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "def": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Icy Wind",
+          "Moonblast",
+          "Helping Hand",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-hatterene",
+        "species": "Hatterene",
+        "item": "Safety Goggles",
+        "ability": "Magic Bounce",
+        "nature": "Quiet",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "spa": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Trick Room",
+          "Dazzling Gleam",
+          "Psychic",
+          "Mystical Fire"
+        ]
+      },
+      {
+        "card_id": "vgc-rillaboom",
+        "species": "Rillaboom",
+        "item": "Assault Vest",
+        "ability": "Grassy Surge",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 236,
+          "atk": 116,
+          "def": 4,
+          "spd": 4,
+          "spe": 148
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Wood Hammer",
+          "Grassy Glide",
+          "U-turn"
+        ]
+      },
+      {
+        "card_id": "vgc-indeedee-f",
+        "species": "Indeedee-F",
+        "item": "Rocky Helmet",
+        "ability": "Psychic Surge",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "def": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Follow Me",
+          "Helping Hand",
+          "Dazzling Gleam",
+          "Psychic"
+        ]
+      },
+      {
+        "card_id": "vgc-baxcalibur",
+        "species": "Baxcalibur",
+        "item": "Loaded Dice",
+        "ability": "Thermal Exchange",
+        "nature": "Jolly",
+        "level": 50,
+        "evs": {
+          "hp": 4,
+          "atk": 252,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Icicle Spear",
+          "Glaive Rush",
+          "Ice Shard",
+          "Protect"
+        ]
+      }
+    ],
+    "opponent_public_cards": [
+      {
+        "card_id": "vgc-amoonguss",
+        "species": "Amoonguss",
+        "item": "Rocky Helmet",
+        "ability": "Regenerator",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 244,
+          "def": 172,
+          "spd": 92
+        },
+        "ivs": {},
+        "moves": [
+          "Spore",
+          "Rage Powder",
+          "Pollen Puff",
+          "Sludge Bomb"
+        ]
+      },
+      {
+        "card_id": "vgc-dragonite",
+        "species": "Dragonite",
+        "item": "Loaded Dice",
+        "ability": "Multiscale",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 252,
+          "spe": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Extreme Speed",
+          "Scale Shot",
+          "Tailwind",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-porygon2",
+        "species": "Porygon2",
+        "item": "Eviolite",
+        "ability": "Download",
+        "nature": "Quiet",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "spa": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Trick Room",
+          "Tri Attack",
+          "Ice Beam",
+          "Recover"
+        ]
+      },
+      {
+        "card_id": "vgc-incineroar",
+        "species": "Incineroar",
+        "item": "Safety Goggles",
+        "ability": "Intimidate",
+        "nature": "Careful",
+        "level": 50,
+        "evs": {
+          "hp": 244,
+          "def": 12,
+          "spd": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Knock Off",
+          "Parting Shot",
+          "Flare Blitz"
+        ]
+      },
+      {
+        "card_id": "vgc-iron-hands",
+        "species": "Iron Hands",
+        "item": "Assault Vest",
+        "ability": "Quark Drive",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 236,
+          "atk": 252,
+          "spe": 20
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Close Combat",
+          "Wild Charge",
+          "Drain Punch"
+        ]
+      },
+      {
+        "card_id": "vgc-gyarados",
+        "species": "Gyarados",
+        "item": "Sitrus Berry",
+        "ability": "Intimidate",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 252,
+          "spe": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Waterfall",
+          "Earthquake",
+          "Taunt",
+          "Protect"
+        ]
+      }
+    ],
+    "legal_candidates": {
+      "0": {
+        "type": "select_lineup",
+        "bring": [
+          "fluttermane",
+          "hatterene",
+          "rillaboom",
+          "baxcalibur"
+        ],
+        "leads": [
+          "hatterene",
+          "baxcalibur"
+        ]
+      },
+      "1": {
+        "type": "select_lineup",
+        "bring": [
+          "fluttermane",
+          "cresselia",
+          "hatterene",
+          "baxcalibur"
+        ],
+        "leads": [
+          "hatterene",
+          "baxcalibur"
+        ]
+      },
+      "2": {
+        "type": "select_lineup",
+        "bring": [
+          "fluttermane",
+          "hatterene",
+          "indeedeef",
+          "baxcalibur"
+        ],
+        "leads": [
+          "hatterene",
+          "baxcalibur"
+        ]
+      },
+      "3": {
+        "type": "select_lineup",
+        "bring": [
+          "fluttermane",
+          "rillaboom",
+          "indeedeef",
+          "baxcalibur"
+        ],
+        "leads": [
+          "rillaboom",
+          "baxcalibur"
+        ]
+      },
+      "4": {
+        "type": "select_lineup",
+        "bring": [
+          "fluttermane",
+          "hatterene",
+          "rillaboom",
+          "baxcalibur"
+        ],
+        "leads": [
+          "rillaboom",
+          "baxcalibur"
+        ]
+      }
+    }
+  },
+  "9": {
+    "task": "Pick four Pok\u00e9mon and two ordered leads in doubles. The opponent's four are unknown. Return JSON with just the legal candidate id.",
+    "our_public_cards": [
+      {
+        "card_id": "vgc-dragonite",
+        "species": "Dragonite",
+        "item": "Loaded Dice",
+        "ability": "Multiscale",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 252,
+          "spe": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Extreme Speed",
+          "Scale Shot",
+          "Tailwind",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-tornadus",
+        "species": "Tornadus",
+        "item": "Mental Herb",
+        "ability": "Prankster",
+        "nature": "Timid",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "spd": 4,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Bleakwind Storm",
+          "Taunt",
+          "Tailwind",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-hatterene",
+        "species": "Hatterene",
+        "item": "Safety Goggles",
+        "ability": "Magic Bounce",
+        "nature": "Quiet",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "spa": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Trick Room",
+          "Dazzling Gleam",
+          "Psychic",
+          "Mystical Fire"
+        ]
+      },
+      {
+        "card_id": "vgc-iron-hands",
+        "species": "Iron Hands",
+        "item": "Assault Vest",
+        "ability": "Quark Drive",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 236,
+          "atk": 252,
+          "spe": 20
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Close Combat",
+          "Wild Charge",
+          "Drain Punch"
+        ]
+      },
+      {
+        "card_id": "vgc-indeedee-f",
+        "species": "Indeedee-F",
+        "item": "Rocky Helmet",
+        "ability": "Psychic Surge",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "def": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Follow Me",
+          "Helping Hand",
+          "Dazzling Gleam",
+          "Psychic"
+        ]
+      },
+      {
+        "card_id": "vgc-iron-bundle",
+        "species": "Iron Bundle",
+        "item": "Booster Energy",
+        "ability": "Quark Drive",
+        "nature": "Timid",
+        "level": 50,
+        "evs": {
+          "hp": 4,
+          "spa": 252,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Freeze-Dry",
+          "Hydro Pump",
+          "Encore",
+          "Protect"
+        ]
+      }
+    ],
+    "opponent_public_cards": [
+      {
+        "card_id": "vgc-amoonguss",
+        "species": "Amoonguss",
+        "item": "Rocky Helmet",
+        "ability": "Regenerator",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 244,
+          "def": 172,
+          "spd": 92
+        },
+        "ivs": {},
+        "moves": [
+          "Spore",
+          "Rage Powder",
+          "Pollen Puff",
+          "Sludge Bomb"
+        ]
+      },
+      {
+        "card_id": "vgc-cresselia",
+        "species": "Cresselia",
+        "item": "Sitrus Berry",
+        "ability": "Levitate",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "def": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Icy Wind",
+          "Moonblast",
+          "Helping Hand",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-incineroar",
+        "species": "Incineroar",
+        "item": "Safety Goggles",
+        "ability": "Intimidate",
+        "nature": "Careful",
+        "level": 50,
+        "evs": {
+          "hp": 244,
+          "def": 12,
+          "spd": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Knock Off",
+          "Parting Shot",
+          "Flare Blitz"
+        ]
+      },
+      {
+        "card_id": "vgc-whimsicott",
+        "species": "Whimsicott",
+        "item": "Focus Sash",
+        "ability": "Prankster",
+        "nature": "Timid",
+        "level": 50,
+        "evs": {
+          "hp": 4,
+          "spa": 252,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Tailwind",
+          "Moonblast",
+          "Encore",
+          "Light Screen"
+        ]
+      },
+      {
+        "card_id": "vgc-sableye",
+        "species": "Sableye",
+        "item": "Mental Herb",
+        "ability": "Prankster",
+        "nature": "Careful",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 4,
+          "spd": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Foul Play",
+          "Fake Out",
+          "Will-O-Wisp",
+          "Taunt"
+        ]
+      },
+      {
+        "card_id": "vgc-rillaboom",
+        "species": "Rillaboom",
+        "item": "Assault Vest",
+        "ability": "Grassy Surge",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 236,
+          "atk": 116,
+          "def": 4,
+          "spd": 4,
+          "spe": 148
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Wood Hammer",
+          "Grassy Glide",
+          "U-turn"
+        ]
+      }
+    ],
+    "legal_candidates": {
+      "0": {
+        "type": "select_lineup",
+        "bring": [
+          "dragonite",
+          "tornadus",
+          "hatterene",
+          "ironhands"
+        ],
+        "leads": [
+          "tornadus",
+          "ironhands"
+        ]
+      },
+      "1": {
+        "type": "select_lineup",
+        "bring": [
+          "tornadus",
+          "hatterene",
+          "ironhands",
+          "ironbundle"
+        ],
+        "leads": [
+          "tornadus",
+          "ironhands"
+        ]
+      },
+      "2": {
+        "type": "select_lineup",
+        "bring": [
+          "tornadus",
+          "hatterene",
+          "ironhands",
+          "indeedeef"
+        ],
+        "leads": [
+          "tornadus",
+          "ironhands"
+        ]
+      },
+      "3": {
+        "type": "select_lineup",
+        "bring": [
+          "dragonite",
+          "tornadus",
+          "ironhands",
+          "ironbundle"
+        ],
+        "leads": [
+          "tornadus",
+          "ironhands"
+        ]
+      },
+      "4": {
+        "type": "select_lineup",
+        "bring": [
+          "dragonite",
+          "tornadus",
+          "hatterene",
+          "ironhands"
+        ],
+        "leads": [
+          "hatterene",
+          "ironhands"
+        ]
+      }
+    }
+  },
+  "10": {
+    "task": "Pick four Pok\u00e9mon and two ordered leads in doubles. The opponent's four are unknown. Return JSON with just the legal candidate id.",
+    "our_public_cards": [
+      {
+        "card_id": "vgc-amoonguss",
+        "species": "Amoonguss",
+        "item": "Rocky Helmet",
+        "ability": "Regenerator",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 244,
+          "def": 172,
+          "spd": 92
+        },
+        "ivs": {},
+        "moves": [
+          "Spore",
+          "Rage Powder",
+          "Pollen Puff",
+          "Sludge Bomb"
+        ]
+      },
+      {
+        "card_id": "vgc-flutter-mane",
+        "species": "Flutter Mane",
+        "item": "Booster Energy",
+        "ability": "Protosynthesis",
+        "nature": "Timid",
+        "level": 50,
+        "evs": {
+          "spa": 252,
+          "spd": 4,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Moonblast",
+          "Shadow Ball",
+          "Icy Wind",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-incineroar",
+        "species": "Incineroar",
+        "item": "Safety Goggles",
+        "ability": "Intimidate",
+        "nature": "Careful",
+        "level": 50,
+        "evs": {
+          "hp": 244,
+          "def": 12,
+          "spd": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Knock Off",
+          "Parting Shot",
+          "Flare Blitz"
+        ]
+      },
+      {
+        "card_id": "vgc-sableye",
+        "species": "Sableye",
+        "item": "Mental Herb",
+        "ability": "Prankster",
+        "nature": "Careful",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 4,
+          "spd": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Foul Play",
+          "Fake Out",
+          "Will-O-Wisp",
+          "Taunt"
+        ]
+      },
+      {
+        "card_id": "vgc-milotic",
+        "species": "Milotic",
+        "item": "Chesto Berry",
+        "ability": "Competitive",
+        "nature": "Calm",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "def": 4,
+          "spd": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Scald",
+          "Ice Beam",
+          "Recover",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-ting-lu",
+        "species": "Ting-Lu",
+        "item": "Leftovers",
+        "ability": "Vessel of Ruin",
+        "nature": "Careful",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 4,
+          "spd": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Ruination",
+          "Spikes",
+          "Earthquake",
+          "Protect"
+        ]
+      }
+    ],
+    "opponent_public_cards": [
+      {
+        "card_id": "vgc-tornadus",
+        "species": "Tornadus",
+        "item": "Mental Herb",
+        "ability": "Prankster",
+        "nature": "Timid",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "spd": 4,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Bleakwind Storm",
+          "Taunt",
+          "Tailwind",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-cresselia",
+        "species": "Cresselia",
+        "item": "Sitrus Berry",
+        "ability": "Levitate",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "def": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Icy Wind",
+          "Moonblast",
+          "Helping Hand",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-indeedee-f",
+        "species": "Indeedee-F",
+        "item": "Rocky Helmet",
+        "ability": "Psychic Surge",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "def": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Follow Me",
+          "Helping Hand",
+          "Dazzling Gleam",
+          "Psychic"
+        ]
+      },
+      {
+        "card_id": "vgc-rillaboom",
+        "species": "Rillaboom",
+        "item": "Assault Vest",
+        "ability": "Grassy Surge",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 236,
+          "atk": 116,
+          "def": 4,
+          "spd": 4,
+          "spe": 148
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Wood Hammer",
+          "Grassy Glide",
+          "U-turn"
+        ]
+      },
+      {
+        "card_id": "vgc-great-tusk",
+        "species": "Great Tusk",
+        "item": "Booster Energy",
+        "ability": "Protosynthesis",
+        "nature": "Jolly",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 252,
+          "spe": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Headlong Rush",
+          "Close Combat",
+          "Rock Slide",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-arcanine",
+        "species": "Arcanine",
+        "item": "Safety Goggles",
+        "ability": "Intimidate",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 252,
+          "spe": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Flare Blitz",
+          "Extreme Speed",
+          "Snarl",
+          "Protect"
+        ]
+      }
+    ],
+    "legal_candidates": {
+      "0": {
+        "type": "select_lineup",
+        "bring": [
+          "fluttermane",
+          "incineroar",
+          "milotic",
+          "tinglu"
+        ],
+        "leads": [
+          "fluttermane",
+          "incineroar"
+        ]
+      },
+      "1": {
+        "type": "select_lineup",
+        "bring": [
+          "fluttermane",
+          "incineroar",
+          "sableye",
+          "milotic"
+        ],
+        "leads": [
+          "fluttermane",
+          "incineroar"
+        ]
+      },
+      "2": {
+        "type": "select_lineup",
+        "bring": [
+          "fluttermane",
+          "incineroar",
+          "sableye",
+          "tinglu"
+        ],
+        "leads": [
+          "fluttermane",
+          "incineroar"
+        ]
+      },
+      "3": {
+        "type": "select_lineup",
+        "bring": [
+          "amoonguss",
+          "fluttermane",
+          "incineroar",
+          "milotic"
+        ],
+        "leads": [
+          "fluttermane",
+          "incineroar"
+        ]
+      },
+      "4": {
+        "type": "select_lineup",
+        "bring": [
+          "fluttermane",
+          "incineroar",
+          "milotic",
+          "tinglu"
+        ],
+        "leads": [
+          "incineroar",
+          "milotic"
+        ]
+      }
+    }
+  },
+  "11": {
+    "task": "Pick four Pok\u00e9mon and two ordered leads in doubles. The opponent's four are unknown. Return JSON with just the legal candidate id.",
+    "our_public_cards": [
+      {
+        "card_id": "vgc-cresselia",
+        "species": "Cresselia",
+        "item": "Sitrus Berry",
+        "ability": "Levitate",
+        "nature": "Bold",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "def": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Icy Wind",
+          "Moonblast",
+          "Helping Hand",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-incineroar",
+        "species": "Incineroar",
+        "item": "Safety Goggles",
+        "ability": "Intimidate",
+        "nature": "Careful",
+        "level": 50,
+        "evs": {
+          "hp": 244,
+          "def": 12,
+          "spd": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Knock Off",
+          "Parting Shot",
+          "Flare Blitz"
+        ]
+      },
+      {
+        "card_id": "vgc-rillaboom",
+        "species": "Rillaboom",
+        "item": "Assault Vest",
+        "ability": "Grassy Surge",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 236,
+          "atk": 116,
+          "def": 4,
+          "spd": 4,
+          "spe": 148
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Wood Hammer",
+          "Grassy Glide",
+          "U-turn"
+        ]
+      },
+      {
+        "card_id": "vgc-whimsicott",
+        "species": "Whimsicott",
+        "item": "Focus Sash",
+        "ability": "Prankster",
+        "nature": "Timid",
+        "level": 50,
+        "evs": {
+          "hp": 4,
+          "spa": 252,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Tailwind",
+          "Moonblast",
+          "Encore",
+          "Light Screen"
+        ]
+      },
+      {
+        "card_id": "vgc-sableye",
+        "species": "Sableye",
+        "item": "Mental Herb",
+        "ability": "Prankster",
+        "nature": "Careful",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 4,
+          "spd": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Foul Play",
+          "Fake Out",
+          "Will-O-Wisp",
+          "Taunt"
+        ]
+      },
+      {
+        "card_id": "vgc-iron-valiant",
+        "species": "Iron Valiant",
+        "item": "Booster Energy",
+        "ability": "Quark Drive",
+        "nature": "Timid",
+        "level": 50,
+        "evs": {
+          "spa": 252,
+          "spd": 4,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Moonblast",
+          "Close Combat",
+          "Thunderbolt",
+          "Protect"
+        ]
+      }
+    ],
+    "opponent_public_cards": [
+      {
+        "card_id": "vgc-flutter-mane",
+        "species": "Flutter Mane",
+        "item": "Booster Energy",
+        "ability": "Protosynthesis",
+        "nature": "Timid",
+        "level": 50,
+        "evs": {
+          "spa": 252,
+          "spd": 4,
+          "spe": 252
+        },
+        "ivs": {},
+        "moves": [
+          "Moonblast",
+          "Shadow Ball",
+          "Icy Wind",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-dragonite",
+        "species": "Dragonite",
+        "item": "Loaded Dice",
+        "ability": "Multiscale",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 252,
+          "spe": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Extreme Speed",
+          "Scale Shot",
+          "Tailwind",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-hatterene",
+        "species": "Hatterene",
+        "item": "Safety Goggles",
+        "ability": "Magic Bounce",
+        "nature": "Quiet",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "spa": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Trick Room",
+          "Dazzling Gleam",
+          "Psychic",
+          "Mystical Fire"
+        ]
+      },
+      {
+        "card_id": "vgc-iron-hands",
+        "species": "Iron Hands",
+        "item": "Assault Vest",
+        "ability": "Quark Drive",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 236,
+          "atk": 252,
+          "spe": 20
+        },
+        "ivs": {},
+        "moves": [
+          "Fake Out",
+          "Close Combat",
+          "Wild Charge",
+          "Drain Punch"
+        ]
+      },
+      {
+        "card_id": "vgc-gyarados",
+        "species": "Gyarados",
+        "item": "Sitrus Berry",
+        "ability": "Intimidate",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 252,
+          "spe": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Waterfall",
+          "Earthquake",
+          "Taunt",
+          "Protect"
+        ]
+      },
+      {
+        "card_id": "vgc-dondozo",
+        "species": "Dondozo",
+        "item": "Leftovers",
+        "ability": "Unaware",
+        "nature": "Adamant",
+        "level": 50,
+        "evs": {
+          "hp": 252,
+          "atk": 252,
+          "spd": 4
+        },
+        "ivs": {},
+        "moves": [
+          "Wave Crash",
+          "Earthquake",
+          "Liquidation",
+          "Protect"
+        ]
+      }
+    ],
+    "legal_candidates": {
+      "0": {
+        "type": "select_lineup",
+        "bring": [
+          "incineroar",
+          "rillaboom",
+          "sableye",
+          "ironvaliant"
+        ],
+        "leads": [
+          "incineroar",
+          "ironvaliant"
+        ]
+      },
+      "1": {
+        "type": "select_lineup",
+        "bring": [
+          "incineroar",
+          "rillaboom",
+          "whimsicott",
+          "ironvaliant"
+        ],
+        "leads": [
+          "incineroar",
+          "ironvaliant"
+        ]
+      },
+      "2": {
+        "type": "select_lineup",
+        "bring": [
+          "cresselia",
+          "incineroar",
+          "rillaboom",
+          "ironvaliant"
+        ],
+        "leads": [
+          "incineroar",
+          "ironvaliant"
+        ]
+      },
+      "3": {
+        "type": "select_lineup",
+        "bring": [
+          "rillaboom",
+          "whimsicott",
+          "sableye",
+          "ironvaliant"
+        ],
+        "leads": [
+          "rillaboom",
+          "ironvaliant"
+        ]
+      },
+      "4": {
+        "type": "select_lineup",
+        "bring": [
+          "incineroar",
+          "rillaboom",
+          "whimsicott",
+          "ironvaliant"
+        ],
+        "leads": [
+          "rillaboom",
+          "ironvaliant"
+        ]
+      }
+    }
+  }
+}

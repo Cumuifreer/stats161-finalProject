@@ -1,0 +1,5680 @@
+{
+  "suite": {
+    "name": "roster-pipeline-v1-blind",
+    "phase": "pipeline",
+    "seed": 290001,
+    "pairs": 64,
+    "catalog_sha256": "16c4d38ae85cc5c02fdd8eab01391c53994bc11978528183c1e43dc27e37da9c",
+    "pool_order_sha256": "73f23553f6ce8aa75681ee465c2c9216d62fc616e8c705bbbf25121efeb6a8ae",
+    "ace_trainer_revision": "b74574abb0c5cb26f3107a4d0a389c0dc25c2a52",
+    "opponents": [
+      "lineup-rollout",
+      "joint",
+      "pivot",
+      "pivot-base",
+      "ppo-history"
+    ]
+  },
+  "checkpoint": "checkpoints/roster-v1/expanded",
+  "checkpoint_sha256": "a458a24568361e1515be1ee13e7b8bb094b0e8147a0799e1eecec4ccedc33d5c",
+  "history_checkpoint": "checkpoints/ppo-v2/annealed/step-0004",
+  "history_checkpoint_sha256": "28ff4ab00e6b600a5b0529a389370740bdb9d43abadf91fd916db0ee45550dc1",
+  "results": {
+    "lineup-rollout": {
+      "baseline": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 290001,
+        "pairs": 64,
+        "frozen_suite": "roster-pipeline-v1-blind",
+        "battle_only": false,
+        "preview_only": false,
+        "pipeline": true,
+        "completed_games": 128,
+        "completed_pairs": 64,
+        "draws": 0,
+        "games_per_second": 0.78,
+        "agents": [
+          {
+            "wins": 64,
+            "fallbacks": 14,
+            "model_choices": 0,
+            "different_choices": 34,
+            "policy": "lineup-rollout",
+            "win_rate": 0.5,
+            "win_rate_ci95": [
+              0.5,
+              0.5
+            ],
+            "score_rate": 0.5,
+            "decision_p95_ms": 558.8,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.09,
+                "p99_ms": 0.14,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 870.63,
+                "p99_ms": 973.04,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1174,
+                "p95_ms": 1.05,
+                "p99_ms": 1.61,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 64,
+            "fallbacks": 14,
+            "model_choices": 0,
+            "different_choices": 34,
+            "policy": "lineup-rollout",
+            "win_rate": 0.5,
+            "win_rate_ci95": [
+              0.5,
+              0.5
+            ],
+            "score_rate": 0.5,
+            "decision_p95_ms": 572.2,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.08,
+                "p99_ms": 0.12,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 876.63,
+                "p99_ms": 936.22,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1174,
+                "p95_ms": 1.04,
+                "p99_ms": 1.64,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "290001": [
+            1,
+            0
+          ],
+          "290002": [
+            1,
+            0
+          ],
+          "290003": [
+            1,
+            0
+          ],
+          "290004": [
+            1,
+            0
+          ],
+          "290005": [
+            0,
+            1
+          ],
+          "290006": [
+            1,
+            0
+          ],
+          "290007": [
+            0,
+            1
+          ],
+          "290008": [
+            0,
+            1
+          ],
+          "290009": [
+            1,
+            0
+          ],
+          "290010": [
+            1,
+            0
+          ],
+          "290011": [
+            0,
+            1
+          ],
+          "290012": [
+            1,
+            0
+          ],
+          "290013": [
+            0,
+            1
+          ],
+          "290014": [
+            0,
+            1
+          ],
+          "290015": [
+            1,
+            0
+          ],
+          "290016": [
+            1,
+            0
+          ],
+          "290017": [
+            1,
+            0
+          ],
+          "290018": [
+            1,
+            0
+          ],
+          "290019": [
+            1,
+            0
+          ],
+          "290020": [
+            1,
+            0
+          ],
+          "290021": [
+            1,
+            0
+          ],
+          "290022": [
+            0,
+            1
+          ],
+          "290023": [
+            1,
+            0
+          ],
+          "290024": [
+            0,
+            1
+          ],
+          "290025": [
+            1,
+            0
+          ],
+          "290026": [
+            0,
+            1
+          ],
+          "290027": [
+            0,
+            1
+          ],
+          "290028": [
+            1,
+            0
+          ],
+          "290029": [
+            1,
+            0
+          ],
+          "290030": [
+            0,
+            1
+          ],
+          "290031": [
+            1,
+            0
+          ],
+          "290032": [
+            1,
+            0
+          ],
+          "290033": [
+            1,
+            0
+          ],
+          "290034": [
+            0,
+            1
+          ],
+          "290035": [
+            0,
+            1
+          ],
+          "290036": [
+            1,
+            0
+          ],
+          "290037": [
+            0,
+            1
+          ],
+          "290038": [
+            1,
+            0
+          ],
+          "290039": [
+            1,
+            0
+          ],
+          "290040": [
+            1,
+            0
+          ],
+          "290041": [
+            1,
+            0
+          ],
+          "290042": [
+            0,
+            1
+          ],
+          "290043": [
+            1,
+            0
+          ],
+          "290044": [
+            0,
+            1
+          ],
+          "290045": [
+            1,
+            0
+          ],
+          "290046": [
+            1,
+            0
+          ],
+          "290047": [
+            1,
+            0
+          ],
+          "290048": [
+            1,
+            0
+          ],
+          "290049": [
+            1,
+            0
+          ],
+          "290050": [
+            0,
+            1
+          ],
+          "290051": [
+            0,
+            1
+          ],
+          "290052": [
+            0,
+            1
+          ],
+          "290053": [
+            0,
+            1
+          ],
+          "290054": [
+            1,
+            0
+          ],
+          "290055": [
+            1,
+            0
+          ],
+          "290056": [
+            0,
+            1
+          ],
+          "290057": [
+            1,
+            0
+          ],
+          "290058": [
+            1,
+            0
+          ],
+          "290059": [
+            1,
+            0
+          ],
+          "290060": [
+            0,
+            1
+          ],
+          "290061": [
+            0,
+            1
+          ],
+          "290062": [
+            1,
+            0
+          ],
+          "290063": [
+            0,
+            1
+          ],
+          "290064": [
+            0,
+            1
+          ]
+        }
+      },
+      "neural": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 290001,
+        "pairs": 64,
+        "frozen_suite": "roster-pipeline-v1-blind",
+        "battle_only": false,
+        "preview_only": false,
+        "pipeline": true,
+        "completed_games": 128,
+        "completed_pairs": 64,
+        "draws": 0,
+        "games_per_second": 0.85,
+        "agents": [
+          {
+            "wins": 114,
+            "fallbacks": 2,
+            "model_choices": 0,
+            "different_choices": 708,
+            "policy": "roster-net",
+            "win_rate": 0.890625,
+            "win_rate_ci95": [
+              0.8203125,
+              0.9453125
+            ],
+            "score_rate": 0.890625,
+            "decision_p95_ms": 571.45,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "roster_activity": {
+              "draft_changed": 696
+            },
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 10.93,
+                "p99_ms": 12.02,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 824.54,
+                "p99_ms": 893.08,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1045,
+                "p95_ms": 1.08,
+                "p99_ms": 1.67,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 14,
+            "fallbacks": 41,
+            "model_choices": 0,
+            "different_choices": 8,
+            "policy": "lineup-rollout",
+            "win_rate": 0.109375,
+            "win_rate_ci95": [
+              0.0546875,
+              0.1796875
+            ],
+            "score_rate": 0.109375,
+            "decision_p95_ms": 2.3,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.06,
+                "p99_ms": 0.12,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 822.34,
+                "p99_ms": 894.99,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1114,
+                "p95_ms": 1.03,
+                "p99_ms": 1.44,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "290001": [
+            1,
+            1
+          ],
+          "290002": [
+            1,
+            1
+          ],
+          "290003": [
+            1,
+            1
+          ],
+          "290004": [
+            0,
+            1
+          ],
+          "290005": [
+            1,
+            1
+          ],
+          "290006": [
+            0,
+            1
+          ],
+          "290007": [
+            1,
+            1
+          ],
+          "290008": [
+            1,
+            1
+          ],
+          "290009": [
+            1,
+            1
+          ],
+          "290010": [
+            1,
+            1
+          ],
+          "290011": [
+            1,
+            1
+          ],
+          "290012": [
+            1,
+            1
+          ],
+          "290013": [
+            1,
+            1
+          ],
+          "290014": [
+            1,
+            1
+          ],
+          "290015": [
+            1,
+            1
+          ],
+          "290016": [
+            1,
+            1
+          ],
+          "290017": [
+            1,
+            1
+          ],
+          "290018": [
+            1,
+            0
+          ],
+          "290019": [
+            1,
+            1
+          ],
+          "290020": [
+            1,
+            1
+          ],
+          "290021": [
+            1,
+            1
+          ],
+          "290022": [
+            1,
+            1
+          ],
+          "290023": [
+            0,
+            0
+          ],
+          "290024": [
+            1,
+            1
+          ],
+          "290025": [
+            1,
+            1
+          ],
+          "290026": [
+            1,
+            1
+          ],
+          "290027": [
+            1,
+            1
+          ],
+          "290028": [
+            1,
+            1
+          ],
+          "290029": [
+            1,
+            1
+          ],
+          "290030": [
+            1,
+            1
+          ],
+          "290031": [
+            1,
+            1
+          ],
+          "290032": [
+            1,
+            1
+          ],
+          "290033": [
+            1,
+            1
+          ],
+          "290034": [
+            1,
+            1
+          ],
+          "290035": [
+            1,
+            1
+          ],
+          "290036": [
+            1,
+            1
+          ],
+          "290037": [
+            1,
+            1
+          ],
+          "290038": [
+            1,
+            1
+          ],
+          "290039": [
+            1,
+            1
+          ],
+          "290040": [
+            1,
+            1
+          ],
+          "290041": [
+            1,
+            1
+          ],
+          "290042": [
+            1,
+            1
+          ],
+          "290043": [
+            1,
+            1
+          ],
+          "290044": [
+            1,
+            1
+          ],
+          "290045": [
+            1,
+            1
+          ],
+          "290046": [
+            0,
+            1
+          ],
+          "290047": [
+            1,
+            1
+          ],
+          "290048": [
+            1,
+            1
+          ],
+          "290049": [
+            1,
+            1
+          ],
+          "290050": [
+            0,
+            0
+          ],
+          "290051": [
+            1,
+            1
+          ],
+          "290052": [
+            1,
+            0
+          ],
+          "290053": [
+            0,
+            1
+          ],
+          "290054": [
+            1,
+            1
+          ],
+          "290055": [
+            1,
+            1
+          ],
+          "290056": [
+            1,
+            0
+          ],
+          "290057": [
+            1,
+            1
+          ],
+          "290058": [
+            1,
+            1
+          ],
+          "290059": [
+            0,
+            0
+          ],
+          "290060": [
+            1,
+            1
+          ],
+          "290061": [
+            1,
+            1
+          ],
+          "290062": [
+            1,
+            1
+          ],
+          "290063": [
+            1,
+            0
+          ],
+          "290064": [
+            1,
+            1
+          ]
+        }
+      },
+      "prior": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 290001,
+        "pairs": 64,
+        "frozen_suite": "roster-pipeline-v1-blind",
+        "battle_only": false,
+        "preview_only": false,
+        "pipeline": true,
+        "completed_games": 128,
+        "completed_pairs": 64,
+        "draws": 0,
+        "games_per_second": 0.86,
+        "agents": [
+          {
+            "wins": 113,
+            "fallbacks": 3,
+            "model_choices": 0,
+            "different_choices": 710,
+            "policy": "roster-net",
+            "win_rate": 0.8828125,
+            "win_rate_ci95": [
+              0.8125,
+              0.9453125
+            ],
+            "score_rate": 0.8828125,
+            "decision_p95_ms": 573.92,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "roster_activity": {
+              "draft_changed": 695
+            },
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.12,
+                "p99_ms": 0.2,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 847.05,
+                "p99_ms": 955.6,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1076,
+                "p95_ms": 1.07,
+                "p99_ms": 1.57,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 15,
+            "fallbacks": 40,
+            "model_choices": 0,
+            "different_choices": 8,
+            "policy": "lineup-rollout",
+            "win_rate": 0.1171875,
+            "win_rate_ci95": [
+              0.0546875,
+              0.1875
+            ],
+            "score_rate": 0.1171875,
+            "decision_p95_ms": 2.27,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.08,
+                "p99_ms": 0.14,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 835.19,
+                "p99_ms": 920.22,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1136,
+                "p95_ms": 1.07,
+                "p99_ms": 1.68,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "290001": [
+            1,
+            1
+          ],
+          "290002": [
+            1,
+            1
+          ],
+          "290003": [
+            1,
+            1
+          ],
+          "290004": [
+            0,
+            1
+          ],
+          "290005": [
+            1,
+            1
+          ],
+          "290006": [
+            1,
+            1
+          ],
+          "290007": [
+            1,
+            1
+          ],
+          "290008": [
+            1,
+            1
+          ],
+          "290009": [
+            1,
+            1
+          ],
+          "290010": [
+            1,
+            1
+          ],
+          "290011": [
+            1,
+            1
+          ],
+          "290012": [
+            1,
+            1
+          ],
+          "290013": [
+            1,
+            1
+          ],
+          "290014": [
+            1,
+            1
+          ],
+          "290015": [
+            1,
+            1
+          ],
+          "290016": [
+            1,
+            1
+          ],
+          "290017": [
+            1,
+            1
+          ],
+          "290018": [
+            1,
+            0
+          ],
+          "290019": [
+            1,
+            1
+          ],
+          "290020": [
+            1,
+            1
+          ],
+          "290021": [
+            1,
+            1
+          ],
+          "290022": [
+            1,
+            1
+          ],
+          "290023": [
+            0,
+            0
+          ],
+          "290024": [
+            1,
+            1
+          ],
+          "290025": [
+            1,
+            1
+          ],
+          "290026": [
+            1,
+            1
+          ],
+          "290027": [
+            1,
+            1
+          ],
+          "290028": [
+            1,
+            1
+          ],
+          "290029": [
+            1,
+            1
+          ],
+          "290030": [
+            1,
+            1
+          ],
+          "290031": [
+            0,
+            1
+          ],
+          "290032": [
+            1,
+            1
+          ],
+          "290033": [
+            1,
+            1
+          ],
+          "290034": [
+            1,
+            1
+          ],
+          "290035": [
+            1,
+            1
+          ],
+          "290036": [
+            1,
+            1
+          ],
+          "290037": [
+            1,
+            1
+          ],
+          "290038": [
+            1,
+            1
+          ],
+          "290039": [
+            1,
+            1
+          ],
+          "290040": [
+            1,
+            1
+          ],
+          "290041": [
+            1,
+            1
+          ],
+          "290042": [
+            1,
+            1
+          ],
+          "290043": [
+            1,
+            1
+          ],
+          "290044": [
+            1,
+            1
+          ],
+          "290045": [
+            1,
+            1
+          ],
+          "290046": [
+            0,
+            1
+          ],
+          "290047": [
+            1,
+            1
+          ],
+          "290048": [
+            1,
+            1
+          ],
+          "290049": [
+            1,
+            1
+          ],
+          "290050": [
+            0,
+            0
+          ],
+          "290051": [
+            1,
+            1
+          ],
+          "290052": [
+            1,
+            0
+          ],
+          "290053": [
+            0,
+            0
+          ],
+          "290054": [
+            1,
+            1
+          ],
+          "290055": [
+            1,
+            1
+          ],
+          "290056": [
+            1,
+            0
+          ],
+          "290057": [
+            1,
+            1
+          ],
+          "290058": [
+            1,
+            1
+          ],
+          "290059": [
+            0,
+            0
+          ],
+          "290060": [
+            1,
+            1
+          ],
+          "290061": [
+            1,
+            1
+          ],
+          "290062": [
+            1,
+            1
+          ],
+          "290063": [
+            1,
+            0
+          ],
+          "290064": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    "joint": {
+      "baseline": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 290001,
+        "pairs": 64,
+        "frozen_suite": "roster-pipeline-v1-blind",
+        "battle_only": false,
+        "preview_only": false,
+        "pipeline": true,
+        "completed_games": 128,
+        "completed_pairs": 64,
+        "draws": 0,
+        "games_per_second": 1.49,
+        "agents": [
+          {
+            "wins": 66,
+            "fallbacks": 14,
+            "model_choices": 0,
+            "different_choices": 34,
+            "policy": "lineup-rollout",
+            "win_rate": 0.515625,
+            "win_rate_ci95": [
+              0.4609375,
+              0.5703125
+            ],
+            "score_rate": 0.515625,
+            "decision_p95_ms": 581.85,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.08,
+                "p99_ms": 0.12,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 894.85,
+                "p99_ms": 968.17,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1149,
+                "p95_ms": 1.06,
+                "p99_ms": 1.51,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 62,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "joint",
+            "win_rate": 0.484375,
+            "win_rate_ci95": [
+              0.4296875,
+              0.5390625
+            ],
+            "score_rate": 0.484375,
+            "decision_p95_ms": 2.04,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.08,
+                "p99_ms": 0.12,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 2.51,
+                "p99_ms": 3.61,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1155,
+                "p95_ms": 1.02,
+                "p99_ms": 1.61,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "290001": [
+            0,
+            0
+          ],
+          "290002": [
+            1,
+            1
+          ],
+          "290003": [
+            1,
+            0
+          ],
+          "290004": [
+            1,
+            0
+          ],
+          "290005": [
+            0,
+            1
+          ],
+          "290006": [
+            1,
+            0
+          ],
+          "290007": [
+            1,
+            1
+          ],
+          "290008": [
+            0,
+            1
+          ],
+          "290009": [
+            1,
+            0
+          ],
+          "290010": [
+            1,
+            0
+          ],
+          "290011": [
+            0,
+            1
+          ],
+          "290012": [
+            1,
+            0
+          ],
+          "290013": [
+            0,
+            1
+          ],
+          "290014": [
+            0,
+            1
+          ],
+          "290015": [
+            0,
+            0
+          ],
+          "290016": [
+            1,
+            0
+          ],
+          "290017": [
+            1,
+            0
+          ],
+          "290018": [
+            1,
+            0
+          ],
+          "290019": [
+            1,
+            0
+          ],
+          "290020": [
+            0,
+            0
+          ],
+          "290021": [
+            1,
+            0
+          ],
+          "290022": [
+            0,
+            1
+          ],
+          "290023": [
+            1,
+            0
+          ],
+          "290024": [
+            0,
+            1
+          ],
+          "290025": [
+            1,
+            1
+          ],
+          "290026": [
+            0,
+            1
+          ],
+          "290027": [
+            0,
+            1
+          ],
+          "290028": [
+            1,
+            0
+          ],
+          "290029": [
+            1,
+            0
+          ],
+          "290030": [
+            0,
+            1
+          ],
+          "290031": [
+            1,
+            0
+          ],
+          "290032": [
+            1,
+            0
+          ],
+          "290033": [
+            1,
+            0
+          ],
+          "290034": [
+            1,
+            0
+          ],
+          "290035": [
+            0,
+            1
+          ],
+          "290036": [
+            1,
+            0
+          ],
+          "290037": [
+            0,
+            0
+          ],
+          "290038": [
+            1,
+            1
+          ],
+          "290039": [
+            1,
+            0
+          ],
+          "290040": [
+            1,
+            0
+          ],
+          "290041": [
+            1,
+            0
+          ],
+          "290042": [
+            0,
+            1
+          ],
+          "290043": [
+            1,
+            0
+          ],
+          "290044": [
+            0,
+            1
+          ],
+          "290045": [
+            1,
+            0
+          ],
+          "290046": [
+            1,
+            0
+          ],
+          "290047": [
+            1,
+            0
+          ],
+          "290048": [
+            1,
+            0
+          ],
+          "290049": [
+            1,
+            0
+          ],
+          "290050": [
+            0,
+            1
+          ],
+          "290051": [
+            0,
+            1
+          ],
+          "290052": [
+            1,
+            1
+          ],
+          "290053": [
+            1,
+            1
+          ],
+          "290054": [
+            1,
+            0
+          ],
+          "290055": [
+            1,
+            0
+          ],
+          "290056": [
+            0,
+            1
+          ],
+          "290057": [
+            1,
+            0
+          ],
+          "290058": [
+            1,
+            0
+          ],
+          "290059": [
+            1,
+            1
+          ],
+          "290060": [
+            0,
+            1
+          ],
+          "290061": [
+            0,
+            1
+          ],
+          "290062": [
+            1,
+            0
+          ],
+          "290063": [
+            0,
+            0
+          ],
+          "290064": [
+            0,
+            1
+          ]
+        }
+      },
+      "neural": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 290001,
+        "pairs": 64,
+        "frozen_suite": "roster-pipeline-v1-blind",
+        "battle_only": false,
+        "preview_only": false,
+        "pipeline": true,
+        "completed_games": 128,
+        "completed_pairs": 64,
+        "draws": 0,
+        "games_per_second": 1.35,
+        "agents": [
+          {
+            "wins": 116,
+            "fallbacks": 2,
+            "model_choices": 0,
+            "different_choices": 708,
+            "policy": "roster-net",
+            "win_rate": 0.90625,
+            "win_rate_ci95": [
+              0.8359375,
+              0.9609375
+            ],
+            "score_rate": 0.90625,
+            "decision_p95_ms": 582.65,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "roster_activity": {
+              "draft_changed": 696
+            },
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 11.06,
+                "p99_ms": 12.12,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 826.8,
+                "p99_ms": 876.63,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1037,
+                "p95_ms": 1.06,
+                "p99_ms": 1.61,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 12,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "joint",
+            "win_rate": 0.09375,
+            "win_rate_ci95": [
+              0.0390625,
+              0.1640625
+            ],
+            "score_rate": 0.09375,
+            "decision_p95_ms": 2.1,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.06,
+                "p99_ms": 0.12,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 3.5,
+                "p99_ms": 7.03,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1105,
+                "p95_ms": 1.07,
+                "p99_ms": 1.68,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "290001": [
+            1,
+            1
+          ],
+          "290002": [
+            1,
+            1
+          ],
+          "290003": [
+            1,
+            1
+          ],
+          "290004": [
+            0,
+            1
+          ],
+          "290005": [
+            1,
+            1
+          ],
+          "290006": [
+            0,
+            1
+          ],
+          "290007": [
+            1,
+            1
+          ],
+          "290008": [
+            1,
+            1
+          ],
+          "290009": [
+            1,
+            1
+          ],
+          "290010": [
+            1,
+            1
+          ],
+          "290011": [
+            1,
+            1
+          ],
+          "290012": [
+            1,
+            1
+          ],
+          "290013": [
+            1,
+            1
+          ],
+          "290014": [
+            1,
+            1
+          ],
+          "290015": [
+            1,
+            1
+          ],
+          "290016": [
+            1,
+            1
+          ],
+          "290017": [
+            1,
+            1
+          ],
+          "290018": [
+            1,
+            0
+          ],
+          "290019": [
+            1,
+            1
+          ],
+          "290020": [
+            1,
+            1
+          ],
+          "290021": [
+            1,
+            1
+          ],
+          "290022": [
+            1,
+            1
+          ],
+          "290023": [
+            1,
+            1
+          ],
+          "290024": [
+            1,
+            1
+          ],
+          "290025": [
+            1,
+            1
+          ],
+          "290026": [
+            1,
+            1
+          ],
+          "290027": [
+            1,
+            1
+          ],
+          "290028": [
+            1,
+            1
+          ],
+          "290029": [
+            1,
+            1
+          ],
+          "290030": [
+            1,
+            1
+          ],
+          "290031": [
+            1,
+            1
+          ],
+          "290032": [
+            1,
+            1
+          ],
+          "290033": [
+            1,
+            1
+          ],
+          "290034": [
+            1,
+            1
+          ],
+          "290035": [
+            1,
+            1
+          ],
+          "290036": [
+            1,
+            1
+          ],
+          "290037": [
+            1,
+            1
+          ],
+          "290038": [
+            1,
+            1
+          ],
+          "290039": [
+            1,
+            1
+          ],
+          "290040": [
+            1,
+            1
+          ],
+          "290041": [
+            1,
+            1
+          ],
+          "290042": [
+            1,
+            1
+          ],
+          "290043": [
+            1,
+            1
+          ],
+          "290044": [
+            1,
+            1
+          ],
+          "290045": [
+            1,
+            1
+          ],
+          "290046": [
+            1,
+            1
+          ],
+          "290047": [
+            1,
+            1
+          ],
+          "290048": [
+            1,
+            1
+          ],
+          "290049": [
+            1,
+            1
+          ],
+          "290050": [
+            0,
+            0
+          ],
+          "290051": [
+            1,
+            1
+          ],
+          "290052": [
+            1,
+            0
+          ],
+          "290053": [
+            0,
+            0
+          ],
+          "290054": [
+            1,
+            1
+          ],
+          "290055": [
+            1,
+            1
+          ],
+          "290056": [
+            1,
+            0
+          ],
+          "290057": [
+            1,
+            1
+          ],
+          "290058": [
+            1,
+            1
+          ],
+          "290059": [
+            0,
+            0
+          ],
+          "290060": [
+            1,
+            1
+          ],
+          "290061": [
+            1,
+            1
+          ],
+          "290062": [
+            1,
+            1
+          ],
+          "290063": [
+            1,
+            0
+          ],
+          "290064": [
+            1,
+            1
+          ]
+        }
+      },
+      "prior": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 290001,
+        "pairs": 64,
+        "frozen_suite": "roster-pipeline-v1-blind",
+        "battle_only": false,
+        "preview_only": false,
+        "pipeline": true,
+        "completed_games": 128,
+        "completed_pairs": 64,
+        "draws": 0,
+        "games_per_second": 1.41,
+        "agents": [
+          {
+            "wins": 116,
+            "fallbacks": 3,
+            "model_choices": 0,
+            "different_choices": 710,
+            "policy": "roster-net",
+            "win_rate": 0.90625,
+            "win_rate_ci95": [
+              0.84375,
+              0.9609375
+            ],
+            "score_rate": 0.90625,
+            "decision_p95_ms": 580.76,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "roster_activity": {
+              "draft_changed": 695
+            },
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.12,
+                "p99_ms": 0.24,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 820.12,
+                "p99_ms": 889.7,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1066,
+                "p95_ms": 1.06,
+                "p99_ms": 1.61,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 12,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "joint",
+            "win_rate": 0.09375,
+            "win_rate_ci95": [
+              0.0390625,
+              0.15625
+            ],
+            "score_rate": 0.09375,
+            "decision_p95_ms": 2.1,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.07,
+                "p99_ms": 0.12,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 2.53,
+                "p99_ms": 4.6,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1128,
+                "p95_ms": 1.06,
+                "p99_ms": 1.59,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "290001": [
+            1,
+            1
+          ],
+          "290002": [
+            1,
+            1
+          ],
+          "290003": [
+            1,
+            1
+          ],
+          "290004": [
+            0,
+            1
+          ],
+          "290005": [
+            1,
+            1
+          ],
+          "290006": [
+            1,
+            1
+          ],
+          "290007": [
+            1,
+            1
+          ],
+          "290008": [
+            1,
+            1
+          ],
+          "290009": [
+            1,
+            1
+          ],
+          "290010": [
+            1,
+            1
+          ],
+          "290011": [
+            1,
+            1
+          ],
+          "290012": [
+            1,
+            1
+          ],
+          "290013": [
+            1,
+            1
+          ],
+          "290014": [
+            1,
+            1
+          ],
+          "290015": [
+            1,
+            1
+          ],
+          "290016": [
+            1,
+            1
+          ],
+          "290017": [
+            1,
+            1
+          ],
+          "290018": [
+            1,
+            0
+          ],
+          "290019": [
+            1,
+            1
+          ],
+          "290020": [
+            1,
+            1
+          ],
+          "290021": [
+            1,
+            1
+          ],
+          "290022": [
+            1,
+            1
+          ],
+          "290023": [
+            1,
+            1
+          ],
+          "290024": [
+            1,
+            1
+          ],
+          "290025": [
+            1,
+            1
+          ],
+          "290026": [
+            1,
+            1
+          ],
+          "290027": [
+            1,
+            1
+          ],
+          "290028": [
+            1,
+            1
+          ],
+          "290029": [
+            1,
+            1
+          ],
+          "290030": [
+            1,
+            1
+          ],
+          "290031": [
+            0,
+            1
+          ],
+          "290032": [
+            1,
+            1
+          ],
+          "290033": [
+            1,
+            1
+          ],
+          "290034": [
+            1,
+            1
+          ],
+          "290035": [
+            1,
+            1
+          ],
+          "290036": [
+            1,
+            1
+          ],
+          "290037": [
+            1,
+            1
+          ],
+          "290038": [
+            1,
+            1
+          ],
+          "290039": [
+            1,
+            1
+          ],
+          "290040": [
+            1,
+            1
+          ],
+          "290041": [
+            1,
+            1
+          ],
+          "290042": [
+            1,
+            1
+          ],
+          "290043": [
+            1,
+            1
+          ],
+          "290044": [
+            1,
+            1
+          ],
+          "290045": [
+            1,
+            1
+          ],
+          "290046": [
+            1,
+            1
+          ],
+          "290047": [
+            1,
+            1
+          ],
+          "290048": [
+            1,
+            1
+          ],
+          "290049": [
+            1,
+            1
+          ],
+          "290050": [
+            0,
+            0
+          ],
+          "290051": [
+            1,
+            1
+          ],
+          "290052": [
+            1,
+            0
+          ],
+          "290053": [
+            0,
+            0
+          ],
+          "290054": [
+            1,
+            1
+          ],
+          "290055": [
+            1,
+            1
+          ],
+          "290056": [
+            1,
+            0
+          ],
+          "290057": [
+            1,
+            1
+          ],
+          "290058": [
+            1,
+            1
+          ],
+          "290059": [
+            0,
+            0
+          ],
+          "290060": [
+            1,
+            1
+          ],
+          "290061": [
+            1,
+            1
+          ],
+          "290062": [
+            1,
+            1
+          ],
+          "290063": [
+            1,
+            0
+          ],
+          "290064": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    "pivot": {
+      "baseline": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 290001,
+        "pairs": 64,
+        "frozen_suite": "roster-pipeline-v1-blind",
+        "battle_only": false,
+        "preview_only": false,
+        "pipeline": true,
+        "completed_games": 128,
+        "completed_pairs": 64,
+        "draws": 0,
+        "games_per_second": 1.38,
+        "agents": [
+          {
+            "wins": 85,
+            "fallbacks": 14,
+            "model_choices": 0,
+            "different_choices": 34,
+            "policy": "lineup-rollout",
+            "win_rate": 0.6640625,
+            "win_rate_ci95": [
+              0.5703125,
+              0.7578125
+            ],
+            "score_rate": 0.6640625,
+            "decision_p95_ms": 560.12,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.07,
+                "p99_ms": 0.12,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 897.14,
+                "p99_ms": 958.91,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1204,
+                "p95_ms": 1.08,
+                "p99_ms": 1.48,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 43,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "pivot",
+            "win_rate": 0.3359375,
+            "win_rate_ci95": [
+              0.2421875,
+              0.4296875
+            ],
+            "score_rate": 0.3359375,
+            "decision_p95_ms": 6.94,
+            "battle_time_p95_seconds": 0.07,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.07,
+                "p99_ms": 0.12,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 1.24,
+                "p99_ms": 1.82,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1231,
+                "p95_ms": 7.59,
+                "p99_ms": 9.56,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "290001": [
+            1,
+            1
+          ],
+          "290002": [
+            0,
+            1
+          ],
+          "290003": [
+            1,
+            1
+          ],
+          "290004": [
+            1,
+            1
+          ],
+          "290005": [
+            1,
+            1
+          ],
+          "290006": [
+            1,
+            1
+          ],
+          "290007": [
+            1,
+            0
+          ],
+          "290008": [
+            1,
+            1
+          ],
+          "290009": [
+            0,
+            0
+          ],
+          "290010": [
+            0,
+            0
+          ],
+          "290011": [
+            1,
+            1
+          ],
+          "290012": [
+            0,
+            1
+          ],
+          "290013": [
+            0,
+            0
+          ],
+          "290014": [
+            1,
+            1
+          ],
+          "290015": [
+            1,
+            1
+          ],
+          "290016": [
+            0,
+            0
+          ],
+          "290017": [
+            0,
+            0
+          ],
+          "290018": [
+            0,
+            0
+          ],
+          "290019": [
+            1,
+            0
+          ],
+          "290020": [
+            1,
+            1
+          ],
+          "290021": [
+            1,
+            1
+          ],
+          "290022": [
+            1,
+            1
+          ],
+          "290023": [
+            1,
+            1
+          ],
+          "290024": [
+            0,
+            1
+          ],
+          "290025": [
+            1,
+            1
+          ],
+          "290026": [
+            1,
+            0
+          ],
+          "290027": [
+            1,
+            1
+          ],
+          "290028": [
+            0,
+            1
+          ],
+          "290029": [
+            1,
+            1
+          ],
+          "290030": [
+            1,
+            1
+          ],
+          "290031": [
+            1,
+            0
+          ],
+          "290032": [
+            1,
+            0
+          ],
+          "290033": [
+            1,
+            0
+          ],
+          "290034": [
+            0,
+            0
+          ],
+          "290035": [
+            1,
+            0
+          ],
+          "290036": [
+            1,
+            0
+          ],
+          "290037": [
+            0,
+            1
+          ],
+          "290038": [
+            0,
+            1
+          ],
+          "290039": [
+            0,
+            1
+          ],
+          "290040": [
+            1,
+            1
+          ],
+          "290041": [
+            1,
+            1
+          ],
+          "290042": [
+            0,
+            1
+          ],
+          "290043": [
+            1,
+            0
+          ],
+          "290044": [
+            1,
+            1
+          ],
+          "290045": [
+            1,
+            0
+          ],
+          "290046": [
+            1,
+            1
+          ],
+          "290047": [
+            1,
+            1
+          ],
+          "290048": [
+            1,
+            1
+          ],
+          "290049": [
+            0,
+            1
+          ],
+          "290050": [
+            0,
+            1
+          ],
+          "290051": [
+            0,
+            0
+          ],
+          "290052": [
+            1,
+            1
+          ],
+          "290053": [
+            0,
+            0
+          ],
+          "290054": [
+            1,
+            1
+          ],
+          "290055": [
+            1,
+            1
+          ],
+          "290056": [
+            1,
+            1
+          ],
+          "290057": [
+            1,
+            1
+          ],
+          "290058": [
+            0,
+            0
+          ],
+          "290059": [
+            0,
+            0
+          ],
+          "290060": [
+            1,
+            0
+          ],
+          "290061": [
+            1,
+            1
+          ],
+          "290062": [
+            1,
+            1
+          ],
+          "290063": [
+            1,
+            1
+          ],
+          "290064": [
+            1,
+            1
+          ]
+        }
+      },
+      "neural": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 290001,
+        "pairs": 64,
+        "frozen_suite": "roster-pipeline-v1-blind",
+        "battle_only": false,
+        "preview_only": false,
+        "pipeline": true,
+        "completed_games": 128,
+        "completed_pairs": 64,
+        "draws": 0,
+        "games_per_second": 1.27,
+        "agents": [
+          {
+            "wins": 112,
+            "fallbacks": 2,
+            "model_choices": 0,
+            "different_choices": 708,
+            "policy": "roster-net",
+            "win_rate": 0.875,
+            "win_rate_ci95": [
+              0.8046875,
+              0.9375
+            ],
+            "score_rate": 0.875,
+            "decision_p95_ms": 567.54,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "roster_activity": {
+              "draft_changed": 696
+            },
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 10.97,
+                "p99_ms": 12.37,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 821.14,
+                "p99_ms": 893.47,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1131,
+                "p95_ms": 1.12,
+                "p99_ms": 1.74,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 16,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "pivot",
+            "win_rate": 0.125,
+            "win_rate_ci95": [
+              0.0625,
+              0.1953125
+            ],
+            "score_rate": 0.125,
+            "decision_p95_ms": 7.19,
+            "battle_time_p95_seconds": 0.08,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.06,
+                "p99_ms": 0.11,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 1.17,
+                "p99_ms": 1.9,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1218,
+                "p95_ms": 8.17,
+                "p99_ms": 10.08,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "290001": [
+            1,
+            1
+          ],
+          "290002": [
+            1,
+            1
+          ],
+          "290003": [
+            1,
+            1
+          ],
+          "290004": [
+            1,
+            1
+          ],
+          "290005": [
+            1,
+            1
+          ],
+          "290006": [
+            1,
+            1
+          ],
+          "290007": [
+            1,
+            1
+          ],
+          "290008": [
+            0,
+            1
+          ],
+          "290009": [
+            1,
+            1
+          ],
+          "290010": [
+            1,
+            1
+          ],
+          "290011": [
+            0,
+            1
+          ],
+          "290012": [
+            1,
+            1
+          ],
+          "290013": [
+            1,
+            0
+          ],
+          "290014": [
+            1,
+            1
+          ],
+          "290015": [
+            1,
+            1
+          ],
+          "290016": [
+            1,
+            1
+          ],
+          "290017": [
+            1,
+            1
+          ],
+          "290018": [
+            1,
+            0
+          ],
+          "290019": [
+            1,
+            1
+          ],
+          "290020": [
+            1,
+            1
+          ],
+          "290021": [
+            1,
+            1
+          ],
+          "290022": [
+            1,
+            1
+          ],
+          "290023": [
+            1,
+            0
+          ],
+          "290024": [
+            1,
+            1
+          ],
+          "290025": [
+            1,
+            1
+          ],
+          "290026": [
+            1,
+            1
+          ],
+          "290027": [
+            1,
+            1
+          ],
+          "290028": [
+            1,
+            1
+          ],
+          "290029": [
+            1,
+            1
+          ],
+          "290030": [
+            1,
+            1
+          ],
+          "290031": [
+            1,
+            1
+          ],
+          "290032": [
+            1,
+            1
+          ],
+          "290033": [
+            1,
+            0
+          ],
+          "290034": [
+            1,
+            1
+          ],
+          "290035": [
+            0,
+            0
+          ],
+          "290036": [
+            1,
+            1
+          ],
+          "290037": [
+            1,
+            1
+          ],
+          "290038": [
+            1,
+            1
+          ],
+          "290039": [
+            1,
+            1
+          ],
+          "290040": [
+            0,
+            1
+          ],
+          "290041": [
+            1,
+            1
+          ],
+          "290042": [
+            1,
+            1
+          ],
+          "290043": [
+            1,
+            1
+          ],
+          "290044": [
+            1,
+            1
+          ],
+          "290045": [
+            1,
+            1
+          ],
+          "290046": [
+            1,
+            1
+          ],
+          "290047": [
+            1,
+            1
+          ],
+          "290048": [
+            1,
+            1
+          ],
+          "290049": [
+            1,
+            1
+          ],
+          "290050": [
+            1,
+            0
+          ],
+          "290051": [
+            0,
+            0
+          ],
+          "290052": [
+            1,
+            1
+          ],
+          "290053": [
+            1,
+            0
+          ],
+          "290054": [
+            1,
+            1
+          ],
+          "290055": [
+            1,
+            1
+          ],
+          "290056": [
+            1,
+            1
+          ],
+          "290057": [
+            1,
+            1
+          ],
+          "290058": [
+            1,
+            0
+          ],
+          "290059": [
+            0,
+            0
+          ],
+          "290060": [
+            1,
+            1
+          ],
+          "290061": [
+            1,
+            1
+          ],
+          "290062": [
+            1,
+            1
+          ],
+          "290063": [
+            1,
+            1
+          ],
+          "290064": [
+            1,
+            1
+          ]
+        }
+      },
+      "prior": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 290001,
+        "pairs": 64,
+        "frozen_suite": "roster-pipeline-v1-blind",
+        "battle_only": false,
+        "preview_only": false,
+        "pipeline": true,
+        "completed_games": 128,
+        "completed_pairs": 64,
+        "draws": 0,
+        "games_per_second": 1.33,
+        "agents": [
+          {
+            "wins": 112,
+            "fallbacks": 3,
+            "model_choices": 0,
+            "different_choices": 710,
+            "policy": "roster-net",
+            "win_rate": 0.875,
+            "win_rate_ci95": [
+              0.8046875,
+              0.9375
+            ],
+            "score_rate": 0.875,
+            "decision_p95_ms": 563.46,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "roster_activity": {
+              "draft_changed": 695
+            },
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.14,
+                "p99_ms": 0.26,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 822.11,
+                "p99_ms": 933.99,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1130,
+                "p95_ms": 1.07,
+                "p99_ms": 1.48,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 16,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "pivot",
+            "win_rate": 0.125,
+            "win_rate_ci95": [
+              0.0625,
+              0.1953125
+            ],
+            "score_rate": 0.125,
+            "decision_p95_ms": 7.09,
+            "battle_time_p95_seconds": 0.07,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.08,
+                "p99_ms": 0.11,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 1.37,
+                "p99_ms": 2.01,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1214,
+                "p95_ms": 8.0,
+                "p99_ms": 10.62,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "290001": [
+            1,
+            1
+          ],
+          "290002": [
+            1,
+            1
+          ],
+          "290003": [
+            1,
+            1
+          ],
+          "290004": [
+            1,
+            1
+          ],
+          "290005": [
+            1,
+            1
+          ],
+          "290006": [
+            1,
+            1
+          ],
+          "290007": [
+            1,
+            1
+          ],
+          "290008": [
+            0,
+            0
+          ],
+          "290009": [
+            1,
+            1
+          ],
+          "290010": [
+            1,
+            1
+          ],
+          "290011": [
+            0,
+            1
+          ],
+          "290012": [
+            1,
+            1
+          ],
+          "290013": [
+            1,
+            0
+          ],
+          "290014": [
+            1,
+            1
+          ],
+          "290015": [
+            1,
+            1
+          ],
+          "290016": [
+            1,
+            1
+          ],
+          "290017": [
+            1,
+            1
+          ],
+          "290018": [
+            1,
+            0
+          ],
+          "290019": [
+            1,
+            1
+          ],
+          "290020": [
+            1,
+            1
+          ],
+          "290021": [
+            1,
+            1
+          ],
+          "290022": [
+            1,
+            1
+          ],
+          "290023": [
+            1,
+            0
+          ],
+          "290024": [
+            1,
+            1
+          ],
+          "290025": [
+            1,
+            1
+          ],
+          "290026": [
+            1,
+            1
+          ],
+          "290027": [
+            1,
+            1
+          ],
+          "290028": [
+            1,
+            1
+          ],
+          "290029": [
+            1,
+            1
+          ],
+          "290030": [
+            1,
+            1
+          ],
+          "290031": [
+            1,
+            1
+          ],
+          "290032": [
+            1,
+            1
+          ],
+          "290033": [
+            1,
+            0
+          ],
+          "290034": [
+            1,
+            1
+          ],
+          "290035": [
+            0,
+            0
+          ],
+          "290036": [
+            1,
+            1
+          ],
+          "290037": [
+            1,
+            1
+          ],
+          "290038": [
+            1,
+            1
+          ],
+          "290039": [
+            1,
+            1
+          ],
+          "290040": [
+            0,
+            1
+          ],
+          "290041": [
+            1,
+            1
+          ],
+          "290042": [
+            1,
+            1
+          ],
+          "290043": [
+            1,
+            1
+          ],
+          "290044": [
+            1,
+            1
+          ],
+          "290045": [
+            1,
+            1
+          ],
+          "290046": [
+            1,
+            1
+          ],
+          "290047": [
+            1,
+            1
+          ],
+          "290048": [
+            1,
+            1
+          ],
+          "290049": [
+            1,
+            1
+          ],
+          "290050": [
+            1,
+            0
+          ],
+          "290051": [
+            0,
+            0
+          ],
+          "290052": [
+            1,
+            1
+          ],
+          "290053": [
+            1,
+            0
+          ],
+          "290054": [
+            1,
+            1
+          ],
+          "290055": [
+            1,
+            1
+          ],
+          "290056": [
+            1,
+            1
+          ],
+          "290057": [
+            1,
+            1
+          ],
+          "290058": [
+            1,
+            0
+          ],
+          "290059": [
+            0,
+            1
+          ],
+          "290060": [
+            1,
+            1
+          ],
+          "290061": [
+            1,
+            1
+          ],
+          "290062": [
+            1,
+            1
+          ],
+          "290063": [
+            1,
+            1
+          ],
+          "290064": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    "pivot-base": {
+      "baseline": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 290001,
+        "pairs": 64,
+        "frozen_suite": "roster-pipeline-v1-blind",
+        "battle_only": false,
+        "preview_only": false,
+        "pipeline": true,
+        "completed_games": 128,
+        "completed_pairs": 64,
+        "draws": 0,
+        "games_per_second": 1.4,
+        "agents": [
+          {
+            "wins": 82,
+            "fallbacks": 14,
+            "model_choices": 0,
+            "different_choices": 34,
+            "policy": "lineup-rollout",
+            "win_rate": 0.640625,
+            "win_rate_ci95": [
+              0.5625,
+              0.71875
+            ],
+            "score_rate": 0.640625,
+            "decision_p95_ms": 554.96,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.07,
+                "p99_ms": 0.13,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 884.3,
+                "p99_ms": 979.44,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1183,
+                "p95_ms": 1.1,
+                "p99_ms": 1.74,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 46,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "pivot-base",
+            "win_rate": 0.359375,
+            "win_rate_ci95": [
+              0.28125,
+              0.4375
+            ],
+            "score_rate": 0.359375,
+            "decision_p95_ms": 6.18,
+            "battle_time_p95_seconds": 0.06,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.07,
+                "p99_ms": 0.12,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 1.58,
+                "p99_ms": 3.06,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1197,
+                "p95_ms": 6.81,
+                "p99_ms": 9.46,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "290001": [
+            1,
+            1
+          ],
+          "290002": [
+            1,
+            1
+          ],
+          "290003": [
+            1,
+            0
+          ],
+          "290004": [
+            1,
+            1
+          ],
+          "290005": [
+            1,
+            1
+          ],
+          "290006": [
+            1,
+            0
+          ],
+          "290007": [
+            1,
+            0
+          ],
+          "290008": [
+            1,
+            1
+          ],
+          "290009": [
+            0,
+            1
+          ],
+          "290010": [
+            0,
+            0
+          ],
+          "290011": [
+            1,
+            1
+          ],
+          "290012": [
+            0,
+            1
+          ],
+          "290013": [
+            1,
+            0
+          ],
+          "290014": [
+            1,
+            1
+          ],
+          "290015": [
+            1,
+            1
+          ],
+          "290016": [
+            0,
+            0
+          ],
+          "290017": [
+            0,
+            0
+          ],
+          "290018": [
+            0,
+            1
+          ],
+          "290019": [
+            0,
+            0
+          ],
+          "290020": [
+            1,
+            0
+          ],
+          "290021": [
+            0,
+            1
+          ],
+          "290022": [
+            0,
+            1
+          ],
+          "290023": [
+            1,
+            1
+          ],
+          "290024": [
+            1,
+            1
+          ],
+          "290025": [
+            1,
+            0
+          ],
+          "290026": [
+            1,
+            0
+          ],
+          "290027": [
+            1,
+            1
+          ],
+          "290028": [
+            0,
+            1
+          ],
+          "290029": [
+            1,
+            0
+          ],
+          "290030": [
+            1,
+            1
+          ],
+          "290031": [
+            1,
+            0
+          ],
+          "290032": [
+            1,
+            1
+          ],
+          "290033": [
+            1,
+            0
+          ],
+          "290034": [
+            1,
+            0
+          ],
+          "290035": [
+            1,
+            0
+          ],
+          "290036": [
+            1,
+            1
+          ],
+          "290037": [
+            1,
+            0
+          ],
+          "290038": [
+            0,
+            1
+          ],
+          "290039": [
+            1,
+            0
+          ],
+          "290040": [
+            0,
+            1
+          ],
+          "290041": [
+            1,
+            1
+          ],
+          "290042": [
+            0,
+            1
+          ],
+          "290043": [
+            1,
+            0
+          ],
+          "290044": [
+            1,
+            1
+          ],
+          "290045": [
+            1,
+            0
+          ],
+          "290046": [
+            1,
+            1
+          ],
+          "290047": [
+            1,
+            0
+          ],
+          "290048": [
+            1,
+            0
+          ],
+          "290049": [
+            1,
+            1
+          ],
+          "290050": [
+            0,
+            1
+          ],
+          "290051": [
+            0,
+            1
+          ],
+          "290052": [
+            1,
+            1
+          ],
+          "290053": [
+            0,
+            1
+          ],
+          "290054": [
+            0,
+            0
+          ],
+          "290055": [
+            1,
+            0
+          ],
+          "290056": [
+            1,
+            1
+          ],
+          "290057": [
+            1,
+            0
+          ],
+          "290058": [
+            0,
+            0
+          ],
+          "290059": [
+            0,
+            0
+          ],
+          "290060": [
+            1,
+            1
+          ],
+          "290061": [
+            1,
+            1
+          ],
+          "290062": [
+            1,
+            1
+          ],
+          "290063": [
+            1,
+            1
+          ],
+          "290064": [
+            1,
+            1
+          ]
+        }
+      },
+      "neural": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 290001,
+        "pairs": 64,
+        "frozen_suite": "roster-pipeline-v1-blind",
+        "battle_only": false,
+        "preview_only": false,
+        "pipeline": true,
+        "completed_games": 128,
+        "completed_pairs": 64,
+        "draws": 0,
+        "games_per_second": 1.27,
+        "agents": [
+          {
+            "wins": 107,
+            "fallbacks": 2,
+            "model_choices": 0,
+            "different_choices": 708,
+            "policy": "roster-net",
+            "win_rate": 0.8359375,
+            "win_rate_ci95": [
+              0.75,
+              0.9140625
+            ],
+            "score_rate": 0.8359375,
+            "decision_p95_ms": 578.81,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "roster_activity": {
+              "draft_changed": 696
+            },
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 10.81,
+                "p99_ms": 12.27,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 865.15,
+                "p99_ms": 970.3,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1075,
+                "p95_ms": 1.14,
+                "p99_ms": 1.75,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 21,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "pivot-base",
+            "win_rate": 0.1640625,
+            "win_rate_ci95": [
+              0.0859375,
+              0.25
+            ],
+            "score_rate": 0.1640625,
+            "decision_p95_ms": 6.42,
+            "battle_time_p95_seconds": 0.08,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.06,
+                "p99_ms": 0.11,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 1.11,
+                "p99_ms": 1.48,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1151,
+                "p95_ms": 7.67,
+                "p99_ms": 10.92,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "290001": [
+            1,
+            1
+          ],
+          "290002": [
+            1,
+            1
+          ],
+          "290003": [
+            1,
+            1
+          ],
+          "290004": [
+            1,
+            1
+          ],
+          "290005": [
+            1,
+            1
+          ],
+          "290006": [
+            1,
+            1
+          ],
+          "290007": [
+            0,
+            0
+          ],
+          "290008": [
+            1,
+            1
+          ],
+          "290009": [
+            1,
+            1
+          ],
+          "290010": [
+            1,
+            1
+          ],
+          "290011": [
+            0,
+            0
+          ],
+          "290012": [
+            0,
+            0
+          ],
+          "290013": [
+            1,
+            0
+          ],
+          "290014": [
+            1,
+            1
+          ],
+          "290015": [
+            1,
+            1
+          ],
+          "290016": [
+            1,
+            1
+          ],
+          "290017": [
+            1,
+            1
+          ],
+          "290018": [
+            1,
+            1
+          ],
+          "290019": [
+            0,
+            0
+          ],
+          "290020": [
+            0,
+            1
+          ],
+          "290021": [
+            1,
+            1
+          ],
+          "290022": [
+            1,
+            1
+          ],
+          "290023": [
+            1,
+            1
+          ],
+          "290024": [
+            1,
+            1
+          ],
+          "290025": [
+            1,
+            1
+          ],
+          "290026": [
+            1,
+            1
+          ],
+          "290027": [
+            1,
+            1
+          ],
+          "290028": [
+            1,
+            1
+          ],
+          "290029": [
+            1,
+            1
+          ],
+          "290030": [
+            1,
+            1
+          ],
+          "290031": [
+            1,
+            1
+          ],
+          "290032": [
+            1,
+            1
+          ],
+          "290033": [
+            1,
+            1
+          ],
+          "290034": [
+            1,
+            1
+          ],
+          "290035": [
+            0,
+            0
+          ],
+          "290036": [
+            1,
+            1
+          ],
+          "290037": [
+            0,
+            0
+          ],
+          "290038": [
+            1,
+            1
+          ],
+          "290039": [
+            1,
+            1
+          ],
+          "290040": [
+            0,
+            1
+          ],
+          "290041": [
+            1,
+            1
+          ],
+          "290042": [
+            1,
+            1
+          ],
+          "290043": [
+            1,
+            1
+          ],
+          "290044": [
+            1,
+            1
+          ],
+          "290045": [
+            1,
+            1
+          ],
+          "290046": [
+            1,
+            1
+          ],
+          "290047": [
+            1,
+            1
+          ],
+          "290048": [
+            0,
+            0
+          ],
+          "290049": [
+            1,
+            1
+          ],
+          "290050": [
+            1,
+            1
+          ],
+          "290051": [
+            0,
+            0
+          ],
+          "290052": [
+            1,
+            1
+          ],
+          "290053": [
+            1,
+            0
+          ],
+          "290054": [
+            1,
+            1
+          ],
+          "290055": [
+            1,
+            1
+          ],
+          "290056": [
+            1,
+            1
+          ],
+          "290057": [
+            1,
+            1
+          ],
+          "290058": [
+            1,
+            1
+          ],
+          "290059": [
+            1,
+            1
+          ],
+          "290060": [
+            1,
+            1
+          ],
+          "290061": [
+            1,
+            1
+          ],
+          "290062": [
+            0,
+            1
+          ],
+          "290063": [
+            1,
+            1
+          ],
+          "290064": [
+            1,
+            1
+          ]
+        }
+      },
+      "prior": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 290001,
+        "pairs": 64,
+        "frozen_suite": "roster-pipeline-v1-blind",
+        "battle_only": false,
+        "preview_only": false,
+        "pipeline": true,
+        "completed_games": 128,
+        "completed_pairs": 64,
+        "draws": 0,
+        "games_per_second": 1.33,
+        "agents": [
+          {
+            "wins": 107,
+            "fallbacks": 3,
+            "model_choices": 0,
+            "different_choices": 710,
+            "policy": "roster-net",
+            "win_rate": 0.8359375,
+            "win_rate_ci95": [
+              0.75,
+              0.9140625
+            ],
+            "score_rate": 0.8359375,
+            "decision_p95_ms": 581.93,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "roster_activity": {
+              "draft_changed": 695
+            },
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.13,
+                "p99_ms": 0.22,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 900.28,
+                "p99_ms": 1000.44,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1080,
+                "p95_ms": 1.15,
+                "p99_ms": 1.79,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 21,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "pivot-base",
+            "win_rate": 0.1640625,
+            "win_rate_ci95": [
+              0.0859375,
+              0.25
+            ],
+            "score_rate": 0.1640625,
+            "decision_p95_ms": 6.42,
+            "battle_time_p95_seconds": 0.07,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.08,
+                "p99_ms": 0.13,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 1.5,
+                "p99_ms": 2.9,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1156,
+                "p95_ms": 7.75,
+                "p99_ms": 10.87,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "290001": [
+            1,
+            1
+          ],
+          "290002": [
+            1,
+            1
+          ],
+          "290003": [
+            1,
+            1
+          ],
+          "290004": [
+            1,
+            1
+          ],
+          "290005": [
+            1,
+            1
+          ],
+          "290006": [
+            1,
+            1
+          ],
+          "290007": [
+            0,
+            0
+          ],
+          "290008": [
+            1,
+            1
+          ],
+          "290009": [
+            1,
+            1
+          ],
+          "290010": [
+            1,
+            1
+          ],
+          "290011": [
+            0,
+            0
+          ],
+          "290012": [
+            0,
+            0
+          ],
+          "290013": [
+            1,
+            0
+          ],
+          "290014": [
+            1,
+            1
+          ],
+          "290015": [
+            1,
+            1
+          ],
+          "290016": [
+            1,
+            1
+          ],
+          "290017": [
+            1,
+            1
+          ],
+          "290018": [
+            1,
+            1
+          ],
+          "290019": [
+            0,
+            0
+          ],
+          "290020": [
+            0,
+            1
+          ],
+          "290021": [
+            1,
+            1
+          ],
+          "290022": [
+            1,
+            1
+          ],
+          "290023": [
+            1,
+            1
+          ],
+          "290024": [
+            1,
+            1
+          ],
+          "290025": [
+            1,
+            1
+          ],
+          "290026": [
+            1,
+            1
+          ],
+          "290027": [
+            1,
+            1
+          ],
+          "290028": [
+            1,
+            1
+          ],
+          "290029": [
+            1,
+            1
+          ],
+          "290030": [
+            1,
+            1
+          ],
+          "290031": [
+            1,
+            1
+          ],
+          "290032": [
+            1,
+            1
+          ],
+          "290033": [
+            1,
+            1
+          ],
+          "290034": [
+            1,
+            1
+          ],
+          "290035": [
+            0,
+            0
+          ],
+          "290036": [
+            1,
+            1
+          ],
+          "290037": [
+            0,
+            0
+          ],
+          "290038": [
+            1,
+            1
+          ],
+          "290039": [
+            1,
+            1
+          ],
+          "290040": [
+            0,
+            1
+          ],
+          "290041": [
+            1,
+            1
+          ],
+          "290042": [
+            1,
+            1
+          ],
+          "290043": [
+            1,
+            1
+          ],
+          "290044": [
+            1,
+            1
+          ],
+          "290045": [
+            1,
+            1
+          ],
+          "290046": [
+            1,
+            1
+          ],
+          "290047": [
+            1,
+            1
+          ],
+          "290048": [
+            0,
+            0
+          ],
+          "290049": [
+            1,
+            1
+          ],
+          "290050": [
+            1,
+            1
+          ],
+          "290051": [
+            0,
+            0
+          ],
+          "290052": [
+            1,
+            1
+          ],
+          "290053": [
+            1,
+            0
+          ],
+          "290054": [
+            1,
+            1
+          ],
+          "290055": [
+            1,
+            1
+          ],
+          "290056": [
+            1,
+            1
+          ],
+          "290057": [
+            1,
+            1
+          ],
+          "290058": [
+            1,
+            1
+          ],
+          "290059": [
+            1,
+            1
+          ],
+          "290060": [
+            1,
+            1
+          ],
+          "290061": [
+            1,
+            1
+          ],
+          "290062": [
+            0,
+            1
+          ],
+          "290063": [
+            1,
+            1
+          ],
+          "290064": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    "ppo-history": {
+      "baseline": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 290001,
+        "pairs": 64,
+        "frozen_suite": "roster-pipeline-v1-blind",
+        "battle_only": false,
+        "preview_only": false,
+        "pipeline": true,
+        "completed_games": 128,
+        "completed_pairs": 64,
+        "draws": 0,
+        "games_per_second": 1.48,
+        "agents": [
+          {
+            "wins": 91,
+            "fallbacks": 14,
+            "model_choices": 0,
+            "different_choices": 34,
+            "policy": "lineup-rollout",
+            "win_rate": 0.7109375,
+            "win_rate_ci95": [
+              0.6484375,
+              0.7734375
+            ],
+            "score_rate": 0.7109375,
+            "decision_p95_ms": 577.87,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.07,
+                "p99_ms": 0.12,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 887.7,
+                "p99_ms": 953.25,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1135,
+                "p95_ms": 1.08,
+                "p99_ms": 1.79,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 37,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "ppo-history",
+            "win_rate": 0.2890625,
+            "win_rate_ci95": [
+              0.2265625,
+              0.3515625
+            ],
+            "score_rate": 0.2890625,
+            "decision_p95_ms": 2.02,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.06,
+                "p99_ms": 0.13,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 2.79,
+                "p99_ms": 5.8,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1153,
+                "p95_ms": 1.16,
+                "p99_ms": 1.72,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "290001": [
+            1,
+            0
+          ],
+          "290002": [
+            1,
+            1
+          ],
+          "290003": [
+            1,
+            0
+          ],
+          "290004": [
+            1,
+            1
+          ],
+          "290005": [
+            0,
+            1
+          ],
+          "290006": [
+            1,
+            1
+          ],
+          "290007": [
+            1,
+            1
+          ],
+          "290008": [
+            0,
+            1
+          ],
+          "290009": [
+            1,
+            0
+          ],
+          "290010": [
+            1,
+            1
+          ],
+          "290011": [
+            1,
+            1
+          ],
+          "290012": [
+            0,
+            1
+          ],
+          "290013": [
+            1,
+            1
+          ],
+          "290014": [
+            1,
+            1
+          ],
+          "290015": [
+            1,
+            0
+          ],
+          "290016": [
+            1,
+            0
+          ],
+          "290017": [
+            1,
+            0
+          ],
+          "290018": [
+            1,
+            0
+          ],
+          "290019": [
+            0,
+            1
+          ],
+          "290020": [
+            1,
+            1
+          ],
+          "290021": [
+            1,
+            1
+          ],
+          "290022": [
+            1,
+            1
+          ],
+          "290023": [
+            0,
+            1
+          ],
+          "290024": [
+            0,
+            1
+          ],
+          "290025": [
+            1,
+            1
+          ],
+          "290026": [
+            1,
+            1
+          ],
+          "290027": [
+            0,
+            0
+          ],
+          "290028": [
+            0,
+            1
+          ],
+          "290029": [
+            1,
+            0
+          ],
+          "290030": [
+            0,
+            1
+          ],
+          "290031": [
+            1,
+            1
+          ],
+          "290032": [
+            1,
+            1
+          ],
+          "290033": [
+            1,
+            1
+          ],
+          "290034": [
+            0,
+            1
+          ],
+          "290035": [
+            0,
+            1
+          ],
+          "290036": [
+            0,
+            1
+          ],
+          "290037": [
+            1,
+            0
+          ],
+          "290038": [
+            0,
+            1
+          ],
+          "290039": [
+            1,
+            1
+          ],
+          "290040": [
+            1,
+            1
+          ],
+          "290041": [
+            1,
+            1
+          ],
+          "290042": [
+            0,
+            1
+          ],
+          "290043": [
+            1,
+            0
+          ],
+          "290044": [
+            1,
+            1
+          ],
+          "290045": [
+            1,
+            0
+          ],
+          "290046": [
+            1,
+            0
+          ],
+          "290047": [
+            1,
+            0
+          ],
+          "290048": [
+            1,
+            1
+          ],
+          "290049": [
+            1,
+            1
+          ],
+          "290050": [
+            0,
+            1
+          ],
+          "290051": [
+            1,
+            1
+          ],
+          "290052": [
+            1,
+            1
+          ],
+          "290053": [
+            1,
+            1
+          ],
+          "290054": [
+            1,
+            1
+          ],
+          "290055": [
+            1,
+            1
+          ],
+          "290056": [
+            1,
+            1
+          ],
+          "290057": [
+            0,
+            1
+          ],
+          "290058": [
+            1,
+            0
+          ],
+          "290059": [
+            0,
+            1
+          ],
+          "290060": [
+            0,
+            1
+          ],
+          "290061": [
+            0,
+            1
+          ],
+          "290062": [
+            1,
+            0
+          ],
+          "290063": [
+            1,
+            0
+          ],
+          "290064": [
+            0,
+            1
+          ]
+        }
+      },
+      "neural": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 290001,
+        "pairs": 64,
+        "frozen_suite": "roster-pipeline-v1-blind",
+        "battle_only": false,
+        "preview_only": false,
+        "pipeline": true,
+        "completed_games": 128,
+        "completed_pairs": 64,
+        "draws": 0,
+        "games_per_second": 1.45,
+        "agents": [
+          {
+            "wins": 116,
+            "fallbacks": 2,
+            "model_choices": 0,
+            "different_choices": 708,
+            "policy": "roster-net",
+            "win_rate": 0.90625,
+            "win_rate_ci95": [
+              0.8359375,
+              0.96875
+            ],
+            "score_rate": 0.90625,
+            "decision_p95_ms": 543.42,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "roster_activity": {
+              "draft_changed": 696
+            },
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 10.43,
+                "p99_ms": 11.39,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 797.6,
+                "p99_ms": 946.65,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 987,
+                "p95_ms": 1.01,
+                "p99_ms": 1.35,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 12,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "ppo-history",
+            "win_rate": 0.09375,
+            "win_rate_ci95": [
+              0.0390625,
+              0.1640625
+            ],
+            "score_rate": 0.09375,
+            "decision_p95_ms": 2.06,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.06,
+                "p99_ms": 0.07,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 2.72,
+                "p99_ms": 56.5,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1077,
+                "p95_ms": 1.06,
+                "p99_ms": 1.6,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "290001": [
+            1,
+            1
+          ],
+          "290002": [
+            1,
+            1
+          ],
+          "290003": [
+            1,
+            1
+          ],
+          "290004": [
+            1,
+            0
+          ],
+          "290005": [
+            1,
+            1
+          ],
+          "290006": [
+            1,
+            1
+          ],
+          "290007": [
+            1,
+            1
+          ],
+          "290008": [
+            0,
+            1
+          ],
+          "290009": [
+            1,
+            1
+          ],
+          "290010": [
+            1,
+            1
+          ],
+          "290011": [
+            1,
+            1
+          ],
+          "290012": [
+            1,
+            1
+          ],
+          "290013": [
+            1,
+            1
+          ],
+          "290014": [
+            1,
+            1
+          ],
+          "290015": [
+            1,
+            1
+          ],
+          "290016": [
+            1,
+            1
+          ],
+          "290017": [
+            1,
+            1
+          ],
+          "290018": [
+            1,
+            1
+          ],
+          "290019": [
+            1,
+            1
+          ],
+          "290020": [
+            1,
+            1
+          ],
+          "290021": [
+            1,
+            1
+          ],
+          "290022": [
+            1,
+            1
+          ],
+          "290023": [
+            1,
+            1
+          ],
+          "290024": [
+            1,
+            1
+          ],
+          "290025": [
+            1,
+            1
+          ],
+          "290026": [
+            1,
+            1
+          ],
+          "290027": [
+            1,
+            1
+          ],
+          "290028": [
+            1,
+            1
+          ],
+          "290029": [
+            1,
+            1
+          ],
+          "290030": [
+            1,
+            1
+          ],
+          "290031": [
+            1,
+            1
+          ],
+          "290032": [
+            1,
+            1
+          ],
+          "290033": [
+            1,
+            1
+          ],
+          "290034": [
+            1,
+            1
+          ],
+          "290035": [
+            1,
+            1
+          ],
+          "290036": [
+            1,
+            1
+          ],
+          "290037": [
+            1,
+            1
+          ],
+          "290038": [
+            1,
+            1
+          ],
+          "290039": [
+            1,
+            1
+          ],
+          "290040": [
+            1,
+            0
+          ],
+          "290041": [
+            1,
+            1
+          ],
+          "290042": [
+            1,
+            1
+          ],
+          "290043": [
+            1,
+            1
+          ],
+          "290044": [
+            0,
+            0
+          ],
+          "290045": [
+            1,
+            1
+          ],
+          "290046": [
+            0,
+            0
+          ],
+          "290047": [
+            1,
+            1
+          ],
+          "290048": [
+            1,
+            1
+          ],
+          "290049": [
+            1,
+            1
+          ],
+          "290050": [
+            0,
+            0
+          ],
+          "290051": [
+            1,
+            1
+          ],
+          "290052": [
+            1,
+            1
+          ],
+          "290053": [
+            0,
+            0
+          ],
+          "290054": [
+            1,
+            1
+          ],
+          "290055": [
+            1,
+            1
+          ],
+          "290056": [
+            1,
+            1
+          ],
+          "290057": [
+            1,
+            1
+          ],
+          "290058": [
+            1,
+            1
+          ],
+          "290059": [
+            1,
+            1
+          ],
+          "290060": [
+            1,
+            1
+          ],
+          "290061": [
+            1,
+            0
+          ],
+          "290062": [
+            1,
+            1
+          ],
+          "290063": [
+            1,
+            1
+          ],
+          "290064": [
+            1,
+            1
+          ]
+        }
+      },
+      "prior": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 290001,
+        "pairs": 64,
+        "frozen_suite": "roster-pipeline-v1-blind",
+        "battle_only": false,
+        "preview_only": false,
+        "pipeline": true,
+        "completed_games": 128,
+        "completed_pairs": 64,
+        "draws": 0,
+        "games_per_second": 1.53,
+        "agents": [
+          {
+            "wins": 113,
+            "fallbacks": 3,
+            "model_choices": 0,
+            "different_choices": 710,
+            "policy": "roster-net",
+            "win_rate": 0.8828125,
+            "win_rate_ci95": [
+              0.8046875,
+              0.9453125
+            ],
+            "score_rate": 0.8828125,
+            "decision_p95_ms": 551.31,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "roster_activity": {
+              "draft_changed": 695
+            },
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.09,
+                "p99_ms": 0.14,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 805.31,
+                "p99_ms": 1060.98,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1000,
+                "p95_ms": 1.04,
+                "p99_ms": 1.52,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 15,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "ppo-history",
+            "win_rate": 0.1171875,
+            "win_rate_ci95": [
+              0.0546875,
+              0.1953125
+            ],
+            "score_rate": 0.1171875,
+            "decision_p95_ms": 2.04,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 768,
+                "p95_ms": 0.06,
+                "p99_ms": 0.09,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 128,
+                "p95_ms": 2.53,
+                "p99_ms": 40.32,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 1086,
+                "p95_ms": 1.06,
+                "p99_ms": 1.77,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "290001": [
+            1,
+            1
+          ],
+          "290002": [
+            1,
+            1
+          ],
+          "290003": [
+            1,
+            1
+          ],
+          "290004": [
+            1,
+            0
+          ],
+          "290005": [
+            1,
+            1
+          ],
+          "290006": [
+            1,
+            1
+          ],
+          "290007": [
+            1,
+            1
+          ],
+          "290008": [
+            0,
+            0
+          ],
+          "290009": [
+            1,
+            1
+          ],
+          "290010": [
+            1,
+            1
+          ],
+          "290011": [
+            1,
+            1
+          ],
+          "290012": [
+            1,
+            1
+          ],
+          "290013": [
+            1,
+            1
+          ],
+          "290014": [
+            1,
+            1
+          ],
+          "290015": [
+            1,
+            1
+          ],
+          "290016": [
+            1,
+            1
+          ],
+          "290017": [
+            1,
+            1
+          ],
+          "290018": [
+            1,
+            0
+          ],
+          "290019": [
+            1,
+            1
+          ],
+          "290020": [
+            1,
+            1
+          ],
+          "290021": [
+            1,
+            1
+          ],
+          "290022": [
+            1,
+            1
+          ],
+          "290023": [
+            1,
+            1
+          ],
+          "290024": [
+            1,
+            1
+          ],
+          "290025": [
+            1,
+            1
+          ],
+          "290026": [
+            1,
+            1
+          ],
+          "290027": [
+            1,
+            1
+          ],
+          "290028": [
+            1,
+            1
+          ],
+          "290029": [
+            1,
+            1
+          ],
+          "290030": [
+            1,
+            1
+          ],
+          "290031": [
+            0,
+            1
+          ],
+          "290032": [
+            1,
+            1
+          ],
+          "290033": [
+            1,
+            1
+          ],
+          "290034": [
+            1,
+            1
+          ],
+          "290035": [
+            1,
+            1
+          ],
+          "290036": [
+            1,
+            1
+          ],
+          "290037": [
+            1,
+            1
+          ],
+          "290038": [
+            1,
+            1
+          ],
+          "290039": [
+            1,
+            1
+          ],
+          "290040": [
+            1,
+            0
+          ],
+          "290041": [
+            1,
+            1
+          ],
+          "290042": [
+            1,
+            1
+          ],
+          "290043": [
+            1,
+            1
+          ],
+          "290044": [
+            0,
+            0
+          ],
+          "290045": [
+            1,
+            1
+          ],
+          "290046": [
+            0,
+            0
+          ],
+          "290047": [
+            1,
+            1
+          ],
+          "290048": [
+            1,
+            1
+          ],
+          "290049": [
+            1,
+            1
+          ],
+          "290050": [
+            0,
+            0
+          ],
+          "290051": [
+            1,
+            1
+          ],
+          "290052": [
+            1,
+            1
+          ],
+          "290053": [
+            0,
+            0
+          ],
+          "290054": [
+            1,
+            1
+          ],
+          "290055": [
+            1,
+            1
+          ],
+          "290056": [
+            1,
+            1
+          ],
+          "290057": [
+            1,
+            1
+          ],
+          "290058": [
+            1,
+            1
+          ],
+          "290059": [
+            1,
+            1
+          ],
+          "290060": [
+            1,
+            1
+          ],
+          "290061": [
+            1,
+            0
+          ],
+          "290062": [
+            1,
+            1
+          ],
+          "290063": [
+            1,
+            1
+          ],
+          "290064": [
+            1,
+            1
+          ]
+        }
+      }
+    }
+  },
+  "comparisons": {
+    "neural_minus_baseline": {
+      "pooled": {
+        "mean": 0.2765625,
+        "ci95": [
+          0.2234375,
+          0.3296875
+        ]
+      },
+      "by_opponent": {
+        "lineup-rollout": {
+          "mean": 0.390625,
+          "ci95": [
+            0.3203125,
+            0.453125
+          ]
+        },
+        "joint": {
+          "mean": 0.390625,
+          "ci95": [
+            0.296875,
+            0.4765625
+          ]
+        },
+        "pivot": {
+          "mean": 0.2109375,
+          "ci95": [
+            0.125,
+            0.3046875
+          ]
+        },
+        "pivot-base": {
+          "mean": 0.1953125,
+          "ci95": [
+            0.09375,
+            0.3046875
+          ]
+        },
+        "ppo-history": {
+          "mean": 0.1953125,
+          "ci95": [
+            0.1015625,
+            0.28125
+          ]
+        }
+      }
+    },
+    "prior_minus_baseline": {
+      "pooled": {
+        "mean": 0.2703125,
+        "ci95": [
+          0.215625,
+          0.3234375
+        ]
+      },
+      "by_opponent": {
+        "lineup-rollout": {
+          "mean": 0.3828125,
+          "ci95": [
+            0.3125,
+            0.4453125
+          ]
+        },
+        "joint": {
+          "mean": 0.390625,
+          "ci95": [
+            0.296875,
+            0.4765625
+          ]
+        },
+        "pivot": {
+          "mean": 0.2109375,
+          "ci95": [
+            0.1171875,
+            0.3046875
+          ]
+        },
+        "pivot-base": {
+          "mean": 0.1953125,
+          "ci95": [
+            0.09375,
+            0.3046875
+          ]
+        },
+        "ppo-history": {
+          "mean": 0.171875,
+          "ci95": [
+            0.0703125,
+            0.265625
+          ]
+        }
+      }
+    },
+    "neural_minus_prior": {
+      "pooled": {
+        "mean": 0.00625,
+        "ci95": [
+          -0.00625,
+          0.0203125
+        ]
+      },
+      "by_opponent": {
+        "lineup-rollout": {
+          "mean": 0.0078125,
+          "ci95": [
+            -0.015625,
+            0.0390625
+          ]
+        },
+        "joint": {
+          "mean": 0.0,
+          "ci95": [
+            -0.0234375,
+            0.0234375
+          ]
+        },
+        "pivot": {
+          "mean": 0.0,
+          "ci95": [
+            -0.0234375,
+            0.0234375
+          ]
+        },
+        "pivot-base": {
+          "mean": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ]
+        },
+        "ppo-history": {
+          "mean": 0.0234375,
+          "ci95": [
+            0.0,
+            0.0546875
+          ]
+        }
+      }
+    }
+  },
+  "seconds": 242.70886010024697
+}

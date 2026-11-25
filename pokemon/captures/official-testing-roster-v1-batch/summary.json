@@ -1,0 +1,313 @@
+{
+  "matches": [
+    {
+      "match_id": "c847a718-7e96-4a42-9050-6e834ab642a4",
+      "capture_key": "ecf91d1ce542051c2254aa18",
+      "context": "testing",
+      "game_type": "pokemon_vgc_doubles_draft",
+      "weights_sha256": "a458a24568361e1515be1ee13e7b8bb094b0e8147a0799e1eecec4ccedc33d5c",
+      "seats": [
+        0,
+        1
+      ],
+      "seat_logs": {
+        "1": {
+          "moves": 12,
+          "draft_picks": [
+            2,
+            3,
+            6,
+            7,
+            10,
+            11
+          ],
+          "decisions": "decisions\\ecf91d1ce542051c2254aa18\\23384122ecf64ef6a6c611316a046083.jsonl",
+          "receipts": "decisions\\ecf91d1ce542051c2254aa18\\23384122ecf64ef6a6c611316a046083.receipts.jsonl"
+        },
+        "2": {
+          "moves": 12,
+          "draft_picks": [
+            1,
+            4,
+            5,
+            8,
+            9,
+            12
+          ],
+          "decisions": "decisions\\ecf91d1ce542051c2254aa18\\616cad2ddde748f39509adf6ff303a57.jsonl",
+          "receipts": "decisions\\ecf91d1ce542051c2254aa18\\616cad2ddde748f39509adf6ff303a57.receipts.jsonl"
+        }
+      },
+      "winner_player": 2,
+      "battle_turns": 10,
+      "official_replay": "replays\\c847a718-7e96-4a42-9050-6e834ab642a4.json",
+      "official_replay_sha256": "4e38759ce756601b03075225e3857719faca471064fb7ac91416ca3a4f76ea7d",
+      "replay_header_winner_index": 1,
+      "header_matches_terminal": true,
+      "server_auto_draft_picks": 0,
+      "showdown_protocol_lines": 227
+    },
+    {
+      "match_id": "9ea6a313-acaa-4f5c-a82b-97dc9317946c",
+      "capture_key": "ebc0f4ef7f68a2e29e66ec67",
+      "context": "testing",
+      "game_type": "pokemon_vgc_doubles_draft",
+      "weights_sha256": "a458a24568361e1515be1ee13e7b8bb094b0e8147a0799e1eecec4ccedc33d5c",
+      "seats": [
+        0,
+        1
+      ],
+      "seat_logs": {
+        "2": {
+          "moves": 6,
+          "draft_picks": [
+            2,
+            3,
+            6,
+            7,
+            10,
+            11
+          ],
+          "decisions": "decisions\\ebc0f4ef7f68a2e29e66ec67\\1e6211d88dd148278ec65566deb8d68c.jsonl",
+          "receipts": "decisions\\ebc0f4ef7f68a2e29e66ec67\\1e6211d88dd148278ec65566deb8d68c.receipts.jsonl"
+        },
+        "1": {
+          "moves": 7,
+          "draft_picks": [
+            1,
+            4,
+            5,
+            8,
+            9,
+            12
+          ],
+          "decisions": "decisions\\ebc0f4ef7f68a2e29e66ec67\\a802a734f1544dec8911ea7b8df12d22.jsonl",
+          "receipts": "decisions\\ebc0f4ef7f68a2e29e66ec67\\a802a734f1544dec8911ea7b8df12d22.receipts.jsonl"
+        }
+      },
+      "winner_player": 2,
+      "battle_turns": 5,
+      "official_replay": "replays\\9ea6a313-acaa-4f5c-a82b-97dc9317946c.json",
+      "official_replay_sha256": "709f10f77b06bf6d80e5f878db0f0b90771c56226e1d940d9474b0d8498287c1",
+      "replay_header_winner_index": 1,
+      "header_matches_terminal": true,
+      "server_auto_draft_picks": 0,
+      "showdown_protocol_lines": 130
+    },
+    {
+      "match_id": "3f349600-3f61-414f-8048-e7c87800e71a",
+      "capture_key": "4562a3465a8d18fdeb3b998c",
+      "context": "testing",
+      "game_type": "pokemon_vgc_doubles_draft",
+      "weights_sha256": "a458a24568361e1515be1ee13e7b8bb094b0e8147a0799e1eecec4ccedc33d5c",
+      "seats": [
+        0,
+        1
+      ],
+      "seat_logs": {
+        "1": {
+          "moves": 8,
+          "draft_picks": [
+            2,
+            3,
+            6,
+            7,
+            10,
+            11
+          ],
+          "decisions": "decisions\\4562a3465a8d18fdeb3b998c\\89a9c7810792487cb339aa2db2c8964f.jsonl",
+          "receipts": "decisions\\4562a3465a8d18fdeb3b998c\\89a9c7810792487cb339aa2db2c8964f.receipts.jsonl"
+        },
+        "2": {
+          "moves": 9,
+          "draft_picks": [
+            1,
+            4,
+            5,
+            8,
+            9,
+            12
+          ],
+          "decisions": "decisions\\4562a3465a8d18fdeb3b998c\\d79d2aa3f88d42e1adaa60520440267d.jsonl",
+          "receipts": "decisions\\4562a3465a8d18fdeb3b998c\\d79d2aa3f88d42e1adaa60520440267d.receipts.jsonl"
+        }
+      },
+      "winner_player": 2,
+      "battle_turns": 7,
+      "official_replay": "replays\\3f349600-3f61-414f-8048-e7c87800e71a.json",
+      "official_replay_sha256": "96022cf4a493f63dd4bb939fa6abe247766fc54fe14af0a384523ca9c9e3e0e0",
+      "replay_header_winner_index": 1,
+      "header_matches_terminal": true,
+      "server_auto_draft_picks": 0,
+      "showdown_protocol_lines": 189
+    },
+    {
+      "match_id": "563cf953-467d-4626-9c45-a2a0a01bd54d",
+      "capture_key": "8d1e72951a074abb0b385246",
+      "context": "testing",
+      "game_type": "pokemon_vgc_doubles_draft",
+      "weights_sha256": "a458a24568361e1515be1ee13e7b8bb094b0e8147a0799e1eecec4ccedc33d5c",
+      "seats": [
+        0,
+        1
+      ],
+      "seat_logs": {
+        "2": {
+          "moves": 4,
+          "draft_picks": [
+            2,
+            3,
+            6,
+            7,
+            10,
+            11
+          ],
+          "decisions": "decisions\\8d1e72951a074abb0b385246\\d369d114f02a4ec3894c8ed436dc6a27.jsonl",
+          "receipts": "decisions\\8d1e72951a074abb0b385246\\d369d114f02a4ec3894c8ed436dc6a27.receipts.jsonl"
+        },
+        "1": {
+          "moves": 3,
+          "draft_picks": [
+            1,
+            4,
+            5,
+            8,
+            9,
+            12
+          ],
+          "decisions": "decisions\\8d1e72951a074abb0b385246\\dc36cfd36b554b2f9c51387a832207fb.jsonl",
+          "receipts": "decisions\\8d1e72951a074abb0b385246\\dc36cfd36b554b2f9c51387a832207fb.receipts.jsonl"
+        }
+      },
+      "winner_player": 1,
+      "battle_turns": 3,
+      "official_replay": "replays\\563cf953-467d-4626-9c45-a2a0a01bd54d.json",
+      "official_replay_sha256": "ed57fb7451a8ba47b53d2b69e9abce0f4ac1927025f66b8cab64226e9273e82e",
+      "replay_header_winner_index": 0,
+      "header_matches_terminal": true,
+      "server_auto_draft_picks": 0,
+      "showdown_protocol_lines": 89
+    }
+  ],
+  "completed": 4,
+  "winning_players": {
+    "1": 1,
+    "2": 3
+  },
+  "official_outcomes_by_seat_id": {
+    "f5cc44ec-1a30-45c3-9809-a1505c7021f8": {
+      "player": 2,
+      "outcome": "lost",
+      "termination_reason": "completed",
+      "score": 0.0
+    },
+    "fdd78d36-5387-4152-84c4-fca9231c32f2": {
+      "player": 1,
+      "outcome": "won",
+      "termination_reason": "completed",
+      "score": 1.0
+    },
+    "4af26056-b374-49c0-bb6a-7b6c1d3fdcf0": {
+      "player": 1,
+      "outcome": "lost",
+      "termination_reason": "completed",
+      "score": 0.0
+    },
+    "1aef68b9-e607-4dee-ad3f-874f732c4d00": {
+      "player": 1,
+      "outcome": "lost",
+      "termination_reason": "completed",
+      "score": 0.0
+    },
+    "a0821ff9-6c35-47f0-914d-391ffd12f936": {
+      "player": 2,
+      "outcome": "won",
+      "termination_reason": "completed",
+      "score": 1.0
+    },
+    "a33b95ad-5e46-4e7c-8253-20ed70817fad": {
+      "player": 2,
+      "outcome": "won",
+      "termination_reason": "completed",
+      "score": 1.0
+    },
+    "d59a47fc-7a6e-4b43-a4fb-c34540007eb1": {
+      "player": 2,
+      "outcome": "won",
+      "termination_reason": "completed",
+      "score": 1.0
+    },
+    "89086e94-8c99-4e3a-9dd0-f0eaca383f9f": {
+      "player": 1,
+      "outcome": "lost",
+      "termination_reason": "completed",
+      "score": 0.0
+    }
+  },
+  "phases": {
+    "draft": {
+      "submitted": 48,
+      "accepted": 48,
+      "max_decision_ms": 15.0,
+      "max_receipt_ms": 78.0,
+      "sources": {
+        "learned_card_prior": 48
+      },
+      "observed_remaining_seconds": [
+        54.053452,
+        54.299116
+      ],
+      "observed_bank_seconds": null
+    },
+    "team_preview": {
+      "submitted": 8,
+      "accepted": 8,
+      "max_decision_ms": 1625.0,
+      "max_receipt_ms": 1672.0,
+      "sources": {
+        "lineup_rollout": 7,
+        "lineup_rollout_fallback": 1
+      },
+      "observed_remaining_seconds": [
+        85.0,
+        85.0
+      ],
+      "observed_bank_seconds": [
+        420,
+        420
+      ]
+    },
+    "moving": {
+      "submitted": 61,
+      "accepted": 61,
+      "max_decision_ms": 16.0,
+      "max_receipt_ms": 125.0,
+      "sources": {
+        "joint": 61
+      },
+      "observed_remaining_seconds": [
+        50.0,
+        50.0
+      ],
+      "observed_bank_seconds": [
+        420,
+        420
+      ]
+    }
+  },
+  "illegal": 0,
+  "timeouts": 0,
+  "rejected": 0,
+  "replay": "passed",
+  "parity": "passed",
+  "llm_calls": 0,
+  "combined_completed_including_initial": 5,
+  "combined_winning_players": {
+    "1": 1,
+    "2": 4
+  },
+  "preview_fallback": {
+    "match_id": "563cf953-467d-4626-9c45-a2a0a01bd54d",
+    "reason": "Public opponent preview used urshifu without a form suffix"
+  }
+}

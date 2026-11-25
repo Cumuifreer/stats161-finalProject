@@ -48,8 +48,16 @@ let battle;
 let logPosition;
 let pivotSeat;
 let pivotPreview;
+let searchSeats;
+let searchEvents;
 const revealed = new Map();
 const previewRosters = new Map();
+const publicEvents = new Set([
+    "turn", "switch", "drag", "replace", "swap", "move", "cant", "faint", "-damage", "-heal", "-sethp",
+    "-status", "-curestatus", "-cureteam", "-item", "-enditem", "-start", "-end", "-singleturn", "-singlemove",
+    "detailschange", "-formechange", "-transform", "-terastallize", "-ability", "-endability",
+    "upkeep", "-weather", "-fieldstart", "-fieldend", "-sidestart", "-sideend",
+]);
 
 function pokemonKey(name) {
     return name.replace(/^(p[12])[ab]: /, "$1: ");
@@ -60,6 +68,7 @@ function trackReveals() {
     logPosition = battle.log.length;
     for (const line of messages) {
         const [, event, actor, detail, ...tags] = line.split("|");
+        if (searchSeats.length && publicEvents.has(event)) searchEvents.push(line);
         if (event === "poke") {
             if (!previewRosters.has(actor)) previewRosters.set(actor, []);
             const species = detail.split(",")[0].replace(/-\*$/, "");
@@ -116,6 +125,7 @@ function publicPokemon(mon, own, previewSpecies) {
 }
 
 function movingOptions(side, request) {
+    const battle = side.battle;
     const reserves = side.pokemon.slice(side.active.length).filter(mon => !mon.fainted);
     const switches = reserves.map(mon => ({type: "switch", species: mon.species.id}));
     const force = request.forceSwitch;
@@ -148,6 +158,7 @@ function movingOptions(side, request) {
 }
 
 function view(side) {
+    const battle = side.battle;
     const request = side.activeRequest;
     if (!request || request.wait || side.isChoiceDone()) return null;
     const opponent = side.foe;
@@ -213,16 +224,34 @@ function handle(message) {
         }
         pivotSeat = message.pivot_seat;
         pivotPreview = pivotSeat ? battle.getSide(pivotSeat).activeRequest : null;
+        searchSeats = message.search_seats || [];
+        searchEvents = [];
     } else if (message.command === "choose") {
         const side = battle.getSide(message.seat);
         if (!battle.choose(side.id, choiceText(side, message.action))) {
             throw new Error(side.choice.error || "Showdown rejected the choice");
         }
+    } else if (message.command === "audit_restore" && process.argv[2] === "--audit-restoration") {
+        // Keep the complete fixture snapshot inside the simulator process.
+        const restored = Battle.fromJSON(JSON.stringify(battle.toJSON()));
+        restored.restart(() => {});
+        battle.destroy();
+        battle = restored;
     } else {
         throw new Error("Unknown Showdown bridge command");
     }
     trackReveals();
     const views = battle.ended ? [] : battle.sides.map(view).filter(Boolean);
+    for (const item of views) {
+        if (item.phase === "moving" && searchSeats.includes(item.seat)) {
+            const {active, forceSwitch} = battle.getSide(item.seat).activeRequest;
+            item.search = {
+                events: searchEvents,
+                force_switch: Boolean(forceSwitch?.some(Boolean)),
+                own_pp: (active || []).map(slot => Object.fromEntries((slot?.moves || []).map(move => [move.id, move.pp]))),
+            };
+        }
+    }
     const pivotView = views.find(item => item.seat === pivotSeat && item.phase === "moving");
     if (pivotView) {
         pivotView.pivot = {
@@ -240,9 +269,10 @@ function handle(message) {
     };
 }
 
+const processCommand = process.argv[2] === "--public-search" ? require("./search.cjs")({view, choiceText}) : handle;
 readline.createInterface({input: process.stdin}).on("line", line => {
     try {
-        process.stdout.write(JSON.stringify(handle(JSON.parse(line))) + "\n");
+        process.stdout.write(JSON.stringify(processCommand(JSON.parse(line))) + "\n");
     } catch (error) {
         process.stdout.write(JSON.stringify({error: error.message}) + "\n");
     }

@@ -1,0 +1,10 @@
+{
+  "name": "lineup-rollout-v1-blind",
+  "phase": "lineup",
+  "seed": 220001,
+  "pairs": 64,
+  "catalog_sha256": "16c4d38ae85cc5c02fdd8eab01391c53994bc11978528183c1e43dc27e37da9c",
+  "pool_order_sha256": "5ecaa343e34e46129fdbf4d59a3116aad67246cc2474aed8993a833ab8b10d00",
+  "ace_trainer_revision": "b74574abb0c5cb26f3107a4d0a389c0dc25c2a52",
+  "opponents": ["joint", "tactical", "tactical-calibrated"]
+}

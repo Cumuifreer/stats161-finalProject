@@ -1,0 +1,16 @@
+{
+  "name": "battle-frozen-1",
+  "seed": 96001,
+  "pairs": 64,
+  "catalog_sha256": "16c4d38ae85cc5c02fdd8eab01391c53994bc11978528183c1e43dc27e37da9c",
+  "pool_order_sha256": "6aff6b028403d6454d5a9c13c5dbf102ced95061f1ad1bce478547da7f65599a",
+  "unseen_opponent": "tactical-calibrated",
+  "ace_trainer_revision": "b74574abb0c5cb26f3107a4d0a389c0dc25c2a52",
+  "opponents": [
+    "joint",
+    "tactical",
+    "pivot",
+    "pivot-base",
+    "tactical-calibrated"
+  ]
+}

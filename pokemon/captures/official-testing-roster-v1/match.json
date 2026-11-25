@@ -1,0 +1,10 @@
+{
+  "match_id": "ebc16a35-5eea-4dc6-895e-1d6039332014",
+  "context": "testing",
+  "game_type": "pokemon_vgc_doubles_draft",
+  "weights_sha256": "a458a24568361e1515be1ee13e7b8bb094b0e8147a0799e1eecec4ccedc33d5c",
+  "seats": [
+    0,
+    1
+  ]
+}

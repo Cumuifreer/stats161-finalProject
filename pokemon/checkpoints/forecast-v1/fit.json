@@ -1,0 +1,6674 @@
+{
+  "selected": "position",
+  "scores": {
+    "joint": 0.5078125,
+    "expanded": 0.51953125,
+    "position": 0.5703125,
+    "responses": 0.515625,
+    "expanded_position": 0.546875,
+    "expanded_responses": 0.5234375,
+    "all": 0.55078125
+  },
+  "tested_models": {
+    "expanded": {
+      "candidates": 12,
+      "position": 0.0,
+      "replies": false,
+      "risk": 0.15
+    },
+    "position": {
+      "candidates": 6,
+      "position": 0.55,
+      "replies": false,
+      "risk": 0.15
+    },
+    "responses": {
+      "candidates": 6,
+      "position": 0.0,
+      "replies": true,
+      "risk": 0.15
+    },
+    "expanded_position": {
+      "candidates": 12,
+      "position": 0.55,
+      "replies": false,
+      "risk": 0.15
+    },
+    "expanded_responses": {
+      "candidates": 12,
+      "position": 0,
+      "replies": true,
+      "risk": 0.15
+    },
+    "all": {
+      "candidates": 12,
+      "position": 0.32,
+      "replies": true,
+      "risk": 0.15
+    }
+  },
+  "benchmark": {
+    "joint": {
+      "joint": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 21.9,
+        "agents": [
+          {
+            "wins": 32,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "joint",
+            "win_rate": 0.5,
+            "win_rate_ci95": [
+              0.5,
+              0.5
+            ],
+            "score_rate": 0.5,
+            "decision_p95_ms": 0.97,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.09,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.09,
+                "p99_ms": 1.65,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 589,
+                "p95_ms": 0.92,
+                "p99_ms": 1.07,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 32,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "joint",
+            "win_rate": 0.5,
+            "win_rate_ci95": [
+              0.5,
+              0.5
+            ],
+            "score_rate": 0.5,
+            "decision_p95_ms": 0.97,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.08,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.14,
+                "p99_ms": 1.56,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 589,
+                "p95_ms": 0.95,
+                "p99_ms": 1.15,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            0
+          ],
+          "180003": [
+            1,
+            0
+          ],
+          "180004": [
+            1,
+            0
+          ],
+          "180005": [
+            0,
+            1
+          ],
+          "180006": [
+            1,
+            0
+          ],
+          "180007": [
+            0,
+            1
+          ],
+          "180008": [
+            0,
+            1
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            1
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            1,
+            0
+          ],
+          "180013": [
+            0,
+            1
+          ],
+          "180014": [
+            0,
+            1
+          ],
+          "180015": [
+            0,
+            1
+          ],
+          "180016": [
+            0,
+            1
+          ],
+          "180017": [
+            0,
+            1
+          ],
+          "180018": [
+            1,
+            0
+          ],
+          "180019": [
+            1,
+            0
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            1,
+            0
+          ],
+          "180023": [
+            1,
+            0
+          ],
+          "180024": [
+            0,
+            1
+          ],
+          "180025": [
+            1,
+            0
+          ],
+          "180026": [
+            1,
+            0
+          ],
+          "180027": [
+            1,
+            0
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            1,
+            0
+          ],
+          "180030": [
+            0,
+            1
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            1,
+            0
+          ]
+        }
+      },
+      "pivot": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 9.78,
+        "agents": [
+          {
+            "wins": 27,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "joint",
+            "win_rate": 0.421875,
+            "win_rate_ci95": [
+              0.328125,
+              0.5
+            ],
+            "score_rate": 0.421875,
+            "decision_p95_ms": 0.99,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.09,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.12,
+                "p99_ms": 1.54,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 607,
+                "p95_ms": 0.99,
+                "p99_ms": 1.15,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 37,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "pivot",
+            "win_rate": 0.578125,
+            "win_rate_ci95": [
+              0.5,
+              0.671875
+            ],
+            "score_rate": 0.578125,
+            "decision_p95_ms": 6.3,
+            "battle_time_p95_seconds": 0.06,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.08,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.08,
+                "p99_ms": 1.51,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 606,
+                "p95_ms": 6.84,
+                "p99_ms": 8.45,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            0
+          ],
+          "180003": [
+            1,
+            0
+          ],
+          "180004": [
+            0,
+            0
+          ],
+          "180005": [
+            0,
+            1
+          ],
+          "180006": [
+            0,
+            1
+          ],
+          "180007": [
+            1,
+            0
+          ],
+          "180008": [
+            0,
+            0
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            0
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            0,
+            0
+          ],
+          "180013": [
+            0,
+            1
+          ],
+          "180014": [
+            1,
+            1
+          ],
+          "180015": [
+            0,
+            1
+          ],
+          "180016": [
+            1,
+            0
+          ],
+          "180017": [
+            0,
+            1
+          ],
+          "180018": [
+            0,
+            0
+          ],
+          "180019": [
+            1,
+            0
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            0,
+            0
+          ],
+          "180023": [
+            0,
+            1
+          ],
+          "180024": [
+            0,
+            0
+          ],
+          "180025": [
+            1,
+            1
+          ],
+          "180026": [
+            1,
+            0
+          ],
+          "180027": [
+            1,
+            0
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            0,
+            1
+          ],
+          "180030": [
+            0,
+            1
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            1,
+            0
+          ]
+        }
+      },
+      "pivot-base": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 10.75,
+        "agents": [
+          {
+            "wins": 32,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "joint",
+            "win_rate": 0.5,
+            "win_rate_ci95": [
+              0.390625,
+              0.609375
+            ],
+            "score_rate": 0.5,
+            "decision_p95_ms": 0.98,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.09,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.04,
+                "p99_ms": 1.54,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 559,
+                "p95_ms": 0.98,
+                "p99_ms": 1.13,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 32,
+            "fallbacks": 1,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "pivot-base",
+            "win_rate": 0.5,
+            "win_rate_ci95": [
+              0.390625,
+              0.609375
+            ],
+            "score_rate": 0.5,
+            "decision_p95_ms": 5.48,
+            "battle_time_p95_seconds": 0.05,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.08,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.02,
+                "p99_ms": 1.4,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 557,
+                "p95_ms": 6.06,
+                "p99_ms": 8.34,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            0
+          ],
+          "180003": [
+            0,
+            0
+          ],
+          "180004": [
+            1,
+            0
+          ],
+          "180005": [
+            0,
+            1
+          ],
+          "180006": [
+            1,
+            1
+          ],
+          "180007": [
+            0,
+            1
+          ],
+          "180008": [
+            1,
+            0
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            0
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            0,
+            1
+          ],
+          "180013": [
+            0,
+            1
+          ],
+          "180014": [
+            0,
+            1
+          ],
+          "180015": [
+            1,
+            1
+          ],
+          "180016": [
+            0,
+            0
+          ],
+          "180017": [
+            1,
+            1
+          ],
+          "180018": [
+            1,
+            0
+          ],
+          "180019": [
+            0,
+            0
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            1,
+            1
+          ],
+          "180023": [
+            0,
+            1
+          ],
+          "180024": [
+            0,
+            1
+          ],
+          "180025": [
+            1,
+            1
+          ],
+          "180026": [
+            1,
+            0
+          ],
+          "180027": [
+            1,
+            1
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            0,
+            1
+          ],
+          "180030": [
+            0,
+            0
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            0,
+            0
+          ]
+        }
+      },
+      "tactical": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 25.96,
+        "agents": [
+          {
+            "wins": 39,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "joint",
+            "win_rate": 0.609375,
+            "win_rate_ci95": [
+              0.515625,
+              0.703125
+            ],
+            "score_rate": 0.609375,
+            "decision_p95_ms": 0.98,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.09,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.24,
+                "p99_ms": 1.56,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 496,
+                "p95_ms": 0.97,
+                "p99_ms": 1.18,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 25,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "tactical",
+            "win_rate": 0.390625,
+            "win_rate_ci95": [
+              0.296875,
+              0.484375
+            ],
+            "score_rate": 0.390625,
+            "decision_p95_ms": 0.94,
+            "battle_time_p95_seconds": 0.0,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.09,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.06,
+                "p99_ms": 1.34,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 497,
+                "p95_ms": 0.34,
+                "p99_ms": 0.46,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            0
+          ],
+          "180003": [
+            1,
+            1
+          ],
+          "180004": [
+            1,
+            0
+          ],
+          "180005": [
+            0,
+            1
+          ],
+          "180006": [
+            1,
+            1
+          ],
+          "180007": [
+            0,
+            0
+          ],
+          "180008": [
+            1,
+            1
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            1
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            1,
+            1
+          ],
+          "180013": [
+            1,
+            1
+          ],
+          "180014": [
+            0,
+            1
+          ],
+          "180015": [
+            1,
+            1
+          ],
+          "180016": [
+            1,
+            1
+          ],
+          "180017": [
+            0,
+            1
+          ],
+          "180018": [
+            1,
+            0
+          ],
+          "180019": [
+            1,
+            1
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            0,
+            1
+          ],
+          "180023": [
+            1,
+            1
+          ],
+          "180024": [
+            0,
+            1
+          ],
+          "180025": [
+            0,
+            0
+          ],
+          "180026": [
+            1,
+            1
+          ],
+          "180027": [
+            1,
+            0
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            0,
+            1
+          ],
+          "180030": [
+            0,
+            1
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "expanded": {
+      "joint": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 19.82,
+        "agents": [
+          {
+            "wins": 32,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "forecast",
+            "win_rate": 0.5,
+            "win_rate_ci95": [
+              0.421875,
+              0.59375
+            ],
+            "score_rate": 0.5,
+            "decision_p95_ms": 1.58,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.08,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.13,
+                "p99_ms": 1.45,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 582,
+                "p95_ms": 1.64,
+                "p99_ms": 2.06,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 32,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "joint",
+            "win_rate": 0.5,
+            "win_rate_ci95": [
+              0.40625,
+              0.578125
+            ],
+            "score_rate": 0.5,
+            "decision_p95_ms": 0.99,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.08,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.1,
+                "p99_ms": 1.53,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 591,
+                "p95_ms": 0.96,
+                "p99_ms": 1.16,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            1
+          ],
+          "180003": [
+            1,
+            0
+          ],
+          "180004": [
+            1,
+            1
+          ],
+          "180005": [
+            0,
+            1
+          ],
+          "180006": [
+            1,
+            0
+          ],
+          "180007": [
+            0,
+            1
+          ],
+          "180008": [
+            0,
+            1
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            0
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            0,
+            0
+          ],
+          "180013": [
+            0,
+            1
+          ],
+          "180014": [
+            0,
+            1
+          ],
+          "180015": [
+            0,
+            0
+          ],
+          "180016": [
+            0,
+            1
+          ],
+          "180017": [
+            0,
+            1
+          ],
+          "180018": [
+            1,
+            0
+          ],
+          "180019": [
+            1,
+            0
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            1,
+            1
+          ],
+          "180023": [
+            0,
+            0
+          ],
+          "180024": [
+            0,
+            1
+          ],
+          "180025": [
+            1,
+            0
+          ],
+          "180026": [
+            1,
+            0
+          ],
+          "180027": [
+            1,
+            0
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            1,
+            1
+          ],
+          "180030": [
+            0,
+            1
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            1,
+            0
+          ]
+        }
+      },
+      "pivot": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 9.4,
+        "agents": [
+          {
+            "wins": 29,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "forecast",
+            "win_rate": 0.453125,
+            "win_rate_ci95": [
+              0.359375,
+              0.546875
+            ],
+            "score_rate": 0.453125,
+            "decision_p95_ms": 1.6,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.08,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.19,
+                "p99_ms": 1.57,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 614,
+                "p95_ms": 1.66,
+                "p99_ms": 2.01,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 35,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "pivot",
+            "win_rate": 0.546875,
+            "win_rate_ci95": [
+              0.453125,
+              0.640625
+            ],
+            "score_rate": 0.546875,
+            "decision_p95_ms": 6.15,
+            "battle_time_p95_seconds": 0.06,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.11,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.15,
+                "p99_ms": 1.27,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 611,
+                "p95_ms": 6.68,
+                "p99_ms": 7.87,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            0
+          ],
+          "180003": [
+            1,
+            0
+          ],
+          "180004": [
+            0,
+            1
+          ],
+          "180005": [
+            0,
+            1
+          ],
+          "180006": [
+            1,
+            1
+          ],
+          "180007": [
+            0,
+            0
+          ],
+          "180008": [
+            0,
+            0
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            0
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            1,
+            0
+          ],
+          "180013": [
+            0,
+            1
+          ],
+          "180014": [
+            1,
+            1
+          ],
+          "180015": [
+            1,
+            1
+          ],
+          "180016": [
+            1,
+            0
+          ],
+          "180017": [
+            0,
+            1
+          ],
+          "180018": [
+            0,
+            0
+          ],
+          "180019": [
+            1,
+            0
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            0,
+            0
+          ],
+          "180023": [
+            0,
+            1
+          ],
+          "180024": [
+            0,
+            0
+          ],
+          "180025": [
+            0,
+            1
+          ],
+          "180026": [
+            1,
+            0
+          ],
+          "180027": [
+            1,
+            0
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            0,
+            1
+          ],
+          "180030": [
+            0,
+            1
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            1,
+            0
+          ]
+        }
+      },
+      "pivot-base": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 10.81,
+        "agents": [
+          {
+            "wins": 31,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "forecast",
+            "win_rate": 0.484375,
+            "win_rate_ci95": [
+              0.40625,
+              0.5625
+            ],
+            "score_rate": 0.484375,
+            "decision_p95_ms": 1.57,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.07,
+                "p99_ms": 0.08,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.11,
+                "p99_ms": 1.28,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 574,
+                "p95_ms": 1.66,
+                "p99_ms": 1.88,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 33,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "pivot-base",
+            "win_rate": 0.515625,
+            "win_rate_ci95": [
+              0.4375,
+              0.59375
+            ],
+            "score_rate": 0.515625,
+            "decision_p95_ms": 5.64,
+            "battle_time_p95_seconds": 0.05,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.08,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.1,
+                "p99_ms": 1.52,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 570,
+                "p95_ms": 6.0,
+                "p99_ms": 8.15,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            0
+          ],
+          "180003": [
+            0,
+            0
+          ],
+          "180004": [
+            1,
+            0
+          ],
+          "180005": [
+            0,
+            1
+          ],
+          "180006": [
+            0,
+            1
+          ],
+          "180007": [
+            0,
+            1
+          ],
+          "180008": [
+            1,
+            0
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            0
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            0,
+            1
+          ],
+          "180013": [
+            0,
+            0
+          ],
+          "180014": [
+            0,
+            1
+          ],
+          "180015": [
+            1,
+            1
+          ],
+          "180016": [
+            1,
+            0
+          ],
+          "180017": [
+            1,
+            1
+          ],
+          "180018": [
+            1,
+            0
+          ],
+          "180019": [
+            1,
+            0
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            1,
+            0
+          ],
+          "180023": [
+            0,
+            1
+          ],
+          "180024": [
+            0,
+            1
+          ],
+          "180025": [
+            1,
+            1
+          ],
+          "180026": [
+            1,
+            0
+          ],
+          "180027": [
+            1,
+            0
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            0,
+            1
+          ],
+          "180030": [
+            0,
+            0
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            1,
+            0
+          ]
+        }
+      },
+      "tactical": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 27.88,
+        "agents": [
+          {
+            "wins": 41,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "forecast",
+            "win_rate": 0.640625,
+            "win_rate_ci95": [
+              0.546875,
+              0.734375
+            ],
+            "score_rate": 0.640625,
+            "decision_p95_ms": 1.52,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.1,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.03,
+                "p99_ms": 1.33,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 511,
+                "p95_ms": 1.62,
+                "p99_ms": 1.76,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 23,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "tactical",
+            "win_rate": 0.359375,
+            "win_rate_ci95": [
+              0.265625,
+              0.453125
+            ],
+            "score_rate": 0.359375,
+            "decision_p95_ms": 0.94,
+            "battle_time_p95_seconds": 0.0,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.07,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.09,
+                "p99_ms": 1.3,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 518,
+                "p95_ms": 0.29,
+                "p99_ms": 0.38,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            0
+          ],
+          "180003": [
+            1,
+            1
+          ],
+          "180004": [
+            1,
+            0
+          ],
+          "180005": [
+            1,
+            1
+          ],
+          "180006": [
+            1,
+            1
+          ],
+          "180007": [
+            1,
+            0
+          ],
+          "180008": [
+            1,
+            1
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            1
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            1,
+            1
+          ],
+          "180013": [
+            1,
+            1
+          ],
+          "180014": [
+            0,
+            1
+          ],
+          "180015": [
+            1,
+            0
+          ],
+          "180016": [
+            1,
+            1
+          ],
+          "180017": [
+            0,
+            1
+          ],
+          "180018": [
+            1,
+            0
+          ],
+          "180019": [
+            1,
+            1
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            1,
+            0
+          ],
+          "180023": [
+            1,
+            1
+          ],
+          "180024": [
+            0,
+            1
+          ],
+          "180025": [
+            0,
+            1
+          ],
+          "180026": [
+            1,
+            1
+          ],
+          "180027": [
+            1,
+            0
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            0,
+            1
+          ],
+          "180030": [
+            0,
+            1
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "position": {
+      "joint": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 24.31,
+        "agents": [
+          {
+            "wins": 42,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "forecast",
+            "win_rate": 0.65625,
+            "win_rate_ci95": [
+              0.578125,
+              0.734375
+            ],
+            "score_rate": 0.65625,
+            "decision_p95_ms": 1.28,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.09,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.06,
+                "p99_ms": 1.12,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 578,
+                "p95_ms": 1.36,
+                "p99_ms": 1.52,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 22,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "joint",
+            "win_rate": 0.34375,
+            "win_rate_ci95": [
+              0.265625,
+              0.421875
+            ],
+            "score_rate": 0.34375,
+            "decision_p95_ms": 0.98,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.07,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.09,
+                "p99_ms": 1.17,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 584,
+                "p95_ms": 0.94,
+                "p99_ms": 1.1,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            1
+          ],
+          "180003": [
+            1,
+            0
+          ],
+          "180004": [
+            1,
+            1
+          ],
+          "180005": [
+            0,
+            1
+          ],
+          "180006": [
+            1,
+            0
+          ],
+          "180007": [
+            1,
+            1
+          ],
+          "180008": [
+            1,
+            1
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            1
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            1,
+            0
+          ],
+          "180013": [
+            0,
+            1
+          ],
+          "180014": [
+            0,
+            1
+          ],
+          "180015": [
+            1,
+            1
+          ],
+          "180016": [
+            1,
+            0
+          ],
+          "180017": [
+            1,
+            1
+          ],
+          "180018": [
+            1,
+            0
+          ],
+          "180019": [
+            1,
+            0
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            1,
+            0
+          ],
+          "180023": [
+            1,
+            1
+          ],
+          "180024": [
+            0,
+            1
+          ],
+          "180025": [
+            1,
+            1
+          ],
+          "180026": [
+            1,
+            0
+          ],
+          "180027": [
+            1,
+            0
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            1,
+            1
+          ],
+          "180030": [
+            0,
+            1
+          ],
+          "180031": [
+            1,
+            1
+          ],
+          "180032": [
+            1,
+            0
+          ]
+        }
+      },
+      "pivot": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 10.2,
+        "agents": [
+          {
+            "wins": 29,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "forecast",
+            "win_rate": 0.453125,
+            "win_rate_ci95": [
+              0.359375,
+              0.546875
+            ],
+            "score_rate": 0.453125,
+            "decision_p95_ms": 1.32,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.07,
+                "p99_ms": 0.12,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.1,
+                "p99_ms": 1.17,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 596,
+                "p95_ms": 1.38,
+                "p99_ms": 1.57,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 35,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "pivot",
+            "win_rate": 0.546875,
+            "win_rate_ci95": [
+              0.453125,
+              0.640625
+            ],
+            "score_rate": 0.546875,
+            "decision_p95_ms": 6.22,
+            "battle_time_p95_seconds": 0.06,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.07,
+                "p99_ms": 0.09,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.13,
+                "p99_ms": 1.59,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 597,
+                "p95_ms": 6.73,
+                "p99_ms": 7.96,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            0
+          ],
+          "180003": [
+            1,
+            1
+          ],
+          "180004": [
+            0,
+            1
+          ],
+          "180005": [
+            1,
+            1
+          ],
+          "180006": [
+            0,
+            0
+          ],
+          "180007": [
+            0,
+            1
+          ],
+          "180008": [
+            0,
+            0
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            1
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            0,
+            1
+          ],
+          "180013": [
+            0,
+            1
+          ],
+          "180014": [
+            0,
+            1
+          ],
+          "180015": [
+            0,
+            0
+          ],
+          "180016": [
+            1,
+            0
+          ],
+          "180017": [
+            0,
+            1
+          ],
+          "180018": [
+            0,
+            0
+          ],
+          "180019": [
+            1,
+            0
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            0,
+            0
+          ],
+          "180023": [
+            0,
+            1
+          ],
+          "180024": [
+            0,
+            1
+          ],
+          "180025": [
+            1,
+            1
+          ],
+          "180026": [
+            1,
+            0
+          ],
+          "180027": [
+            1,
+            0
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            0,
+            0
+          ],
+          "180030": [
+            0,
+            1
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            1,
+            0
+          ]
+        }
+      },
+      "pivot-base": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 11.07,
+        "agents": [
+          {
+            "wins": 35,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "forecast",
+            "win_rate": 0.546875,
+            "win_rate_ci95": [
+              0.46875,
+              0.625
+            ],
+            "score_rate": 0.546875,
+            "decision_p95_ms": 1.33,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.11,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.12,
+                "p99_ms": 1.41,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 601,
+                "p95_ms": 1.39,
+                "p99_ms": 1.54,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 29,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "pivot-base",
+            "win_rate": 0.453125,
+            "win_rate_ci95": [
+              0.375,
+              0.53125
+            ],
+            "score_rate": 0.453125,
+            "decision_p95_ms": 5.38,
+            "battle_time_p95_seconds": 0.05,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.11,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.12,
+                "p99_ms": 1.22,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 599,
+                "p95_ms": 5.84,
+                "p99_ms": 8.33,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            1
+          ],
+          "180003": [
+            1,
+            0
+          ],
+          "180004": [
+            0,
+            0
+          ],
+          "180005": [
+            1,
+            0
+          ],
+          "180006": [
+            1,
+            1
+          ],
+          "180007": [
+            0,
+            1
+          ],
+          "180008": [
+            1,
+            0
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            1
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            0,
+            1
+          ],
+          "180013": [
+            0,
+            1
+          ],
+          "180014": [
+            0,
+            1
+          ],
+          "180015": [
+            1,
+            0
+          ],
+          "180016": [
+            0,
+            1
+          ],
+          "180017": [
+            1,
+            1
+          ],
+          "180018": [
+            1,
+            0
+          ],
+          "180019": [
+            1,
+            0
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            0,
+            1
+          ],
+          "180023": [
+            0,
+            1
+          ],
+          "180024": [
+            0,
+            0
+          ],
+          "180025": [
+            1,
+            1
+          ],
+          "180026": [
+            1,
+            0
+          ],
+          "180027": [
+            1,
+            1
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            0,
+            1
+          ],
+          "180030": [
+            0,
+            1
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            1,
+            0
+          ]
+        }
+      },
+      "tactical": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 28.35,
+        "agents": [
+          {
+            "wins": 40,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "forecast",
+            "win_rate": 0.625,
+            "win_rate_ci95": [
+              0.53125,
+              0.71875
+            ],
+            "score_rate": 0.625,
+            "decision_p95_ms": 1.29,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.07,
+                "p99_ms": 0.08,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.1,
+                "p99_ms": 1.53,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 495,
+                "p95_ms": 1.35,
+                "p99_ms": 1.51,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 24,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "tactical",
+            "win_rate": 0.375,
+            "win_rate_ci95": [
+              0.28125,
+              0.46875
+            ],
+            "score_rate": 0.375,
+            "decision_p95_ms": 0.95,
+            "battle_time_p95_seconds": 0.0,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.07,
+                "p99_ms": 0.08,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.09,
+                "p99_ms": 1.22,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 503,
+                "p95_ms": 0.31,
+                "p99_ms": 0.42,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            1
+          ],
+          "180003": [
+            1,
+            0
+          ],
+          "180004": [
+            1,
+            1
+          ],
+          "180005": [
+            0,
+            1
+          ],
+          "180006": [
+            1,
+            1
+          ],
+          "180007": [
+            1,
+            1
+          ],
+          "180008": [
+            1,
+            1
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            1
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            1,
+            0
+          ],
+          "180013": [
+            0,
+            1
+          ],
+          "180014": [
+            0,
+            1
+          ],
+          "180015": [
+            1,
+            1
+          ],
+          "180016": [
+            1,
+            1
+          ],
+          "180017": [
+            0,
+            1
+          ],
+          "180018": [
+            1,
+            0
+          ],
+          "180019": [
+            1,
+            0
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            1,
+            1
+          ],
+          "180022": [
+            1,
+            1
+          ],
+          "180023": [
+            1,
+            1
+          ],
+          "180024": [
+            0,
+            1
+          ],
+          "180025": [
+            0,
+            0
+          ],
+          "180026": [
+            1,
+            0
+          ],
+          "180027": [
+            1,
+            0
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            0,
+            1
+          ],
+          "180030": [
+            0,
+            0
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            0,
+            1
+          ]
+        }
+      }
+    },
+    "responses": {
+      "joint": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 24.27,
+        "agents": [
+          {
+            "wins": 31,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "forecast",
+            "win_rate": 0.484375,
+            "win_rate_ci95": [
+              0.453125,
+              0.5
+            ],
+            "score_rate": 0.484375,
+            "decision_p95_ms": 1.15,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.1,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.05,
+                "p99_ms": 1.15,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 597,
+                "p95_ms": 1.19,
+                "p99_ms": 1.34,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 33,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "joint",
+            "win_rate": 0.515625,
+            "win_rate_ci95": [
+              0.5,
+              0.546875
+            ],
+            "score_rate": 0.515625,
+            "decision_p95_ms": 0.97,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.08,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.1,
+                "p99_ms": 1.25,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 596,
+                "p95_ms": 0.94,
+                "p99_ms": 1.11,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            0,
+            1
+          ],
+          "180003": [
+            1,
+            0
+          ],
+          "180004": [
+            1,
+            0
+          ],
+          "180005": [
+            0,
+            0
+          ],
+          "180006": [
+            1,
+            0
+          ],
+          "180007": [
+            0,
+            1
+          ],
+          "180008": [
+            0,
+            1
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            1
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            1,
+            0
+          ],
+          "180013": [
+            0,
+            1
+          ],
+          "180014": [
+            0,
+            1
+          ],
+          "180015": [
+            0,
+            1
+          ],
+          "180016": [
+            0,
+            1
+          ],
+          "180017": [
+            0,
+            1
+          ],
+          "180018": [
+            1,
+            0
+          ],
+          "180019": [
+            1,
+            0
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            1,
+            0
+          ],
+          "180023": [
+            1,
+            0
+          ],
+          "180024": [
+            0,
+            1
+          ],
+          "180025": [
+            1,
+            0
+          ],
+          "180026": [
+            1,
+            0
+          ],
+          "180027": [
+            1,
+            0
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            1,
+            0
+          ],
+          "180030": [
+            0,
+            1
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            1,
+            0
+          ]
+        }
+      },
+      "pivot": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 10.27,
+        "agents": [
+          {
+            "wins": 29,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "forecast",
+            "win_rate": 0.453125,
+            "win_rate_ci95": [
+              0.359375,
+              0.546875
+            ],
+            "score_rate": 0.453125,
+            "decision_p95_ms": 1.16,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.07,
+                "p99_ms": 0.12,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.09,
+                "p99_ms": 1.23,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 603,
+                "p95_ms": 1.21,
+                "p99_ms": 1.29,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 35,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "pivot",
+            "win_rate": 0.546875,
+            "win_rate_ci95": [
+              0.453125,
+              0.640625
+            ],
+            "score_rate": 0.546875,
+            "decision_p95_ms": 6.21,
+            "battle_time_p95_seconds": 0.06,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.07,
+                "p99_ms": 0.11,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.08,
+                "p99_ms": 1.17,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 601,
+                "p95_ms": 6.8,
+                "p99_ms": 7.86,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            0
+          ],
+          "180003": [
+            1,
+            0
+          ],
+          "180004": [
+            0,
+            1
+          ],
+          "180005": [
+            0,
+            1
+          ],
+          "180006": [
+            1,
+            1
+          ],
+          "180007": [
+            1,
+            0
+          ],
+          "180008": [
+            0,
+            0
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            0
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            0,
+            0
+          ],
+          "180013": [
+            0,
+            1
+          ],
+          "180014": [
+            0,
+            1
+          ],
+          "180015": [
+            0,
+            1
+          ],
+          "180016": [
+            1,
+            0
+          ],
+          "180017": [
+            0,
+            1
+          ],
+          "180018": [
+            0,
+            0
+          ],
+          "180019": [
+            1,
+            0
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            0,
+            0
+          ],
+          "180023": [
+            0,
+            1
+          ],
+          "180024": [
+            0,
+            0
+          ],
+          "180025": [
+            1,
+            1
+          ],
+          "180026": [
+            1,
+            1
+          ],
+          "180027": [
+            1,
+            0
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            0,
+            1
+          ],
+          "180030": [
+            0,
+            1
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            1,
+            0
+          ]
+        }
+      },
+      "pivot-base": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 11.19,
+        "agents": [
+          {
+            "wins": 35,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "forecast",
+            "win_rate": 0.546875,
+            "win_rate_ci95": [
+              0.421875,
+              0.65625
+            ],
+            "score_rate": 0.546875,
+            "decision_p95_ms": 1.18,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.07,
+                "p99_ms": 0.12,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.16,
+                "p99_ms": 1.22,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 571,
+                "p95_ms": 1.22,
+                "p99_ms": 1.37,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 29,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "pivot-base",
+            "win_rate": 0.453125,
+            "win_rate_ci95": [
+              0.34375,
+              0.578125
+            ],
+            "score_rate": 0.453125,
+            "decision_p95_ms": 5.41,
+            "battle_time_p95_seconds": 0.05,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.07,
+                "p99_ms": 0.12,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.06,
+                "p99_ms": 1.14,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 573,
+                "p95_ms": 5.83,
+                "p99_ms": 8.93,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            1
+          ],
+          "180003": [
+            0,
+            1
+          ],
+          "180004": [
+            0,
+            0
+          ],
+          "180005": [
+            0,
+            1
+          ],
+          "180006": [
+            1,
+            1
+          ],
+          "180007": [
+            0,
+            1
+          ],
+          "180008": [
+            1,
+            0
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            0
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            1,
+            1
+          ],
+          "180013": [
+            0,
+            1
+          ],
+          "180014": [
+            1,
+            1
+          ],
+          "180015": [
+            1,
+            1
+          ],
+          "180016": [
+            0,
+            0
+          ],
+          "180017": [
+            1,
+            1
+          ],
+          "180018": [
+            1,
+            0
+          ],
+          "180019": [
+            0,
+            0
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            1,
+            1
+          ],
+          "180023": [
+            0,
+            1
+          ],
+          "180024": [
+            0,
+            1
+          ],
+          "180025": [
+            1,
+            1
+          ],
+          "180026": [
+            1,
+            0
+          ],
+          "180027": [
+            1,
+            1
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            0,
+            1
+          ],
+          "180030": [
+            0,
+            0
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            0,
+            0
+          ]
+        }
+      },
+      "tactical": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 30.09,
+        "agents": [
+          {
+            "wins": 37,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "forecast",
+            "win_rate": 0.578125,
+            "win_rate_ci95": [
+              0.46875,
+              0.6875
+            ],
+            "score_rate": 0.578125,
+            "decision_p95_ms": 1.13,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.09,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.03,
+                "p99_ms": 1.1,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 502,
+                "p95_ms": 1.2,
+                "p99_ms": 1.4,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 27,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "tactical",
+            "win_rate": 0.421875,
+            "win_rate_ci95": [
+              0.3125,
+              0.53125
+            ],
+            "score_rate": 0.421875,
+            "decision_p95_ms": 0.95,
+            "battle_time_p95_seconds": 0.0,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.08,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.04,
+                "p99_ms": 1.17,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 507,
+                "p95_ms": 0.29,
+                "p99_ms": 0.36,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            0
+          ],
+          "180003": [
+            1,
+            1
+          ],
+          "180004": [
+            1,
+            0
+          ],
+          "180005": [
+            1,
+            1
+          ],
+          "180006": [
+            1,
+            1
+          ],
+          "180007": [
+            0,
+            0
+          ],
+          "180008": [
+            1,
+            1
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            1
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            1,
+            0
+          ],
+          "180013": [
+            1,
+            1
+          ],
+          "180014": [
+            0,
+            1
+          ],
+          "180015": [
+            1,
+            1
+          ],
+          "180016": [
+            1,
+            1
+          ],
+          "180017": [
+            0,
+            1
+          ],
+          "180018": [
+            0,
+            0
+          ],
+          "180019": [
+            1,
+            1
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            0,
+            1
+          ],
+          "180023": [
+            1,
+            1
+          ],
+          "180024": [
+            0,
+            1
+          ],
+          "180025": [
+            0,
+            0
+          ],
+          "180026": [
+            1,
+            1
+          ],
+          "180027": [
+            0,
+            0
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            0,
+            1
+          ],
+          "180030": [
+            0,
+            1
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "expanded_position": {
+      "joint": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 21.42,
+        "agents": [
+          {
+            "wins": 38,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "forecast",
+            "win_rate": 0.59375,
+            "win_rate_ci95": [
+              0.5,
+              0.6875
+            ],
+            "score_rate": 0.59375,
+            "decision_p95_ms": 2.18,
+            "battle_time_p95_seconds": 0.02,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.09,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.14,
+                "p99_ms": 1.22,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 585,
+                "p95_ms": 2.27,
+                "p99_ms": 2.58,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 26,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "joint",
+            "win_rate": 0.40625,
+            "win_rate_ci95": [
+              0.3125,
+              0.5
+            ],
+            "score_rate": 0.40625,
+            "decision_p95_ms": 0.97,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.07,
+                "p99_ms": 0.09,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.23,
+                "p99_ms": 1.54,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 596,
+                "p95_ms": 0.93,
+                "p99_ms": 1.07,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            1
+          ],
+          "180002": [
+            1,
+            1
+          ],
+          "180003": [
+            1,
+            0
+          ],
+          "180004": [
+            1,
+            0
+          ],
+          "180005": [
+            0,
+            1
+          ],
+          "180006": [
+            1,
+            0
+          ],
+          "180007": [
+            0,
+            1
+          ],
+          "180008": [
+            1,
+            1
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            0
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            0,
+            0
+          ],
+          "180013": [
+            0,
+            1
+          ],
+          "180014": [
+            1,
+            1
+          ],
+          "180015": [
+            1,
+            0
+          ],
+          "180016": [
+            1,
+            0
+          ],
+          "180017": [
+            1,
+            1
+          ],
+          "180018": [
+            1,
+            0
+          ],
+          "180019": [
+            1,
+            0
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            1,
+            0
+          ],
+          "180023": [
+            0,
+            1
+          ],
+          "180024": [
+            0,
+            1
+          ],
+          "180025": [
+            1,
+            1
+          ],
+          "180026": [
+            1,
+            0
+          ],
+          "180027": [
+            1,
+            0
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            1,
+            1
+          ],
+          "180030": [
+            0,
+            1
+          ],
+          "180031": [
+            1,
+            1
+          ],
+          "180032": [
+            1,
+            0
+          ]
+        }
+      },
+      "pivot": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 9.71,
+        "agents": [
+          {
+            "wins": 33,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "forecast",
+            "win_rate": 0.515625,
+            "win_rate_ci95": [
+              0.421875,
+              0.609375
+            ],
+            "score_rate": 0.515625,
+            "decision_p95_ms": 2.25,
+            "battle_time_p95_seconds": 0.02,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.07,
+                "p99_ms": 0.08,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.05,
+                "p99_ms": 1.27,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 604,
+                "p95_ms": 2.33,
+                "p99_ms": 2.64,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 31,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "pivot",
+            "win_rate": 0.484375,
+            "win_rate_ci95": [
+              0.390625,
+              0.578125
+            ],
+            "score_rate": 0.484375,
+            "decision_p95_ms": 6.28,
+            "battle_time_p95_seconds": 0.06,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.07,
+                "p99_ms": 0.08,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.08,
+                "p99_ms": 1.23,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 602,
+                "p95_ms": 6.89,
+                "p99_ms": 8.38,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            1
+          ],
+          "180003": [
+            1,
+            1
+          ],
+          "180004": [
+            0,
+            1
+          ],
+          "180005": [
+            0,
+            1
+          ],
+          "180006": [
+            1,
+            1
+          ],
+          "180007": [
+            0,
+            1
+          ],
+          "180008": [
+            1,
+            0
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            1
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            1,
+            1
+          ],
+          "180013": [
+            0,
+            1
+          ],
+          "180014": [
+            0,
+            1
+          ],
+          "180015": [
+            0,
+            0
+          ],
+          "180016": [
+            1,
+            0
+          ],
+          "180017": [
+            0,
+            1
+          ],
+          "180018": [
+            1,
+            0
+          ],
+          "180019": [
+            0,
+            0
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            0,
+            0
+          ],
+          "180023": [
+            0,
+            1
+          ],
+          "180024": [
+            0,
+            1
+          ],
+          "180025": [
+            0,
+            1
+          ],
+          "180026": [
+            1,
+            1
+          ],
+          "180027": [
+            0,
+            0
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            0,
+            1
+          ],
+          "180030": [
+            0,
+            1
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            1,
+            0
+          ]
+        }
+      },
+      "pivot-base": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 10.26,
+        "agents": [
+          {
+            "wins": 30,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "forecast",
+            "win_rate": 0.46875,
+            "win_rate_ci95": [
+              0.390625,
+              0.546875
+            ],
+            "score_rate": 0.46875,
+            "decision_p95_ms": 2.22,
+            "battle_time_p95_seconds": 0.02,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.07,
+                "p99_ms": 0.09,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.07,
+                "p99_ms": 1.67,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 600,
+                "p95_ms": 2.28,
+                "p99_ms": 2.45,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 34,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "pivot-base",
+            "win_rate": 0.53125,
+            "win_rate_ci95": [
+              0.453125,
+              0.625
+            ],
+            "score_rate": 0.53125,
+            "decision_p95_ms": 5.43,
+            "battle_time_p95_seconds": 0.05,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.07,
+                "p99_ms": 0.09,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.18,
+                "p99_ms": 1.56,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 598,
+                "p95_ms": 5.88,
+                "p99_ms": 8.29,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            1
+          ],
+          "180003": [
+            1,
+            0
+          ],
+          "180004": [
+            0,
+            0
+          ],
+          "180005": [
+            0,
+            0
+          ],
+          "180006": [
+            0,
+            0
+          ],
+          "180007": [
+            0,
+            1
+          ],
+          "180008": [
+            1,
+            0
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            1
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            0,
+            1
+          ],
+          "180013": [
+            0,
+            1
+          ],
+          "180014": [
+            0,
+            1
+          ],
+          "180015": [
+            1,
+            0
+          ],
+          "180016": [
+            1,
+            1
+          ],
+          "180017": [
+            1,
+            1
+          ],
+          "180018": [
+            1,
+            0
+          ],
+          "180019": [
+            1,
+            0
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            0,
+            1
+          ],
+          "180023": [
+            0,
+            1
+          ],
+          "180024": [
+            0,
+            0
+          ],
+          "180025": [
+            1,
+            0
+          ],
+          "180026": [
+            1,
+            0
+          ],
+          "180027": [
+            0,
+            0
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            0,
+            1
+          ],
+          "180030": [
+            0,
+            1
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            1,
+            0
+          ]
+        }
+      },
+      "tactical": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 26.03,
+        "agents": [
+          {
+            "wins": 39,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "forecast",
+            "win_rate": 0.609375,
+            "win_rate_ci95": [
+              0.53125,
+              0.6875
+            ],
+            "score_rate": 0.609375,
+            "decision_p95_ms": 2.13,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.07,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.09,
+                "p99_ms": 1.66,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 490,
+                "p95_ms": 2.26,
+                "p99_ms": 2.42,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 25,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "tactical",
+            "win_rate": 0.390625,
+            "win_rate_ci95": [
+              0.3125,
+              0.46875
+            ],
+            "score_rate": 0.390625,
+            "decision_p95_ms": 0.95,
+            "battle_time_p95_seconds": 0.0,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.09,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.11,
+                "p99_ms": 1.48,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 500,
+                "p95_ms": 0.28,
+                "p99_ms": 0.41,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            0
+          ],
+          "180003": [
+            1,
+            0
+          ],
+          "180004": [
+            1,
+            0
+          ],
+          "180005": [
+            1,
+            1
+          ],
+          "180006": [
+            1,
+            0
+          ],
+          "180007": [
+            0,
+            1
+          ],
+          "180008": [
+            1,
+            1
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            1
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            1,
+            1
+          ],
+          "180013": [
+            0,
+            1
+          ],
+          "180014": [
+            1,
+            1
+          ],
+          "180015": [
+            1,
+            0
+          ],
+          "180016": [
+            1,
+            1
+          ],
+          "180017": [
+            0,
+            1
+          ],
+          "180018": [
+            1,
+            0
+          ],
+          "180019": [
+            1,
+            0
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            1,
+            1
+          ],
+          "180022": [
+            1,
+            1
+          ],
+          "180023": [
+            1,
+            1
+          ],
+          "180024": [
+            0,
+            1
+          ],
+          "180025": [
+            0,
+            1
+          ],
+          "180026": [
+            1,
+            0
+          ],
+          "180027": [
+            1,
+            0
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            0,
+            1
+          ],
+          "180030": [
+            0,
+            0
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            0,
+            1
+          ]
+        }
+      }
+    },
+    "expanded_responses": {
+      "joint": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 21.82,
+        "agents": [
+          {
+            "wins": 33,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "forecast",
+            "win_rate": 0.515625,
+            "win_rate_ci95": [
+              0.4375,
+              0.59375
+            ],
+            "score_rate": 0.515625,
+            "decision_p95_ms": 2.01,
+            "battle_time_p95_seconds": 0.02,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.08,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.05,
+                "p99_ms": 1.41,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 582,
+                "p95_ms": 2.07,
+                "p99_ms": 2.34,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 31,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "joint",
+            "win_rate": 0.484375,
+            "win_rate_ci95": [
+              0.40625,
+              0.5625
+            ],
+            "score_rate": 0.484375,
+            "decision_p95_ms": 0.99,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.07,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.11,
+                "p99_ms": 1.32,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 589,
+                "p95_ms": 0.96,
+                "p99_ms": 1.05,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            0,
+            0
+          ],
+          "180003": [
+            1,
+            0
+          ],
+          "180004": [
+            1,
+            1
+          ],
+          "180005": [
+            0,
+            0
+          ],
+          "180006": [
+            1,
+            0
+          ],
+          "180007": [
+            0,
+            1
+          ],
+          "180008": [
+            0,
+            1
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            1
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            1,
+            0
+          ],
+          "180013": [
+            0,
+            1
+          ],
+          "180014": [
+            1,
+            1
+          ],
+          "180015": [
+            0,
+            0
+          ],
+          "180016": [
+            0,
+            1
+          ],
+          "180017": [
+            0,
+            1
+          ],
+          "180018": [
+            1,
+            0
+          ],
+          "180019": [
+            1,
+            0
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            1,
+            0
+          ],
+          "180023": [
+            1,
+            1
+          ],
+          "180024": [
+            0,
+            1
+          ],
+          "180025": [
+            1,
+            0
+          ],
+          "180026": [
+            1,
+            0
+          ],
+          "180027": [
+            1,
+            0
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            1,
+            1
+          ],
+          "180030": [
+            0,
+            1
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            1,
+            0
+          ]
+        }
+      },
+      "pivot": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 9.92,
+        "agents": [
+          {
+            "wins": 29,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "forecast",
+            "win_rate": 0.453125,
+            "win_rate_ci95": [
+              0.359375,
+              0.546875
+            ],
+            "score_rate": 0.453125,
+            "decision_p95_ms": 2.05,
+            "battle_time_p95_seconds": 0.02,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.08,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.13,
+                "p99_ms": 1.33,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 607,
+                "p95_ms": 2.14,
+                "p99_ms": 2.4,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 35,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "pivot",
+            "win_rate": 0.546875,
+            "win_rate_ci95": [
+              0.453125,
+              0.640625
+            ],
+            "score_rate": 0.546875,
+            "decision_p95_ms": 6.26,
+            "battle_time_p95_seconds": 0.06,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.07,
+                "p99_ms": 0.12,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.12,
+                "p99_ms": 1.17,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 601,
+                "p95_ms": 6.64,
+                "p99_ms": 7.96,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            0
+          ],
+          "180003": [
+            1,
+            0
+          ],
+          "180004": [
+            0,
+            1
+          ],
+          "180005": [
+            0,
+            1
+          ],
+          "180006": [
+            1,
+            1
+          ],
+          "180007": [
+            0,
+            0
+          ],
+          "180008": [
+            0,
+            0
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            0
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            0,
+            0
+          ],
+          "180013": [
+            0,
+            1
+          ],
+          "180014": [
+            0,
+            1
+          ],
+          "180015": [
+            1,
+            1
+          ],
+          "180016": [
+            1,
+            0
+          ],
+          "180017": [
+            0,
+            1
+          ],
+          "180018": [
+            0,
+            0
+          ],
+          "180019": [
+            1,
+            0
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            0,
+            0
+          ],
+          "180023": [
+            0,
+            1
+          ],
+          "180024": [
+            0,
+            0
+          ],
+          "180025": [
+            1,
+            1
+          ],
+          "180026": [
+            1,
+            1
+          ],
+          "180027": [
+            1,
+            0
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            0,
+            1
+          ],
+          "180030": [
+            0,
+            1
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            1,
+            0
+          ]
+        }
+      },
+      "pivot-base": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 10.76,
+        "agents": [
+          {
+            "wins": 34,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "forecast",
+            "win_rate": 0.53125,
+            "win_rate_ci95": [
+              0.421875,
+              0.640625
+            ],
+            "score_rate": 0.53125,
+            "decision_p95_ms": 2.02,
+            "battle_time_p95_seconds": 0.02,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.07,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.04,
+                "p99_ms": 1.05,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 577,
+                "p95_ms": 2.11,
+                "p99_ms": 2.32,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 30,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "pivot-base",
+            "win_rate": 0.46875,
+            "win_rate_ci95": [
+              0.359375,
+              0.578125
+            ],
+            "score_rate": 0.46875,
+            "decision_p95_ms": 5.45,
+            "battle_time_p95_seconds": 0.05,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.07,
+                "p99_ms": 0.08,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.07,
+                "p99_ms": 1.13,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 576,
+                "p95_ms": 5.98,
+                "p99_ms": 8.43,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            1
+          ],
+          "180003": [
+            0,
+            1
+          ],
+          "180004": [
+            0,
+            0
+          ],
+          "180005": [
+            0,
+            1
+          ],
+          "180006": [
+            0,
+            1
+          ],
+          "180007": [
+            0,
+            1
+          ],
+          "180008": [
+            1,
+            0
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            0
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            1,
+            1
+          ],
+          "180013": [
+            0,
+            1
+          ],
+          "180014": [
+            1,
+            1
+          ],
+          "180015": [
+            1,
+            1
+          ],
+          "180016": [
+            0,
+            0
+          ],
+          "180017": [
+            1,
+            1
+          ],
+          "180018": [
+            1,
+            0
+          ],
+          "180019": [
+            1,
+            0
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            1,
+            1
+          ],
+          "180023": [
+            0,
+            0
+          ],
+          "180024": [
+            0,
+            1
+          ],
+          "180025": [
+            1,
+            1
+          ],
+          "180026": [
+            1,
+            0
+          ],
+          "180027": [
+            1,
+            0
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            0,
+            1
+          ],
+          "180030": [
+            0,
+            0
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            1,
+            0
+          ]
+        }
+      },
+      "tactical": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 27.43,
+        "agents": [
+          {
+            "wins": 38,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "forecast",
+            "win_rate": 0.59375,
+            "win_rate_ci95": [
+              0.5,
+              0.6875
+            ],
+            "score_rate": 0.59375,
+            "decision_p95_ms": 1.98,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.07,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.1,
+                "p99_ms": 1.31,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 490,
+                "p95_ms": 2.05,
+                "p99_ms": 2.24,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 26,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "tactical",
+            "win_rate": 0.40625,
+            "win_rate_ci95": [
+              0.3125,
+              0.5
+            ],
+            "score_rate": 0.40625,
+            "decision_p95_ms": 0.95,
+            "battle_time_p95_seconds": 0.0,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.07,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.05,
+                "p99_ms": 1.13,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 496,
+                "p95_ms": 0.29,
+                "p99_ms": 0.43,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            0
+          ],
+          "180003": [
+            1,
+            1
+          ],
+          "180004": [
+            1,
+            0
+          ],
+          "180005": [
+            0,
+            1
+          ],
+          "180006": [
+            1,
+            1
+          ],
+          "180007": [
+            1,
+            0
+          ],
+          "180008": [
+            1,
+            1
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            1
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            1,
+            0
+          ],
+          "180013": [
+            1,
+            1
+          ],
+          "180014": [
+            0,
+            1
+          ],
+          "180015": [
+            1,
+            0
+          ],
+          "180016": [
+            1,
+            1
+          ],
+          "180017": [
+            0,
+            1
+          ],
+          "180018": [
+            0,
+            0
+          ],
+          "180019": [
+            1,
+            1
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            1,
+            1
+          ],
+          "180023": [
+            1,
+            1
+          ],
+          "180024": [
+            0,
+            1
+          ],
+          "180025": [
+            0,
+            1
+          ],
+          "180026": [
+            1,
+            1
+          ],
+          "180027": [
+            0,
+            0
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            0,
+            1
+          ],
+          "180030": [
+            0,
+            1
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "all": {
+      "joint": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 20.03,
+        "agents": [
+          {
+            "wins": 34,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "forecast",
+            "win_rate": 0.53125,
+            "win_rate_ci95": [
+              0.453125,
+              0.625
+            ],
+            "score_rate": 0.53125,
+            "decision_p95_ms": 2.94,
+            "battle_time_p95_seconds": 0.02,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.07,
+                "p99_ms": 0.09,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.04,
+                "p99_ms": 1.5,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 576,
+                "p95_ms": 3.09,
+                "p99_ms": 3.37,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 30,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "joint",
+            "win_rate": 0.46875,
+            "win_rate_ci95": [
+              0.375,
+              0.546875
+            ],
+            "score_rate": 0.46875,
+            "decision_p95_ms": 0.97,
+            "battle_time_p95_seconds": 0.01,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.07,
+                "p99_ms": 0.12,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.11,
+                "p99_ms": 1.58,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 580,
+                "p95_ms": 0.93,
+                "p99_ms": 1.08,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            1
+          ],
+          "180003": [
+            1,
+            0
+          ],
+          "180004": [
+            1,
+            1
+          ],
+          "180005": [
+            0,
+            0
+          ],
+          "180006": [
+            1,
+            0
+          ],
+          "180007": [
+            0,
+            1
+          ],
+          "180008": [
+            0,
+            1
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            0
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            0,
+            0
+          ],
+          "180013": [
+            0,
+            1
+          ],
+          "180014": [
+            0,
+            1
+          ],
+          "180015": [
+            1,
+            0
+          ],
+          "180016": [
+            1,
+            0
+          ],
+          "180017": [
+            0,
+            1
+          ],
+          "180018": [
+            1,
+            0
+          ],
+          "180019": [
+            1,
+            0
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            1,
+            0
+          ],
+          "180023": [
+            1,
+            1
+          ],
+          "180024": [
+            0,
+            1
+          ],
+          "180025": [
+            1,
+            1
+          ],
+          "180026": [
+            1,
+            0
+          ],
+          "180027": [
+            1,
+            0
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            1,
+            1
+          ],
+          "180030": [
+            0,
+            1
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            1,
+            0
+          ]
+        }
+      },
+      "pivot": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 10.04,
+        "agents": [
+          {
+            "wins": 32,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "forecast",
+            "win_rate": 0.5,
+            "win_rate_ci95": [
+              0.40625,
+              0.59375
+            ],
+            "score_rate": 0.5,
+            "decision_p95_ms": 2.83,
+            "battle_time_p95_seconds": 0.02,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.08,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.02,
+                "p99_ms": 1.06,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 620,
+                "p95_ms": 2.98,
+                "p99_ms": 3.23,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 32,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "pivot",
+            "win_rate": 0.5,
+            "win_rate_ci95": [
+              0.40625,
+              0.59375
+            ],
+            "score_rate": 0.5,
+            "decision_p95_ms": 5.87,
+            "battle_time_p95_seconds": 0.05,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.08,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.01,
+                "p99_ms": 1.42,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 614,
+                "p95_ms": 6.43,
+                "p99_ms": 7.45,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            1
+          ],
+          "180003": [
+            1,
+            0
+          ],
+          "180004": [
+            0,
+            1
+          ],
+          "180005": [
+            1,
+            1
+          ],
+          "180006": [
+            1,
+            1
+          ],
+          "180007": [
+            0,
+            0
+          ],
+          "180008": [
+            1,
+            0
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            1
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            1,
+            0
+          ],
+          "180013": [
+            0,
+            1
+          ],
+          "180014": [
+            1,
+            1
+          ],
+          "180015": [
+            0,
+            0
+          ],
+          "180016": [
+            1,
+            0
+          ],
+          "180017": [
+            0,
+            1
+          ],
+          "180018": [
+            0,
+            0
+          ],
+          "180019": [
+            1,
+            0
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            0,
+            0
+          ],
+          "180023": [
+            0,
+            1
+          ],
+          "180024": [
+            0,
+            1
+          ],
+          "180025": [
+            0,
+            1
+          ],
+          "180026": [
+            1,
+            1
+          ],
+          "180027": [
+            0,
+            0
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            0,
+            1
+          ],
+          "180030": [
+            0,
+            1
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            1,
+            0
+          ]
+        }
+      },
+      "pivot-base": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 10.89,
+        "agents": [
+          {
+            "wins": 36,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "forecast",
+            "win_rate": 0.5625,
+            "win_rate_ci95": [
+              0.484375,
+              0.640625
+            ],
+            "score_rate": 0.5625,
+            "decision_p95_ms": 2.88,
+            "battle_time_p95_seconds": 0.02,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.07,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.03,
+                "p99_ms": 1.13,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 575,
+                "p95_ms": 3.05,
+                "p99_ms": 3.25,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 28,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "pivot-base",
+            "win_rate": 0.4375,
+            "win_rate_ci95": [
+              0.359375,
+              0.515625
+            ],
+            "score_rate": 0.4375,
+            "decision_p95_ms": 5.27,
+            "battle_time_p95_seconds": 0.05,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.08,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.05,
+                "p99_ms": 1.18,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 583,
+                "p95_ms": 5.87,
+                "p99_ms": 7.87,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            1
+          ],
+          "180003": [
+            1,
+            0
+          ],
+          "180004": [
+            0,
+            0
+          ],
+          "180005": [
+            1,
+            1
+          ],
+          "180006": [
+            0,
+            1
+          ],
+          "180007": [
+            0,
+            1
+          ],
+          "180008": [
+            1,
+            0
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            1
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            0,
+            1
+          ],
+          "180013": [
+            0,
+            1
+          ],
+          "180014": [
+            0,
+            1
+          ],
+          "180015": [
+            1,
+            1
+          ],
+          "180016": [
+            1,
+            1
+          ],
+          "180017": [
+            1,
+            1
+          ],
+          "180018": [
+            0,
+            0
+          ],
+          "180019": [
+            1,
+            0
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            0,
+            1
+          ],
+          "180023": [
+            0,
+            1
+          ],
+          "180024": [
+            0,
+            1
+          ],
+          "180025": [
+            1,
+            1
+          ],
+          "180026": [
+            1,
+            0
+          ],
+          "180027": [
+            0,
+            1
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            0,
+            1
+          ],
+          "180030": [
+            0,
+            1
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            1,
+            0
+          ]
+        }
+      },
+      "tactical": {
+        "catalog": "D:\\stats161-finalProject\\pokemon\\data\\historical_cards.json",
+        "testing_pools": 0,
+        "first_seed": 180001,
+        "pairs": 32,
+        "frozen_suite": null,
+        "battle_only": true,
+        "preview_only": false,
+        "completed_games": 64,
+        "completed_pairs": 32,
+        "draws": 0,
+        "games_per_second": 25.68,
+        "agents": [
+          {
+            "wins": 39,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "forecast",
+            "win_rate": 0.609375,
+            "win_rate_ci95": [
+              0.546875,
+              0.6875
+            ],
+            "score_rate": 0.609375,
+            "decision_p95_ms": 2.77,
+            "battle_time_p95_seconds": 0.02,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.09,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.05,
+                "p99_ms": 1.09,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 473,
+                "p95_ms": 3.01,
+                "p99_ms": 3.29,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          },
+          {
+            "wins": 25,
+            "fallbacks": 0,
+            "model_choices": 0,
+            "different_choices": 0,
+            "policy": "tactical",
+            "win_rate": 0.390625,
+            "win_rate_ci95": [
+              0.3125,
+              0.453125
+            ],
+            "score_rate": 0.390625,
+            "decision_p95_ms": 0.94,
+            "battle_time_p95_seconds": 0.0,
+            "forfeits": 0,
+            "by_phase": {
+              "draft": {
+                "decisions": 384,
+                "p95_ms": 0.06,
+                "p99_ms": 0.07,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "team_preview": {
+                "decisions": 64,
+                "p95_ms": 1.04,
+                "p99_ms": 1.25,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              },
+              "moving": {
+                "decisions": 484,
+                "p95_ms": 0.3,
+                "p99_ms": 0.44,
+                "auto_actions": 0,
+                "timeout_rate": 0.0,
+                "illegal_actions": 0,
+                "illegal_action_rate": 0.0
+              }
+            }
+          }
+        ],
+        "errors": [],
+        "paired_scores": {
+          "180001": [
+            1,
+            0
+          ],
+          "180002": [
+            1,
+            0
+          ],
+          "180003": [
+            1,
+            0
+          ],
+          "180004": [
+            1,
+            0
+          ],
+          "180005": [
+            0,
+            1
+          ],
+          "180006": [
+            1,
+            1
+          ],
+          "180007": [
+            1,
+            0
+          ],
+          "180008": [
+            1,
+            1
+          ],
+          "180009": [
+            1,
+            0
+          ],
+          "180010": [
+            0,
+            1
+          ],
+          "180011": [
+            1,
+            0
+          ],
+          "180012": [
+            1,
+            1
+          ],
+          "180013": [
+            0,
+            1
+          ],
+          "180014": [
+            0,
+            1
+          ],
+          "180015": [
+            1,
+            0
+          ],
+          "180016": [
+            1,
+            1
+          ],
+          "180017": [
+            0,
+            1
+          ],
+          "180018": [
+            1,
+            0
+          ],
+          "180019": [
+            1,
+            0
+          ],
+          "180020": [
+            1,
+            0
+          ],
+          "180021": [
+            0,
+            1
+          ],
+          "180022": [
+            1,
+            1
+          ],
+          "180023": [
+            1,
+            1
+          ],
+          "180024": [
+            0,
+            1
+          ],
+          "180025": [
+            0,
+            1
+          ],
+          "180026": [
+            1,
+            1
+          ],
+          "180027": [
+            1,
+            0
+          ],
+          "180028": [
+            1,
+            0
+          ],
+          "180029": [
+            0,
+            1
+          ],
+          "180030": [
+            0,
+            1
+          ],
+          "180031": [
+            0,
+            1
+          ],
+          "180032": [
+            0,
+            1
+          ]
+        }
+      }
+    }
+  }
+}

@@ -10,9 +10,10 @@ requires-python = ">=3.11"
 [project.optional-dependencies]
 live = ["altruagent-starter @ git+https://github.com/UCLA-Trustworthy-AI-Lab/altruagent-starter.git@d94be8c8d0a9cbbcf3a4cefadcde4da69d079bc9"]
 llm = ["openai>=2,<4", "python-dotenv>=1"]
+bc = ["torch>=2.6,<3"]
 
 [tool.setuptools]
 packages = ["pokemon_agent"]
 
 [tool.setuptools.package-data]
-pokemon_agent = ["showdown.cjs"]
+pokemon_agent = ["*.cjs"]
