@@ -1,0 +1,7 @@
+{
+  "name": "stats161-pokemon",
+  "private": true,
+  "dependencies": {
+    "pokemon-showdown": "0.11.11"
+  }
+}
