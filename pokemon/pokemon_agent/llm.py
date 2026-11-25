@@ -6,12 +6,13 @@ from pathlib import Path
 from queue import Empty, Queue
 from threading import Thread
 
-from .game import Decision, PREVIEW
+from .game import BATTLE, Decision, PREVIEW
+from .joint import JointPolicy
 from .tactics import tactical_candidates
 
 
 class LlmPolicy:
-    def __init__(self, candidates=tactical_candidates):
+    def __init__(self, candidates=tactical_candidates, *, forecast: JointPolicy | None = None):
         from dotenv import load_dotenv
         from openai import OpenAI
 
@@ -29,13 +30,14 @@ class LlmPolicy:
         self.model = os.getenv("POKEMON_LLM_MODEL") or default_model
         self.provider = provider
         self.candidates = candidates
+        self.forecast = forecast
         self.in_flight: Thread | None = None
         self.source = "local"
         self.fallbacks = 0
         self.model_choices = 0
         self.different_choices = 0
 
-    def _ask(self, decision: Decision, candidates: list[dict], budget: float, result: Queue):
+    def _ask(self, decision: Decision, candidates: list[dict], budget: float, result: Queue, summaries=None):
         choices = {str(index): action for index, action in enumerate(candidates)}
         if self.provider == "deepseek":
             options = {
@@ -58,6 +60,19 @@ class LlmPolicy:
                     },
                 }},
             }
+        payload = {
+            "phase": decision.phase,
+            "board": decision.observation,
+            "move_info": decision.move_info,
+            "candidates": choices,
+        }
+        if summaries:
+            payload["forecast_notes"] = (
+                "Approximate results under each candidate's most dangerous plausible opponent reply. "
+                "Move order positions 0 and 1 are ours, 2 and 3 are the opponent's. "
+                "KO positions are relative to the specified side. The opponent's two choices are listed in slot order."
+            )
+            payload["candidate_forecasts"] = summaries
         try:
             response = self.client.chat.completions.create(
                 model=self.model,
@@ -69,12 +84,7 @@ class LlmPolicy:
                         'and 0 means the move takes no explicit target. Return JSON like {"id":"0"} '
                         "with exactly one of the supplied candidate IDs."
                     )},
-                    {"role": "user", "content": json.dumps({
-                        "phase": decision.phase,
-                        "board": decision.observation,
-                        "move_info": decision.move_info,
-                        "candidates": choices,
-                    })},
+                    {"role": "user", "content": json.dumps(payload)},
                 ],
                 timeout=budget,
                 **options,
@@ -85,8 +95,25 @@ class LlmPolicy:
             # Provider failures and malformed replies use the same legal fallback.
             result.put(None)
 
+    def observe(self, decision: Decision) -> None:
+        if self.forecast is not None:
+            self.forecast.observe(decision)
+
     def __call__(self, decision: Decision) -> dict:
+        self.observe(decision)
+        action = self._choose(decision)
+        if self.forecast is not None:
+            self.forecast.record(decision, action)
+        return action
+
+    def _choose(self, decision: Decision) -> dict:
         ranked = self.candidates(decision)[:6]
+        summaries = None
+        if self.forecast is not None and decision.phase == BATTLE:
+            summaries = {
+                str(ranked.index(action)): {key: value for key, value in details.items() if key != "score"}
+                for action, details in self.forecast.rank(decision, ranked)
+            }
         self.source = "forced"
         if len(ranked) == 1:
             return ranked[0]
@@ -98,7 +125,7 @@ class LlmPolicy:
         if budget >= 0.25 and not (self.in_flight and self.in_flight.is_alive()):
             result = Queue(maxsize=1)
             self.in_flight = Thread(
-                target=self._ask, args=(decision, ranked[:6], budget, result), daemon=True
+                target=self._ask, args=(decision, ranked, budget, result, summaries), daemon=True
             )
             self.in_flight.start()
             try:

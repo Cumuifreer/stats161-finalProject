@@ -12,6 +12,7 @@ from unittest.mock import Mock, patch
 
 from pokemon_agent.__main__ import HISTORICAL_CARDS, _bench, _catalog, _replay
 from pokemon_agent.game import BATTLE, DRAFT, GAME_TYPE, PREVIEW, Decision, make_decision
+from pokemon_agent.joint import JointPolicy, TurnForecast
 from pokemon_agent.live import create_agent
 from pokemon_agent.llm import LlmPolicy
 from pokemon_agent.policy import heuristic
@@ -123,6 +124,39 @@ class ContractTests(unittest.TestCase):
             action = tactical(decision, card_profiles=profiles)
         self.assertEqual(decision.validate(action)["slot_0"]["move_id"], "waterpulse")
 
+    def test_joint_forecast_values_partner_ko_and_keeps_the_same_shortlist(self):
+        options = [{"type": "move", "move_id": "rocktomb", "targets": [1, 2]},
+                   {"type": "move", "move_id": "protect", "targets": [0]}]
+        template = {"slots": [{"slot": slot, "options": options} for slot in (0, 1)]}
+        raw = {"turn": 2, "active_pokemon": [{"species": "Garchomp"}, {"species": "Torkoal"}],
+               "opponent_active_pokemon": [{"species": "Flutter Mane"}, {"species": "Sableye"}]}
+        decision = make_decision(BATTLE, raw, [template], "p1")
+        dex = {"types": {}, "species": {}, "moves": {
+            "rocktomb": {"type": "rock", "category": "physical", "base_power": 200, "accuracy": 1, "priority": 0},
+            "protect": {"category": "status", "priority": 4},
+        }}
+        profiles = {
+            name: {"level": 50, "stats": {"hp": 100, "atk": 100, "def": 50, "spe": speed},
+                   "card_moves": ("rocktomb", "protect")}
+            for name, speed in (("garchomp", 150), ("fluttermane", 100), ("torkoal", 30), ("sableye", 20))
+        }
+        hit = {"type": "move", "move_id": "rocktomb", "target": 1}
+        hit_second = dict(hit, target=2)
+        protect = {"type": "move", "move_id": "protect", "target": 0}
+        with patch("pokemon_agent.joint.load_dex", return_value=dex), patch("pokemon_agent.tactics.load_dex", return_value=dex):
+            forecast = TurnForecast(decision, profiles, (), set())
+            both_attack, attacks = forecast._evaluate([hit, hit_second, hit_second, PASS])
+            separated, would_lose = forecast._evaluate([hit_second, hit, hit_second, PASS])
+            cover, protected = forecast._evaluate([hit_second, protect, hit_second, PASS])
+            candidates = tactical_candidates(decision)
+            ranked = [action for action, _ in JointPolicy(profiles).rank(decision)]
+        self.assertEqual(attacks["move_order"], [0, 1])
+        self.assertEqual(would_lose["our_ko"], [1])
+        self.assertEqual(protected["our_ko"], [])
+        self.assertGreater(both_attack, cover)
+        self.assertGreater(cover, separated)
+        self.assertCountEqual(ranked, candidates)
+
     def test_preview_scores_reserves_and_avoids_reversed_lead_duplicates(self):
         leads = ["incineroar", "rillaboom"]
         bring = leads + ["amoonguss", "arcanine"]
@@ -191,6 +225,35 @@ class ContractTests(unittest.TestCase):
         self.assertEqual(request["model"], "deepseek-flash")
         self.assertEqual(request["response_format"], {"type": "json_object"})
         self.assertEqual(request["extra_body"], {"thinking": {"type": "disabled"}})
+
+    def test_llm_forecast_keeps_candidate_ids_and_fallback(self):
+        template = {"slots": [
+            {"slot": 0, "options": [{"type": "move", "move_id": "rocktomb", "targets": [1, 2]}]},
+            {"slot": 1, "options": [PASS]},
+        ]}
+        decision = make_decision(BATTLE, {}, [template], "p1")
+        first, second = decision.actions
+        client = Mock()
+        client.chat.completions.create.return_value = SimpleNamespace(
+            choices=[SimpleNamespace(message=SimpleNamespace(content='{"id":"9"}'))],
+        )
+        forecast = Mock()
+        forecast.rank.return_value = [(second, {"worst_reply": "switch"}), (first, {"worst_reply": "protect"})]
+        with patch.dict(os.environ, {"POKEMON_LLM_PROVIDER": "deepseek", "DEEPSEEK_API_KEY": "test"}, clear=True):
+            with patch.dict(sys.modules, {
+                "openai": SimpleNamespace(OpenAI=Mock(return_value=client)),
+                "dotenv": SimpleNamespace(load_dotenv=Mock()),
+            }):
+                control = LlmPolicy(list_candidates := Mock(return_value=list(decision.actions)))
+                treatment = LlmPolicy(list_candidates, forecast=forecast)
+        self.assertEqual(control(decision), first)
+        self.assertEqual(treatment(decision), first)
+        messages = [json.loads(call.kwargs["messages"][1]["content"])
+                    for call in client.chat.completions.create.call_args_list]
+        self.assertEqual(messages[0]["candidates"], messages[1]["candidates"])
+        self.assertEqual(messages[1]["candidate_forecasts"]["1"]["worst_reply"], "switch")
+        self.assertNotIn("candidate_forecasts", messages[0])
+        forecast.record.assert_called_once_with(decision, first)
 
     def test_moves_without_explicit_targets(self):
         template = {"slots": [

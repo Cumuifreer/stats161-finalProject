@@ -6,7 +6,7 @@ import random
 import subprocess
 from time import perf_counter
 
-from .game import BATTLE, BATTLE_BANK, DECISION_LIMIT, DRAFT, DRAFT_SIZE, Decision, ident, make_decision
+from .game import BATTLE, BATTLE_BANK, DECISION_LIMIT, DRAFT, DRAFT_SIZE, PREVIEW, Decision, ident, make_decision
 from .pivot import PivotOpponent
 
 SEATS = ("p1", "p2")
@@ -87,7 +87,11 @@ def play_game(
 
     def choose(seat: str, decision: Decision, view: dict | None = None) -> dict:
         started = perf_counter()
-        policy = fixed_policies.get(decision.phase, policies[seat])
+        configured = policies[seat]
+        policy = fixed_policies.get(decision.phase, configured)
+        if policy is not configured and decision.phase == PREVIEW:
+            if observe := getattr(configured, "observe", None):
+                observe(decision)
         action = policy.choose(decision, view) if isinstance(policy, PivotOpponent) else policy(decision)
         elapsed = perf_counter() - started
         late = elapsed >= decision.seconds_left

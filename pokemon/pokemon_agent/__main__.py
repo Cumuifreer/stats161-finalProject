@@ -11,6 +11,7 @@ import sys
 from time import perf_counter
 
 from .game import BATTLE, CARD_FIELDS, DECISION_LIMIT, DRAFT, DRAFT_SIZE, PREVIEW, Decision, card_set
+from .joint import JointPolicy
 from .parity import compare_self_play
 from .pivot import PivotOpponent
 from .policy import RandomPolicy, heuristic, ranked_actions
@@ -18,7 +19,9 @@ from .sim import SEATS, Showdown, play_game
 from .tactics import load_card_profiles, tactical
 
 HISTORICAL_CARDS = Path(__file__).resolve().parents[1] / "data" / "historical_cards.json"
-BENCH_POLICIES = ("heuristic", "random", "tactical", "tactical-calibrated", "llm-heuristic", "llm")
+BENCH_POLICIES = (
+    "heuristic", "random", "tactical", "tactical-calibrated", "joint", "llm-heuristic", "llm", "llm-forecast",
+)
 ACE_POLICIES = ("pivot", "pivot-base")
 
 
@@ -29,9 +32,13 @@ def _policy(name, seed, profiles=None):
         return tactical
     if name == "tactical-calibrated":
         return partial(tactical, card_profiles=profiles)
-    if name in {"llm", "llm-heuristic"}:
+    if name == "joint":
+        return JointPolicy(profiles)
+    if name in {"llm", "llm-heuristic", "llm-forecast"}:
         from .llm import LlmPolicy
 
+        if name == "llm-forecast":
+            return LlmPolicy(forecast=JointPolicy(profiles))
         return LlmPolicy(ranked_actions) if name == "llm-heuristic" else LlmPolicy()
     return heuristic
 
@@ -80,7 +87,10 @@ def _bench(args):
         if len(cards) < DRAFT_SIZE or len({card["card_id"] for card in cards}) != len(cards):
             raise ValueError(f"The draft catalog must contain at least {DRAFT_SIZE} unique card IDs")
     names = [args.left, args.right]
-    profiles = load_card_profiles(cards or [card for pool in pools for card in pool]) if "tactical-calibrated" in names else None
+    profiles = None
+    with_forecast = bool({"joint", "llm-forecast"}.intersection(names))
+    if with_forecast or "tactical-calibrated" in names:
+        profiles = load_card_profiles(cards or [card for pool in pools for card in pool], with_sets=with_forecast)
     counters = [dict(wins=0, fallbacks=0, model_choices=0, different_choices=0) for _ in names]
     pair_wins = [[], []]
     paired_scores = {}

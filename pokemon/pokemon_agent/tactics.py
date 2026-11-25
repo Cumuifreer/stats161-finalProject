@@ -22,7 +22,7 @@ def load_dex() -> dict:
         raise RuntimeError("Could not load the Showdown Dex. Verify Node.js and npm install in pokemon/.") from error
 
 
-def load_card_profiles(cards: list[dict]) -> dict:
+def load_card_profiles(cards: list[dict], *, with_sets: bool = False) -> dict:
     unique = list({json.dumps(card, sort_keys=True): card for card in cards}.values())
     bridge = Path(__file__).with_name("showdown.cjs")
     try:
@@ -34,6 +34,10 @@ def load_card_profiles(cards: list[dict]) -> dict:
     profiles = {}
     for card, profile in zip(unique, stats, strict=True):
         species = ident(card["species"])
+        if with_sets:
+            profile["card_moves"] = tuple(ident(move) for move in card.get("moves", ()))
+            profile["card_ability"] = ident(card.get("ability", ""))
+            profile["card_item"] = ident(card.get("item", ""))
         if profiles.setdefault(species, profile) != profile:
             profiles[species] = None
     return {species: profile for species, profile in profiles.items() if profile is not None}

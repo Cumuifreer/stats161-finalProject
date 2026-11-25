@@ -37,7 +37,8 @@ if (process.argv[2] === "--dex") {
     const moves = Object.fromEntries(Dex.moves.all().map(move => [move.id, {
         type: move.type.toLowerCase(), multihit: move.multihit,
         base_power: move.basePower, accuracy: move.accuracy === true ? 1 : move.accuracy / 100,
-        category: move.category.toLowerCase(),
+        category: move.category.toLowerCase(), priority: move.priority, target: move.target.toLowerCase(),
+        contact: Boolean(move.flags.contact),
     }]));
     process.stdout.write(JSON.stringify({types, species, moves}) + "\n");
     return;
