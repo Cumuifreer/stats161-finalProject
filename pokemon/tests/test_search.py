@@ -4,6 +4,8 @@ from shutil import which
 import unittest
 
 from pokemon_agent.game import BATTLE, PREVIEW, make_decision
+from pokemon_agent.planning_preview import resolve_species
+from pokemon_agent.reply_belief import ReplyBelief
 from pokemon_agent.search import _key, _winner
 from pokemon_agent.sim import FORMAT, SEATS, Showdown
 
@@ -20,6 +22,23 @@ def _slot_pair(kind, left, right):
 
 
 class SearchTests(unittest.TestCase):
+    def test_reply_weight_updates_from_visible_move(self):
+        attack = _slot_pair("move", ("shadowball", 1), ("protect", 0))
+        switch = _slot_pair("switch", "arcanine", "sylveon")
+        belief = ReplyBelief(("attacks", "switches"))
+        belief.remember(1, 1, "attacks", [attack, switch], [1., 0.])
+        belief.remember(1, 1, "switches", [attack, switch], [0., 1.])
+        self.assertEqual(belief.mix({"attacks": [1., 0.], "switches": [0., 1.]}), [.5, .5])
+        events = ["|turn|1", "|move|p2a: Gholdengo|Shadow Ball|p1a: Dondozo",
+                  "|switch|p2b: Arcanine|Arcanine, L50|100/100", "|turn|2"]
+        self.assertTrue(belief.observe(2, events, "p2"))
+        self.assertGreater(belief.mix({"attacks": [1., 0.], "switches": [0., 1.]})[0], .7)
+
+    def test_public_catalog_resolves_preview_forms_only_when_unique(self):
+        self.assertEqual(resolve_species("urshifu", {"urshifurapidstrike": {}}), "urshifurapidstrike")
+        ambiguous = {"urshifurapidstrike": {}, "urshifusinglestrike": {}}
+        self.assertEqual(resolve_species("urshifu", ambiguous), "urshifu")
+
     def test_benefit_must_repeat_across_common_draws(self):
         base = [[0., 0., 0.], [0., 0., 0.], [0., 0., 0.]]
         outlier = [[2., -.3, -.3], [2., -.3, -.3], [2., -.3, -.3]]
@@ -141,3 +160,48 @@ class SearchTests(unittest.TestCase):
                 reply = game.call("choose", seat="p2", action=wait_ours)
             self.assertEqual(rebuild(reply)[0]["weather"], {"raindance": 1})
             self.assertEqual(branch(wait_ours)["fields"]["weather"], {})
+
+    @unittest.skipUnless(which("node") and (ROOT / "node_modules/pokemon-showdown").is_dir(),
+                         "requires local Showdown")
+    def test_opening_plan_uses_hypothetical_reserves_and_its_own_rng(self):
+        cards = json.loads((ROOT / "data/historical_cards.json").read_text(encoding="utf-8"))
+        by_name = {card["species"]: card for card in cards}
+        names = [["Gholdengo", "Porygon2", "Arcanine", "Iron Hands", "Dragonite", "Lucario"],
+                 ["Cresselia", "Flutter Mane", "Amoonguss", "Basculegion", "Gyarados", "Dondozo"]]
+        # Fix public Preview genders so changing the live seed leaves this observation unchanged.
+        rosters = {seat: [by_name[name] | {"gender": "N"} for name in team] for seat, team in zip(SEATS, names, strict=True)}
+        ours = ["gholdengo", "porygon2", "arcanine", "ironhands"]
+        their_leads = ["cresselia", "fluttermane"]
+        with Showdown() as game, Showdown(public_search=True) as worker:
+            worker.call("configure", cards=cards)
+            observations = []
+            for hidden, seed in ((["amoonguss", "basculegion"], [1, 2, 3, 4]),
+                                 (["gyarados", "dondozo"], [4, 3, 2, 1])):
+                reply = game.call("start", format=FORMAT, seed=seed, rosters=rosters,
+                                  search_seats=["p1"], proxy_seats=["p1"], proposal_seats=["p1"])
+                for seat, bring, leads in (("p1", ours, ours[:2]), ("p2", their_leads + hidden, their_leads)):
+                    reply = game.call("choose", seat=seat,
+                                      action={"type": "select_lineup", "bring": bring, "leads": leads})
+                observations.append(next(view for view in reply["views"] if view["seat"] == "p1"))
+            self.assertEqual(*observations)
+            observation = observations[0]
+            own_request = observation["search"]["own_proxy"]["pivot"]["request"]["side"]["pokemon"]
+            self.assertEqual({mon["details"].split(",")[0] for mon in own_request},
+                             {"Gholdengo", "Porygon2", "Arcanine", "Iron Hands"})
+            actual = make_decision(BATTLE, observation["raw"], observation["templates"], "p1")
+            hypothetical = their_leads + ["amoonguss", "dondozo"]
+            rebuilt = worker.call("prepare", format=FORMAT, seat="p1", observation=actual.observation,
+                                  rosters=[[mon["species"].lower().replace(" ", "") for mon in rosters[seat]]
+                                           for seat in SEATS],
+                                  lineups=[ours, hypothetical], events=observation["search"]["events"],
+                                  own_pp=observation["search"]["own_pp"], proxy_seat="p2")
+            self.assertIn("views", rebuilt, rebuilt)
+            expected, foe = [make_decision(BATTLE, item["raw"], item["templates"], item["seat"]) for item in rebuilt["views"]]
+            self.assertEqual({_key(action) for action in actual.actions}, {_key(action) for action in expected.actions})
+            self.assertEqual(set(foe.observation["reserves"]), set(hypothetical[2:]))
+            proxy = rebuilt["views"][1]["pivot"]
+            self.assertIn("Dondozo", [mon["details"].split(",")[0] for mon in proxy["request"]["side"]["pokemon"]])
+            self.assertNotIn("Gyarados", [mon["details"].split(",")[0] for mon in proxy["request"]["side"]["pokemon"]])
+            result = worker.call("evaluate", seat="p1", ours=[actual.actions[0]], replies=[foe.actions[0]],
+                                 seeds=[[0, 0, 0, 11]], budget_ms=1000, planning=2)
+            self.assertIn("matrix", result, result)

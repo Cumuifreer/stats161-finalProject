@@ -1,0 +1,1 @@
+{"coverage_novelty":{"uniform":{"previously_unseen_leads":92,"previously_unseen_triples":74,"triples_with_under_ten_previous_examples":1141},"stratified":{"previously_unseen_leads":115,"previously_unseen_triples":86,"triples_with_under_ten_previous_examples":1249}},"groups_supported_in_both_splits":0,"candidate_cores":{"lead":[],"triple":[]}}

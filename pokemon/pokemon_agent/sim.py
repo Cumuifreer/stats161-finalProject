@@ -27,9 +27,10 @@ def pool_fingerprint(cards, seed) -> str:
 
 
 class Showdown:
-    def __init__(self, *, audit_restoration: bool = False, public_search: bool = False):
+    def __init__(self, *, audit_restoration: bool = False, public_search: bool = False, counterfactual_labels: bool = False):
         self.audit_restoration = audit_restoration
         self.public_search = public_search
+        self.counterfactual_labels = counterfactual_labels
 
     def __enter__(self):
         bridge = Path(__file__).with_name("showdown.cjs")
@@ -38,6 +39,8 @@ class Showdown:
             command.append("--audit-restoration")
         if self.public_search:
             command.append("--public-search")
+        if self.counterfactual_labels:
+            command.append("--counterfactual-labels")
         self.process = subprocess.Popen(
             command, stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True
         )
@@ -153,6 +156,12 @@ def play_battle(engine, rosters, policies, seed, battle_seed, choose):
     search_seats = [seat for seat, policy in policies.items() if hasattr(policy, "choose_with_public_history")]
     if search_seats:
         start["search_seats"] = search_seats
+    proxy_seats = [seat for seat, policy in policies.items() if getattr(policy, "needs_proxy_evidence", False)]
+    if proxy_seats:
+        start["proxy_seats"] = proxy_seats
+    proposal_seats = [seat for seat, policy in policies.items() if getattr(policy, "needs_own_proposals", False)]
+    if proposal_seats:
+        start["proposal_seats"] = proposal_seats
     for seat, policy in policies.items():
         if isinstance(policy, PivotOpponent):
             policy.start(seed, seat, rosters)

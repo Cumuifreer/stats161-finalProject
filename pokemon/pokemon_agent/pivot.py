@@ -2,6 +2,7 @@
 
 import json
 import os
+from hashlib import sha256
 from pathlib import Path
 import subprocess
 import sys
@@ -80,24 +81,41 @@ def _run_worker():
     sys.stdout = sys.stderr
     sys.path.insert(0, str(Path.cwd()))
     from agent.pokemon.memory import species_key
+    from agent.agent import PokemonAgent
     from agent.versions.pivot import PivotAgent
     from altruagent import DecisionContext
-    from sim.translate import BATTLE_FORMAT, GAME_TYPE, battle_state
+    from sim.translate import (BATTLE_FORMAT, GAME_TYPE, LINEUP_INSTRUCTIONS, LINEUP_LABEL, _action, _new_state,
+                               battle_state, draft_state)
+
+    full_match = False
+
+    def new_player(seed, seat, style, code_only=False):
+        session = f"stats161-{seed}"
+        context = DecisionContext(session, None, GAME_TYPE, seat, int(seat == "p2"))
+        agent = PokemonAgent(None) if code_only else PivotAgent()
+        if not style and not code_only:
+            agent.style_turn = lambda _template, _observation, _sheet, answer: (answer, [])
+        agent.decision_log = log = DecisionLog()
+        agent._print = lambda _: None
+        return session, context, agent, log
 
     for line in sys.stdin:
         try:
             message = json.loads(line)
-            if message.get("start"):
+            if message.get("setup"):
+                full_match = True
+                seat = message["seat"]
+                opponent = "p2" if seat == "p1" else "p1"
+                first = message["first"]
+                session, context, agent, log = new_player(message["seed"], seat, message["style"], message["code_only"])
+                agent.memory.tiebreak_seed = int.from_bytes(sha256(f"{session}|{seat}".encode()).digest()[:8], "big")
+                reply = {"ready": True}
+            elif message.get("start"):
                 seat = message["seat"]
                 opponent = "p2" if seat == "p1" else "p1"
                 rosters = message["rosters"]
-                session = f"stats161-{message['seed']}"
-                context = DecisionContext(session, None, GAME_TYPE, seat, int(seat == "p2"))
-                agent = PivotAgent()
-                if not message["style"]:
-                    agent.style_turn = lambda _template, _observation, _sheet, answer: (answer, [])
-                agent.decision_log = log = DecisionLog()
-                agent._print = lambda _: None
+                if not full_match:
+                    session, context, agent, log = new_player(message["seed"], seat, message["style"])
                 agent.memory.pool_cards.update({
                     card["card_id"]: card for roster in rosters.values() for card in roster
                 })
@@ -106,6 +124,34 @@ def _run_worker():
                 })
                 version = 0
                 reply = {"ready": True}
+            elif phase := message.get("phase"):
+                obs, clock = message["observation"], message["clock"]
+                if phase == "draft":
+                    picked = {key: iter(value) for key, value in ((seat, obs["picked"]), (opponent, obs["opponent_picked"]))}
+                    rosters = {key: obs["picked"] if key == seat else obs["opponent_picked"] for key in ("p1", "p2")}
+                    other_first = "p2" if first == "p1" else "p1"
+                    order = [first if i in (0, 3, 4, 7, 8, 11) else other_first for i in range(obs["pick"] - 1)]
+                    picks = [{"pick_number": i, "seat_id": owner, "card_id": card["card_id"], "species": card["species"]}
+                             for i, owner in enumerate(order, 1) for card in [next(picked[owner])]]
+                    state = draft_state(session, me=seat, pool=obs["cards"], rosters=rosters, picks=picks,
+                                        first_drafter=first, current_seat=seat, version=len(picks))
+                    legal = {entry.action_id.split(":", 1)[1] for entry in state.legal_actions}
+                    if legal != set(message["legal_cards"]):
+                        raise ValueError("Ace Trainer Draft translation changed the legal menu")
+                else:
+                    names = message["roster"]
+                    observation = {"phase": phase, "battle_format": BATTLE_FORMAT, "your_roster": obs["team"],
+                                   "opponent_roster": obs["opponent_team"], "clock": clock, "waiting_for_action": True}
+                    payload = {"type": "select_lineup", "roster": names, "bring_count": 4, "lead_count": 2,
+                               "instructions": LINEUP_INSTRUCTIONS}
+                    legal = [_action(session, "select_lineup", LINEUP_LABEL, payload, 0)]
+                    state = _new_state(session, phase, observation, legal, 0, actor=seat, position=int(seat == "p2"))
+                action = agent.choose_action(state, context).action
+                if hasattr(action, "input"):
+                    action = action.input["action"]
+                if log.error:
+                    raise RuntimeError(log.error)
+                reply = {"action": action}
             else:
                 player_view = message["view"]
                 request = player_view["request"]
