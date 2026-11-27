@@ -36,6 +36,18 @@ def freeze(checkout, quicksilver, candidate, pools, blind, opponents, workers, c
     }
 
 
+def print_report(report):
+    for name, metrics in report.items():
+        if any(metrics[side].get(key) for side in ("champion_actions", "opponent_actions") for key in CLOCK_FAILURES):
+            raise RuntimeError(f"Clock failure while playing {name}")
+        summary = f"{name}: {metrics['wins']}/{metrics['games']} ({metrics['win_rate']:.2%})"
+        interval = metrics["paired_bootstrap_95"]
+        if interval is not None:
+            low, high = interval
+            summary += f", paired 95% {low:.2%}–{high:.2%}"
+        print(summary, flush=True)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--ace-trainer", type=Path, required=True)
@@ -109,12 +121,7 @@ def main():
     report = outcome["report"]
     if freeze(*lock_args) != {key: value for key, value in locked.items() if key != "generalization"}:
         raise RuntimeError("Inputs changed during the paired run")
-    for name, metrics in report.items():
-        if any(metrics[side].get(key) for side in ("champion_actions", "opponent_actions") for key in CLOCK_FAILURES):
-            raise RuntimeError(f"Clock failure while playing {name}")
-        count, total = metrics["wins"], metrics["games"]
-        low, high = metrics["paired_bootstrap_95"]
-        print(f"{name}: {count}/{total} ({count / total:.2%}), paired 95% {low:.2%}–{high:.2%}", flush=True)
+    print_report(report)
     if blind and not (args.output / "acceptance.json").exists():
         metrics = report[QUICKSILVER]
         save(args.output / "acceptance.json", {
@@ -130,12 +137,7 @@ def main():
                              args.ace_trainer, args.workers, candidate, args.quicksilver)
         if freeze(*lock_args) != {key: value for key, value in locked.items() if key != "generalization"}:
             raise RuntimeError("Inputs changed during the generalization checks")
-        for name, metrics in tested["report"].items():
-            if any(metrics[side].get(key) for side in ("champion_actions", "opponent_actions") for key in CLOCK_FAILURES):
-                raise RuntimeError(f"Clock failure while playing {name}")
-            low, high = metrics["paired_bootstrap_95"]
-            print(f"{name}: {metrics['wins']}/{metrics['games']} ({metrics['win_rate']:.2%}), "
-                  f"paired 95% {low:.2%}–{high:.2%}", flush=True)
+        print_report(tested["report"])
 
 
 if __name__ == "__main__":
