@@ -106,13 +106,14 @@ function publicPokemon(mon, own, previewSpecies) {
     const apparent = own ? mon : (mon.illusion || mon);
     const species = previewSpecies || apparent.species;
     const hp = mon.hp / mon.maxhp;
+    const shownHP = hp === 1 ? 1 : Math.min(.99, Math.ceil(100 * hp) / 100);
     const view = {
         species: species.id,
         types: previewSpecies ? species.types : apparent.getTypes(),
         status: mon.status,
         boosts: mon.boosts,
         fainted: mon.fainted,
-        current_hp_fraction: own ? hp : previewSpecies ? 0 : Math.ceil(100 * hp) / 100,
+        current_hp_fraction: own ? hp : previewSpecies ? 0 : shownHP,
     };
     if (own) {
         view.item = mon.item;
@@ -299,11 +300,15 @@ function handle(message) {
     };
 }
 
-const processCommand = process.argv[2] === "--public-search" ? require("./search.cjs")({view, choiceText, movingOptions}) : handle;
-readline.createInterface({input: process.stdin}).on("line", line => {
-    try {
-        process.stdout.write(JSON.stringify(processCommand(JSON.parse(line))) + "\n");
-    } catch (error) {
-        process.stdout.write(JSON.stringify({error: error.message}) + "\n");
-    }
-});
+module.exports = {choiceText, movingOptions};
+
+if (require.main === module) {
+    const processCommand = process.argv[2] === "--public-search" ? require("./search.cjs")({view, choiceText, movingOptions}) : handle;
+    readline.createInterface({input: process.stdin}).on("line", line => {
+        try {
+            process.stdout.write(JSON.stringify(processCommand(JSON.parse(line))) + "\n");
+        } catch (error) {
+            process.stdout.write(JSON.stringify({error: error.message}) + "\n");
+        }
+    });
+}

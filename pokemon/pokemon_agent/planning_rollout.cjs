@@ -199,4 +199,4 @@ function playStep(battle, optionSlots, choiceText, interaction = false) {
     return commands.some(Boolean);
 }
 
-module.exports = {playStep};
+module.exports = {playStep, movement};

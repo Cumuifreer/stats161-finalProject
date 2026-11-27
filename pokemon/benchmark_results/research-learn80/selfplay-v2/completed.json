@@ -1,0 +1,1 @@
+{"complete":true,"counts":{"games":16384,"self_play_games":8738,"student_games":15292,"draws":0,"learner_decisions":184938,"learner_preferences_different":65833,"paths":64,"positions":254422,"worker_seconds":2242.8292232999665,"policy_seconds":1458.4251156980172},"wall_seconds":293.1549865000052}

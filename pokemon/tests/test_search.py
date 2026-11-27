@@ -1,8 +1,10 @@
 import json
+from math import exp
 from pathlib import Path
 from shutil import which
 import unittest
 
+from pokemon_agent.deep_opening85 import condition_reserves
 from pokemon_agent.game import BATTLE, PREVIEW, make_decision
 from pokemon_agent.planning_preview import resolve_species
 from pokemon_agent.reply_belief import ReplyBelief
@@ -22,6 +24,60 @@ def _slot_pair(kind, left, right):
 
 
 class SearchTests(unittest.TestCase):
+    def test_opening_reserve_prior_only_uses_revealed_leads(self):
+        lead = {"arcanine", "sylveon"}
+        chosen = ("arcanine", "gholdengo", "pelipper", "sylveon")
+        alternative = ("arcanine", "cresselia", "ironhands", "sylveon")
+        logits = {chosen: 0., alternative: 0.}
+        forecasts = [(dict(bring=chosen, leads=sorted(lead)), .48),
+                     (dict(bring=alternative, leads=["ironhands", "sylveon"]), .50)]
+        revised = condition_reserves(logits, lead, forecasts)
+        self.assertGreater(revised[chosen], revised[alternative])
+        self.assertAlmostEqual(sum(map(exp, revised.values())), 1.)
+        self.assertEqual(condition_reserves(logits, {"sylveon", "pelipper"}, forecasts), logits)
+
+    @unittest.skipUnless(which("node") and (ROOT / "node_modules/pokemon-showdown").is_dir(),
+                         "requires local Showdown")
+    def test_public_world_accepts_replaced_terrain_and_spikes(self):
+        cards = json.loads((ROOT / "data/historical_cards.json").read_text(encoding="utf-8"))
+        by_name = {card["species"]: card for card in cards}
+        names = [["Rillaboom", "Ting-Lu", "Farigiraf", "Dragonite"], ["Arcanine", "Gholdengo", "Indeedee-F", "Sylveon"]]
+        rosters = {seat: [by_name[name] for name in team] for seat, team in zip(SEATS, names, strict=True)}
+        with Showdown() as game, Showdown(public_search=True) as worker:
+            worker.call("configure", cards=cards)
+            reply = game.call("start", format=FORMAT, seed=[67, 43, 555, 7], rosters=rosters,
+                              search_seats=["p1"], proposal_seats=["p1"])
+            selected = []
+            for view in reply["views"]:
+                decision = make_decision(PREVIEW, view["raw"], view["templates"], view["seat"])
+                selected.append(decision.actions[0]["bring"])
+                reply = game.call("choose", seat=view["seat"], action=decision.actions[0])
+            spikes = _slot_pair("move", ("grassyglide", 2), ("spikes", 0))
+            terrain = {"type": "doubles_turn", "slot_0": {"type": "switch", "species": "indeedeef"},
+                       "slot_1": {"type": "move", "move_id": "protect", "target": 0}}
+            game.call("choose", seat="p1", action=spikes)
+            reply = game.call("choose", seat="p2", action=terrain)
+            view = next(view for view in reply["views"] if view["seat"] == "p1")
+            decision = make_decision(BATTLE, view["raw"], view["templates"], "p1")
+            self.assertEqual(decision.observation["fields"], ["psychicterrain"])
+            self.assertEqual(decision.observation["opponent_side_conditions"], ["spikes"])
+            evidence = view["search"]
+            actual = worker.call("prepare", format=FORMAT, seat="p1", observation=decision.observation, rosters=selected,
+                                 lineups=selected, events=evidence["events"], own_pp=evidence["own_pp"])
+            self.assertIn("views", actual, actual)
+            rebuilt = make_decision(BATTLE, actual["views"][0]["raw"], actual["views"][0]["templates"], "p1")
+            self.assertEqual(set(map(_key, rebuilt.actions)), set(map(_key, decision.actions)))
+            self.assertEqual(rebuilt.observation["fields"], ["psychicterrain"])
+            self.assertEqual(rebuilt.observation["opponent_side_conditions"], ["spikes"])
+            # Showdown displays 99% for any non-full HP which would otherwise round to 100%.
+            request = evidence["own_proxy"]["pivot"]["request"]
+            maximum = int(request["side"]["pokemon"][0]["condition"].split("/")[1])
+            decision.observation["active"][0]["hp"] = (maximum - 1) / maximum
+            events = evidence["events"] + ["|-damage|p1a: Rillaboom|99/100"]
+            restored = worker.call("prepare", format=FORMAT, seat="p1", observation=decision.observation, rosters=selected,
+                                   lineups=selected, events=events, own_pp=evidence["own_pp"])
+            self.assertIn("views", restored, restored)
+
     def test_reply_weight_updates_from_visible_move(self):
         attack = _slot_pair("move", ("shadowball", 1), ("protect", 0))
         switch = _slot_pair("switch", "arcanine", "sylveon")

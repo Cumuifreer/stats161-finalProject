@@ -667,3 +667,42 @@ To evaluate the same candidate on a fresh blind sample, use the pinned Ace Train
 ```powershell
 .\.venv\Scripts\python.exe -m pokemon_agent.planning_blind --development "$planningResults/v3-continuation-fresh-dev.json" --ace-trainer $planningAce --reply-model "$planningModels/reply" --pairs 256 --workers 14 --output benchmark_results/planning-blind-reproduction
 ```
+
+### Offline research benchmarks
+
+The locked learned Draft and Preview candidate won 421 of 512 full matches against the public Quicksilver policy (82.23%, 95% paired interval 78.71%–85.55%). The [learning report](LEARNING_RESEARCH.md) includes the training runs, DeepSeek experiments, full match results, and candidate archive. The [Quicksilver report](QUICKSILVER80.md) describes the pinned public opponent and the earlier 391/512 result. The [85% research report](RESEARCH85.md) records the earlier paired tests against Ace Trainer and Pivot.
+
+Run these commands from `pokemon/` in PowerShell. Install Node.js and Python, and reuse `.venv` if it already exists. Use the pinned fixtures below for repeatable tests. The Ace adapter imports the pinned source directly and uses its Python dependencies. Both opponents run locally without API credentials.
+
+```powershell
+python -m venv .venv
+$python = './.venv/Scripts/python.exe'
+& $python -m pip install -e '.[bc]'
+npm ci
+
+git -c core.autocrlf=false clone https://github.com/holmjames/ace-trainer-claude.git .venv/strength-ace-b74574a
+git -C .venv/strength-ace-b74574a checkout --detach b74574abb0c5cb26f3107a4d0a389c0dc25c2a52
+& $python -m pip install 'httpx==0.28.1' 'python-dotenv>=1.0' 'anthropic==1.12.0' 'mcp>=1.12.0,<2.0.0'
+$ace = (Resolve-Path '.venv/strength-ace-b74574a').Path
+
+git clone https://github.com/abubakarsiddik31/quicksilver-hok.git .venv/quicksilver-hok-public
+git -C .venv/quicksilver-hok-public checkout --detach 198ee85c350ef06e0239afe8ae83563f3035da43
+npm --prefix .venv/quicksilver-hok-public/pokemon/sim ci
+$quicksilver = (Resolve-Path '.venv/quicksilver-hok-public').Path
+
+git worktree add --detach .venv/frozen70-checkout 33c5a3c9e634dff86d02476f188178551ab45542
+npm --prefix .venv/frozen70-checkout/pokemon ci
+$env:POKEMON_FROZEN_BASELINE_PACKAGE = (Resolve-Path '.venv/frozen70-checkout/pokemon/pokemon_agent').Path
+```
+
+The next command draws a new blind sample after locking the candidate. Choose an unused output directory. Use `--prior-workspace` for each additional workspace with locally retained pool registries. To resume a run, use the original checkout, fixtures, and output directory and add `--resume`.
+
+```powershell
+& $python -B -m pokemon_agent.research_learn80.draft_matches `
+  --lineup-net checkpoints/research-learn80/preview-outcome-v1 `
+  --ace-trainer $ace --quicksilver $quicksilver `
+  --candidate checkpoints/research80/draft-bundles-candidate.json `
+  --pairs 256 --workers 12 `
+  --generalization ace-code pivot pivot-cycle pivot-pressure champion baseline70 `
+  --generalization-pairs 64 --output benchmark_results/learned-draft-preview-reproduction
+```

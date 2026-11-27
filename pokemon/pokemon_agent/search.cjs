@@ -3,9 +3,11 @@
 // This worker receives a player observation and public events. It has no live Battle.
 const {performance} = require("node:perf_hooks");
 const {Battle, Dex, Teams} = require("pokemon-showdown");
-const {playStep} = require("./planning_rollout.cjs");
+const {playStep, movement} = require("./planning_rollout.cjs");
 const {evaluate: evaluatePreview} = require("./planning_preview.cjs");
 const {value: estimatePosition} = require("./planning_value.cjs");
+const {probability: position85} = require("./position85.cjs");
+const {continuation: continue85} = require("./endgame85.cjs");
 
 const SEATS = ["p1", "p2"];
 const ROTATION_CHANGES = new Set(["replace", "swap", "detailschange", "-formechange", "-transform", "-terastallize"]);
@@ -42,6 +44,11 @@ function trackField(timers, parts, tick, nicknames, extended) {
         const key = `${seat}:${condition}`;
         if (event === "-sideend") timers.delete(key);
         else {
+            if (extended && condition === "spikes") {
+                const layers = Math.min(3, (timers.get(key)?.layers || 0) + 1);
+                timers.set(key, {condition, kind: "side", seat, expires: null, layers});
+                return;
+            }
             const record = source(args) || [...nicknames.values()].findLast(mon => mon.lastMove === condition);
             const duration = condition === "tailwind" ? 4 : extended && SCREENS.has(condition)
                 ? (record?.item === "lightclay" ? 8 : 5) : null;
@@ -52,6 +59,11 @@ function trackField(timers, parts, tick, nicknames, extended) {
         if (event === "-fieldend") timers.delete(condition);
         else {
             const terrain = extended && SIMPLE_TERRAINS.has(condition);
+            if (terrain) {
+                for (const [key, timer] of timers) {
+                    if (timer.kind === "terrain") timers.delete(key);
+                }
+            }
             const duration = condition === "trickroom" ? 5 : terrain ? (source([detail, ...args])?.item === "terrainextender" ? 8 : 5) : null;
             timers.set(condition, {condition, kind: terrain ? "terrain" : "field",
                                    expires: duration === null ? null : tick + duration});
@@ -177,8 +189,8 @@ function readPublic(events, cards, extended) {
 function hpRange(pokemon, record, ownExactFraction) {
     if (!record.health[0]) return [0, 0];
     const [shown, scale] = record.health;
-    const low = Math.floor((shown - 1) * pokemon.maxhp / scale) + 1;
-    const high = Math.floor(shown * pokemon.maxhp / scale);
+    const low = scale === 100 && shown === 100 ? pokemon.maxhp : Math.floor((shown - 1) * pokemon.maxhp / scale) + 1;
+    const high = scale === 100 && shown === 99 ? pokemon.maxhp - 1 : Math.floor(shown * pokemon.maxhp / scale);
     if (ownExactFraction == null) return low <= high ? [low, high] : null;
     const hp = Math.round(ownExactFraction * pokemon.maxhp);
     return hp >= low && hp <= high ? [hp, hp] : null;
@@ -190,11 +202,11 @@ function prepare(message, cards, view) {
     const publicState = readPublic(message.events, cards, extended);
     if (publicState.reason) return publicState;
     if (publicState.turn !== board.turn) return {reason: "stale_history"};
-    if (publicState.timers.some(timer => timer.duration === null)) return {reason: "unsupported_field"};
+    if (publicState.timers.some(timer => timer.duration === null && !timer.layers)) return {reason: "unsupported_field"};
     const activeTimers = (kind, seat) => publicState.timers.filter(timer => timer.kind === kind && timer.seat === seat)
         .map(timer => timer.condition).sort().join(",");
     const other = message.seat === "p1" ? "p2" : "p1";
-    if (publicState.timers.some(timer => !(timer.duration > 0)) || activeTimers("weather") !== board.weather.join(",") ||
+    if (publicState.timers.some(timer => !timer.layers && !(timer.duration > 0)) || activeTimers("weather") !== board.weather.join(",") ||
         [activeTimers("field"), activeTimers("terrain")].filter(Boolean).sort().join(",") !== board.fields.join(",") ||
         activeTimers("side", message.seat) !== board.side_conditions.join(",") ||
         activeTimers("side", other) !== board.opponent_side_conditions.join(",")) return {reason: "field_mismatch"};
@@ -309,7 +321,8 @@ function prepare(message, cards, view) {
         }
         for (const timer of publicState.timers) {
             const target = timer.kind === "side" ? root.getSide(timer.seat) : root.field;
-            const effect = root.initEffectState({id: timer.condition, target, duration: timer.duration});
+            const details = timer.layers ? {layers: timer.layers} : {duration: timer.duration};
+            const effect = root.initEffectState({id: timer.condition, target, ...details});
             if (timer.kind === "weather") {
                 root.field.weather = timer.condition;
                 root.field.weatherState = effect;
@@ -380,7 +393,7 @@ function positionValue(battle, seat) {
     return sideValue(our) - sideValue(foe) + .065 * tempo;
 }
 
-function branch(snapshot, choices, seed, hpSample, seat, choiceText, movingOptions, audit, planning, interaction, payoff) {
+function branch(snapshot, choices, seed, hpSample, seat, choiceText, movingOptions, audit, planning, interaction, payoff, deadline) {
     const battle = Battle.fromJSON(snapshot.state);
     battle.restart(() => {});
     battle.resetRNG(seed);
@@ -406,6 +419,7 @@ function branch(snapshot, choices, seed, hpSample, seat, choiceText, movingOptio
         if (!battle.ended && (battle.turn <= turn || battle.requestState !== "move")) return null;
         if (audit) return {turn: battle.turn, fields: fieldSummary(battle)};
         if (!planning) return leaf(battle, seat);
+        if (planning === 3) return continue85(battle, movingOptions, choiceText, movement, playStep, payoff, seat, deadline);
         const immediate = payoff(battle, seat);
         if (battle.ended || planning < 2) return immediate;
         if (!playStep(battle, movingOptions, choiceText, interaction)) return immediate;
@@ -454,7 +468,8 @@ module.exports = ({view, choiceText, movingOptions}) => {
         const matrix = [];
         const payoff = !model ? positionValue : (battle, seat) => {
             const base = positionValue(battle, seat);
-            return battle.ended ? base : .68 * estimatePosition(battle, seat, model) + .32 * base;
+            if (battle.ended) return base;
+            return .68 * (model.version === 3 ? position85(battle, seat, model) : estimatePosition(battle, seat, model)) + .32 * base;
         };
         for (const ours of message.ours) {
             const row = [];
@@ -466,7 +481,7 @@ module.exports = ({view, choiceText, movingOptions}) => {
                     try {
                         const hpSample = message.spread_hp ? (message.seeds.length === 1 ? .5 : index / (message.seeds.length - 1)) : index / 2;
                         value = branch(world, {[message.seat]: ours, [foe]: theirs}, seed, hpSample, message.seat,
-                            choiceText, movingOptions, message.audit_fields, message.planning, message.interaction, payoff);
+                            choiceText, movingOptions, message.audit_fields, message.planning, message.interaction, payoff, deadline);
                     } catch (error) {
                         return {reason: "branch_error", detail: error.message};
                     }

@@ -1,0 +1,1 @@
+{"variant":"wide","preview":true,"preview_model":"","position_model":"","draft_review":false,"full_preview":true,"lead_model":"checkpoints/research80/lead-ensemble-v2.json","action_model":"checkpoints/research85/actions-v1","deep_preview":true,"research80":{"rollout_lineups":true,"check_endgame":true,"reply_rollouts":true}}

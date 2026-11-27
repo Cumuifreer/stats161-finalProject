@@ -82,7 +82,7 @@ def _run_worker():
     sys.path.insert(0, str(Path.cwd()))
     from agent.pokemon.memory import species_key
     from agent.agent import PokemonAgent
-    from agent.versions.pivot import PivotAgent
+    from agent.versions.pivot import create_agent as create_pivot
     from altruagent import DecisionContext
     from sim.translate import (BATTLE_FORMAT, GAME_TYPE, LINEUP_INSTRUCTIONS, LINEUP_LABEL, _action, _new_state,
                                battle_state, draft_state)
@@ -92,7 +92,10 @@ def _run_worker():
     def new_player(seed, seat, style, code_only=False):
         session = f"stats161-{seed}"
         context = DecisionContext(session, None, GAME_TYPE, seat, int(seat == "p2"))
-        agent = PokemonAgent(None) if code_only else PivotAgent()
+        agent = PokemonAgent(None) if code_only else create_pivot()
+        if not code_only and (overrides := os.environ.get("PIVOT_STYLE")):
+            if any(agent.style[name] != value for name, value in json.loads(overrides).items()):
+                raise RuntimeError("The local variant did not apply its configured style")
         if not style and not code_only:
             agent.style_turn = lambda _template, _observation, _sheet, answer: (answer, [])
         agent.decision_log = log = DecisionLog()
