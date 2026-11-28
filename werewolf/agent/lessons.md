@@ -1,0 +1,6 @@
+- Don't publicly claim 'villager' early; it removes flexibility and creates contradictions later.
+- Killing the seer night 2 backfired because their prior claim still framed me; assess claim value first.
+- I wrongly accused Player5 of voting me when votes show they didn't—verify vote records before accusing.
+- Don't lynch a player just for pushing role claims; that's normal villager behavior, not a wolf tell.
+- Day 2: vote the confirmed wolf (Player1), not a seer-accusing villager; analyze vote records before accusing.
+- Track who actually voted with wolves: Player4's seer vote was real evidence, but confirm before committing publicly.
