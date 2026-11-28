@@ -34,10 +34,12 @@ def _best_lineup(scores):
 
 
 class LineupPolicy(JointPolicy):
-    def __init__(self, profiles, cards, worker):
+    def __init__(self, profiles, cards, worker, *, options_limit=5, seed_count=2):
         super().__init__(profiles)
         self.cards = cards
         self.worker = worker
+        self.options_limit = options_limit
+        self.seed_count = seed_count
         self.different_choices = 0
         self.fallbacks = 0
 
@@ -55,7 +57,7 @@ class LineupPolicy(JointPolicy):
             return options[0]
         rosters = {seat: [self.cards[name] for name in team] for seat, team in zip(SEATS, names, strict=True)}
         rng = Random(fingerprint([sorted(team) for team in names]))
-        seeds = [[rng.randrange(65536) for _ in range(4)] for _ in range(2)]
+        seeds = [[rng.randrange(65536) for _ in range(4)] for _ in range(self.seed_count)]
         deadline = perf_counter() + min(5., (decision.seconds_left or 85.) - 1.)
         scores = []
         try:
@@ -70,7 +72,7 @@ class LineupPolicy(JointPolicy):
         return options[winner]
 
     def options(self, decision):
-        return lineup_options(decision)
+        return lineup_options(decision, self.options_limit)
 
     def _play(self, rosters, selected, variant, seed, deadline):
         policies = {seat: JointPolicy(self.profiles) for seat in SEATS}

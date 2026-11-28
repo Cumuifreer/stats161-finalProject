@@ -1,0 +1,1 @@
+{"network":{"state_size":264,"action_size":178,"card_count":48,"hidden":144,"depth":4,"history_steps":4},"catalog":"16c4d38ae85cc5c02fdd8eab01391c53994bc11978528183c1e43dc27e37da9c","champion":{"hybrid":"9f4ce36ba012548be7795666aa8bd557fb785ea8fe65e3206697a4802332dc4b","pick":12,"alternatives":1,"pairs":10,"review_seconds":6.0,"starts":180},"version":1,"feature_version":2}

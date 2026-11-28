@@ -1,0 +1,20 @@
+# Keep checkout bytes consistent with the published blind-test fingerprints.
+/pokemon_agent/*.py text eol=lf
+/pokemon_agent/*.cjs text eol=lf
+/pokemon_agent/__init__.py text eol=crlf
+/pokemon_agent/__main__.py text eol=crlf
+/pokemon_agent/game.py text eol=crlf
+/pokemon_agent/joint.py text eol=crlf
+/pokemon_agent/live.py text eol=crlf
+/pokemon_agent/llm.py text eol=crlf
+/pokemon_agent/parity.py text eol=crlf
+/pokemon_agent/pivot.py text eol=crlf
+/pokemon_agent/policy.py text eol=crlf
+/pokemon_agent/showdown.cjs text eol=crlf
+/pokemon_agent/sim.py text eol=crlf
+/pokemon_agent/tactics.py text eol=crlf
+/package-lock.json text eol=crlf
+/data/historical_cards.json text eol=crlf
+/checkpoints/public-planning-v1/lineup-belief.json text eol=crlf
+/checkpoints/public-planning-v1/value-v2.json text eol=crlf
+/checkpoints/public-planning-v1/reply/config.json text eol=crlf

@@ -50,6 +50,10 @@ let pivotSeat;
 let pivotPreview;
 let searchSeats;
 let searchEvents;
+let proxySeats;
+let proposalPreviews;
+let labelRoot;
+const labelMode = process.argv[2] === "--counterfactual-labels";
 const revealed = new Map();
 const previewRosters = new Map();
 const publicEvents = new Set([
@@ -102,13 +106,14 @@ function publicPokemon(mon, own, previewSpecies) {
     const apparent = own ? mon : (mon.illusion || mon);
     const species = previewSpecies || apparent.species;
     const hp = mon.hp / mon.maxhp;
+    const shownHP = hp === 1 ? 1 : Math.min(.99, Math.ceil(100 * hp) / 100);
     const view = {
         species: species.id,
         types: previewSpecies ? species.types : apparent.getTypes(),
         status: mon.status,
         boosts: mon.boosts,
         fainted: mon.fainted,
-        current_hp_fraction: own ? hp : previewSpecies ? 0 : Math.ceil(100 * hp) / 100,
+        current_hp_fraction: own ? hp : previewSpecies ? 0 : shownHP,
     };
     if (own) {
         view.item = mon.item;
@@ -211,6 +216,7 @@ function choiceText(side, action) {
 
 function handle(message) {
     if (message.command === "start") {
+        labelRoot = undefined;
         battle?.destroy();
         battle = new Battle({formatid: message.format, seed: message.seed});
         revealed.clear();
@@ -225,6 +231,8 @@ function handle(message) {
         pivotSeat = message.pivot_seat;
         pivotPreview = pivotSeat ? battle.getSide(pivotSeat).activeRequest : null;
         searchSeats = message.search_seats || [];
+        proxySeats = message.proxy_seats || [];
+        proposalPreviews = new Map((message.proposal_seats || []).map(seat => [seat, battle.getSide(seat).activeRequest]));
         searchEvents = [];
     } else if (message.command === "choose") {
         const side = battle.getSide(message.seat);
@@ -237,11 +245,29 @@ function handle(message) {
         restored.restart(() => {});
         battle.destroy();
         battle = restored;
+    } else if (message.command === "label_root" && labelMode) {
+        if (battle.ended || !battle.turn || !battle.sides.some(side => view(side)?.phase === "moving")) {
+            throw new Error("A label root requires a pending Battle decision");
+        }
+        labelRoot = {battle: JSON.stringify(battle.toJSON()), revealed: structuredClone(revealed), logPosition};
+    } else if (message.command === "label_restore" && labelMode && labelRoot) {
+        const restored = Battle.fromJSON(labelRoot.battle);
+        restored.restart(() => {});
+        if (message.seed) restored.resetRNG(message.seed);
+        battle.destroy();
+        battle = restored;
+        revealed.clear();
+        for (const [key, known] of structuredClone(labelRoot.revealed)) revealed.set(key, known);
+        logPosition = labelRoot.logPosition;
     } else {
         throw new Error("Unknown Showdown bridge command");
     }
     trackReveals();
     const views = battle.ended ? [] : battle.sides.map(view).filter(Boolean);
+    let protocolLog;
+    const publicLog = () => protocolLog ??= extractChannelMessages(battle.log.join("\n"), [0])[0].filter(
+        line => !/^\|(debug|showteam|t:)\|/.test(line),
+    );
     for (const item of views) {
         if (item.phase === "moving" && searchSeats.includes(item.seat)) {
             const {active, forceSwitch} = battle.getSide(item.seat).activeRequest;
@@ -250,6 +276,13 @@ function handle(message) {
                 force_switch: Boolean(forceSwitch?.some(Boolean)),
                 own_pp: (active || []).map(slot => Object.fromEntries((slot?.moves || []).map(move => [move.id, move.pp]))),
             };
+            if (proxySeats.includes(item.seat)) item.search.protocol_log = publicLog();
+            if (proposalPreviews.has(item.seat)) {
+                item.search.own_proxy = {
+                    pivot: {request: battle.getSide(item.seat).activeRequest, preview_request: proposalPreviews.get(item.seat)},
+                    templates: item.templates,
+                };
+            }
         }
     }
     const pivotView = views.find(item => item.seat === pivotSeat && item.phase === "moving");
@@ -257,9 +290,7 @@ function handle(message) {
         pivotView.pivot = {
             request: battle.getSide(pivotSeat).activeRequest,
             preview_request: pivotPreview,
-            protocol_log: extractChannelMessages(battle.log.join("\n"), [0])[0].filter(
-                line => !/^\|(debug|showteam|t:)\|/.test(line),
-            ),
+            protocol_log: publicLog(),
         };
     }
     return {
@@ -269,11 +300,15 @@ function handle(message) {
     };
 }
 
-const processCommand = process.argv[2] === "--public-search" ? require("./search.cjs")({view, choiceText}) : handle;
-readline.createInterface({input: process.stdin}).on("line", line => {
-    try {
-        process.stdout.write(JSON.stringify(processCommand(JSON.parse(line))) + "\n");
-    } catch (error) {
-        process.stdout.write(JSON.stringify({error: error.message}) + "\n");
-    }
-});
+module.exports = {choiceText, movingOptions};
+
+if (require.main === module) {
+    const processCommand = process.argv[2] === "--public-search" ? require("./search.cjs")({view, choiceText, movingOptions}) : handle;
+    readline.createInterface({input: process.stdin}).on("line", line => {
+        try {
+            process.stdout.write(JSON.stringify(processCommand(JSON.parse(line))) + "\n");
+        } catch (error) {
+            process.stdout.write(JSON.stringify({error: error.message}) + "\n");
+        }
+    });
+}
